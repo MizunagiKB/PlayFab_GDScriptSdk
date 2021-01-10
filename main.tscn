@@ -1,0 +1,194 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[node name="main" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ui" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_displayname" type="Label" parent="ui"]
+margin_left = 64.0
+margin_top = 32.0
+margin_right = 184.0
+margin_bottom = 56.0
+text = "DisplayName"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="LineEdit" parent="ui/lbl_displayname"]
+margin_left = 128.0
+margin_right = 320.0
+margin_bottom = 24.0
+text = "TESTUSER_DISPLAY"
+
+[node name="lbl_username" type="Label" parent="ui"]
+margin_left = 64.0
+margin_top = 64.0
+margin_right = 184.0
+margin_bottom = 88.0
+text = "Username"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="LineEdit" parent="ui/lbl_username"]
+margin_left = 128.0
+margin_right = 320.0
+margin_bottom = 24.0
+text = "TESTUSER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_password" type="Label" parent="ui"]
+margin_left = 64.0
+margin_top = 96.0
+margin_right = 184.0
+margin_bottom = 120.0
+text = "Password"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="LineEdit" parent="ui/lbl_password"]
+margin_left = 128.0
+margin_right = 320.0
+margin_bottom = 24.0
+text = "TESTUSER"
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_register" type="Button" parent="ui"]
+margin_left = 192.0
+margin_top = 192.0
+margin_right = 320.0
+margin_bottom = 216.0
+text = "PlayFab Register"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_login" type="Button" parent="ui"]
+margin_left = 192.0
+margin_top = 224.0
+margin_right = 320.0
+margin_bottom = 248.0
+text = "PlayFab Login"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_title_id" type="Label" parent="ui"]
+margin_left = 512.0
+margin_top = 32.0
+margin_right = 632.0
+margin_bottom = 56.0
+text = "TitleId"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="ui/lbl_title_id"]
+margin_left = 128.0
+margin_right = 384.0
+margin_bottom = 24.0
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_result" type="Label" parent="ui"]
+margin_left = 512.0
+margin_top = 64.0
+margin_right = 632.0
+margin_bottom = 88.0
+text = "result"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="LineEdit" parent="ui/lbl_result"]
+margin_left = 128.0
+margin_right = 384.0
+margin_bottom = 24.0
+editable = false
+
+[node name="lbl_response_code" type="Label" parent="ui"]
+margin_left = 512.0
+margin_top = 96.0
+margin_right = 632.0
+margin_bottom = 120.0
+text = "response_code"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="LineEdit" parent="ui/lbl_response_code"]
+margin_left = 128.0
+margin_right = 384.0
+margin_bottom = 24.0
+editable = false
+
+[node name="lbl_headers" type="Label" parent="ui"]
+margin_left = 512.0
+margin_top = 128.0
+margin_right = 632.0
+margin_bottom = 152.0
+text = "headers"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="TextEdit" parent="ui/lbl_headers"]
+margin_left = 128.0
+margin_right = 384.0
+margin_bottom = 120.0
+readonly = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_json_parse_result" type="Label" parent="ui"]
+margin_left = 512.0
+margin_top = 256.0
+margin_right = 632.0
+margin_bottom = 280.0
+text = "json_parse_result"
+align = 2
+valign = 1
+
+[node name="value" type="TextEdit" parent="ui/lbl_json_parse_result"]
+margin_left = 128.0
+margin_right = 384.0
+margin_bottom = 248.0
+readonly = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="ui/btn_register" to="." method="_on_btn_register_pressed"]
+[connection signal="pressed" from="ui/btn_login" to="." method="_on_btn_login_pressed"]
