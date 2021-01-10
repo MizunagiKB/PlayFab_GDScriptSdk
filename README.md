@@ -1,2 +1,2 @@
 # PlayFab_GDScriptSdk
-PlayFabSDK for GDScriptSdk
+PlayFabSDK for GDScript
