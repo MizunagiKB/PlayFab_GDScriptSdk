@@ -17,6 +17,7 @@ static func GetEntityToken(dict_request, customData = null, extraHeaders = null)
         authKey = "X-SecretKey"
         authValue = PlayFabSettings.DeveloperSecretKey 
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_GetEntityTokenResponse")
     PlayFabHTTPRequest.api_request(
         "/Authentication/GetEntityToken",
@@ -31,6 +32,7 @@ static func ValidateEntityToken(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Authentication/ValidateEntityToken",

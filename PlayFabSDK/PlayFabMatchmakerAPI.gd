@@ -8,6 +8,7 @@ static func AuthUser(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Matchmaker/AuthUser",
@@ -22,6 +23,7 @@ static func PlayerJoined(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Matchmaker/PlayerJoined",
@@ -36,6 +38,7 @@ static func PlayerLeft(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Matchmaker/PlayerLeft",
@@ -50,6 +53,7 @@ static func StartGame(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Matchmaker/StartGame",
@@ -64,6 +68,7 @@ static func UserInfo(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Matchmaker/UserInfo",

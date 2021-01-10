@@ -8,6 +8,7 @@ static func AcceptGroupApplication(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/AcceptGroupApplication",
@@ -22,6 +23,7 @@ static func AcceptGroupInvitation(dict_request, customData = null, extraHeaders 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/AcceptGroupInvitation",
@@ -36,6 +38,7 @@ static func AddMembers(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/AddMembers",
@@ -50,6 +53,7 @@ static func ApplyToGroup(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ApplyToGroup",
@@ -64,6 +68,7 @@ static func BlockEntity(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/BlockEntity",
@@ -78,6 +83,7 @@ static func ChangeMemberRole(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ChangeMemberRole",
@@ -92,6 +98,7 @@ static func CreateGroup(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/CreateGroup",
@@ -106,6 +113,7 @@ static func CreateRole(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/CreateRole",
@@ -120,6 +128,7 @@ static func DeleteGroup(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/DeleteGroup",
@@ -134,6 +143,7 @@ static func DeleteRole(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/DeleteRole",
@@ -148,6 +158,7 @@ static func GetGroup(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/GetGroup",
@@ -162,6 +173,7 @@ static func InviteToGroup(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/InviteToGroup",
@@ -176,6 +188,7 @@ static func IsMember(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/IsMember",
@@ -190,6 +203,7 @@ static func ListGroupApplications(dict_request, customData = null, extraHeaders 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ListGroupApplications",
@@ -204,6 +218,7 @@ static func ListGroupBlocks(dict_request, customData = null, extraHeaders = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ListGroupBlocks",
@@ -218,6 +233,7 @@ static func ListGroupInvitations(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ListGroupInvitations",
@@ -232,6 +248,7 @@ static func ListGroupMembers(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ListGroupMembers",
@@ -246,6 +263,7 @@ static func ListMembership(dict_request, customData = null, extraHeaders = null)
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ListMembership",
@@ -260,6 +278,7 @@ static func ListMembershipOpportunities(dict_request, customData = null, extraHe
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/ListMembershipOpportunities",
@@ -274,6 +293,7 @@ static func RemoveGroupApplication(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/RemoveGroupApplication",
@@ -288,6 +308,7 @@ static func RemoveGroupInvitation(dict_request, customData = null, extraHeaders 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/RemoveGroupInvitation",
@@ -302,6 +323,7 @@ static func RemoveMembers(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/RemoveMembers",
@@ -316,6 +338,7 @@ static func UnblockEntity(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/UnblockEntity",
@@ -330,6 +353,7 @@ static func UpdateGroup(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/UpdateGroup",
@@ -344,6 +368,7 @@ static func UpdateRole(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Group/UpdateRole",

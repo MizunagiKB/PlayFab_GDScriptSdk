@@ -8,6 +8,7 @@ static func AbortTaskInstance(dict_request, customData = null, extraHeaders = nu
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AbortTaskInstance",
@@ -22,6 +23,7 @@ static func AddLocalizedNews(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AddLocalizedNews",
@@ -36,6 +38,7 @@ static func AddNews(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AddNews",
@@ -50,6 +53,7 @@ static func AddPlayerTag(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AddPlayerTag",
@@ -64,6 +68,7 @@ static func AddServerBuild(dict_request, customData = null, extraHeaders = null)
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AddServerBuild",
@@ -78,6 +83,7 @@ static func AddUserVirtualCurrency(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AddUserVirtualCurrency",
@@ -92,6 +98,7 @@ static func AddVirtualCurrencyTypes(dict_request, customData = null, extraHeader
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/AddVirtualCurrencyTypes",
@@ -106,6 +113,7 @@ static func BanUsers(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/BanUsers",
@@ -120,6 +128,7 @@ static func CheckLimitedEditionItemAvailability(dict_request, customData = null,
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CheckLimitedEditionItemAvailability",
@@ -134,6 +143,7 @@ static func CreateActionsOnPlayersInSegmentTask(dict_request, customData = null,
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreateActionsOnPlayersInSegmentTask",
@@ -148,6 +158,7 @@ static func CreateCloudScriptTask(dict_request, customData = null, extraHeaders 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreateCloudScriptTask",
@@ -162,6 +173,7 @@ static func CreateInsightsScheduledScalingTask(dict_request, customData = null, 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreateInsightsScheduledScalingTask",
@@ -176,6 +188,7 @@ static func CreateOpenIdConnection(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreateOpenIdConnection",
@@ -190,6 +203,7 @@ static func CreatePlayerSharedSecret(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreatePlayerSharedSecret",
@@ -204,6 +218,7 @@ static func CreatePlayerStatisticDefinition(dict_request, customData = null, ext
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreatePlayerStatisticDefinition",
@@ -218,6 +233,7 @@ static func CreateSegment(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/CreateSegment",
@@ -232,6 +248,7 @@ static func DeleteContent(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteContent",
@@ -246,6 +263,7 @@ static func DeleteMasterPlayerAccount(dict_request, customData = null, extraHead
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteMasterPlayerAccount",
@@ -260,6 +278,7 @@ static func DeleteOpenIdConnection(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteOpenIdConnection",
@@ -274,6 +293,7 @@ static func DeletePlayer(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeletePlayer",
@@ -288,6 +308,7 @@ static func DeletePlayerSharedSecret(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeletePlayerSharedSecret",
@@ -302,6 +323,7 @@ static func DeleteSegment(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteSegment",
@@ -316,6 +338,7 @@ static func DeleteStore(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteStore",
@@ -330,6 +353,7 @@ static func DeleteTask(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteTask",
@@ -344,6 +368,7 @@ static func DeleteTitle(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteTitle",
@@ -358,6 +383,7 @@ static func DeleteTitleDataOverride(dict_request, customData = null, extraHeader
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/DeleteTitleDataOverride",
@@ -372,6 +398,7 @@ static func ExportMasterPlayerData(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ExportMasterPlayerData",
@@ -386,6 +413,7 @@ static func GetActionsOnPlayersInSegmentTaskInstance(dict_request, customData = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetActionsOnPlayersInSegmentTaskInstance",
@@ -400,6 +428,7 @@ static func GetAllSegments(dict_request, customData = null, extraHeaders = null)
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetAllSegments",
@@ -414,6 +443,7 @@ static func GetCatalogItems(dict_request, customData = null, extraHeaders = null
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetCatalogItems",
@@ -428,6 +458,7 @@ static func GetCloudScriptRevision(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetCloudScriptRevision",
@@ -442,6 +473,7 @@ static func GetCloudScriptTaskInstance(dict_request, customData = null, extraHea
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetCloudScriptTaskInstance",
@@ -456,6 +488,7 @@ static func GetCloudScriptVersions(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetCloudScriptVersions",
@@ -470,6 +503,7 @@ static func GetContentList(dict_request, customData = null, extraHeaders = null)
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetContentList",
@@ -484,6 +518,7 @@ static func GetContentUploadUrl(dict_request, customData = null, extraHeaders = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetContentUploadUrl",
@@ -498,6 +533,7 @@ static func GetDataReport(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetDataReport",
@@ -512,6 +548,7 @@ static func GetMatchmakerGameInfo(dict_request, customData = null, extraHeaders 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetMatchmakerGameInfo",
@@ -526,6 +563,7 @@ static func GetMatchmakerGameModes(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetMatchmakerGameModes",
@@ -540,6 +578,7 @@ static func GetPlayedTitleList(dict_request, customData = null, extraHeaders = n
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayedTitleList",
@@ -554,6 +593,7 @@ static func GetPlayerIdFromAuthToken(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerIdFromAuthToken",
@@ -568,6 +608,7 @@ static func GetPlayerProfile(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerProfile",
@@ -582,6 +623,7 @@ static func GetPlayerSegments(dict_request, customData = null, extraHeaders = nu
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerSegments",
@@ -596,6 +638,7 @@ static func GetPlayerSharedSecrets(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerSharedSecrets",
@@ -610,6 +653,7 @@ static func GetPlayersInSegment(dict_request, customData = null, extraHeaders = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayersInSegment",
@@ -624,6 +668,7 @@ static func GetPlayerStatisticDefinitions(dict_request, customData = null, extra
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerStatisticDefinitions",
@@ -638,6 +683,7 @@ static func GetPlayerStatisticVersions(dict_request, customData = null, extraHea
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerStatisticVersions",
@@ -652,6 +698,7 @@ static func GetPlayerTags(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPlayerTags",
@@ -666,6 +713,7 @@ static func GetPolicy(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPolicy",
@@ -680,6 +728,7 @@ static func GetPublisherData(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetPublisherData",
@@ -694,6 +743,7 @@ static func GetRandomResultTables(dict_request, customData = null, extraHeaders 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetRandomResultTables",
@@ -708,6 +758,7 @@ static func GetSegments(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetSegments",
@@ -722,6 +773,7 @@ static func GetServerBuildInfo(dict_request, customData = null, extraHeaders = n
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetServerBuildInfo",
@@ -736,6 +788,7 @@ static func GetServerBuildUploadUrl(dict_request, customData = null, extraHeader
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetServerBuildUploadUrl",
@@ -750,6 +803,7 @@ static func GetStoreItems(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetStoreItems",
@@ -764,6 +818,7 @@ static func GetTaskInstances(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetTaskInstances",
@@ -778,6 +833,7 @@ static func GetTasks(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetTasks",
@@ -792,6 +848,7 @@ static func GetTitleData(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetTitleData",
@@ -806,6 +863,7 @@ static func GetTitleInternalData(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetTitleInternalData",
@@ -820,6 +878,7 @@ static func GetUserAccountInfo(dict_request, customData = null, extraHeaders = n
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserAccountInfo",
@@ -834,6 +893,7 @@ static func GetUserBans(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserBans",
@@ -848,6 +908,7 @@ static func GetUserData(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserData",
@@ -862,6 +923,7 @@ static func GetUserInternalData(dict_request, customData = null, extraHeaders = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserInternalData",
@@ -876,6 +938,7 @@ static func GetUserInventory(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserInventory",
@@ -890,6 +953,7 @@ static func GetUserPublisherData(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserPublisherData",
@@ -904,6 +968,7 @@ static func GetUserPublisherInternalData(dict_request, customData = null, extraH
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserPublisherInternalData",
@@ -918,6 +983,7 @@ static func GetUserPublisherReadOnlyData(dict_request, customData = null, extraH
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserPublisherReadOnlyData",
@@ -932,6 +998,7 @@ static func GetUserReadOnlyData(dict_request, customData = null, extraHeaders = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GetUserReadOnlyData",
@@ -946,6 +1013,7 @@ static func GrantItemsToUsers(dict_request, customData = null, extraHeaders = nu
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/GrantItemsToUsers",
@@ -960,6 +1028,7 @@ static func IncrementLimitedEditionItemAvailability(dict_request, customData = n
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/IncrementLimitedEditionItemAvailability",
@@ -974,6 +1043,7 @@ static func IncrementPlayerStatisticVersion(dict_request, customData = null, ext
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/IncrementPlayerStatisticVersion",
@@ -988,6 +1058,7 @@ static func ListOpenIdConnection(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ListOpenIdConnection",
@@ -1002,6 +1073,7 @@ static func ListServerBuilds(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ListServerBuilds",
@@ -1016,6 +1088,7 @@ static func ListVirtualCurrencyTypes(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ListVirtualCurrencyTypes",
@@ -1030,6 +1103,7 @@ static func ModifyMatchmakerGameModes(dict_request, customData = null, extraHead
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ModifyMatchmakerGameModes",
@@ -1044,6 +1118,7 @@ static func ModifyServerBuild(dict_request, customData = null, extraHeaders = nu
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ModifyServerBuild",
@@ -1058,6 +1133,7 @@ static func RefundPurchase(dict_request, customData = null, extraHeaders = null)
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RefundPurchase",
@@ -1072,6 +1148,7 @@ static func RemovePlayerTag(dict_request, customData = null, extraHeaders = null
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RemovePlayerTag",
@@ -1086,6 +1163,7 @@ static func RemoveServerBuild(dict_request, customData = null, extraHeaders = nu
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RemoveServerBuild",
@@ -1100,6 +1178,7 @@ static func RemoveVirtualCurrencyTypes(dict_request, customData = null, extraHea
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RemoveVirtualCurrencyTypes",
@@ -1114,6 +1193,7 @@ static func ResetCharacterStatistics(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ResetCharacterStatistics",
@@ -1128,6 +1208,7 @@ static func ResetPassword(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ResetPassword",
@@ -1142,6 +1223,7 @@ static func ResetUserStatistics(dict_request, customData = null, extraHeaders = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ResetUserStatistics",
@@ -1156,6 +1238,7 @@ static func ResolvePurchaseDispute(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/ResolvePurchaseDispute",
@@ -1170,6 +1253,7 @@ static func RevokeAllBansForUser(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RevokeAllBansForUser",
@@ -1184,6 +1268,7 @@ static func RevokeBans(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RevokeBans",
@@ -1198,6 +1283,7 @@ static func RevokeInventoryItem(dict_request, customData = null, extraHeaders = 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RevokeInventoryItem",
@@ -1212,6 +1298,7 @@ static func RevokeInventoryItems(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RevokeInventoryItems",
@@ -1226,6 +1313,7 @@ static func RunTask(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/RunTask",
@@ -1240,6 +1328,7 @@ static func SendAccountRecoveryEmail(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SendAccountRecoveryEmail",
@@ -1254,6 +1343,7 @@ static func SetCatalogItems(dict_request, customData = null, extraHeaders = null
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetCatalogItems",
@@ -1268,6 +1358,7 @@ static func SetPlayerSecret(dict_request, customData = null, extraHeaders = null
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetPlayerSecret",
@@ -1282,6 +1373,7 @@ static func SetPublishedRevision(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetPublishedRevision",
@@ -1296,6 +1388,7 @@ static func SetPublisherData(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetPublisherData",
@@ -1310,6 +1403,7 @@ static func SetStoreItems(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetStoreItems",
@@ -1324,6 +1418,7 @@ static func SetTitleData(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetTitleData",
@@ -1338,6 +1433,7 @@ static func SetTitleDataAndOverrides(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetTitleDataAndOverrides",
@@ -1352,6 +1448,7 @@ static func SetTitleInternalData(dict_request, customData = null, extraHeaders =
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetTitleInternalData",
@@ -1366,6 +1463,7 @@ static func SetupPushNotification(dict_request, customData = null, extraHeaders 
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SetupPushNotification",
@@ -1380,6 +1478,7 @@ static func SubtractUserVirtualCurrency(dict_request, customData = null, extraHe
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/SubtractUserVirtualCurrency",
@@ -1394,6 +1493,7 @@ static func UpdateBans(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateBans",
@@ -1408,6 +1508,7 @@ static func UpdateCatalogItems(dict_request, customData = null, extraHeaders = n
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateCatalogItems",
@@ -1422,6 +1523,7 @@ static func UpdateCloudScript(dict_request, customData = null, extraHeaders = nu
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateCloudScript",
@@ -1436,6 +1538,7 @@ static func UpdateOpenIdConnection(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateOpenIdConnection",
@@ -1450,6 +1553,7 @@ static func UpdatePlayerSharedSecret(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdatePlayerSharedSecret",
@@ -1464,6 +1568,7 @@ static func UpdatePlayerStatisticDefinition(dict_request, customData = null, ext
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdatePlayerStatisticDefinition",
@@ -1478,6 +1583,7 @@ static func UpdatePolicy(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdatePolicy",
@@ -1492,6 +1598,7 @@ static func UpdateRandomResultTables(dict_request, customData = null, extraHeade
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateRandomResultTables",
@@ -1506,6 +1613,7 @@ static func UpdateSegment(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateSegment",
@@ -1520,6 +1628,7 @@ static func UpdateStoreItems(dict_request, customData = null, extraHeaders = nul
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateStoreItems",
@@ -1534,6 +1643,7 @@ static func UpdateTask(dict_request, customData = null, extraHeaders = null):
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateTask",
@@ -1548,6 +1658,7 @@ static func UpdateUserData(dict_request, customData = null, extraHeaders = null)
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserData",
@@ -1562,6 +1673,7 @@ static func UpdateUserInternalData(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserInternalData",
@@ -1576,6 +1688,7 @@ static func UpdateUserPublisherData(dict_request, customData = null, extraHeader
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserPublisherData",
@@ -1590,6 +1703,7 @@ static func UpdateUserPublisherInternalData(dict_request, customData = null, ext
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserPublisherInternalData",
@@ -1604,6 +1718,7 @@ static func UpdateUserPublisherReadOnlyData(dict_request, customData = null, ext
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserPublisherReadOnlyData",
@@ -1618,6 +1733,7 @@ static func UpdateUserReadOnlyData(dict_request, customData = null, extraHeaders
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserReadOnlyData",
@@ -1632,6 +1748,7 @@ static func UpdateUserTitleDisplayName(dict_request, customData = null, extraHea
         # Must have DeveloperSecretKey set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Admin/UpdateUserTitleDisplayName",

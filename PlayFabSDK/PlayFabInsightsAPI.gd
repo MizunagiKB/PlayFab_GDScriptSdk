@@ -8,6 +8,7 @@ static func GetDetails(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Insights/GetDetails",
@@ -22,6 +23,7 @@ static func GetLimits(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Insights/GetLimits",
@@ -36,6 +38,7 @@ static func GetOperationStatus(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Insights/GetOperationStatus",
@@ -50,6 +53,7 @@ static func GetPendingOperations(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Insights/GetPendingOperations",
@@ -64,6 +68,7 @@ static func SetPerformance(dict_request, customData = null, extraHeaders = null)
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Insights/SetPerformance",
@@ -78,6 +83,7 @@ static func SetStorageRetention(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Insights/SetStorageRetention",

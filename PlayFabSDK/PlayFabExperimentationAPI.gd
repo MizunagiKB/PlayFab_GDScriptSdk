@@ -8,6 +8,7 @@ static func CreateExclusionGroup(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/CreateExclusionGroup",
@@ -22,6 +23,7 @@ static func CreateExperiment(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/CreateExperiment",
@@ -36,6 +38,7 @@ static func DeleteExclusionGroup(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/DeleteExclusionGroup",
@@ -50,6 +53,7 @@ static func DeleteExperiment(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/DeleteExperiment",
@@ -64,6 +68,7 @@ static func GetExclusionGroups(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/GetExclusionGroups",
@@ -78,6 +83,7 @@ static func GetExclusionGroupTraffic(dict_request, customData = null, extraHeade
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/GetExclusionGroupTraffic",
@@ -92,6 +98,7 @@ static func GetExperiments(dict_request, customData = null, extraHeaders = null)
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/GetExperiments",
@@ -106,6 +113,7 @@ static func GetLatestScorecard(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/GetLatestScorecard",
@@ -120,6 +128,7 @@ static func GetTreatmentAssignment(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/GetTreatmentAssignment",
@@ -134,6 +143,7 @@ static func StartExperiment(dict_request, customData = null, extraHeaders = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/StartExperiment",
@@ -148,6 +158,7 @@ static func StopExperiment(dict_request, customData = null, extraHeaders = null)
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/StopExperiment",
@@ -162,6 +173,7 @@ static func UpdateExclusionGroup(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/UpdateExclusionGroup",
@@ -176,6 +188,7 @@ static func UpdateExperiment(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Experimentation/UpdateExperiment",

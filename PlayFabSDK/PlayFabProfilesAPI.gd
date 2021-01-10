@@ -8,6 +8,7 @@ static func GetGlobalPolicy(dict_request, customData = null, extraHeaders = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/GetGlobalPolicy",
@@ -22,6 +23,7 @@ static func GetProfile(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/GetProfile",
@@ -36,6 +38,7 @@ static func GetProfiles(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/GetProfiles",
@@ -50,6 +53,7 @@ static func GetTitlePlayersFromMasterPlayerAccountIds(dict_request, customData =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/GetTitlePlayersFromMasterPlayerAccountIds",
@@ -64,6 +68,7 @@ static func SetGlobalPolicy(dict_request, customData = null, extraHeaders = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/SetGlobalPolicy",
@@ -78,6 +83,7 @@ static func SetProfileLanguage(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/SetProfileLanguage",
@@ -92,6 +98,7 @@ static func SetProfilePolicy(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Profile/SetProfilePolicy",

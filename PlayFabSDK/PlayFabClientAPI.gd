@@ -25,6 +25,7 @@ static func AcceptTrade(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AcceptTrade",
@@ -39,6 +40,7 @@ static func AddFriend(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AddFriend",
@@ -53,6 +55,7 @@ static func AddGenericID(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AddGenericID",
@@ -67,6 +70,7 @@ static func AddOrUpdateContactEmail(dict_request, customData = null, extraHeader
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AddOrUpdateContactEmail",
@@ -81,6 +85,7 @@ static func AddSharedGroupMembers(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AddSharedGroupMembers",
@@ -95,6 +100,7 @@ static func AddUsernamePassword(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AddUsernamePassword",
@@ -109,6 +115,7 @@ static func AddUserVirtualCurrency(dict_request, customData = null, extraHeaders
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AddUserVirtualCurrency",
@@ -123,6 +130,7 @@ static func AndroidDevicePushNotificationRegistration(dict_request, customData =
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/AndroidDevicePushNotificationRegistration",
@@ -137,6 +145,7 @@ static func AttributeInstall(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_AttributeInstallResult")
     PlayFabHTTPRequest.api_request(
         "/Client/AttributeInstall",
@@ -151,6 +160,7 @@ static func CancelTrade(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/CancelTrade",
@@ -165,6 +175,7 @@ static func ConfirmPurchase(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ConfirmPurchase",
@@ -179,6 +190,7 @@ static func ConsumeItem(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ConsumeItem",
@@ -193,6 +205,7 @@ static func ConsumeMicrosoftStoreEntitlements(dict_request, customData = null, e
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ConsumeMicrosoftStoreEntitlements",
@@ -207,6 +220,7 @@ static func ConsumePSNEntitlements(dict_request, customData = null, extraHeaders
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ConsumePSNEntitlements",
@@ -221,6 +235,7 @@ static func ConsumeXboxEntitlements(dict_request, customData = null, extraHeader
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ConsumeXboxEntitlements",
@@ -235,6 +250,7 @@ static func CreateSharedGroup(dict_request, customData = null, extraHeaders = nu
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/CreateSharedGroup",
@@ -249,6 +265,7 @@ static func ExecuteCloudScript(dict_request, customData = null, extraHeaders = n
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ExecuteCloudScript",
@@ -263,6 +280,7 @@ static func GetAccountInfo(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetAccountInfo",
@@ -277,6 +295,7 @@ static func GetAdPlacements(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetAdPlacements",
@@ -291,6 +310,7 @@ static func GetAllUsersCharacters(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetAllUsersCharacters",
@@ -305,6 +325,7 @@ static func GetCatalogItems(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCatalogItems",
@@ -319,6 +340,7 @@ static func GetCharacterData(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCharacterData",
@@ -333,6 +355,7 @@ static func GetCharacterInventory(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCharacterInventory",
@@ -347,6 +370,7 @@ static func GetCharacterLeaderboard(dict_request, customData = null, extraHeader
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCharacterLeaderboard",
@@ -361,6 +385,7 @@ static func GetCharacterReadOnlyData(dict_request, customData = null, extraHeade
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCharacterReadOnlyData",
@@ -375,6 +400,7 @@ static func GetCharacterStatistics(dict_request, customData = null, extraHeaders
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCharacterStatistics",
@@ -389,6 +415,7 @@ static func GetContentDownloadUrl(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetContentDownloadUrl",
@@ -403,6 +430,7 @@ static func GetCurrentGames(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetCurrentGames",
@@ -417,6 +445,7 @@ static func GetFriendLeaderboard(dict_request, customData = null, extraHeaders =
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetFriendLeaderboard",
@@ -431,6 +460,7 @@ static func GetFriendLeaderboardAroundPlayer(dict_request, customData = null, ex
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetFriendLeaderboardAroundPlayer",
@@ -445,6 +475,7 @@ static func GetFriendsList(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetFriendsList",
@@ -459,6 +490,7 @@ static func GetGameServerRegions(dict_request, customData = null, extraHeaders =
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetGameServerRegions",
@@ -473,6 +505,7 @@ static func GetLeaderboard(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetLeaderboard",
@@ -487,6 +520,7 @@ static func GetLeaderboardAroundCharacter(dict_request, customData = null, extra
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetLeaderboardAroundCharacter",
@@ -501,6 +535,7 @@ static func GetLeaderboardAroundPlayer(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetLeaderboardAroundPlayer",
@@ -515,6 +550,7 @@ static func GetLeaderboardForUserCharacters(dict_request, customData = null, ext
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetLeaderboardForUserCharacters",
@@ -529,6 +565,7 @@ static func GetPaymentToken(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPaymentToken",
@@ -543,6 +580,7 @@ static func GetPhotonAuthenticationToken(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPhotonAuthenticationToken",
@@ -557,6 +595,7 @@ static func GetPlayerCombinedInfo(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerCombinedInfo",
@@ -571,6 +610,7 @@ static func GetPlayerProfile(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerProfile",
@@ -585,6 +625,7 @@ static func GetPlayerSegments(dict_request, customData = null, extraHeaders = nu
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerSegments",
@@ -599,6 +640,7 @@ static func GetPlayerStatistics(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerStatistics",
@@ -613,6 +655,7 @@ static func GetPlayerStatisticVersions(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerStatisticVersions",
@@ -627,6 +670,7 @@ static func GetPlayerTags(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerTags",
@@ -641,6 +685,7 @@ static func GetPlayerTrades(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayerTrades",
@@ -655,6 +700,7 @@ static func GetPlayFabIDsFromFacebookIDs(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromFacebookIDs",
@@ -669,6 +715,7 @@ static func GetPlayFabIDsFromFacebookInstantGamesIds(dict_request, customData = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromFacebookInstantGamesIds",
@@ -683,6 +730,7 @@ static func GetPlayFabIDsFromGameCenterIDs(dict_request, customData = null, extr
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromGameCenterIDs",
@@ -697,6 +745,7 @@ static func GetPlayFabIDsFromGenericIDs(dict_request, customData = null, extraHe
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromGenericIDs",
@@ -711,6 +760,7 @@ static func GetPlayFabIDsFromGoogleIDs(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromGoogleIDs",
@@ -725,6 +775,7 @@ static func GetPlayFabIDsFromKongregateIDs(dict_request, customData = null, extr
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromKongregateIDs",
@@ -739,6 +790,7 @@ static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, customData = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromNintendoSwitchDeviceIds",
@@ -753,6 +805,7 @@ static func GetPlayFabIDsFromPSNAccountIDs(dict_request, customData = null, extr
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromPSNAccountIDs",
@@ -767,6 +820,7 @@ static func GetPlayFabIDsFromSteamIDs(dict_request, customData = null, extraHead
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromSteamIDs",
@@ -781,6 +835,7 @@ static func GetPlayFabIDsFromTwitchIDs(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromTwitchIDs",
@@ -795,6 +850,7 @@ static func GetPlayFabIDsFromXboxLiveIDs(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPlayFabIDsFromXboxLiveIDs",
@@ -809,6 +865,7 @@ static func GetPublisherData(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPublisherData",
@@ -823,6 +880,7 @@ static func GetPurchase(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetPurchase",
@@ -837,6 +895,7 @@ static func GetSharedGroupData(dict_request, customData = null, extraHeaders = n
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetSharedGroupData",
@@ -851,6 +910,7 @@ static func GetStoreItems(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetStoreItems",
@@ -865,6 +925,7 @@ static func GetTime(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetTime",
@@ -879,6 +940,7 @@ static func GetTitleData(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetTitleData",
@@ -893,6 +955,7 @@ static func GetTitleNews(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetTitleNews",
@@ -904,6 +967,7 @@ static func GetTitleNews(dict_request, customData = null, extraHeaders = null):
 static func GetTitlePublicKey(dict_request, customData = null, extraHeaders = null):
 
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetTitlePublicKey",
@@ -918,6 +982,7 @@ static func GetTradeStatus(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetTradeStatus",
@@ -932,6 +997,7 @@ static func GetUserData(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetUserData",
@@ -946,6 +1012,7 @@ static func GetUserInventory(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetUserInventory",
@@ -960,6 +1027,7 @@ static func GetUserPublisherData(dict_request, customData = null, extraHeaders =
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetUserPublisherData",
@@ -974,6 +1042,7 @@ static func GetUserPublisherReadOnlyData(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetUserPublisherReadOnlyData",
@@ -988,6 +1057,7 @@ static func GetUserReadOnlyData(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetUserReadOnlyData",
@@ -999,6 +1069,7 @@ static func GetUserReadOnlyData(dict_request, customData = null, extraHeaders = 
 static func GetWindowsHelloChallenge(dict_request, customData = null, extraHeaders = null):
 
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GetWindowsHelloChallenge",
@@ -1013,6 +1084,7 @@ static func GrantCharacterToUser(dict_request, customData = null, extraHeaders =
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/GrantCharacterToUser",
@@ -1027,6 +1099,7 @@ static func LinkAndroidDeviceID(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkAndroidDeviceID",
@@ -1041,6 +1114,7 @@ static func LinkApple(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkApple",
@@ -1055,6 +1129,7 @@ static func LinkCustomID(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkCustomID",
@@ -1069,6 +1144,7 @@ static func LinkFacebookAccount(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkFacebookAccount",
@@ -1083,6 +1159,7 @@ static func LinkFacebookInstantGamesId(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkFacebookInstantGamesId",
@@ -1097,6 +1174,7 @@ static func LinkGameCenterAccount(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkGameCenterAccount",
@@ -1111,6 +1189,7 @@ static func LinkGoogleAccount(dict_request, customData = null, extraHeaders = nu
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkGoogleAccount",
@@ -1125,6 +1204,7 @@ static func LinkIOSDeviceID(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkIOSDeviceID",
@@ -1139,6 +1219,7 @@ static func LinkKongregate(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkKongregate",
@@ -1153,6 +1234,7 @@ static func LinkNintendoServiceAccount(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkNintendoServiceAccount",
@@ -1167,6 +1249,7 @@ static func LinkNintendoSwitchDeviceId(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkNintendoSwitchDeviceId",
@@ -1181,6 +1264,7 @@ static func LinkOpenIdConnect(dict_request, customData = null, extraHeaders = nu
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkOpenIdConnect",
@@ -1195,6 +1279,7 @@ static func LinkPSNAccount(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkPSNAccount",
@@ -1209,6 +1294,7 @@ static func LinkSteamAccount(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkSteamAccount",
@@ -1223,6 +1309,7 @@ static func LinkTwitch(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkTwitch",
@@ -1237,6 +1324,7 @@ static func LinkWindowsHello(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkWindowsHello",
@@ -1251,6 +1339,7 @@ static func LinkXboxAccount(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/LinkXboxAccount",
@@ -1269,6 +1358,7 @@ static func LoginWithAndroidDeviceID(dict_request, customData = null, extraHeade
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithAndroidDeviceID",
@@ -1287,6 +1377,7 @@ static func LoginWithApple(dict_request, customData = null, extraHeaders = null)
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithApple",
@@ -1305,6 +1396,7 @@ static func LoginWithCustomID(dict_request, customData = null, extraHeaders = nu
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithCustomID",
@@ -1323,6 +1415,7 @@ static func LoginWithEmailAddress(dict_request, customData = null, extraHeaders 
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithEmailAddress",
@@ -1341,6 +1434,7 @@ static func LoginWithFacebook(dict_request, customData = null, extraHeaders = nu
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithFacebook",
@@ -1359,6 +1453,7 @@ static func LoginWithFacebookInstantGamesId(dict_request, customData = null, ext
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithFacebookInstantGamesId",
@@ -1377,6 +1472,7 @@ static func LoginWithGameCenter(dict_request, customData = null, extraHeaders = 
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithGameCenter",
@@ -1395,6 +1491,7 @@ static func LoginWithGoogleAccount(dict_request, customData = null, extraHeaders
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithGoogleAccount",
@@ -1413,6 +1510,7 @@ static func LoginWithIOSDeviceID(dict_request, customData = null, extraHeaders =
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithIOSDeviceID",
@@ -1431,6 +1529,7 @@ static func LoginWithKongregate(dict_request, customData = null, extraHeaders = 
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithKongregate",
@@ -1449,6 +1548,7 @@ static func LoginWithNintendoServiceAccount(dict_request, customData = null, ext
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithNintendoServiceAccount",
@@ -1467,6 +1567,7 @@ static func LoginWithNintendoSwitchDeviceId(dict_request, customData = null, ext
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithNintendoSwitchDeviceId",
@@ -1485,6 +1586,7 @@ static func LoginWithOpenIdConnect(dict_request, customData = null, extraHeaders
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithOpenIdConnect",
@@ -1503,6 +1605,7 @@ static func LoginWithPlayFab(dict_request, customData = null, extraHeaders = nul
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithPlayFab",
@@ -1521,6 +1624,7 @@ static func LoginWithPSN(dict_request, customData = null, extraHeaders = null):
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithPSN",
@@ -1539,6 +1643,7 @@ static func LoginWithSteam(dict_request, customData = null, extraHeaders = null)
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithSteam",
@@ -1557,6 +1662,7 @@ static func LoginWithTwitch(dict_request, customData = null, extraHeaders = null
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithTwitch",
@@ -1575,6 +1681,7 @@ static func LoginWithWindowsHello(dict_request, customData = null, extraHeaders 
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithWindowsHello",
@@ -1593,6 +1700,7 @@ static func LoginWithXbox(dict_request, customData = null, extraHeaders = null):
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/LoginWithXbox",
@@ -1607,6 +1715,7 @@ static func Matchmake(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/Matchmake",
@@ -1621,6 +1730,7 @@ static func OpenTrade(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/OpenTrade",
@@ -1635,6 +1745,7 @@ static func PayForPurchase(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/PayForPurchase",
@@ -1649,6 +1760,7 @@ static func PurchaseItem(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/PurchaseItem",
@@ -1663,6 +1775,7 @@ static func RedeemCoupon(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RedeemCoupon",
@@ -1677,6 +1790,7 @@ static func RefreshPSNAuthToken(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RefreshPSNAuthToken",
@@ -1691,6 +1805,7 @@ static func RegisterForIOSPushNotification(dict_request, customData = null, extr
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RegisterForIOSPushNotification",
@@ -1709,6 +1824,7 @@ static func RegisterPlayFabUser(dict_request, customData = null, extraHeaders = 
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RegisterPlayFabUserResult")
     PlayFabHTTPRequest.api_request(
         "/Client/RegisterPlayFabUser",
@@ -1727,6 +1843,7 @@ static func RegisterWithWindowsHello(dict_request, customData = null, extraHeade
         # Must be have TitleId set to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_LoginResult")
     PlayFabHTTPRequest.api_request(
         "/Client/RegisterWithWindowsHello",
@@ -1741,6 +1858,7 @@ static func RemoveContactEmail(dict_request, customData = null, extraHeaders = n
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RemoveContactEmail",
@@ -1755,6 +1873,7 @@ static func RemoveFriend(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RemoveFriend",
@@ -1769,6 +1888,7 @@ static func RemoveGenericID(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RemoveGenericID",
@@ -1783,6 +1903,7 @@ static func RemoveSharedGroupMembers(dict_request, customData = null, extraHeade
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RemoveSharedGroupMembers",
@@ -1797,6 +1918,7 @@ static func ReportAdActivity(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ReportAdActivity",
@@ -1811,6 +1933,7 @@ static func ReportDeviceInfo(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ReportDeviceInfo",
@@ -1825,6 +1948,7 @@ static func ReportPlayer(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ReportPlayer",
@@ -1839,6 +1963,7 @@ static func RestoreIOSPurchases(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RestoreIOSPurchases",
@@ -1853,6 +1978,7 @@ static func RewardAdActivity(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/RewardAdActivity",
@@ -1864,6 +1990,7 @@ static func RewardAdActivity(dict_request, customData = null, extraHeaders = nul
 static func SendAccountRecoveryEmail(dict_request, customData = null, extraHeaders = null):
 
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/SendAccountRecoveryEmail",
@@ -1878,6 +2005,7 @@ static func SetFriendTags(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/SetFriendTags",
@@ -1892,6 +2020,7 @@ static func SetPlayerSecret(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/SetPlayerSecret",
@@ -1906,6 +2035,7 @@ static func StartGame(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/StartGame",
@@ -1920,6 +2050,7 @@ static func StartPurchase(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/StartPurchase",
@@ -1934,6 +2065,7 @@ static func SubtractUserVirtualCurrency(dict_request, customData = null, extraHe
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/SubtractUserVirtualCurrency",
@@ -1948,6 +2080,7 @@ static func UnlinkAndroidDeviceID(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkAndroidDeviceID",
@@ -1962,6 +2095,7 @@ static func UnlinkApple(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkApple",
@@ -1976,6 +2110,7 @@ static func UnlinkCustomID(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkCustomID",
@@ -1990,6 +2125,7 @@ static func UnlinkFacebookAccount(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkFacebookAccount",
@@ -2004,6 +2140,7 @@ static func UnlinkFacebookInstantGamesId(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkFacebookInstantGamesId",
@@ -2018,6 +2155,7 @@ static func UnlinkGameCenterAccount(dict_request, customData = null, extraHeader
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkGameCenterAccount",
@@ -2032,6 +2170,7 @@ static func UnlinkGoogleAccount(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkGoogleAccount",
@@ -2046,6 +2185,7 @@ static func UnlinkIOSDeviceID(dict_request, customData = null, extraHeaders = nu
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkIOSDeviceID",
@@ -2060,6 +2200,7 @@ static func UnlinkKongregate(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkKongregate",
@@ -2074,6 +2215,7 @@ static func UnlinkNintendoServiceAccount(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkNintendoServiceAccount",
@@ -2088,6 +2230,7 @@ static func UnlinkNintendoSwitchDeviceId(dict_request, customData = null, extraH
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkNintendoSwitchDeviceId",
@@ -2102,6 +2245,7 @@ static func UnlinkOpenIdConnect(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkOpenIdConnect",
@@ -2116,6 +2260,7 @@ static func UnlinkPSNAccount(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkPSNAccount",
@@ -2130,6 +2275,7 @@ static func UnlinkSteamAccount(dict_request, customData = null, extraHeaders = n
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkSteamAccount",
@@ -2144,6 +2290,7 @@ static func UnlinkTwitch(dict_request, customData = null, extraHeaders = null):
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkTwitch",
@@ -2158,6 +2305,7 @@ static func UnlinkWindowsHello(dict_request, customData = null, extraHeaders = n
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkWindowsHello",
@@ -2172,6 +2320,7 @@ static func UnlinkXboxAccount(dict_request, customData = null, extraHeaders = nu
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlinkXboxAccount",
@@ -2186,6 +2335,7 @@ static func UnlockContainerInstance(dict_request, customData = null, extraHeader
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlockContainerInstance",
@@ -2200,6 +2350,7 @@ static func UnlockContainerItem(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UnlockContainerItem",
@@ -2214,6 +2365,7 @@ static func UpdateAvatarUrl(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateAvatarUrl",
@@ -2228,6 +2380,7 @@ static func UpdateCharacterData(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateCharacterData",
@@ -2242,6 +2395,7 @@ static func UpdateCharacterStatistics(dict_request, customData = null, extraHead
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateCharacterStatistics",
@@ -2256,6 +2410,7 @@ static func UpdatePlayerStatistics(dict_request, customData = null, extraHeaders
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdatePlayerStatistics",
@@ -2270,6 +2425,7 @@ static func UpdateSharedGroupData(dict_request, customData = null, extraHeaders 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateSharedGroupData",
@@ -2284,6 +2440,7 @@ static func UpdateUserData(dict_request, customData = null, extraHeaders = null)
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateUserData",
@@ -2298,6 +2455,7 @@ static func UpdateUserPublisherData(dict_request, customData = null, extraHeader
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateUserPublisherData",
@@ -2312,6 +2470,7 @@ static func UpdateUserTitleDisplayName(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/UpdateUserTitleDisplayName",
@@ -2326,6 +2485,7 @@ static func ValidateAmazonIAPReceipt(dict_request, customData = null, extraHeade
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ValidateAmazonIAPReceipt",
@@ -2340,6 +2500,7 @@ static func ValidateGooglePlayPurchase(dict_request, customData = null, extraHea
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ValidateGooglePlayPurchase",
@@ -2354,6 +2515,7 @@ static func ValidateIOSReceipt(dict_request, customData = null, extraHeaders = n
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ValidateIOSReceipt",
@@ -2368,6 +2530,7 @@ static func ValidateWindowsStoreReceipt(dict_request, customData = null, extraHe
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/ValidateWindowsStoreReceipt",
@@ -2382,6 +2545,7 @@ static func WriteCharacterEvent(dict_request, customData = null, extraHeaders = 
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/WriteCharacterEvent",
@@ -2396,6 +2560,7 @@ static func WritePlayerEvent(dict_request, customData = null, extraHeaders = nul
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/WritePlayerEvent",
@@ -2410,6 +2575,7 @@ static func WriteTitleEvent(dict_request, customData = null, extraHeaders = null
         # Must be logged in to call this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Client/WriteTitleEvent",

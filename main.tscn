@@ -14,9 +14,9 @@ __meta__ = {
 
 [node name="lbl_displayname" type="Label" parent="ui"]
 margin_left = 64.0
-margin_top = 32.0
+margin_top = 64.0
 margin_right = 184.0
-margin_bottom = 56.0
+margin_bottom = 88.0
 text = "DisplayName"
 align = 2
 valign = 1
@@ -29,12 +29,15 @@ margin_left = 128.0
 margin_right = 320.0
 margin_bottom = 24.0
 text = "TESTUSER_DISPLAY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="lbl_username" type="Label" parent="ui"]
 margin_left = 64.0
-margin_top = 64.0
+margin_top = 96.0
 margin_right = 184.0
-margin_bottom = 88.0
+margin_bottom = 120.0
 text = "Username"
 align = 2
 valign = 1
@@ -53,9 +56,9 @@ __meta__ = {
 
 [node name="lbl_password" type="Label" parent="ui"]
 margin_left = 64.0
-margin_top = 96.0
+margin_top = 128.0
 margin_right = 184.0
-margin_bottom = 120.0
+margin_bottom = 152.0
 text = "Password"
 align = 2
 valign = 1
@@ -76,9 +79,9 @@ __meta__ = {
 [node name="btn_register" type="Button" parent="ui"]
 margin_left = 192.0
 margin_top = 192.0
-margin_right = 320.0
+margin_right = 384.0
 margin_bottom = 216.0
-text = "PlayFab Register"
+text = "RegisterPlayFabUser"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -86,9 +89,9 @@ __meta__ = {
 [node name="btn_login" type="Button" parent="ui"]
 margin_left = 192.0
 margin_top = 224.0
-margin_right = 320.0
+margin_right = 384.0
 margin_bottom = 248.0
-text = "PlayFab Login"
+text = "LoginWithPlayFab"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -190,5 +193,16 @@ wrap_enabled = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="btn_event" type="Button" parent="ui"]
+margin_left = 192.0
+margin_top = 288.0
+margin_right = 384.0
+margin_bottom = 312.0
+text = "WriteEvent"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="ui/btn_register" to="." method="_on_btn_register_pressed"]
 [connection signal="pressed" from="ui/btn_login" to="." method="_on_btn_login_pressed"]
+[connection signal="pressed" from="ui/btn_event" to="." method="_on_btn_event_pressed"]

@@ -8,6 +8,7 @@ static func WriteEvents(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Event/WriteEvents",
@@ -22,6 +23,7 @@ static func WriteTelemetryEvents(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Event/WriteTelemetryEvents",

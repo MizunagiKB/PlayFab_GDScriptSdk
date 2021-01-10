@@ -4,8 +4,8 @@ extends Node2D
 func reset_ui():
     $ui/lbl_result/value.clear()
     $ui/lbl_response_code/value.clear()
-    $ui/lbl_headers/value.text = "";
-    $ui/lbl_json_parse_result/value.text = "";
+    $ui/lbl_headers/value.text = ""
+    $ui/lbl_json_parse_result/value.text = ""
     
 
 func _request_completed(result: int, response_code: int, headers, json_parse_result: JSONParseResult):
@@ -20,10 +20,7 @@ func _ready():
     # In order for tests to run, you need a valid testTitleData.json file
     # Format specification here: https://github.com/PlayFab/SDKGenerator/blob/master/JenkinsConsoleUtility/testTitleData.md
     var f = File.new()
-    var error = f.open("res://testTitleData.json", File.READ)
-
-    assert(error == OK)
-
+    f.open("res://testTitleData.json", File.READ)
     var res = JSON.parse(f.get_as_text())
     f.close()
 
@@ -55,3 +52,14 @@ func _on_btn_login_pressed():
 
     reset_ui()
     PlayFab.Client.LoginWithPlayFab(dict_request)
+
+
+func _on_btn_event_pressed():
+
+    var dict_request = {
+        "Events": [
+            {"EventNamespace": "custom.test", "Name": "TESTEVENT", "Payload": {"ABCDEFGH": "01234567"}}
+        ]
+    }
+
+    PlayFab.Events.WriteEvents(dict_request)

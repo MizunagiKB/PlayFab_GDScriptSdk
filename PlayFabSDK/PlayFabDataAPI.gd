@@ -8,6 +8,7 @@ static func AbortFileUploads(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/File/AbortFileUploads",
@@ -22,6 +23,7 @@ static func DeleteFiles(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/File/DeleteFiles",
@@ -36,6 +38,7 @@ static func FinalizeFileUploads(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/File/FinalizeFileUploads",
@@ -50,6 +53,7 @@ static func GetFiles(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/File/GetFiles",
@@ -64,6 +68,7 @@ static func GetObjects(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Object/GetObjects",
@@ -78,6 +83,7 @@ static func InitiateFileUploads(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/File/InitiateFileUploads",
@@ -92,6 +98,7 @@ static func SetObjects(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Object/SetObjects",

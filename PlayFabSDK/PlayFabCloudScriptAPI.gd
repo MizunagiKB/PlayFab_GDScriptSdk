@@ -8,6 +8,7 @@ static func ExecuteEntityCloudScript(dict_request, customData = null, extraHeade
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/ExecuteEntityCloudScript",
@@ -22,6 +23,7 @@ static func ExecuteFunction(dict_request, customData = null, extraHeaders = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/ExecuteFunction",
@@ -36,6 +38,7 @@ static func ListFunctions(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/ListFunctions",
@@ -50,6 +53,7 @@ static func ListHttpFunctions(dict_request, customData = null, extraHeaders = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/ListHttpFunctions",
@@ -64,6 +68,7 @@ static func ListQueuedFunctions(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/ListQueuedFunctions",
@@ -78,6 +83,7 @@ static func PostFunctionResultForEntityTriggeredAction(dict_request, customData 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/PostFunctionResultForEntityTriggeredAction",
@@ -92,6 +98,7 @@ static func PostFunctionResultForFunctionExecution(dict_request, customData = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/PostFunctionResultForFunctionExecution",
@@ -106,6 +113,7 @@ static func PostFunctionResultForPlayerTriggeredAction(dict_request, customData 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/PostFunctionResultForPlayerTriggeredAction",
@@ -120,6 +128,7 @@ static func PostFunctionResultForScheduledTask(dict_request, customData = null, 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/PostFunctionResultForScheduledTask",
@@ -134,6 +143,7 @@ static func RegisterHttpFunction(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/RegisterHttpFunction",
@@ -148,6 +158,7 @@ static func RegisterQueuedFunction(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/RegisterQueuedFunction",
@@ -162,6 +173,7 @@ static func UnregisterFunction(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/CloudScript/UnregisterFunction",

@@ -8,6 +8,7 @@ static func CancelAllMatchmakingTicketsForPlayer(dict_request, customData = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CancelAllMatchmakingTicketsForPlayer",
@@ -22,6 +23,7 @@ static func CancelAllServerBackfillTicketsForPlayer(dict_request, customData = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CancelAllServerBackfillTicketsForPlayer",
@@ -36,6 +38,7 @@ static func CancelMatchmakingTicket(dict_request, customData = null, extraHeader
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CancelMatchmakingTicket",
@@ -50,6 +53,7 @@ static func CancelServerBackfillTicket(dict_request, customData = null, extraHea
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CancelServerBackfillTicket",
@@ -64,6 +68,7 @@ static func CreateBuildAlias(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/CreateBuildAlias",
@@ -78,6 +83,7 @@ static func CreateBuildWithCustomContainer(dict_request, customData = null, extr
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/CreateBuildWithCustomContainer",
@@ -92,6 +98,7 @@ static func CreateBuildWithManagedContainer(dict_request, customData = null, ext
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/CreateBuildWithManagedContainer",
@@ -106,6 +113,7 @@ static func CreateBuildWithProcessBasedServer(dict_request, customData = null, e
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/CreateBuildWithProcessBasedServer",
@@ -120,6 +128,7 @@ static func CreateMatchmakingTicket(dict_request, customData = null, extraHeader
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CreateMatchmakingTicket",
@@ -134,6 +143,7 @@ static func CreateRemoteUser(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/CreateRemoteUser",
@@ -148,6 +158,7 @@ static func CreateServerBackfillTicket(dict_request, customData = null, extraHea
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CreateServerBackfillTicket",
@@ -162,6 +173,7 @@ static func CreateServerMatchmakingTicket(dict_request, customData = null, extra
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/CreateServerMatchmakingTicket",
@@ -176,6 +188,7 @@ static func DeleteAsset(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteAsset",
@@ -190,6 +203,7 @@ static func DeleteBuild(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteBuild",
@@ -204,6 +218,7 @@ static func DeleteBuildAlias(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteBuildAlias",
@@ -218,6 +233,7 @@ static func DeleteBuildRegion(dict_request, customData = null, extraHeaders = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteBuildRegion",
@@ -232,6 +248,7 @@ static func DeleteCertificate(dict_request, customData = null, extraHeaders = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteCertificate",
@@ -246,6 +263,7 @@ static func DeleteContainerImageRepository(dict_request, customData = null, extr
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteContainerImageRepository",
@@ -260,6 +278,7 @@ static func DeleteRemoteUser(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/DeleteRemoteUser",
@@ -274,6 +293,7 @@ static func EnableMultiplayerServersForTitle(dict_request, customData = null, ex
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/EnableMultiplayerServersForTitle",
@@ -288,6 +308,7 @@ static func GetAssetUploadUrl(dict_request, customData = null, extraHeaders = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetAssetUploadUrl",
@@ -302,6 +323,7 @@ static func GetBuild(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetBuild",
@@ -316,6 +338,7 @@ static func GetBuildAlias(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetBuildAlias",
@@ -330,6 +353,7 @@ static func GetContainerRegistryCredentials(dict_request, customData = null, ext
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetContainerRegistryCredentials",
@@ -344,6 +368,7 @@ static func GetMatch(dict_request, customData = null, extraHeaders = null):
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/GetMatch",
@@ -358,6 +383,7 @@ static func GetMatchmakingTicket(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/GetMatchmakingTicket",
@@ -372,6 +398,7 @@ static func GetMultiplayerServerDetails(dict_request, customData = null, extraHe
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetMultiplayerServerDetails",
@@ -386,6 +413,7 @@ static func GetMultiplayerServerLogs(dict_request, customData = null, extraHeade
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetMultiplayerServerLogs",
@@ -400,6 +428,7 @@ static func GetMultiplayerSessionLogsBySessionId(dict_request, customData = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetMultiplayerSessionLogsBySessionId",
@@ -414,6 +443,7 @@ static func GetQueueStatistics(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/GetQueueStatistics",
@@ -428,6 +458,7 @@ static func GetRemoteLoginEndpoint(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetRemoteLoginEndpoint",
@@ -442,6 +473,7 @@ static func GetServerBackfillTicket(dict_request, customData = null, extraHeader
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/GetServerBackfillTicket",
@@ -456,6 +488,7 @@ static func GetTitleEnabledForMultiplayerServersStatus(dict_request, customData 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetTitleEnabledForMultiplayerServersStatus",
@@ -470,6 +503,7 @@ static func GetTitleMultiplayerServersQuotas(dict_request, customData = null, ex
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/GetTitleMultiplayerServersQuotas",
@@ -484,6 +518,7 @@ static func JoinMatchmakingTicket(dict_request, customData = null, extraHeaders 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/JoinMatchmakingTicket",
@@ -498,6 +533,7 @@ static func ListArchivedMultiplayerServers(dict_request, customData = null, extr
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListArchivedMultiplayerServers",
@@ -512,6 +548,7 @@ static func ListAssetSummaries(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListAssetSummaries",
@@ -526,6 +563,7 @@ static func ListBuildAliases(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListBuildAliases",
@@ -540,6 +578,7 @@ static func ListBuildSummaries(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListBuildSummaries",
@@ -554,6 +593,7 @@ static func ListBuildSummariesV2(dict_request, customData = null, extraHeaders =
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListBuildSummariesV2",
@@ -568,6 +608,7 @@ static func ListCertificateSummaries(dict_request, customData = null, extraHeade
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListCertificateSummaries",
@@ -582,6 +623,7 @@ static func ListContainerImages(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListContainerImages",
@@ -596,6 +638,7 @@ static func ListContainerImageTags(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListContainerImageTags",
@@ -610,6 +653,7 @@ static func ListMatchmakingTicketsForPlayer(dict_request, customData = null, ext
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/ListMatchmakingTicketsForPlayer",
@@ -624,6 +668,7 @@ static func ListMultiplayerServers(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListMultiplayerServers",
@@ -635,6 +680,7 @@ static func ListMultiplayerServers(dict_request, customData = null, extraHeaders
 static func ListPartyQosServers(dict_request, customData = null, extraHeaders = null):
 
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListPartyQosServers",
@@ -649,6 +695,7 @@ static func ListQosServersForTitle(dict_request, customData = null, extraHeaders
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListQosServersForTitle",
@@ -663,6 +710,7 @@ static func ListServerBackfillTicketsForPlayer(dict_request, customData = null, 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/Match/ListServerBackfillTicketsForPlayer",
@@ -677,6 +725,7 @@ static func ListVirtualMachineSummaries(dict_request, customData = null, extraHe
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ListVirtualMachineSummaries",
@@ -691,6 +740,7 @@ static func RequestMultiplayerServer(dict_request, customData = null, extraHeade
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/RequestMultiplayerServer",
@@ -705,6 +755,7 @@ static func RolloverContainerRegistryCredentials(dict_request, customData = null
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/RolloverContainerRegistryCredentials",
@@ -719,6 +770,7 @@ static func ShutdownMultiplayerServer(dict_request, customData = null, extraHead
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/ShutdownMultiplayerServer",
@@ -733,6 +785,7 @@ static func UntagContainerImage(dict_request, customData = null, extraHeaders = 
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/UntagContainerImage",
@@ -747,6 +800,7 @@ static func UpdateBuildAlias(dict_request, customData = null, extraHeaders = nul
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/UpdateBuildAlias",
@@ -761,6 +815,7 @@ static func UpdateBuildRegion(dict_request, customData = null, extraHeaders = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/UpdateBuildRegion",
@@ -775,6 +830,7 @@ static func UpdateBuildRegions(dict_request, customData = null, extraHeaders = n
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/UpdateBuildRegions",
@@ -789,6 +845,7 @@ static func UploadCertificate(dict_request, customData = null, extraHeaders = nu
         # Must call GetEntityToken before calling this method
         assert(false)
 
+    PlayFabHTTPRequest.reset_connection()
     PlayFabHTTPRequest.connect("request_completed", PlayFabHTTPRequest, "_evt_RequestCompleted")
     PlayFabHTTPRequest.api_request(
         "/MultiplayerServer/UploadCertificate",
