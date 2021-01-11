@@ -9,72 +9,72 @@ extends Node
 # -------------------------------------------------------------------- func(s)
 
 
-static func GetDetails(dict_request, custom_data = null, dict_header_extra = {}):
+static func GetDetails(dict_request, user_callback = null, dict_header_extra = {}):
 
-    PlayFab._http_cli.request_append(
+    return PlayFab._http_cli.request_append(
         "/Insights/GetDetails",
         dict_request,
-        custom_data,
+        user_callback,
         dict_header_extra,
         [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
         []
     )
 
 
-static func GetLimits(dict_request, custom_data = null, dict_header_extra = {}):
+static func GetLimits(dict_request, user_callback = null, dict_header_extra = {}):
 
-    PlayFab._http_cli.request_append(
+    return PlayFab._http_cli.request_append(
         "/Insights/GetLimits",
         dict_request,
-        custom_data,
+        user_callback,
         dict_header_extra,
         [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
         []
     )
 
 
-static func GetOperationStatus(dict_request, custom_data = null, dict_header_extra = {}):
+static func GetOperationStatus(dict_request, user_callback = null, dict_header_extra = {}):
 
-    PlayFab._http_cli.request_append(
+    return PlayFab._http_cli.request_append(
         "/Insights/GetOperationStatus",
         dict_request,
-        custom_data,
+        user_callback,
         dict_header_extra,
         [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
         []
     )
 
 
-static func GetPendingOperations(dict_request, custom_data = null, dict_header_extra = {}):
+static func GetPendingOperations(dict_request, user_callback = null, dict_header_extra = {}):
 
-    PlayFab._http_cli.request_append(
+    return PlayFab._http_cli.request_append(
         "/Insights/GetPendingOperations",
         dict_request,
-        custom_data,
+        user_callback,
         dict_header_extra,
         [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
         []
     )
 
 
-static func SetPerformance(dict_request, custom_data = null, dict_header_extra = {}):
+static func SetPerformance(dict_request, user_callback = null, dict_header_extra = {}):
 
-    PlayFab._http_cli.request_append(
+    return PlayFab._http_cli.request_append(
         "/Insights/SetPerformance",
         dict_request,
-        custom_data,
+        user_callback,
         dict_header_extra,
         [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
         []
     )
 
 
-static func SetStorageRetention(dict_request, custom_data = null, dict_header_extra = {}):
+static func SetStorageRetention(dict_request, user_callback = null, dict_header_extra = {}):
 
-    PlayFab._http_cli.request_append(
+    return PlayFab._http_cli.request_append(
         "/Insights/SetStorageRetention",
         dict_request,
-        custom_data,
+        user_callback,
         dict_header_extra,
         [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
         []

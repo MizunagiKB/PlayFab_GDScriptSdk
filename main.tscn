@@ -2,8 +2,39 @@
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 
-[node name="main" type="Node2D"]
+[node name="main" type="Control"]
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tab_container" type="TabContainer" parent="."]
+margin_left = 208.0
+margin_top = 64.0
+margin_right = 688.0
+margin_bottom = 512.0
+tab_align = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Data" type="Panel" parent="tab_container"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -684.0
+margin_bottom = -376.0
+
+[node name="btn_initiate_file_uploads" type="Button" parent="tab_container/Data"]
+margin_left = 12.0
+margin_top = 8.0
+margin_right = 204.0
+margin_bottom = 40.0
+text = "InitiateFileUploads"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ui" type="Control" parent="."]
 margin_right = 40.0
@@ -13,104 +44,106 @@ __meta__ = {
 }
 
 [node name="lbl_displayname" type="Label" parent="ui"]
-margin_left = 64.0
+margin_left = 8.0
 margin_top = 64.0
-margin_right = 184.0
+margin_right = 128.0
 margin_bottom = 88.0
 text = "DisplayName"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="LineEdit" parent="ui/lbl_displayname"]
-margin_left = 128.0
-margin_right = 320.0
-margin_bottom = 24.0
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 56.0
 text = "TESTUSER_DISPLAY"
+caret_blink = true
+caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="lbl_username" type="Label" parent="ui"]
-margin_left = 64.0
-margin_top = 96.0
-margin_right = 184.0
-margin_bottom = 120.0
+margin_left = 8.0
+margin_top = 128.0
+margin_right = 128.0
+margin_bottom = 152.0
 text = "Username"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="LineEdit" parent="ui/lbl_username"]
-margin_left = 128.0
-margin_right = 320.0
-margin_bottom = 24.0
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 56.0
 text = "TESTUSER"
+caret_blink = true
+caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="lbl_password" type="Label" parent="ui"]
-margin_left = 64.0
-margin_top = 128.0
-margin_right = 184.0
-margin_bottom = 152.0
+margin_left = 8.0
+margin_top = 192.0
+margin_right = 128.0
+margin_bottom = 216.0
 text = "Password"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="LineEdit" parent="ui/lbl_password"]
-margin_left = 128.0
-margin_right = 320.0
-margin_bottom = 24.0
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 56.0
 text = "TESTUSER"
 secret = true
+caret_blink = true
+caret_blink_speed = 0.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_register" type="Button" parent="ui"]
-margin_left = 192.0
-margin_top = 192.0
-margin_right = 384.0
-margin_bottom = 216.0
+margin_left = 8.0
+margin_top = 256.0
+margin_right = 200.0
+margin_bottom = 280.0
 text = "RegisterPlayFabUser"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="btn_login" type="Button" parent="ui"]
-margin_left = 192.0
-margin_top = 224.0
-margin_right = 384.0
-margin_bottom = 248.0
+margin_left = 8.0
+margin_top = 288.0
+margin_right = 200.0
+margin_bottom = 312.0
 text = "LoginWithPlayFab"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="lbl_title_id" type="Label" parent="ui"]
-margin_left = 512.0
-margin_top = 32.0
-margin_right = 632.0
-margin_bottom = 56.0
+margin_left = 696.0
+margin_top = 64.0
+margin_right = 768.0
+margin_bottom = 88.0
 text = "TitleId"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="Label" parent="ui/lbl_title_id"]
-margin_left = 128.0
-margin_right = 384.0
+margin_left = 80.0
+margin_right = 256.0
 margin_bottom = 24.0
 valign = 1
 __meta__ = {
@@ -118,57 +151,64 @@ __meta__ = {
 }
 
 [node name="lbl_h_request" type="Label" parent="ui"]
-margin_left = 512.0
-margin_top = 64.0
-margin_right = 632.0
-margin_bottom = 88.0
+margin_left = 696.0
+margin_top = 96.0
+margin_right = 816.0
+margin_bottom = 120.0
 text = "h_request"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="LineEdit" parent="ui/lbl_h_request"]
-margin_left = 128.0
-margin_right = 384.0
-margin_bottom = 24.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 56.0
 editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="lbl_response_code" type="Label" parent="ui"]
-margin_left = 512.0
-margin_top = 96.0
-margin_right = 632.0
-margin_bottom = 120.0
+margin_left = 696.0
+margin_top = 160.0
+margin_right = 816.0
+margin_bottom = 184.0
 text = "response_code"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="LineEdit" parent="ui/lbl_response_code"]
-margin_left = 128.0
-margin_right = 384.0
-margin_bottom = 24.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 56.0
 editable = false
+caret_blink = true
+caret_blink_speed = 0.5
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="lbl_headers" type="Label" parent="ui"]
-margin_left = 512.0
-margin_top = 128.0
-margin_right = 632.0
-margin_bottom = 152.0
+margin_left = 696.0
+margin_top = 224.0
+margin_right = 816.0
+margin_bottom = 248.0
 text = "headers"
-align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="value" type="TextEdit" parent="ui/lbl_headers"]
-margin_left = 128.0
-margin_right = 384.0
-margin_bottom = 120.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 88.0
 readonly = true
 wrap_enabled = true
 __meta__ = {
@@ -176,18 +216,20 @@ __meta__ = {
 }
 
 [node name="lbl_json_parse_result" type="Label" parent="ui"]
-margin_left = 512.0
-margin_top = 256.0
-margin_right = 632.0
-margin_bottom = 280.0
+margin_left = 696.0
+margin_top = 320.0
+margin_right = 816.0
+margin_bottom = 344.0
 text = "json_parse_result"
-align = 2
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="value" type="TextEdit" parent="ui/lbl_json_parse_result"]
-margin_left = 128.0
-margin_right = 384.0
-margin_bottom = 248.0
+margin_top = 32.0
+margin_right = 256.0
+margin_bottom = 192.0
 readonly = true
 wrap_enabled = true
 __meta__ = {
@@ -195,14 +237,15 @@ __meta__ = {
 }
 
 [node name="btn_event" type="Button" parent="ui"]
-margin_left = 192.0
-margin_top = 288.0
-margin_right = 384.0
-margin_bottom = 312.0
+margin_left = 8.0
+margin_top = 320.0
+margin_right = 200.0
+margin_bottom = 344.0
 text = "WriteEvent"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="pressed" from="tab_container/Data/btn_initiate_file_uploads" to="." method="_on_btn_initiate_file_uploads_pressed"]
 [connection signal="pressed" from="ui/btn_register" to="." method="_on_btn_register_pressed"]
 [connection signal="pressed" from="ui/btn_login" to="." method="_on_btn_login_pressed"]
 [connection signal="pressed" from="ui/btn_event" to="." method="_on_btn_event_pressed"]

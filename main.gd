@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 
 func reset_ui():
@@ -14,6 +14,7 @@ func _request_completed(h_request: int, response_code: int, headers, json_parse_
     $ui/lbl_headers/value.text = String(headers)
     if json_parse_result.error == OK:
         $ui/lbl_json_parse_result/value.text = String(json_parse_result.result)
+        print(json_parse_result.result)
 
 
 func _ready():
@@ -30,8 +31,6 @@ func _ready():
     PlayFabSettings.TitleId = res.result["TitleId"]
     PlayFabSettings.DeveloperSecretKey = res.result["developerSecretKey"]
 
-    PlayFab.connect("PlayFabResult", self, "_request_completed")
-
 
 func _on_btn_register_pressed():
     var dict_request = {
@@ -43,7 +42,10 @@ func _on_btn_register_pressed():
     }
 
     reset_ui()
-    PlayFab.Client.RegisterPlayFabUser(dict_request)
+    PlayFab.Client.RegisterPlayFabUser(
+        dict_request,
+        funcref(self, "_request_completed")
+    )
 
 
 func _on_btn_login_pressed():
@@ -54,7 +56,10 @@ func _on_btn_login_pressed():
     }
 
     reset_ui()
-    PlayFab.Client.LoginWithPlayFab(dict_request)
+    PlayFab.Client.LoginWithPlayFab(
+        dict_request,
+        funcref(self, "_request_completed")
+    )
 
 
 func _on_btn_event_pressed():
@@ -65,4 +70,21 @@ func _on_btn_event_pressed():
         ]
     }
 
-    PlayFab.Events.WriteEvents(dict_request)
+    PlayFab.Events.WriteEvents(
+        dict_request,
+        funcref(self, "_request_completed")
+    )
+
+
+func _on_btn_initiate_file_uploads_pressed():
+    
+    var id = PlayFabSettings._internalSettings.EntityToken["Entity"]["Id"]
+    var dict_request = {
+        "Entity": {"Id": id, "Type": "title_player_account"},
+        "FileNames": "Test"
+       }
+    
+    PlayFab.Data.InitiateFileUploads(
+        dict_request,
+        funcref(self, "_request_completed")
+    )
