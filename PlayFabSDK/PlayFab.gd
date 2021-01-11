@@ -41,9 +41,7 @@ var _http_cli = null
 
 
 # ------------------------------------------------------------------ signal(s)
-signal PlayFabResult(h_request, response_code, dict_header, json_parse_result)
-
-
+# -------------------------------------------------------------------- func(s)
 func _ready():
     _http_cli = load("res://PlayFabSDK/PlayFabHttpClient.gd").new()
 

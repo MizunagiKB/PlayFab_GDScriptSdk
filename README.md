@@ -64,10 +64,10 @@ PlayFab.Client.RegisterPlayFabUser(dict_request)
 
 ### Result
 
-The return value is received in **PlayFabResult* Signal.
+Use funcref to get the results.
 
 ```python
-# signal receiver defineed
+# callback function
 func _request_completed(
     h_request: int,
     response_code: int,
@@ -76,8 +76,11 @@ func _request_completed(
     ):
     pass
 
-# signal connect
-PlayFab.connect("PlayFabResult", self, "_request_completed")
+# on function call
+PlayFab.Client.RegisterPlayFabUser(
+    dict_request,
+    funcref(self, "_request_completed")
+)
 ```
 
 ## PlayFab API Reference
