@@ -21,9 +21,8 @@ config/icon="res://icon.png"
 
 [autoload]
 
-PlayFabSettings="*res://PlayFabSDK/PlayFabSettings.gd"
-PlayFabHTTPRequest="*res://PlayFabSDK/PlayFabHTTPRequest.gd"
 PlayFab="*res://PlayFabSDK/PlayFab.gd"
+PlayFabSettings="*res://PlayFabSDK/PlayFabSettings.gd"
 
 [display]
 

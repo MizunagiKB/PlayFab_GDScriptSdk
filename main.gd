@@ -2,17 +2,18 @@ extends Node2D
 
 
 func reset_ui():
-    $ui/lbl_result/value.clear()
+    $ui/lbl_h_request/value.clear()
     $ui/lbl_response_code/value.clear()
     $ui/lbl_headers/value.text = ""
     $ui/lbl_json_parse_result/value.text = ""
     
 
-func _request_completed(result: int, response_code: int, headers, json_parse_result: JSONParseResult):
-    $ui/lbl_result/value.text = String(result)
+func _request_completed(h_request: int, response_code: int, headers, json_parse_result: JSONParseResult):
+    $ui/lbl_h_request/value.text = String(h_request)
     $ui/lbl_response_code/value.text = String(response_code)
     $ui/lbl_headers/value.text = String(headers)
-    $ui/lbl_json_parse_result/value.text = String(json_parse_result.result)
+    if json_parse_result.error == OK:
+        $ui/lbl_json_parse_result/value.text = String(json_parse_result.result)
 
 
 func _ready():
@@ -27,7 +28,9 @@ func _ready():
     $ui/lbl_title_id/value.text = res.result["TitleId"]
 
     PlayFabSettings.TitleId = res.result["TitleId"]
-    PlayFabHTTPRequest.connect("playFab_request_complete", self, "_request_completed")
+    PlayFabSettings.DeveloperSecretKey = res.result["developerSecretKey"]
+
+    PlayFab.connect("PlayFabResult", self, "_request_completed")
 
 
 func _on_btn_register_pressed():

@@ -117,19 +117,19 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="lbl_result" type="Label" parent="ui"]
+[node name="lbl_h_request" type="Label" parent="ui"]
 margin_left = 512.0
 margin_top = 64.0
 margin_right = 632.0
 margin_bottom = 88.0
-text = "result"
+text = "h_request"
 align = 2
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="value" type="LineEdit" parent="ui/lbl_result"]
+[node name="value" type="LineEdit" parent="ui/lbl_h_request"]
 margin_left = 128.0
 margin_right = 384.0
 margin_bottom = 24.0
