@@ -53,6 +53,20 @@ margin_top = 160.0
 margin_right = 192.0
 margin_bottom = 184.0
 text = "GetTitleNews"
+
+[node name="lbl_json_parse_result" type="Label" parent="."]
+margin_left = 200.0
+margin_right = 472.0
+margin_bottom = 24.0
+text = "json_parse_result"
+valign = 1
+
+[node name="value" type="TextEdit" parent="lbl_json_parse_result"]
+margin_top = 32.0
+margin_right = 272.0
+margin_bottom = 432.0
+readonly = true
+wrap_enabled = true
 [connection signal="pressed" from="btn_get_catalog_items" to="." method="_on_btn_get_catalog_items_pressed"]
 [connection signal="pressed" from="btn_get_publisher_data" to="." method="_on_btn_get_publisher_data_pressed"]
 [connection signal="pressed" from="btn_get_store_items" to="." method="_on_btn_get_store_items_pressed"]

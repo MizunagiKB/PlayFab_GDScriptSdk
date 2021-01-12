@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
 [ext_resource path="res://scene/title_wide_data/title_wide_data.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scene/player_data_management/player_data_management.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scene/player_item_management/player_item_management.tscn" type="PackedScene" id=4]
 
 [node name="main" type="Control"]
 script = ExtResource( 1 )
@@ -19,7 +21,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="PlayerDataManagement" parent="tab_container" instance=ExtResource( 3 )]
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="PlayerItemManagement" parent="tab_container" instance=ExtResource( 4 )]
+visible = false
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
 [node name="Title-Wide Data" parent="tab_container" instance=ExtResource( 2 )]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0

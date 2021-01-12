@@ -7,12 +7,7 @@ func _ready():
 
 func _on_PlayFab_response(h_request: int, response_code: int, headers, json_parse_result: JSONParseResult):
     if json_parse_result.error == OK:
-        print(json_parse_result.result)
-
-
-func _on_PlayFab_GetCatalogItems_response(h_request: int, response_code: int, headers, json_parse_result: JSONParseResult):
-    if json_parse_result.error == OK:
-        print(json_parse_result.result)
+        $lbl_json_parse_result/value.text = String(json_parse_result.result)
 
 
 func _on_btn_get_catalog_items_pressed():
@@ -21,7 +16,7 @@ func _on_btn_get_catalog_items_pressed():
     
     PlayFab.Client.GetCatalogItems(
         dict_request,
-        funcref(self, "_on_PlayFab_GetCatalogItems_response")
+        funcref(self, "_on_PlayFab_response")
     )
 
 

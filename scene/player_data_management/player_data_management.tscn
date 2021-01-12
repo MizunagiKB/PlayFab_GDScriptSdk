@@ -1,0 +1,67 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/player_data_management/player_data_management.gd" type="Script" id=1]
+
+[node name="PlayerDataManagement" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_get_friend_leaderboard" type="Button" parent="."]
+margin_right = 192.0
+margin_bottom = 24.0
+text = "GetFriendLeaderboard"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_get_leaderboard" type="Button" parent="."]
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 56.0
+text = "GetLeaderboard"
+
+[node name="btn_get_player_statistics" type="Button" parent="."]
+margin_top = 64.0
+margin_right = 192.0
+margin_bottom = 88.0
+text = "GetPlayerStatistics"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_update_player_statistics" type="Button" parent="."]
+margin_top = 96.0
+margin_right = 192.0
+margin_bottom = 120.0
+text = "UpdatePlayerStastics"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_json_parse_result" type="Label" parent="."]
+margin_left = 200.0
+margin_right = 472.0
+margin_bottom = 24.0
+text = "json_parse_result"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="TextEdit" parent="lbl_json_parse_result"]
+margin_top = 32.0
+margin_right = 272.0
+margin_bottom = 432.0
+readonly = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="btn_get_friend_leaderboard" to="." method="_on_btn_get_friend_leaderboard_pressed"]
+[connection signal="pressed" from="btn_get_leaderboard" to="." method="_on_btn_get_leaderboard_pressed"]
+[connection signal="pressed" from="btn_get_player_statistics" to="." method="_on_btn_get_player_statistics_pressed"]
+[connection signal="pressed" from="btn_update_player_statistics" to="." method="_on_btn_update_player_statistics_pressed"]

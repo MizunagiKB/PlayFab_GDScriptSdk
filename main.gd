@@ -14,7 +14,6 @@ func _request_completed(h_request: int, response_code: int, headers, json_parse_
     $ui/lbl_headers/value.text = String(headers)
     if json_parse_result.error == OK:
         $ui/lbl_json_parse_result/value.text = String(json_parse_result.result)
-        print(json_parse_result.result)
 
 
 func _ready():
