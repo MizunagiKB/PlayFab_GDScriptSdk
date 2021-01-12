@@ -16,7 +16,7 @@ static func CancelAllMatchmakingTicketsForPlayer(dict_request, user_callback = n
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -28,7 +28,7 @@ static func CancelAllServerBackfillTicketsForPlayer(dict_request, user_callback 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -40,7 +40,7 @@ static func CancelMatchmakingTicket(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -52,7 +52,7 @@ static func CancelServerBackfillTicket(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -64,7 +64,7 @@ static func CreateBuildAlias(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -76,7 +76,7 @@ static func CreateBuildWithCustomContainer(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -88,7 +88,7 @@ static func CreateBuildWithManagedContainer(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -100,7 +100,7 @@ static func CreateBuildWithProcessBasedServer(dict_request, user_callback = null
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -112,7 +112,7 @@ static func CreateMatchmakingTicket(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -124,7 +124,7 @@ static func CreateRemoteUser(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -136,7 +136,7 @@ static func CreateServerBackfillTicket(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -148,7 +148,7 @@ static func CreateServerMatchmakingTicket(dict_request, user_callback = null, di
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -160,7 +160,7 @@ static func DeleteAsset(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -172,7 +172,7 @@ static func DeleteBuild(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -184,7 +184,7 @@ static func DeleteBuildAlias(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -196,7 +196,7 @@ static func DeleteBuildRegion(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -208,7 +208,7 @@ static func DeleteCertificate(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -220,7 +220,7 @@ static func DeleteContainerImageRepository(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -232,7 +232,7 @@ static func DeleteRemoteUser(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -244,7 +244,7 @@ static func EnableMultiplayerServersForTitle(dict_request, user_callback = null,
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -256,7 +256,7 @@ static func GetAssetUploadUrl(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -268,7 +268,7 @@ static func GetBuild(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -280,7 +280,7 @@ static func GetBuildAlias(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -292,7 +292,7 @@ static func GetContainerRegistryCredentials(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -304,7 +304,7 @@ static func GetMatch(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -316,7 +316,7 @@ static func GetMatchmakingTicket(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -328,7 +328,7 @@ static func GetMultiplayerServerDetails(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -340,7 +340,7 @@ static func GetMultiplayerServerLogs(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -352,7 +352,7 @@ static func GetMultiplayerSessionLogsBySessionId(dict_request, user_callback = n
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -364,7 +364,7 @@ static func GetQueueStatistics(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -376,7 +376,7 @@ static func GetRemoteLoginEndpoint(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -388,7 +388,7 @@ static func GetServerBackfillTicket(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -400,7 +400,7 @@ static func GetTitleEnabledForMultiplayerServersStatus(dict_request, user_callba
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -412,7 +412,7 @@ static func GetTitleMultiplayerServersQuotas(dict_request, user_callback = null,
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -424,7 +424,7 @@ static func JoinMatchmakingTicket(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -436,7 +436,7 @@ static func ListArchivedMultiplayerServers(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -448,7 +448,7 @@ static func ListAssetSummaries(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -460,7 +460,7 @@ static func ListBuildAliases(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -472,7 +472,7 @@ static func ListBuildSummaries(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -484,7 +484,7 @@ static func ListBuildSummariesV2(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -496,7 +496,7 @@ static func ListCertificateSummaries(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -508,7 +508,7 @@ static func ListContainerImages(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -520,7 +520,7 @@ static func ListContainerImageTags(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -532,7 +532,7 @@ static func ListMatchmakingTicketsForPlayer(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -544,7 +544,7 @@ static func ListMultiplayerServers(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -568,7 +568,7 @@ static func ListQosServersForTitle(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -580,7 +580,7 @@ static func ListServerBackfillTicketsForPlayer(dict_request, user_callback = nul
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -592,7 +592,7 @@ static func ListVirtualMachineSummaries(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -604,7 +604,7 @@ static func RequestMultiplayerServer(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -616,7 +616,7 @@ static func RolloverContainerRegistryCredentials(dict_request, user_callback = n
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -628,7 +628,7 @@ static func ShutdownMultiplayerServer(dict_request, user_callback = null, dict_h
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -640,7 +640,7 @@ static func UntagContainerImage(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -652,7 +652,7 @@ static func UpdateBuildAlias(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -664,7 +664,7 @@ static func UpdateBuildRegion(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -676,7 +676,7 @@ static func UpdateBuildRegions(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -688,7 +688,7 @@ static func UploadCertificate(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 

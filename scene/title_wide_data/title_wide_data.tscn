@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/title_wide_data/title_wide_data.gd" type="Script" id=1]
+
+[node name="Title-Wide Data" type="Control"]
+margin_right = 512.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_get_catalog_items" type="Button" parent="."]
+margin_right = 192.0
+margin_bottom = 24.0
+text = "GetCatalogItems"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_get_publisher_data" type="Button" parent="."]
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 56.0
+text = "GetPublisherData"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_get_store_items" type="Button" parent="."]
+margin_top = 64.0
+margin_right = 192.0
+margin_bottom = 88.0
+text = "GetStoreItems"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_get_time" type="Button" parent="."]
+margin_top = 96.0
+margin_right = 192.0
+margin_bottom = 120.0
+text = "GetTime"
+
+[node name="btn_title_data" type="Button" parent="."]
+margin_top = 128.0
+margin_right = 192.0
+margin_bottom = 152.0
+text = "GetTitleData"
+
+[node name="btn_title_news" type="Button" parent="."]
+margin_top = 160.0
+margin_right = 192.0
+margin_bottom = 184.0
+text = "GetTitleNews"
+[connection signal="pressed" from="btn_get_catalog_items" to="." method="_on_btn_get_catalog_items_pressed"]
+[connection signal="pressed" from="btn_get_publisher_data" to="." method="_on_btn_get_publisher_data_pressed"]
+[connection signal="pressed" from="btn_get_store_items" to="." method="_on_btn_get_store_items_pressed"]
+[connection signal="pressed" from="btn_get_time" to="." method="_on_btn_get_time_pressed"]
+[connection signal="pressed" from="btn_title_data" to="." method="_on_btn_title_data_pressed"]
+[connection signal="pressed" from="btn_title_news" to="." method="_on_btn_title_news_pressed"]

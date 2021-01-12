@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://main.gd" type="Script" id=1]
+[ext_resource path="res://scene/title_wide_data/title_wide_data.tscn" type="PackedScene" id=2]
 
 [node name="main" type="Control"]
 script = ExtResource( 1 )
@@ -10,31 +11,21 @@ __meta__ = {
 
 [node name="tab_container" type="TabContainer" parent="."]
 margin_left = 208.0
-margin_top = 64.0
+margin_top = 32.0
 margin_right = 688.0
-margin_bottom = 512.0
+margin_bottom = 504.0
 tab_align = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Data" type="Panel" parent="tab_container"]
+[node name="Title-Wide Data" parent="tab_container" instance=ExtResource( 2 )]
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = 4.0
 margin_top = 32.0
-margin_right = -684.0
-margin_bottom = -376.0
-
-[node name="btn_initiate_file_uploads" type="Button" parent="tab_container/Data"]
-margin_left = 12.0
-margin_top = 8.0
-margin_right = 204.0
-margin_bottom = 40.0
-text = "InitiateFileUploads"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+margin_right = -4.0
+margin_bottom = -4.0
 
 [node name="ui" type="Control" parent="."]
 margin_right = 40.0
@@ -43,11 +34,21 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="menu_json" type="MenuButton" parent="ui"]
+margin_left = 696.0
+margin_top = 8.0
+margin_right = 952.0
+margin_bottom = 28.0
+text = "testTitleData.json"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="lbl_displayname" type="Label" parent="ui"]
 margin_left = 8.0
-margin_top = 64.0
+margin_top = 32.0
 margin_right = 128.0
-margin_bottom = 88.0
+margin_bottom = 56.0
 text = "DisplayName"
 valign = 1
 __meta__ = {
@@ -67,9 +68,9 @@ __meta__ = {
 
 [node name="lbl_username" type="Label" parent="ui"]
 margin_left = 8.0
-margin_top = 128.0
+margin_top = 96.0
 margin_right = 128.0
-margin_bottom = 152.0
+margin_bottom = 120.0
 text = "Username"
 valign = 1
 __meta__ = {
@@ -89,9 +90,9 @@ __meta__ = {
 
 [node name="lbl_password" type="Label" parent="ui"]
 margin_left = 8.0
-margin_top = 192.0
+margin_top = 160.0
 margin_right = 128.0
-margin_bottom = 216.0
+margin_bottom = 184.0
 text = "Password"
 valign = 1
 __meta__ = {
@@ -112,9 +113,9 @@ __meta__ = {
 
 [node name="btn_register" type="Button" parent="ui"]
 margin_left = 8.0
-margin_top = 256.0
+margin_top = 224.0
 margin_right = 200.0
-margin_bottom = 280.0
+margin_bottom = 248.0
 text = "RegisterPlayFabUser"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -122,39 +123,19 @@ __meta__ = {
 
 [node name="btn_login" type="Button" parent="ui"]
 margin_left = 8.0
-margin_top = 288.0
+margin_top = 256.0
 margin_right = 200.0
-margin_bottom = 312.0
+margin_bottom = 280.0
 text = "LoginWithPlayFab"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="lbl_title_id" type="Label" parent="ui"]
-margin_left = 696.0
-margin_top = 64.0
-margin_right = 768.0
-margin_bottom = 88.0
-text = "TitleId"
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="value" type="Label" parent="ui/lbl_title_id"]
-margin_left = 80.0
-margin_right = 256.0
-margin_bottom = 24.0
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="lbl_h_request" type="Label" parent="ui"]
 margin_left = 696.0
-margin_top = 96.0
+margin_top = 64.0
 margin_right = 816.0
-margin_bottom = 120.0
+margin_bottom = 88.0
 text = "h_request"
 valign = 1
 __meta__ = {
@@ -174,9 +155,9 @@ __meta__ = {
 
 [node name="lbl_response_code" type="Label" parent="ui"]
 margin_left = 696.0
-margin_top = 160.0
+margin_top = 128.0
 margin_right = 816.0
-margin_bottom = 184.0
+margin_bottom = 152.0
 text = "response_code"
 valign = 1
 __meta__ = {
@@ -196,9 +177,9 @@ __meta__ = {
 
 [node name="lbl_headers" type="Label" parent="ui"]
 margin_left = 696.0
-margin_top = 224.0
+margin_top = 192.0
 margin_right = 816.0
-margin_bottom = 248.0
+margin_bottom = 216.0
 text = "headers"
 valign = 1
 __meta__ = {
@@ -217,9 +198,9 @@ __meta__ = {
 
 [node name="lbl_json_parse_result" type="Label" parent="ui"]
 margin_left = 696.0
-margin_top = 320.0
+margin_top = 288.0
 margin_right = 816.0
-margin_bottom = 344.0
+margin_bottom = 312.0
 text = "json_parse_result"
 valign = 1
 __meta__ = {
@@ -229,7 +210,7 @@ __meta__ = {
 [node name="value" type="TextEdit" parent="ui/lbl_json_parse_result"]
 margin_top = 32.0
 margin_right = 256.0
-margin_bottom = 192.0
+margin_bottom = 216.0
 readonly = true
 wrap_enabled = true
 __meta__ = {
@@ -238,14 +219,13 @@ __meta__ = {
 
 [node name="btn_event" type="Button" parent="ui"]
 margin_left = 8.0
-margin_top = 320.0
+margin_top = 288.0
 margin_right = 200.0
-margin_bottom = 344.0
+margin_bottom = 312.0
 text = "WriteEvent"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="pressed" from="tab_container/Data/btn_initiate_file_uploads" to="." method="_on_btn_initiate_file_uploads_pressed"]
 [connection signal="pressed" from="ui/btn_register" to="." method="_on_btn_register_pressed"]
 [connection signal="pressed" from="ui/btn_login" to="." method="_on_btn_login_pressed"]
 [connection signal="pressed" from="ui/btn_event" to="." method="_on_btn_event_pressed"]

@@ -14,21 +14,11 @@ var connecting = false
 
 # ------------------------------------------------------------------ signal(s)
 # -------------------------------------------------------------- innerclass(s)
-class CAuthParam:
-    var auth_key
-    var auth_val
-
-    func _init(k, v):
-        self.auth_key = k
-        self.auth_val = v
-
-
 class CRequest:
     var h_request: int
     var host: String
     var url: String
     var dict_request: Dictionary
-    var auth_param: CAuthParam
     var user_callback = null
     var list_header = []
     var list_prologue_work = []
@@ -88,25 +78,31 @@ func pro_chk_session_ticket():
     )
 
 
-func pro_use_auth(dict_request: Dictionary):
-
-    if PlayFabSettings._internalSettings.EntityToken:
-        return CAuthParam.new(
-            "X-EntityToken",
-            PlayFabSettings._internalSettings.EntityToken["EntityToken"])
-    elif PlayFabSettings._internalSettings.ClientSessionTicket:
-        return CAuthParam.new(
+func pro_use_auth_authorization():
+    return "{0}: {1}".format(
+        [
             "X-Authorization",
-            PlayFabSettings._internalSettings.ClientSessionTicket)
-    elif PlayFabSettings.DeveloperSecretKey:
-        return CAuthParam.new(
+            PlayFabSettings._internalSettings.ClientSessionTicket
+        ]
+    )
+
+
+func pro_use_auth_entity_token():
+    return "{0}: {1}".format(
+        [
+            "X-EntityToken",
+            PlayFabSettings._internalSettings.EntityToken["EntityToken"]
+        ]
+    )
+
+
+func pro_use_auth_secret_key():
+    return "{0}: {1}".format(
+        [
             "X-SecretKey",
-            PlayFabSettings._internalSettings.DeveloperSecretKey)
-    else:
-        assert(
-            false,
-            "Undefined Error"
-        )
+            PlayFabSettings._internalSettings.DeveloperSecretKey
+        ]
+    )
 
 
 func pro_use_title_id(dict_request: Dictionary):
@@ -216,14 +212,12 @@ func request_append(
                 pro_chk_secret_key()
             PlayFab.E_PRO.CHK_SESSION_TICKET:
                 pro_chk_session_ticket()
-            PlayFab.E_PRO.USE_AUTH:
-                var auth_param = pro_use_auth(dict_request)
-                if auth_param:
-                    list_header.append(
-                        "{0}: {1}".format(
-                            [auth_param.auth_key, auth_param.auth_val]
-                        )
-                    )
+            PlayFab.E_PRO.USE_AUTH_AUTHORIZATION:
+                list_header.append(pro_use_auth_authorization())
+            PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN:
+                list_header.append(pro_use_auth_entity_token())
+            PlayFab.E_PRO.USE_AUTH_SECRET_KEY:
+                list_header.append(pro_use_auth_secret_key())
             PlayFab.E_PRO.USE_TITLE_ID:
                 pro_use_title_id(dict_request)
 
@@ -252,16 +246,17 @@ func dispatch(o_request: CRequest):
     var parse_result = JSON.parse(raw_text)
     
     if parse_result.error == OK:
-        for e_val in o_request.list_epilogue_work:
-            match e_val:
-                PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN:
-                    epi_req_multi_step_client_login(parse_result)
-                PlayFab.E_EPI.UPD_ATTRIBUTE:
-                    epi_upd_attribute()
-                PlayFab.E_EPI.UPD_ENTITY_TOKEN:
-                    epi_upd_entity_token(parse_result)
-                PlayFab.E_EPI.UPD_SESSION_TICKET:
-                    epi_upd_session_ticket(parse_result)
+        if parse_result.result["code"] == 200:
+            for e_val in o_request.list_epilogue_work:
+                match e_val:
+                    PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN:
+                        epi_req_multi_step_client_login(parse_result)
+                    PlayFab.E_EPI.UPD_ATTRIBUTE:
+                        epi_upd_attribute()
+                    PlayFab.E_EPI.UPD_ENTITY_TOKEN:
+                        epi_upd_entity_token(parse_result)
+                    PlayFab.E_EPI.UPD_SESSION_TICKET:
+                        epi_upd_session_ticket(parse_result)
 
     if o_request.user_callback != null:
         o_request.user_callback.call_func(

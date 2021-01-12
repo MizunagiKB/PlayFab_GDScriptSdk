@@ -26,7 +26,9 @@ func _ready():
     var res = JSON.parse(f.get_as_text())
     f.close()
 
-    $ui/lbl_title_id/value.text = res.result["TitleId"]
+    $ui/menu_json.get_popup().add_item("TitleId = \"{TitleId}\"".format(res.result))
+    $ui/menu_json.get_popup().add_item("developerSecretKey = \"{developerSecretKey}\"".format(res.result))
+    $ui/menu_json.get_popup().add_item("userEmail = \"{userEmail}\"".format(res.result))
 
     PlayFabSettings.TitleId = res.result["TitleId"]
     PlayFabSettings.DeveloperSecretKey = res.result["developerSecretKey"]
@@ -75,7 +77,7 @@ func _on_btn_event_pressed():
         funcref(self, "_request_completed")
     )
 
-
+"""
 func _on_btn_initiate_file_uploads_pressed():
     
     var id = PlayFabSettings._internalSettings.EntityToken["Entity"]["Id"]
@@ -88,3 +90,4 @@ func _on_btn_initiate_file_uploads_pressed():
         dict_request,
         funcref(self, "_request_completed")
     )
+"""

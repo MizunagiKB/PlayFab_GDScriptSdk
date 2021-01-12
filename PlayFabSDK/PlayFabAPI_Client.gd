@@ -19,7 +19,7 @@ static func AcceptTrade(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -31,7 +31,7 @@ static func AddFriend(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -43,7 +43,7 @@ static func AddGenericID(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -55,7 +55,7 @@ static func AddOrUpdateContactEmail(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -67,7 +67,7 @@ static func AddSharedGroupMembers(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -79,7 +79,7 @@ static func AddUsernamePassword(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -91,7 +91,7 @@ static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -103,7 +103,7 @@ static func AndroidDevicePushNotificationRegistration(dict_request, user_callbac
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -115,7 +115,7 @@ static func AttributeInstall(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         [PlayFab.E_EPI.UPD_ATTRIBUTE]
     )
 
@@ -127,7 +127,7 @@ static func CancelTrade(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -139,7 +139,7 @@ static func ConfirmPurchase(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -151,7 +151,7 @@ static func ConsumeItem(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -163,7 +163,7 @@ static func ConsumeMicrosoftStoreEntitlements(dict_request, user_callback = null
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -175,7 +175,7 @@ static func ConsumePSNEntitlements(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -187,7 +187,7 @@ static func ConsumeXboxEntitlements(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -199,7 +199,7 @@ static func CreateSharedGroup(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -211,7 +211,7 @@ static func ExecuteCloudScript(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -223,7 +223,7 @@ static func GetAccountInfo(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -235,7 +235,7 @@ static func GetAdPlacements(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -247,7 +247,7 @@ static func GetAllUsersCharacters(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -259,7 +259,7 @@ static func GetCatalogItems(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -271,7 +271,7 @@ static func GetCharacterData(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -283,7 +283,7 @@ static func GetCharacterInventory(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -295,7 +295,7 @@ static func GetCharacterLeaderboard(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -307,7 +307,7 @@ static func GetCharacterReadOnlyData(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -319,7 +319,7 @@ static func GetCharacterStatistics(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -331,7 +331,7 @@ static func GetContentDownloadUrl(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -343,7 +343,7 @@ static func GetCurrentGames(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -355,7 +355,7 @@ static func GetFriendLeaderboard(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -367,7 +367,7 @@ static func GetFriendLeaderboardAroundPlayer(dict_request, user_callback = null,
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -379,7 +379,7 @@ static func GetFriendsList(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -391,7 +391,7 @@ static func GetGameServerRegions(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -403,7 +403,7 @@ static func GetLeaderboard(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -415,7 +415,7 @@ static func GetLeaderboardAroundCharacter(dict_request, user_callback = null, di
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -427,7 +427,7 @@ static func GetLeaderboardAroundPlayer(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -439,7 +439,7 @@ static func GetLeaderboardForUserCharacters(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -451,7 +451,7 @@ static func GetPaymentToken(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -463,7 +463,7 @@ static func GetPhotonAuthenticationToken(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -475,7 +475,7 @@ static func GetPlayerCombinedInfo(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -487,7 +487,7 @@ static func GetPlayerProfile(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -499,7 +499,7 @@ static func GetPlayerSegments(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -511,7 +511,7 @@ static func GetPlayerStatistics(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -523,7 +523,7 @@ static func GetPlayerStatisticVersions(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -535,7 +535,7 @@ static func GetPlayerTags(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -547,7 +547,7 @@ static func GetPlayerTrades(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -559,7 +559,7 @@ static func GetPlayFabIDsFromFacebookIDs(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -571,7 +571,7 @@ static func GetPlayFabIDsFromFacebookInstantGamesIds(dict_request, user_callback
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -583,7 +583,7 @@ static func GetPlayFabIDsFromGameCenterIDs(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -595,7 +595,7 @@ static func GetPlayFabIDsFromGenericIDs(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -607,7 +607,7 @@ static func GetPlayFabIDsFromGoogleIDs(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -619,7 +619,7 @@ static func GetPlayFabIDsFromKongregateIDs(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -631,7 +631,7 @@ static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, user_callback
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -643,7 +643,7 @@ static func GetPlayFabIDsFromPSNAccountIDs(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -655,7 +655,7 @@ static func GetPlayFabIDsFromSteamIDs(dict_request, user_callback = null, dict_h
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -667,7 +667,7 @@ static func GetPlayFabIDsFromTwitchIDs(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -679,7 +679,7 @@ static func GetPlayFabIDsFromXboxLiveIDs(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -691,7 +691,7 @@ static func GetPublisherData(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -703,7 +703,7 @@ static func GetPurchase(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -715,7 +715,7 @@ static func GetSharedGroupData(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -727,7 +727,7 @@ static func GetStoreItems(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -739,7 +739,7 @@ static func GetTime(dict_request, user_callback = null, dict_header_extra = {}):
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -751,7 +751,7 @@ static func GetTitleData(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -763,7 +763,7 @@ static func GetTitleNews(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -787,7 +787,7 @@ static func GetTradeStatus(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -799,7 +799,7 @@ static func GetUserData(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -811,7 +811,7 @@ static func GetUserInventory(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -823,7 +823,7 @@ static func GetUserPublisherData(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -835,7 +835,7 @@ static func GetUserPublisherReadOnlyData(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -847,7 +847,7 @@ static func GetUserReadOnlyData(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -871,7 +871,7 @@ static func GrantCharacterToUser(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -883,7 +883,7 @@ static func LinkAndroidDeviceID(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -895,7 +895,7 @@ static func LinkApple(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -907,7 +907,7 @@ static func LinkCustomID(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -919,7 +919,7 @@ static func LinkFacebookAccount(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -931,7 +931,7 @@ static func LinkFacebookInstantGamesId(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -943,7 +943,7 @@ static func LinkGameCenterAccount(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -955,7 +955,7 @@ static func LinkGoogleAccount(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -967,7 +967,7 @@ static func LinkIOSDeviceID(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -979,7 +979,7 @@ static func LinkKongregate(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -991,7 +991,7 @@ static func LinkNintendoServiceAccount(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1003,7 +1003,7 @@ static func LinkNintendoSwitchDeviceId(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1015,7 +1015,7 @@ static func LinkOpenIdConnect(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1027,7 +1027,7 @@ static func LinkPSNAccount(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1039,7 +1039,7 @@ static func LinkSteamAccount(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1051,7 +1051,7 @@ static func LinkTwitch(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1063,7 +1063,7 @@ static func LinkWindowsHello(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1075,7 +1075,7 @@ static func LinkXboxAccount(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1315,7 +1315,7 @@ static func Matchmake(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1327,7 +1327,7 @@ static func OpenTrade(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1339,7 +1339,7 @@ static func PayForPurchase(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1351,7 +1351,7 @@ static func PurchaseItem(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1363,7 +1363,7 @@ static func RedeemCoupon(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1375,7 +1375,7 @@ static func RefreshPSNAuthToken(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1387,7 +1387,7 @@ static func RegisterForIOSPushNotification(dict_request, user_callback = null, d
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1423,7 +1423,7 @@ static func RemoveContactEmail(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1435,7 +1435,7 @@ static func RemoveFriend(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1447,7 +1447,7 @@ static func RemoveGenericID(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1459,7 +1459,7 @@ static func RemoveSharedGroupMembers(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1471,7 +1471,7 @@ static func ReportAdActivity(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1483,7 +1483,7 @@ static func ReportDeviceInfo(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1495,7 +1495,7 @@ static func ReportPlayer(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1507,7 +1507,7 @@ static func RestoreIOSPurchases(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1519,7 +1519,7 @@ static func RewardAdActivity(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1543,7 +1543,7 @@ static func SetFriendTags(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1555,7 +1555,7 @@ static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1567,7 +1567,7 @@ static func StartGame(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1579,7 +1579,7 @@ static func StartPurchase(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1591,7 +1591,7 @@ static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1603,7 +1603,7 @@ static func UnlinkAndroidDeviceID(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1615,7 +1615,7 @@ static func UnlinkApple(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1627,7 +1627,7 @@ static func UnlinkCustomID(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1639,7 +1639,7 @@ static func UnlinkFacebookAccount(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1651,7 +1651,7 @@ static func UnlinkFacebookInstantGamesId(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1663,7 +1663,7 @@ static func UnlinkGameCenterAccount(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1675,7 +1675,7 @@ static func UnlinkGoogleAccount(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1687,7 +1687,7 @@ static func UnlinkIOSDeviceID(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1699,7 +1699,7 @@ static func UnlinkKongregate(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1711,7 +1711,7 @@ static func UnlinkNintendoServiceAccount(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1723,7 +1723,7 @@ static func UnlinkNintendoSwitchDeviceId(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1735,7 +1735,7 @@ static func UnlinkOpenIdConnect(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1747,7 +1747,7 @@ static func UnlinkPSNAccount(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1759,7 +1759,7 @@ static func UnlinkSteamAccount(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1771,7 +1771,7 @@ static func UnlinkTwitch(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1783,7 +1783,7 @@ static func UnlinkWindowsHello(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1795,7 +1795,7 @@ static func UnlinkXboxAccount(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1807,7 +1807,7 @@ static func UnlockContainerInstance(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1819,7 +1819,7 @@ static func UnlockContainerItem(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1831,7 +1831,7 @@ static func UpdateAvatarUrl(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1843,7 +1843,7 @@ static func UpdateCharacterData(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1855,7 +1855,7 @@ static func UpdateCharacterStatistics(dict_request, user_callback = null, dict_h
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1867,7 +1867,7 @@ static func UpdatePlayerStatistics(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1879,7 +1879,7 @@ static func UpdateSharedGroupData(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1891,7 +1891,7 @@ static func UpdateUserData(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1903,7 +1903,7 @@ static func UpdateUserPublisherData(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1915,7 +1915,7 @@ static func UpdateUserTitleDisplayName(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1927,7 +1927,7 @@ static func ValidateAmazonIAPReceipt(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1939,7 +1939,7 @@ static func ValidateGooglePlayPurchase(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1951,7 +1951,7 @@ static func ValidateIOSReceipt(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1963,7 +1963,7 @@ static func ValidateWindowsStoreReceipt(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1975,7 +1975,7 @@ static func WriteCharacterEvent(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1987,7 +1987,7 @@ static func WritePlayerEvent(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 
@@ -1999,7 +1999,7 @@ static func WriteTitleEvent(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
         []
     )
 

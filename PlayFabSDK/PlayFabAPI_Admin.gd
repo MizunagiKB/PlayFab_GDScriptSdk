@@ -16,7 +16,7 @@ static func AbortTaskInstance(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -28,7 +28,7 @@ static func AddLocalizedNews(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -40,7 +40,7 @@ static func AddNews(dict_request, user_callback = null, dict_header_extra = {}):
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -52,7 +52,7 @@ static func AddPlayerTag(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -64,7 +64,7 @@ static func AddServerBuild(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -76,7 +76,7 @@ static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -88,7 +88,7 @@ static func AddVirtualCurrencyTypes(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -100,7 +100,7 @@ static func BanUsers(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -112,7 +112,7 @@ static func CheckLimitedEditionItemAvailability(dict_request, user_callback = nu
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -124,7 +124,7 @@ static func CreateActionsOnPlayersInSegmentTask(dict_request, user_callback = nu
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -136,7 +136,7 @@ static func CreateCloudScriptTask(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -148,7 +148,7 @@ static func CreateInsightsScheduledScalingTask(dict_request, user_callback = nul
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -160,7 +160,7 @@ static func CreateOpenIdConnection(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -172,7 +172,7 @@ static func CreatePlayerSharedSecret(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -184,7 +184,7 @@ static func CreatePlayerStatisticDefinition(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -196,7 +196,7 @@ static func CreateSegment(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -208,7 +208,7 @@ static func DeleteContent(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -220,7 +220,7 @@ static func DeleteMasterPlayerAccount(dict_request, user_callback = null, dict_h
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -232,7 +232,7 @@ static func DeleteOpenIdConnection(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -244,7 +244,7 @@ static func DeletePlayer(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -256,7 +256,7 @@ static func DeletePlayerSharedSecret(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -268,7 +268,7 @@ static func DeleteSegment(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -280,7 +280,7 @@ static func DeleteStore(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -292,7 +292,7 @@ static func DeleteTask(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -304,7 +304,7 @@ static func DeleteTitle(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -316,7 +316,7 @@ static func DeleteTitleDataOverride(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -328,7 +328,7 @@ static func ExportMasterPlayerData(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -340,7 +340,7 @@ static func GetActionsOnPlayersInSegmentTaskInstance(dict_request, user_callback
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -352,7 +352,7 @@ static func GetAllSegments(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -364,7 +364,7 @@ static func GetCatalogItems(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -376,7 +376,7 @@ static func GetCloudScriptRevision(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -388,7 +388,7 @@ static func GetCloudScriptTaskInstance(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -400,7 +400,7 @@ static func GetCloudScriptVersions(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -412,7 +412,7 @@ static func GetContentList(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -424,7 +424,7 @@ static func GetContentUploadUrl(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -436,7 +436,7 @@ static func GetDataReport(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -448,7 +448,7 @@ static func GetMatchmakerGameInfo(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -460,7 +460,7 @@ static func GetMatchmakerGameModes(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -472,7 +472,7 @@ static func GetPlayedTitleList(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -484,7 +484,7 @@ static func GetPlayerIdFromAuthToken(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -496,7 +496,7 @@ static func GetPlayerProfile(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -508,7 +508,7 @@ static func GetPlayerSegments(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -520,7 +520,7 @@ static func GetPlayerSharedSecrets(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -532,7 +532,7 @@ static func GetPlayersInSegment(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -544,7 +544,7 @@ static func GetPlayerStatisticDefinitions(dict_request, user_callback = null, di
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -556,7 +556,7 @@ static func GetPlayerStatisticVersions(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -568,7 +568,7 @@ static func GetPlayerTags(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -580,7 +580,7 @@ static func GetPolicy(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -592,7 +592,7 @@ static func GetPublisherData(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -604,7 +604,7 @@ static func GetRandomResultTables(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -616,7 +616,7 @@ static func GetSegments(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -628,7 +628,7 @@ static func GetServerBuildInfo(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -640,7 +640,7 @@ static func GetServerBuildUploadUrl(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -652,7 +652,7 @@ static func GetStoreItems(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -664,7 +664,7 @@ static func GetTaskInstances(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -676,7 +676,7 @@ static func GetTasks(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -688,7 +688,7 @@ static func GetTitleData(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -700,7 +700,7 @@ static func GetTitleInternalData(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -712,7 +712,7 @@ static func GetUserAccountInfo(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -724,7 +724,7 @@ static func GetUserBans(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -736,7 +736,7 @@ static func GetUserData(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -748,7 +748,7 @@ static func GetUserInternalData(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -760,7 +760,7 @@ static func GetUserInventory(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -772,7 +772,7 @@ static func GetUserPublisherData(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -784,7 +784,7 @@ static func GetUserPublisherInternalData(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -796,7 +796,7 @@ static func GetUserPublisherReadOnlyData(dict_request, user_callback = null, dic
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -808,7 +808,7 @@ static func GetUserReadOnlyData(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -820,7 +820,7 @@ static func GrantItemsToUsers(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -832,7 +832,7 @@ static func IncrementLimitedEditionItemAvailability(dict_request, user_callback 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -844,7 +844,7 @@ static func IncrementPlayerStatisticVersion(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -856,7 +856,7 @@ static func ListOpenIdConnection(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -868,7 +868,7 @@ static func ListServerBuilds(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -880,7 +880,7 @@ static func ListVirtualCurrencyTypes(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -892,7 +892,7 @@ static func ModifyMatchmakerGameModes(dict_request, user_callback = null, dict_h
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -904,7 +904,7 @@ static func ModifyServerBuild(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -916,7 +916,7 @@ static func RefundPurchase(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -928,7 +928,7 @@ static func RemovePlayerTag(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -940,7 +940,7 @@ static func RemoveServerBuild(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -952,7 +952,7 @@ static func RemoveVirtualCurrencyTypes(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -964,7 +964,7 @@ static func ResetCharacterStatistics(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -976,7 +976,7 @@ static func ResetPassword(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -988,7 +988,7 @@ static func ResetUserStatistics(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1000,7 +1000,7 @@ static func ResolvePurchaseDispute(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1012,7 +1012,7 @@ static func RevokeAllBansForUser(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1024,7 +1024,7 @@ static func RevokeBans(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1036,7 +1036,7 @@ static func RevokeInventoryItem(dict_request, user_callback = null, dict_header_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1048,7 +1048,7 @@ static func RevokeInventoryItems(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1060,7 +1060,7 @@ static func RunTask(dict_request, user_callback = null, dict_header_extra = {}):
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1072,7 +1072,7 @@ static func SendAccountRecoveryEmail(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1084,7 +1084,7 @@ static func SetCatalogItems(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1096,7 +1096,7 @@ static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1108,7 +1108,7 @@ static func SetPublishedRevision(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1120,7 +1120,7 @@ static func SetPublisherData(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1132,7 +1132,7 @@ static func SetStoreItems(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1144,7 +1144,7 @@ static func SetTitleData(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1156,7 +1156,7 @@ static func SetTitleDataAndOverrides(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1168,7 +1168,7 @@ static func SetTitleInternalData(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1180,7 +1180,7 @@ static func SetupPushNotification(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1192,7 +1192,7 @@ static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1204,7 +1204,7 @@ static func UpdateBans(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1216,7 +1216,7 @@ static func UpdateCatalogItems(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1228,7 +1228,7 @@ static func UpdateCloudScript(dict_request, user_callback = null, dict_header_ex
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1240,7 +1240,7 @@ static func UpdateOpenIdConnection(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1252,7 +1252,7 @@ static func UpdatePlayerSharedSecret(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1264,7 +1264,7 @@ static func UpdatePlayerStatisticDefinition(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1276,7 +1276,7 @@ static func UpdatePolicy(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1288,7 +1288,7 @@ static func UpdateRandomResultTables(dict_request, user_callback = null, dict_he
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1300,7 +1300,7 @@ static func UpdateSegment(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1312,7 +1312,7 @@ static func UpdateStoreItems(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1324,7 +1324,7 @@ static func UpdateTask(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1336,7 +1336,7 @@ static func UpdateUserData(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1348,7 +1348,7 @@ static func UpdateUserInternalData(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1360,7 +1360,7 @@ static func UpdateUserPublisherData(dict_request, user_callback = null, dict_hea
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1372,7 +1372,7 @@ static func UpdateUserPublisherInternalData(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1384,7 +1384,7 @@ static func UpdateUserPublisherReadOnlyData(dict_request, user_callback = null, 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1396,7 +1396,7 @@ static func UpdateUserReadOnlyData(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -1408,7 +1408,7 @@ static func UpdateUserTitleDisplayName(dict_request, user_callback = null, dict_
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 

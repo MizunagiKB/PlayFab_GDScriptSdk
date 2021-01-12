@@ -16,7 +16,7 @@ static func AcceptGroupApplication(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -28,7 +28,7 @@ static func AcceptGroupInvitation(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -40,7 +40,7 @@ static func AddMembers(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -52,7 +52,7 @@ static func ApplyToGroup(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -64,7 +64,7 @@ static func BlockEntity(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -76,7 +76,7 @@ static func ChangeMemberRole(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -88,7 +88,7 @@ static func CreateGroup(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -100,7 +100,7 @@ static func CreateRole(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -112,7 +112,7 @@ static func DeleteGroup(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -124,7 +124,7 @@ static func DeleteRole(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -136,7 +136,7 @@ static func GetGroup(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -148,7 +148,7 @@ static func InviteToGroup(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -160,7 +160,7 @@ static func IsMember(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -172,7 +172,7 @@ static func ListGroupApplications(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -184,7 +184,7 @@ static func ListGroupBlocks(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -196,7 +196,7 @@ static func ListGroupInvitations(dict_request, user_callback = null, dict_header
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -208,7 +208,7 @@ static func ListGroupMembers(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -220,7 +220,7 @@ static func ListMembership(dict_request, user_callback = null, dict_header_extra
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -232,7 +232,7 @@ static func ListMembershipOpportunities(dict_request, user_callback = null, dict
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -244,7 +244,7 @@ static func RemoveGroupApplication(dict_request, user_callback = null, dict_head
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -256,7 +256,7 @@ static func RemoveGroupInvitation(dict_request, user_callback = null, dict_heade
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -268,7 +268,7 @@ static func RemoveMembers(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -280,7 +280,7 @@ static func UnblockEntity(dict_request, user_callback = null, dict_header_extra 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -292,7 +292,7 @@ static func UpdateGroup(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -304,7 +304,7 @@ static func UpdateRole(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 

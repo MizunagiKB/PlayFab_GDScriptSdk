@@ -16,7 +16,7 @@ static func AuthUser(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -28,7 +28,7 @@ static func PlayerJoined(dict_request, user_callback = null, dict_header_extra =
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -40,7 +40,7 @@ static func PlayerLeft(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -52,7 +52,7 @@ static func StartGame(dict_request, user_callback = null, dict_header_extra = {}
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 
@@ -64,7 +64,7 @@ static func UserInfo(dict_request, user_callback = null, dict_header_extra = {})
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
         []
     )
 

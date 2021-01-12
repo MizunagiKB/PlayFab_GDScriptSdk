@@ -16,7 +16,7 @@ static func GetGlobalPolicy(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -28,7 +28,7 @@ static func GetProfile(dict_request, user_callback = null, dict_header_extra = {
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -40,7 +40,7 @@ static func GetProfiles(dict_request, user_callback = null, dict_header_extra = 
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -52,7 +52,7 @@ static func GetTitlePlayersFromMasterPlayerAccountIds(dict_request, user_callbac
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -64,7 +64,7 @@ static func SetGlobalPolicy(dict_request, user_callback = null, dict_header_extr
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -76,7 +76,7 @@ static func SetProfileLanguage(dict_request, user_callback = null, dict_header_e
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
@@ -88,7 +88,7 @@ static func SetProfilePolicy(dict_request, user_callback = null, dict_header_ext
         dict_request,
         user_callback,
         dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH],
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
         []
     )
 
