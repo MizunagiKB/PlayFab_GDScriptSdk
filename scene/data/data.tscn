@@ -1,0 +1,83 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scene/data/data.gd" type="Script" id=1]
+
+[node name="Data" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_abort_file_uploads" type="Button" parent="."]
+margin_right = 192.0
+margin_bottom = 24.0
+text = "AbortFileUploads"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_delete_files" type="Button" parent="."]
+margin_top = 32.0
+margin_right = 192.0
+margin_bottom = 56.0
+text = "DeleteFiles"
+
+[node name="btn_finalize_file_uploads" type="Button" parent="."]
+margin_top = 64.0
+margin_right = 192.0
+margin_bottom = 88.0
+text = "FinalizeFileUploads"
+
+[node name="btn_get_files" type="Button" parent="."]
+margin_top = 96.0
+margin_right = 192.0
+margin_bottom = 120.0
+text = "GetFiles"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_initiate_file_uploads" type="Button" parent="."]
+margin_top = 128.0
+margin_right = 192.0
+margin_bottom = 152.0
+text = "InitiateFileUploads"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_file_upload_test" type="Button" parent="."]
+margin_top = 192.0
+margin_right = 192.0
+margin_bottom = 216.0
+text = "FileUploadTest"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_json_parse_result" type="Label" parent="."]
+margin_left = 200.0
+margin_right = 472.0
+margin_bottom = 24.0
+text = "json_parse_result"
+valign = 1
+
+[node name="value" type="TextEdit" parent="lbl_json_parse_result"]
+margin_top = 32.0
+margin_right = 272.0
+margin_bottom = 432.0
+readonly = true
+wrap_enabled = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[connection signal="pressed" from="btn_abort_file_uploads" to="." method="_on_btn_abort_file_uploads_pressed"]
+[connection signal="pressed" from="btn_delete_files" to="." method="_on_btn_delete_files_pressed"]
+[connection signal="pressed" from="btn_finalize_file_uploads" to="." method="_on_btn_finalize_file_uploads_pressed"]
+[connection signal="pressed" from="btn_get_files" to="." method="_on_btn_get_files_pressed"]
+[connection signal="pressed" from="btn_initiate_file_uploads" to="." method="_on_btn_initiate_file_uploads_pressed"]
+[connection signal="pressed" from="btn_file_upload_test" to="." method="_on_btn_file_upload_test_pressed"]
