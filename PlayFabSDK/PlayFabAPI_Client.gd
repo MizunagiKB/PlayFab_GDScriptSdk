@@ -13,6 +13,12 @@ static func IsClientLoggedIn():
 
 
 static func AcceptTrade(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Accepts an open trade (one that has not yet been accepted or cancelled), if the locally signed-in player is in the
+    allowed player list for the trade, or it is open to all players. If the call is successful, the offered and accepted
+    items will be swapped between the two players' inventories.
+    https://docs.microsoft.com/rest/api/playfab/client/trading/accepttrade
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AcceptTrade",
@@ -25,6 +31,11 @@ static func AcceptTrade(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func AddFriend(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds the PlayFab user, based upon a match against a supplied unique identifier, to the friend list of the local user. At
+    least one of FriendPlayFabId,FriendUsername,FriendEmail, or FriendTitleDisplayName should be initialized.
+    https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/addfriend
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AddFriend",
@@ -37,6 +48,12 @@ static func AddFriend(dict_request, user_callback = null, dict_header_extra = {}
 
 
 static func AddGenericID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds the specified generic service identifier to the player's PlayFab account. This is designed to allow for a PlayFab
+    ID lookup of any arbitrary service identifier a title wants to add. This identifier should never be used as
+    authentication credentials, as the intent is that it is easily accessible by other players.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/addgenericid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AddGenericID",
@@ -49,6 +66,10 @@ static func AddGenericID(dict_request, user_callback = null, dict_header_extra =
 
 
 static func AddOrUpdateContactEmail(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds or updates a contact email to the player's profile.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/addorupdatecontactemail
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AddOrUpdateContactEmail",
@@ -61,6 +82,12 @@ static func AddOrUpdateContactEmail(dict_request, user_callback = null, dict_hea
 
 
 static func AddSharedGroupMembers(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds users to the set of those able to update both the shared data, as well as the set of users in the group. Only users
+    in the group can add new members. Shared Groups are designed for sharing data between a very small number of players,
+    please see our guide: https://docs.microsoft.com/gaming/playfab/features/social/groups/using-shared-group-data
+    https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/addsharedgroupmembers
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AddSharedGroupMembers",
@@ -73,6 +100,11 @@ static func AddSharedGroupMembers(dict_request, user_callback = null, dict_heade
 
 
 static func AddUsernamePassword(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds playfab username/password auth to an existing account created via an anonymous auth method, e.g. automatic device
+    ID login.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/addusernamepassword
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AddUsernamePassword",
@@ -85,6 +117,10 @@ static func AddUsernamePassword(dict_request, user_callback = null, dict_header_
 
 
 static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Increments the user's balance of the specified virtual currency by the stated amount
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/adduservirtualcurrency
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AddUserVirtualCurrency",
@@ -97,6 +133,10 @@ static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_head
 
 
 static func AndroidDevicePushNotificationRegistration(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Registers the Android device to receive push notifications
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/androiddevicepushnotificationregistration
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AndroidDevicePushNotificationRegistration",
@@ -109,6 +149,10 @@ static func AndroidDevicePushNotificationRegistration(dict_request, user_callbac
 
 
 static func AttributeInstall(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Attributes an install for advertisment.
+    https://docs.microsoft.com/rest/api/playfab/client/advertising/attributeinstall
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/AttributeInstall",
@@ -121,6 +165,12 @@ static func AttributeInstall(dict_request, user_callback = null, dict_header_ext
 
 
 static func CancelTrade(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Cancels an open trade (one that has not yet been accepted or cancelled). Note that only the player who created the trade
+    can cancel it via this API call, to prevent griefing of the trade system (cancelling trades in order to prevent other
+    players from accepting them, for trades that can be claimed by more than one player).
+    https://docs.microsoft.com/rest/api/playfab/client/trading/canceltrade
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/CancelTrade",
@@ -133,6 +183,11 @@ static func CancelTrade(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func ConfirmPurchase(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Confirms with the payment provider that the purchase was approved (if applicable) and adjusts inventory and virtual
+    currency balances as appropriate
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/confirmpurchase
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ConfirmPurchase",
@@ -145,6 +200,10 @@ static func ConfirmPurchase(dict_request, user_callback = null, dict_header_extr
 
 
 static func ConsumeItem(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Consume uses of a consumable item. When all uses are consumed, it will be removed from the player's inventory.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/consumeitem
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ConsumeItem",
@@ -157,6 +216,10 @@ static func ConsumeItem(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func ConsumeMicrosoftStoreEntitlements(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Grants the player's current entitlements from Microsoft Store's Collection API
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumemicrosoftstoreentitlements
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ConsumeMicrosoftStoreEntitlements",
@@ -169,6 +232,10 @@ static func ConsumeMicrosoftStoreEntitlements(dict_request, user_callback = null
 
 
 static func ConsumePSNEntitlements(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Checks for any new consumable entitlements. If any are found, they are consumed and added as PlayFab items
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumepsnentitlements
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ConsumePSNEntitlements",
@@ -181,6 +248,11 @@ static func ConsumePSNEntitlements(dict_request, user_callback = null, dict_head
 
 
 static func ConsumeXboxEntitlements(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Grants the player's current entitlements from Xbox Live, consuming all availble items in Xbox and granting them to the
+    player's PlayFab inventory. This call is idempotent and will not grant previously granted items to the player.
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumexboxentitlements
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ConsumeXboxEntitlements",
@@ -193,6 +265,13 @@ static func ConsumeXboxEntitlements(dict_request, user_callback = null, dict_hea
 
 
 static func CreateSharedGroup(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Requests the creation of a shared group object, containing key/value pairs which may be updated by all members of the
+    group. Upon creation, the current user will be the only member of the group. Shared Groups are designed for sharing data
+    between a very small number of players, please see our guide:
+    https://docs.microsoft.com/gaming/playfab/features/social/groups/using-shared-group-data
+    https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/createsharedgroup
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/CreateSharedGroup",
@@ -205,6 +284,10 @@ static func CreateSharedGroup(dict_request, user_callback = null, dict_header_ex
 
 
 static func ExecuteCloudScript(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Executes a CloudScript function, with the 'currentPlayerId' set to the PlayFab ID of the authenticated player.
+    https://docs.microsoft.com/rest/api/playfab/client/server-side-cloud-script/executecloudscript
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ExecuteCloudScript",
@@ -217,6 +300,10 @@ static func ExecuteCloudScript(dict_request, user_callback = null, dict_header_e
 
 
 static func GetAccountInfo(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the user's PlayFab account details
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getaccountinfo
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetAccountInfo",
@@ -229,6 +316,10 @@ static func GetAccountInfo(dict_request, user_callback = null, dict_header_extra
 
 
 static func GetAdPlacements(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Returns a list of ad placements and a reward for each
+    https://docs.microsoft.com/rest/api/playfab/client/advertising/getadplacements
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetAdPlacements",
@@ -241,6 +332,11 @@ static func GetAdPlacements(dict_request, user_callback = null, dict_header_extr
 
 
 static func GetAllUsersCharacters(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Lists all of the characters that belong to a specific user. CharacterIds are not globally unique; characterId must be
+    evaluated with the parent PlayFabId to guarantee uniqueness.
+    https://docs.microsoft.com/rest/api/playfab/client/characters/getalluserscharacters
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetAllUsersCharacters",
@@ -253,6 +349,10 @@ static func GetAllUsersCharacters(dict_request, user_callback = null, dict_heade
 
 
 static func GetCatalogItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
+    https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getcatalogitems
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCatalogItems",
@@ -265,6 +365,10 @@ static func GetCatalogItems(dict_request, user_callback = null, dict_header_extr
 
 
 static func GetCharacterData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title-specific custom data for the character which is readable and writable by the client
+    https://docs.microsoft.com/rest/api/playfab/client/character-data/getcharacterdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCharacterData",
@@ -277,6 +381,10 @@ static func GetCharacterData(dict_request, user_callback = null, dict_header_ext
 
 
 static func GetCharacterInventory(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the specified character's current inventory of virtual goods
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getcharacterinventory
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCharacterInventory",
@@ -289,6 +397,10 @@ static func GetCharacterInventory(dict_request, user_callback = null, dict_heade
 
 
 static func GetCharacterLeaderboard(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of ranked characters for the given statistic, starting from the indicated point in the leaderboard
+    https://docs.microsoft.com/rest/api/playfab/client/characters/getcharacterleaderboard
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCharacterLeaderboard",
@@ -301,6 +413,10 @@ static func GetCharacterLeaderboard(dict_request, user_callback = null, dict_hea
 
 
 static func GetCharacterReadOnlyData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title-specific custom data for the character which can only be read by the client
+    https://docs.microsoft.com/rest/api/playfab/client/character-data/getcharacterreadonlydata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCharacterReadOnlyData",
@@ -313,6 +429,10 @@ static func GetCharacterReadOnlyData(dict_request, user_callback = null, dict_he
 
 
 static func GetCharacterStatistics(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the details of all title-specific statistics for the user
+    https://docs.microsoft.com/rest/api/playfab/client/characters/getcharacterstatistics
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCharacterStatistics",
@@ -325,6 +445,15 @@ static func GetCharacterStatistics(dict_request, user_callback = null, dict_head
 
 
 static func GetContentDownloadUrl(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    This API retrieves a pre-signed URL for accessing a content file for the title. A subsequent HTTP GET to the returned
+    URL will attempt to download the content. A HEAD query to the returned URL will attempt to retrieve the metadata of the
+    content. Note that a successful result does not guarantee the existence of this content - if it has not been uploaded,
+    the query to retrieve the data will fail. See this post for more information:
+    https://community.playfab.com/hc/community/posts/205469488-How-to-upload-files-to-PlayFab-s-Content-Service. Also,
+    please be aware that the Content service is specifically PlayFab's CDN offering, for which standard CDN rates apply.
+    https://docs.microsoft.com/rest/api/playfab/client/content/getcontentdownloadurl
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetContentDownloadUrl",
@@ -337,6 +466,10 @@ static func GetContentDownloadUrl(dict_request, user_callback = null, dict_heade
 
 
 static func GetCurrentGames(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get details about all current running game servers matching the given parameters.
+    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/getcurrentgames
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetCurrentGames",
@@ -349,6 +482,11 @@ static func GetCurrentGames(dict_request, user_callback = null, dict_header_extr
 
 
 static func GetFriendLeaderboard(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of ranked friends of the current player for the given statistic, starting from the indicated point in
+    the leaderboard
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getfriendleaderboard
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetFriendLeaderboard",
@@ -361,6 +499,11 @@ static func GetFriendLeaderboard(dict_request, user_callback = null, dict_header
 
 
 static func GetFriendLeaderboardAroundPlayer(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of ranked friends of the current player for the given statistic, centered on the requested PlayFab
+    user. If PlayFabId is empty or null will return currently logged in user.
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getfriendleaderboardaroundplayer
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetFriendLeaderboardAroundPlayer",
@@ -373,6 +516,11 @@ static func GetFriendLeaderboardAroundPlayer(dict_request, user_callback = null,
 
 
 static func GetFriendsList(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the current friend list for the local user, constrained to users who have PlayFab accounts. Friends from
+    linked accounts (Facebook, Steam) are also included. You may optionally exclude some linked services' friends.
+    https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/getfriendslist
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetFriendsList",
@@ -385,6 +533,10 @@ static func GetFriendsList(dict_request, user_callback = null, dict_header_extra
 
 
 static func GetGameServerRegions(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get details about the regions hosting game servers matching the given parameters.
+    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/getgameserverregions
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetGameServerRegions",
@@ -397,6 +549,10 @@ static func GetGameServerRegions(dict_request, user_callback = null, dict_header
 
 
 static func GetLeaderboard(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of ranked users for the given statistic, starting from the indicated point in the leaderboard
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getleaderboard
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetLeaderboard",
@@ -409,6 +565,10 @@ static func GetLeaderboard(dict_request, user_callback = null, dict_header_extra
 
 
 static func GetLeaderboardAroundCharacter(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of ranked characters for the given statistic, centered on the requested Character ID
+    https://docs.microsoft.com/rest/api/playfab/client/characters/getleaderboardaroundcharacter
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetLeaderboardAroundCharacter",
@@ -421,6 +581,11 @@ static func GetLeaderboardAroundCharacter(dict_request, user_callback = null, di
 
 
 static func GetLeaderboardAroundPlayer(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of ranked users for the given statistic, centered on the requested player. If PlayFabId is empty or
+    null will return currently logged in user.
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getleaderboardaroundplayer
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetLeaderboardAroundPlayer",
@@ -433,6 +598,10 @@ static func GetLeaderboardAroundPlayer(dict_request, user_callback = null, dict_
 
 
 static func GetLeaderboardForUserCharacters(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a list of all of the user's characters for the given statistic.
+    https://docs.microsoft.com/rest/api/playfab/client/characters/getleaderboardforusercharacters
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetLeaderboardForUserCharacters",
@@ -445,6 +614,12 @@ static func GetLeaderboardForUserCharacters(dict_request, user_callback = null, 
 
 
 static func GetPaymentToken(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    For payments flows where the provider requires playfab (the fulfiller) to initiate the transaction, but the client
+    completes the rest of the flow. In the Xsolla case, the token returned here will be passed to Xsolla by the client to
+    create a cart. Poll GetPurchase using the returned OrderId once you've completed the payment.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getpaymenttoken
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPaymentToken",
@@ -457,6 +632,11 @@ static func GetPaymentToken(dict_request, user_callback = null, dict_header_extr
 
 
 static func GetPhotonAuthenticationToken(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets a Photon custom authentication token that can be used to securely join the player into a Photon room. See
+    https://docs.microsoft.com/gaming/playfab/features/multiplayer/photon/quickstart for more details.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/getphotonauthenticationtoken
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPhotonAuthenticationToken",
@@ -469,6 +649,10 @@ static func GetPhotonAuthenticationToken(dict_request, user_callback = null, dic
 
 
 static func GetPlayerCombinedInfo(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves all of the user's different kinds of info.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayercombinedinfo
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerCombinedInfo",
@@ -481,6 +665,10 @@ static func GetPlayerCombinedInfo(dict_request, user_callback = null, dict_heade
 
 
 static func GetPlayerProfile(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the player's profile
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayerprofile
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerProfile",
@@ -493,6 +681,10 @@ static func GetPlayerProfile(dict_request, user_callback = null, dict_header_ext
 
 
 static func GetPlayerSegments(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    List all segments that a player currently belongs to at this moment in time.
+    https://docs.microsoft.com/rest/api/playfab/client/playstream/getplayersegments
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerSegments",
@@ -505,6 +697,11 @@ static func GetPlayerSegments(dict_request, user_callback = null, dict_header_ex
 
 
 static func GetPlayerStatistics(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the indicated statistics (current version and values for all statistics, if none are specified), for the local
+    player.
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getplayerstatistics
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerStatistics",
@@ -517,6 +714,10 @@ static func GetPlayerStatistics(dict_request, user_callback = null, dict_header_
 
 
 static func GetPlayerStatisticVersions(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the information on the available versions of the specified statistic.
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getplayerstatisticversions
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerStatisticVersions",
@@ -529,6 +730,10 @@ static func GetPlayerStatisticVersions(dict_request, user_callback = null, dict_
 
 
 static func GetPlayerTags(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get all tags with a given Namespace (optional) from a player profile.
+    https://docs.microsoft.com/rest/api/playfab/client/playstream/getplayertags
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerTags",
@@ -541,6 +746,10 @@ static func GetPlayerTags(dict_request, user_callback = null, dict_header_extra 
 
 
 static func GetPlayerTrades(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets all trades the player has either opened or accepted, optionally filtered by trade status.
+    https://docs.microsoft.com/rest/api/playfab/client/trading/getplayertrades
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayerTrades",
@@ -553,6 +762,10 @@ static func GetPlayerTrades(dict_request, user_callback = null, dict_header_extr
 
 
 static func GetPlayFabIDsFromFacebookIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Facebook identifiers.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromfacebookids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromFacebookIDs",
@@ -565,6 +778,10 @@ static func GetPlayFabIDsFromFacebookIDs(dict_request, user_callback = null, dic
 
 
 static func GetPlayFabIDsFromFacebookInstantGamesIds(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Facebook Instant Game identifiers.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromfacebookinstantgamesids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromFacebookInstantGamesIds",
@@ -577,6 +794,11 @@ static func GetPlayFabIDsFromFacebookInstantGamesIds(dict_request, user_callback
 
 
 static func GetPlayFabIDsFromGameCenterIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Game Center identifiers (referenced in the Game Center
+    Programming Guide as the Player Identifier).
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgamecenterids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromGameCenterIDs",
@@ -589,6 +811,12 @@ static func GetPlayFabIDsFromGameCenterIDs(dict_request, user_callback = null, d
 
 
 static func GetPlayFabIDsFromGenericIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of generic service identifiers. A generic identifier is the
+    service name plus the service-specific ID for the player, as specified by the title when the generic identifier was
+    added to the player account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgenericids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromGenericIDs",
@@ -601,6 +829,11 @@ static func GetPlayFabIDsFromGenericIDs(dict_request, user_callback = null, dict
 
 
 static func GetPlayFabIDsFromGoogleIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Google identifiers. The Google identifiers are the IDs for
+    the user accounts, available as "id" in the Google+ People API calls.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgoogleids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromGoogleIDs",
@@ -613,6 +846,12 @@ static func GetPlayFabIDsFromGoogleIDs(dict_request, user_callback = null, dict_
 
 
 static func GetPlayFabIDsFromKongregateIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Kongregate identifiers. The Kongregate identifiers are the
+    IDs for the user accounts, available as "user_id" from the Kongregate API methods(ex:
+    http://developers.kongregate.com/docs/client/getUserId).
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromkongregateids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromKongregateIDs",
@@ -625,6 +864,10 @@ static func GetPlayFabIDsFromKongregateIDs(dict_request, user_callback = null, d
 
 
 static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Nintendo Switch identifiers.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromnintendoswitchdeviceids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromNintendoSwitchDeviceIds",
@@ -637,6 +880,10 @@ static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, user_callback
 
 
 static func GetPlayFabIDsFromPSNAccountIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of PlayStation Network identifiers.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfrompsnaccountids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromPSNAccountIDs",
@@ -649,6 +896,11 @@ static func GetPlayFabIDsFromPSNAccountIDs(dict_request, user_callback = null, d
 
 
 static func GetPlayFabIDsFromSteamIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Steam identifiers. The Steam identifiers are the profile
+    IDs for the user accounts, available as SteamId in the Steamworks Community API calls.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromsteamids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromSteamIDs",
@@ -661,6 +913,12 @@ static func GetPlayFabIDsFromSteamIDs(dict_request, user_callback = null, dict_h
 
 
 static func GetPlayFabIDsFromTwitchIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Twitch identifiers. The Twitch identifiers are the IDs for
+    the user accounts, available as "_id" from the Twitch API methods (ex:
+    https://github.com/justintv/Twitch-API/blob/master/v3_resources/users.md#get-usersuser).
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromtwitchids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromTwitchIDs",
@@ -673,6 +931,10 @@ static func GetPlayFabIDsFromTwitchIDs(dict_request, user_callback = null, dict_
 
 
 static func GetPlayFabIDsFromXboxLiveIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of XboxLive identifiers.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromxboxliveids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPlayFabIDsFromXboxLiveIDs",
@@ -685,6 +947,10 @@ static func GetPlayFabIDsFromXboxLiveIDs(dict_request, user_callback = null, dic
 
 
 static func GetPublisherData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the key-value store of custom publisher settings
+    https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getpublisherdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPublisherData",
@@ -697,6 +963,11 @@ static func GetPublisherData(dict_request, user_callback = null, dict_header_ext
 
 
 static func GetPurchase(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves a purchase along with its current PlayFab status. Returns inventory items from the purchase that are still
+    active.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getpurchase
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetPurchase",
@@ -709,6 +980,13 @@ static func GetPurchase(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func GetSharedGroupData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves data stored in a shared group object, as well as the list of members in the group. Non-members of the group
+    may use this to retrieve group data, including membership, but they will not receive data for keys marked as private.
+    Shared Groups are designed for sharing data between a very small number of players, please see our guide:
+    https://docs.microsoft.com/gaming/playfab/features/social/groups/using-shared-group-data
+    https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/getsharedgroupdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetSharedGroupData",
@@ -721,6 +999,10 @@ static func GetSharedGroupData(dict_request, user_callback = null, dict_header_e
 
 
 static func GetStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the set of items defined for the specified store, including all prices defined
+    https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getstoreitems
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetStoreItems",
@@ -733,6 +1015,10 @@ static func GetStoreItems(dict_request, user_callback = null, dict_header_extra 
 
 
 static func GetTime(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the current server time
+    https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/gettime
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetTime",
@@ -745,6 +1031,10 @@ static func GetTime(dict_request, user_callback = null, dict_header_extra = {}):
 
 
 static func GetTitleData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the key-value store of custom title settings
+    https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/gettitledata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetTitleData",
@@ -757,6 +1047,10 @@ static func GetTitleData(dict_request, user_callback = null, dict_header_extra =
 
 
 static func GetTitleNews(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title news feed, as configured in the developer portal
+    https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/gettitlenews
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetTitleNews",
@@ -769,6 +1063,10 @@ static func GetTitleNews(dict_request, user_callback = null, dict_header_extra =
 
 
 static func GetTitlePublicKey(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Returns the title's base 64 encoded RSA CSP blob.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/gettitlepublickey
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetTitlePublicKey",
@@ -781,6 +1079,10 @@ static func GetTitlePublicKey(dict_request, user_callback = null, dict_header_ex
 
 
 static func GetTradeStatus(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the current status of an existing trade.
+    https://docs.microsoft.com/rest/api/playfab/client/trading/gettradestatus
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetTradeStatus",
@@ -793,6 +1095,10 @@ static func GetTradeStatus(dict_request, user_callback = null, dict_header_extra
 
 
 static func GetUserData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title-specific custom data for the user which is readable and writable by the client
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetUserData",
@@ -805,6 +1111,10 @@ static func GetUserData(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func GetUserInventory(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the user's current inventory of virtual goods
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getuserinventory
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetUserInventory",
@@ -817,6 +1127,10 @@ static func GetUserInventory(dict_request, user_callback = null, dict_header_ext
 
 
 static func GetUserPublisherData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the publisher-specific custom data for the user which is readable and writable by the client
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserpublisherdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetUserPublisherData",
@@ -829,6 +1143,10 @@ static func GetUserPublisherData(dict_request, user_callback = null, dict_header
 
 
 static func GetUserPublisherReadOnlyData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the publisher-specific custom data for the user which can only be read by the client
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserpublisherreadonlydata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetUserPublisherReadOnlyData",
@@ -841,6 +1159,10 @@ static func GetUserPublisherReadOnlyData(dict_request, user_callback = null, dic
 
 
 static func GetUserReadOnlyData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title-specific custom data for the user which can only be read by the client
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/getuserreadonlydata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetUserReadOnlyData",
@@ -853,6 +1175,10 @@ static func GetUserReadOnlyData(dict_request, user_callback = null, dict_header_
 
 
 static func GetWindowsHelloChallenge(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Requests a challenge from the server to be signed by Windows Hello Passport service to authenticate.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/getwindowshellochallenge
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GetWindowsHelloChallenge",
@@ -865,6 +1191,11 @@ static func GetWindowsHelloChallenge(dict_request, user_callback = null, dict_he
 
 
 static func GrantCharacterToUser(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Grants the specified character type to the user. CharacterIds are not globally unique; characterId must be evaluated
+    with the parent PlayFabId to guarantee uniqueness.
+    https://docs.microsoft.com/rest/api/playfab/client/characters/grantcharactertouser
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/GrantCharacterToUser",
@@ -877,6 +1208,10 @@ static func GrantCharacterToUser(dict_request, user_callback = null, dict_header
 
 
 static func LinkAndroidDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Android device identifier to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkandroiddeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkAndroidDeviceID",
@@ -889,6 +1224,10 @@ static func LinkAndroidDeviceID(dict_request, user_callback = null, dict_header_
 
 
 static func LinkApple(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Apple account associated with the token to the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkapple
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkApple",
@@ -901,6 +1240,10 @@ static func LinkApple(dict_request, user_callback = null, dict_header_extra = {}
 
 
 static func LinkCustomID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the custom identifier, generated by the title, to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkcustomid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkCustomID",
@@ -913,6 +1256,10 @@ static func LinkCustomID(dict_request, user_callback = null, dict_header_extra =
 
 
 static func LinkFacebookAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Facebook account associated with the provided Facebook access token to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkfacebookaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkFacebookAccount",
@@ -925,6 +1272,10 @@ static func LinkFacebookAccount(dict_request, user_callback = null, dict_header_
 
 
 static func LinkFacebookInstantGamesId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Facebook Instant Games Id to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkfacebookinstantgamesid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkFacebookInstantGamesId",
@@ -937,6 +1288,10 @@ static func LinkFacebookInstantGamesId(dict_request, user_callback = null, dict_
 
 
 static func LinkGameCenterAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Game Center account associated with the provided Game Center ID to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgamecenteraccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkGameCenterAccount",
@@ -949,6 +1304,10 @@ static func LinkGameCenterAccount(dict_request, user_callback = null, dict_heade
 
 
 static func LinkGoogleAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the currently signed-in user account to their Google account, using their Google account credentials
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgoogleaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkGoogleAccount",
@@ -961,6 +1320,10 @@ static func LinkGoogleAccount(dict_request, user_callback = null, dict_header_ex
 
 
 static func LinkIOSDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the vendor-specific iOS device identifier to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkiosdeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkIOSDeviceID",
@@ -973,6 +1336,10 @@ static func LinkIOSDeviceID(dict_request, user_callback = null, dict_header_extr
 
 
 static func LinkKongregate(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Kongregate identifier to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkkongregate
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkKongregate",
@@ -985,6 +1352,10 @@ static func LinkKongregate(dict_request, user_callback = null, dict_header_extra
 
 
 static func LinkNintendoServiceAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Nintendo account associated with the token to the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linknintendoserviceaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkNintendoServiceAccount",
@@ -997,6 +1368,10 @@ static func LinkNintendoServiceAccount(dict_request, user_callback = null, dict_
 
 
 static func LinkNintendoSwitchDeviceId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the NintendoSwitchDeviceId to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linknintendoswitchdeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkNintendoSwitchDeviceId",
@@ -1009,6 +1384,11 @@ static func LinkNintendoSwitchDeviceId(dict_request, user_callback = null, dict_
 
 
 static func LinkOpenIdConnect(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links an OpenID Connect account to a user's PlayFab account, based on an existing relationship between a title and an
+    Open ID Connect provider and the OpenId Connect JWT from that provider.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkopenidconnect
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkOpenIdConnect",
@@ -1021,6 +1401,10 @@ static func LinkOpenIdConnect(dict_request, user_callback = null, dict_header_ex
 
 
 static func LinkPSNAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the PlayStation Network account associated with the provided access code to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkpsnaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkPSNAccount",
@@ -1033,6 +1417,10 @@ static func LinkPSNAccount(dict_request, user_callback = null, dict_header_extra
 
 
 static func LinkSteamAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Steam account associated with the provided Steam authentication ticket to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linksteamaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkSteamAccount",
@@ -1045,6 +1433,10 @@ static func LinkSteamAccount(dict_request, user_callback = null, dict_header_ext
 
 
 static func LinkTwitch(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Twitch account associated with the token to the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linktwitch
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkTwitch",
@@ -1057,6 +1449,10 @@ static func LinkTwitch(dict_request, user_callback = null, dict_header_extra = {
 
 
 static func LinkWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Link Windows Hello authentication to the current PlayFab Account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkwindowshello
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkWindowsHello",
@@ -1069,6 +1465,10 @@ static func LinkWindowsHello(dict_request, user_callback = null, dict_header_ext
 
 
 static func LinkXboxAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Xbox Live account associated with the provided access code to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkxboxaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LinkXboxAccount",
@@ -1081,6 +1481,11 @@ static func LinkXboxAccount(dict_request, user_callback = null, dict_header_extr
 
 
 static func LoginWithAndroidDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using the Android device identifier, returning a session identifier that can subsequently be used for
+    API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithandroiddeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithAndroidDeviceID",
@@ -1093,6 +1498,10 @@ static func LoginWithAndroidDeviceID(dict_request, user_callback = null, dict_he
 
 
 static func LoginWithApple(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs in the user with a Sign in with Apple identity token.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithapple
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithApple",
@@ -1105,6 +1514,11 @@ static func LoginWithApple(dict_request, user_callback = null, dict_header_extra
 
 
 static func LoginWithCustomID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a custom unique identifier generated by the title, returning a session identifier that can
+    subsequently be used for API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithcustomid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithCustomID",
@@ -1117,6 +1531,13 @@ static func LoginWithCustomID(dict_request, user_callback = null, dict_header_ex
 
 
 static func LoginWithEmailAddress(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user into the PlayFab account, returning a session identifier that can subsequently be used for API calls
+    which require an authenticated user. Unlike most other login API calls, LoginWithEmailAddress does not permit the
+    creation of new accounts via the CreateAccountFlag. Email addresses may be used to create accounts via
+    RegisterPlayFabUser.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithemailaddress
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithEmailAddress",
@@ -1129,6 +1550,11 @@ static func LoginWithEmailAddress(dict_request, user_callback = null, dict_heade
 
 
 static func LoginWithFacebook(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Facebook access token, returning a session identifier that can subsequently be used for API
+    calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithfacebook
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithFacebook",
@@ -1141,6 +1567,11 @@ static func LoginWithFacebook(dict_request, user_callback = null, dict_header_ex
 
 
 static func LoginWithFacebookInstantGamesId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Facebook Instant Games ID, returning a session identifier that can subsequently be used for
+    API calls which require an authenticated user. Requires Facebook Instant Games to be configured.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithfacebookinstantgamesid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithFacebookInstantGamesId",
@@ -1153,6 +1584,11 @@ static func LoginWithFacebookInstantGamesId(dict_request, user_callback = null, 
 
 
 static func LoginWithGameCenter(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using an iOS Game Center player identifier, returning a session identifier that can subsequently be
+    used for API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgamecenter
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithGameCenter",
@@ -1165,6 +1601,10 @@ static func LoginWithGameCenter(dict_request, user_callback = null, dict_header_
 
 
 static func LoginWithGoogleAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using their Google account credentials
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgoogleaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithGoogleAccount",
@@ -1177,6 +1617,11 @@ static func LoginWithGoogleAccount(dict_request, user_callback = null, dict_head
 
 
 static func LoginWithIOSDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using the vendor-specific iOS device identifier, returning a session identifier that can subsequently
+    be used for API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithiosdeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithIOSDeviceID",
@@ -1189,6 +1634,10 @@ static func LoginWithIOSDeviceID(dict_request, user_callback = null, dict_header
 
 
 static func LoginWithKongregate(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Kongregate player account.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithkongregate
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithKongregate",
@@ -1201,6 +1650,10 @@ static func LoginWithKongregate(dict_request, user_callback = null, dict_header_
 
 
 static func LoginWithNintendoServiceAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs in the user with a Nintendo service account token.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithnintendoserviceaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithNintendoServiceAccount",
@@ -1213,6 +1666,11 @@ static func LoginWithNintendoServiceAccount(dict_request, user_callback = null, 
 
 
 static func LoginWithNintendoSwitchDeviceId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Nintendo Switch Device ID, returning a session identifier that can subsequently be used for
+    API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithnintendoswitchdeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithNintendoSwitchDeviceId",
@@ -1225,6 +1683,11 @@ static func LoginWithNintendoSwitchDeviceId(dict_request, user_callback = null, 
 
 
 static func LoginWithOpenIdConnect(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Logs in a user with an Open ID Connect JWT created by an existing relationship between a title and an Open ID Connect
+    provider.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithopenidconnect
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithOpenIdConnect",
@@ -1237,6 +1700,13 @@ static func LoginWithOpenIdConnect(dict_request, user_callback = null, dict_head
 
 
 static func LoginWithPlayFab(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user into the PlayFab account, returning a session identifier that can subsequently be used for API calls
+    which require an authenticated user. Unlike most other login API calls, LoginWithPlayFab does not permit the creation of
+    new accounts via the CreateAccountFlag. Username/Password credentials may be used to create accounts via
+    RegisterPlayFabUser, or added to existing accounts using AddUsernamePassword.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithplayfab
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithPlayFab",
@@ -1249,6 +1719,11 @@ static func LoginWithPlayFab(dict_request, user_callback = null, dict_header_ext
 
 
 static func LoginWithPSN(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a PlayStation Network authentication code, returning a session identifier that can subsequently
+    be used for API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithpsn
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithPSN",
@@ -1261,6 +1736,11 @@ static func LoginWithPSN(dict_request, user_callback = null, dict_header_extra =
 
 
 static func LoginWithSteam(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Steam authentication ticket, returning a session identifier that can subsequently be used for
+    API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithsteam
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithSteam",
@@ -1273,6 +1753,10 @@ static func LoginWithSteam(dict_request, user_callback = null, dict_header_extra
 
 
 static func LoginWithTwitch(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Twitch access token.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithtwitch
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithTwitch",
@@ -1285,6 +1769,13 @@ static func LoginWithTwitch(dict_request, user_callback = null, dict_header_extr
 
 
 static func LoginWithWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Completes the Windows Hello login flow by returning the signed value of the challange from GetWindowsHelloChallenge.
+    Windows Hello has a 2 step client to server authentication scheme. Step one is to request from the server a challenge
+    string. Step two is to request the user sign the string via Windows Hello and then send the signed value back to the
+    server.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithwindowshello
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithWindowsHello",
@@ -1297,6 +1788,11 @@ static func LoginWithWindowsHello(dict_request, user_callback = null, dict_heade
 
 
 static func LoginWithXbox(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using a Xbox Live Token, returning a session identifier that can subsequently be used for API calls
+    which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithxbox
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/LoginWithXbox",
@@ -1309,6 +1805,15 @@ static func LoginWithXbox(dict_request, user_callback = null, dict_header_extra 
 
 
 static func Matchmake(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Attempts to locate a game session matching the given parameters. If the goal is to match the player into a specific
+    active session, only the LobbyId is required. Otherwise, the BuildVersion, GameMode, and Region are all required
+    parameters. Note that parameters specified in the search are required (they are not weighting factors). If a slot is
+    found in a server instance matching the parameters, the slot will be assigned to that player, removing it from the
+    availabe set. In that case, the information on the game session will be returned, otherwise the Status returned will be
+    GameNotFound.
+    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/matchmake
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/Matchmake",
@@ -1321,6 +1826,10 @@ static func Matchmake(dict_request, user_callback = null, dict_header_extra = {}
 
 
 static func OpenTrade(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Opens a new outstanding trade. Note that a given item instance may only be in one open trade at a time.
+    https://docs.microsoft.com/rest/api/playfab/client/trading/opentrade
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/OpenTrade",
@@ -1333,6 +1842,10 @@ static func OpenTrade(dict_request, user_callback = null, dict_header_extra = {}
 
 
 static func PayForPurchase(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Selects a payment option for purchase order created via StartPurchase
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/payforpurchase
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/PayForPurchase",
@@ -1345,6 +1858,11 @@ static func PayForPurchase(dict_request, user_callback = null, dict_header_extra
 
 
 static func PurchaseItem(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Buys a single item with virtual currency. You must specify both the virtual currency to use to purchase, as well as what
+    the client believes the price to be. This lets the server fail the purchase if the price has changed.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/purchaseitem
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/PurchaseItem",
@@ -1357,6 +1875,11 @@ static func PurchaseItem(dict_request, user_callback = null, dict_header_extra =
 
 
 static func RedeemCoupon(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds the virtual goods associated with the coupon to the user's inventory. Coupons can be generated via the
+    Economy->Catalogs tab in the PlayFab Game Manager.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/redeemcoupon
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RedeemCoupon",
@@ -1369,6 +1892,10 @@ static func RedeemCoupon(dict_request, user_callback = null, dict_header_extra =
 
 
 static func RefreshPSNAuthToken(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Uses the supplied OAuth code to refresh the internally cached player PSN auth token
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/refreshpsnauthtoken
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RefreshPSNAuthToken",
@@ -1381,6 +1908,10 @@ static func RefreshPSNAuthToken(dict_request, user_callback = null, dict_header_
 
 
 static func RegisterForIOSPushNotification(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Registers the iOS device to receive push notifications
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/registerforiospushnotification
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RegisterForIOSPushNotification",
@@ -1393,6 +1924,11 @@ static func RegisterForIOSPushNotification(dict_request, user_callback = null, d
 
 
 static func RegisterPlayFabUser(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Registers a new Playfab user account, returning a session identifier that can subsequently be used for API calls which
+    require an authenticated user. You must supply either a username or an email address.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/registerplayfabuser
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RegisterPlayFabUser",
@@ -1405,6 +1941,11 @@ static func RegisterPlayFabUser(dict_request, user_callback = null, dict_header_
 
 
 static func RegisterWithWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Registers a new PlayFab user account using Windows Hello authentication, returning a session ticket that can
+    subsequently be used for API calls which require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/registerwithwindowshello
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RegisterWithWindowsHello",
@@ -1417,6 +1958,10 @@ static func RegisterWithWindowsHello(dict_request, user_callback = null, dict_he
 
 
 static func RemoveContactEmail(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Removes a contact email from the player's profile.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/removecontactemail
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RemoveContactEmail",
@@ -1429,6 +1974,10 @@ static func RemoveContactEmail(dict_request, user_callback = null, dict_header_e
 
 
 static func RemoveFriend(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Removes a specified user from the friend list of the local user
+    https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/removefriend
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RemoveFriend",
@@ -1441,6 +1990,10 @@ static func RemoveFriend(dict_request, user_callback = null, dict_header_extra =
 
 
 static func RemoveGenericID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Removes the specified generic service identifier from the player's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/removegenericid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RemoveGenericID",
@@ -1453,6 +2006,13 @@ static func RemoveGenericID(dict_request, user_callback = null, dict_header_extr
 
 
 static func RemoveSharedGroupMembers(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Removes users from the set of those able to update the shared data and the set of users in the group. Only users in the
+    group can remove members. If as a result of the call, zero users remain with access, the group and its associated data
+    will be deleted. Shared Groups are designed for sharing data between a very small number of players, please see our
+    guide: https://docs.microsoft.com/gaming/playfab/features/social/groups/using-shared-group-data
+    https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/removesharedgroupmembers
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RemoveSharedGroupMembers",
@@ -1465,6 +2025,10 @@ static func RemoveSharedGroupMembers(dict_request, user_callback = null, dict_he
 
 
 static func ReportAdActivity(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Report player's ad activity
+    https://docs.microsoft.com/rest/api/playfab/client/advertising/reportadactivity
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ReportAdActivity",
@@ -1477,6 +2041,11 @@ static func ReportAdActivity(dict_request, user_callback = null, dict_header_ext
 
 
 static func ReportDeviceInfo(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Write a PlayStream event to describe the provided player device information. This API method is not designed to be
+    called directly by developers. Each PlayFab client SDK will eventually report this information automatically.
+    https://docs.microsoft.com/rest/api/playfab/client/analytics/reportdeviceinfo
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ReportDeviceInfo",
@@ -1489,6 +2058,11 @@ static func ReportDeviceInfo(dict_request, user_callback = null, dict_header_ext
 
 
 static func ReportPlayer(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Submit a report for another player (due to bad bahavior, etc.), so that customer service representatives for the title
+    can take action concerning potentially toxic players.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/reportplayer
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ReportPlayer",
@@ -1501,6 +2075,10 @@ static func ReportPlayer(dict_request, user_callback = null, dict_header_extra =
 
 
 static func RestoreIOSPurchases(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Restores all in-app purchases based on the given restore receipt
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/restoreiospurchases
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RestoreIOSPurchases",
@@ -1513,6 +2091,10 @@ static func RestoreIOSPurchases(dict_request, user_callback = null, dict_header_
 
 
 static func RewardAdActivity(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Reward player's ad activity
+    https://docs.microsoft.com/rest/api/playfab/client/advertising/rewardadactivity
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/RewardAdActivity",
@@ -1525,6 +2107,12 @@ static func RewardAdActivity(dict_request, user_callback = null, dict_header_ext
 
 
 static func SendAccountRecoveryEmail(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Forces an email to be sent to the registered email address for the user's account, with a link allowing the user to
+    change the password.If an account recovery email template ID is provided, an email using the custom email template will
+    be used.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/sendaccountrecoveryemail
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/SendAccountRecoveryEmail",
@@ -1537,6 +2125,10 @@ static func SendAccountRecoveryEmail(dict_request, user_callback = null, dict_he
 
 
 static func SetFriendTags(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates the tag list for a specified user in the friend list of the local user
+    https://docs.microsoft.com/rest/api/playfab/client/friend-list-management/setfriendtags
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/SetFriendTags",
@@ -1549,6 +2141,11 @@ static func SetFriendTags(dict_request, user_callback = null, dict_header_extra 
 
 
 static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets the player's secret if it is not already set. Player secrets are used to sign API requests. To reset a player's
+    secret use the Admin or Server API method SetPlayerSecret.
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/setplayersecret
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/SetPlayerSecret",
@@ -1561,6 +2158,10 @@ static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extr
 
 
 static func StartGame(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Start a new game server with a given configuration, add the current player and return the connection information.
+    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/startgame
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/StartGame",
@@ -1573,6 +2174,10 @@ static func StartGame(dict_request, user_callback = null, dict_header_extra = {}
 
 
 static func StartPurchase(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates an order for a list of items from the title catalog
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/startpurchase
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/StartPurchase",
@@ -1585,6 +2190,11 @@ static func StartPurchase(dict_request, user_callback = null, dict_header_extra 
 
 
 static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Decrements the user's balance of the specified virtual currency by the stated amount. It is possible to make a VC
+    balance negative with this API.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/subtractuservirtualcurrency
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/SubtractUserVirtualCurrency",
@@ -1597,6 +2207,10 @@ static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict
 
 
 static func UnlinkAndroidDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Android device identifier from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkandroiddeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkAndroidDeviceID",
@@ -1609,6 +2223,10 @@ static func UnlinkAndroidDeviceID(dict_request, user_callback = null, dict_heade
 
 
 static func UnlinkApple(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Apple account from the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkapple
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkApple",
@@ -1621,6 +2239,10 @@ static func UnlinkApple(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func UnlinkCustomID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related custom identifier from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkcustomid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkCustomID",
@@ -1633,6 +2255,10 @@ static func UnlinkCustomID(dict_request, user_callback = null, dict_header_extra
 
 
 static func UnlinkFacebookAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Facebook account from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkfacebookaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkFacebookAccount",
@@ -1645,6 +2271,10 @@ static func UnlinkFacebookAccount(dict_request, user_callback = null, dict_heade
 
 
 static func UnlinkFacebookInstantGamesId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Facebook Instant Game Ids from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkfacebookinstantgamesid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkFacebookInstantGamesId",
@@ -1657,6 +2287,10 @@ static func UnlinkFacebookInstantGamesId(dict_request, user_callback = null, dic
 
 
 static func UnlinkGameCenterAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Game Center account from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkgamecenteraccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkGameCenterAccount",
@@ -1669,6 +2303,11 @@ static func UnlinkGameCenterAccount(dict_request, user_callback = null, dict_hea
 
 
 static func UnlinkGoogleAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Google account from the user's PlayFab account
+    (https://developers.google.com/android/reference/com/google/android/gms/auth/GoogleAuthUtil#public-methods).
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkgoogleaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkGoogleAccount",
@@ -1681,6 +2320,10 @@ static func UnlinkGoogleAccount(dict_request, user_callback = null, dict_header_
 
 
 static func UnlinkIOSDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related iOS device identifier from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkiosdeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkIOSDeviceID",
@@ -1693,6 +2336,10 @@ static func UnlinkIOSDeviceID(dict_request, user_callback = null, dict_header_ex
 
 
 static func UnlinkKongregate(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Kongregate identifier from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkkongregate
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkKongregate",
@@ -1705,6 +2352,10 @@ static func UnlinkKongregate(dict_request, user_callback = null, dict_header_ext
 
 
 static func UnlinkNintendoServiceAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Nintendo account from the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinknintendoserviceaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkNintendoServiceAccount",
@@ -1717,6 +2368,10 @@ static func UnlinkNintendoServiceAccount(dict_request, user_callback = null, dic
 
 
 static func UnlinkNintendoSwitchDeviceId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related NintendoSwitchDeviceId from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinknintendoswitchdeviceid
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkNintendoSwitchDeviceId",
@@ -1729,6 +2384,11 @@ static func UnlinkNintendoSwitchDeviceId(dict_request, user_callback = null, dic
 
 
 static func UnlinkOpenIdConnect(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks an OpenID Connect account from a user's PlayFab account, based on the connection ID of an existing relationship
+    between a title and an Open ID Connect provider.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkopenidconnect
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkOpenIdConnect",
@@ -1741,6 +2401,10 @@ static func UnlinkOpenIdConnect(dict_request, user_callback = null, dict_header_
 
 
 static func UnlinkPSNAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related PSN account from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkpsnaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkPSNAccount",
@@ -1753,6 +2417,10 @@ static func UnlinkPSNAccount(dict_request, user_callback = null, dict_header_ext
 
 
 static func UnlinkSteamAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Steam account from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinksteamaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkSteamAccount",
@@ -1765,6 +2433,10 @@ static func UnlinkSteamAccount(dict_request, user_callback = null, dict_header_e
 
 
 static func UnlinkTwitch(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Twitch account from the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinktwitch
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkTwitch",
@@ -1777,6 +2449,10 @@ static func UnlinkTwitch(dict_request, user_callback = null, dict_header_extra =
 
 
 static func UnlinkWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlink Windows Hello authentication from the current PlayFab Account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkwindowshello
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkWindowsHello",
@@ -1789,6 +2465,10 @@ static func UnlinkWindowsHello(dict_request, user_callback = null, dict_header_e
 
 
 static func UnlinkXboxAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Xbox Live account from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkxboxaccount
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkXboxAccount",
@@ -1801,6 +2481,12 @@ static func UnlinkXboxAccount(dict_request, user_callback = null, dict_header_ex
 
 
 static func UnlockContainerInstance(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Opens the specified container, with the specified key (when required), and returns the contents of the opened container.
+    If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented,
+    consistent with the operation of ConsumeItem.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/unlockcontainerinstance
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlockContainerInstance",
@@ -1813,6 +2499,12 @@ static func UnlockContainerInstance(dict_request, user_callback = null, dict_hea
 
 
 static func UnlockContainerItem(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Searches target inventory for an ItemInstance matching the given CatalogItemId, if necessary unlocks it using an
+    appropriate key, and returns the contents of the opened container. If the container (and key when relevant) are
+    consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.
+    https://docs.microsoft.com/rest/api/playfab/client/player-item-management/unlockcontaineritem
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlockContainerItem",
@@ -1825,6 +2517,10 @@ static func UnlockContainerItem(dict_request, user_callback = null, dict_header_
 
 
 static func UpdateAvatarUrl(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Update the avatar URL of the player
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/updateavatarurl
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateAvatarUrl",
@@ -1837,6 +2533,10 @@ static func UpdateAvatarUrl(dict_request, user_callback = null, dict_header_extr
 
 
 static func UpdateCharacterData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates and updates the title-specific custom data for the user's character which is readable and writable by the client
+    https://docs.microsoft.com/rest/api/playfab/client/character-data/updatecharacterdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateCharacterData",
@@ -1849,6 +2549,11 @@ static func UpdateCharacterData(dict_request, user_callback = null, dict_header_
 
 
 static func UpdateCharacterStatistics(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates the values of the specified title-specific statistics for the specific character. By default, clients are not
+    permitted to update statistics. Developers may override this setting in the Game Manager > Settings > API Features.
+    https://docs.microsoft.com/rest/api/playfab/client/characters/updatecharacterstatistics
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateCharacterStatistics",
@@ -1861,6 +2566,11 @@ static func UpdateCharacterStatistics(dict_request, user_callback = null, dict_h
 
 
 static func UpdatePlayerStatistics(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates the values of the specified title-specific statistics for the user. By default, clients are not permitted to
+    update statistics. Developers may override this setting in the Game Manager > Settings > API Features.
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateplayerstatistics
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdatePlayerStatistics",
@@ -1873,6 +2583,14 @@ static func UpdatePlayerStatistics(dict_request, user_callback = null, dict_head
 
 
 static func UpdateSharedGroupData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Adds, updates, and removes data keys for a shared group object. If the permission is set to Public, all fields updated
+    or added in this call will be readable by users not in the group. By default, data permissions are set to Private.
+    Regardless of the permission setting, only members of the group can update the data. Shared Groups are designed for
+    sharing data between a very small number of players, please see our guide:
+    https://docs.microsoft.com/gaming/playfab/features/social/groups/using-shared-group-data
+    https://docs.microsoft.com/rest/api/playfab/client/shared-group-data/updatesharedgroupdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateSharedGroupData",
@@ -1885,6 +2603,10 @@ static func UpdateSharedGroupData(dict_request, user_callback = null, dict_heade
 
 
 static func UpdateUserData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates and updates the title-specific custom data for the user which is readable and writable by the client
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateuserdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateUserData",
@@ -1897,6 +2619,10 @@ static func UpdateUserData(dict_request, user_callback = null, dict_header_extra
 
 
 static func UpdateUserPublisherData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates and updates the publisher-specific custom data for the user which is readable and writable by the client
+    https://docs.microsoft.com/rest/api/playfab/client/player-data-management/updateuserpublisherdata
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateUserPublisherData",
@@ -1909,6 +2635,10 @@ static func UpdateUserPublisherData(dict_request, user_callback = null, dict_hea
 
 
 static func UpdateUserTitleDisplayName(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates the title specific display name for the user
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/updateusertitledisplayname
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/UpdateUserTitleDisplayName",
@@ -1921,6 +2651,11 @@ static func UpdateUserTitleDisplayName(dict_request, user_callback = null, dict_
 
 
 static func ValidateAmazonIAPReceipt(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Validates with Amazon that the receipt for an Amazon App Store in-app purchase is valid and that it matches the
+    purchased catalog item
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validateamazoniapreceipt
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ValidateAmazonIAPReceipt",
@@ -1933,6 +2668,10 @@ static func ValidateAmazonIAPReceipt(dict_request, user_callback = null, dict_he
 
 
 static func ValidateGooglePlayPurchase(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Validates a Google Play purchase and gives the corresponding item to the player.
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validategoogleplaypurchase
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ValidateGooglePlayPurchase",
@@ -1945,6 +2684,11 @@ static func ValidateGooglePlayPurchase(dict_request, user_callback = null, dict_
 
 
 static func ValidateIOSReceipt(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Validates with the Apple store that the receipt for an iOS in-app purchase is valid and that it matches the purchased
+    catalog item
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validateiosreceipt
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ValidateIOSReceipt",
@@ -1957,6 +2701,11 @@ static func ValidateIOSReceipt(dict_request, user_callback = null, dict_header_e
 
 
 static func ValidateWindowsStoreReceipt(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Validates with Windows that the receipt for an Windows App Store in-app purchase is valid and that it matches the
+    purchased catalog item
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validatewindowsstorereceipt
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/ValidateWindowsStoreReceipt",
@@ -1969,6 +2718,10 @@ static func ValidateWindowsStoreReceipt(dict_request, user_callback = null, dict
 
 
 static func WriteCharacterEvent(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Writes a character-based event into PlayStream.
+    https://docs.microsoft.com/rest/api/playfab/client/analytics/writecharacterevent
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/WriteCharacterEvent",
@@ -1981,6 +2734,10 @@ static func WriteCharacterEvent(dict_request, user_callback = null, dict_header_
 
 
 static func WritePlayerEvent(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Writes a player-based event into PlayStream.
+    https://docs.microsoft.com/rest/api/playfab/client/analytics/writeplayerevent
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/WritePlayerEvent",
@@ -1993,6 +2750,10 @@ static func WritePlayerEvent(dict_request, user_callback = null, dict_header_ext
 
 
 static func WriteTitleEvent(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Writes a title-based event into PlayStream.
+    https://docs.microsoft.com/rest/api/playfab/client/analytics/writetitleevent
+    """
 
     return PlayFab._http_cli.request_append(
         "/Client/WriteTitleEvent",

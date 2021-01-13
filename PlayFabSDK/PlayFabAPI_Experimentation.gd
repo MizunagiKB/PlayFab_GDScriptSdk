@@ -10,6 +10,10 @@ extends Node
 
 
 static func CreateExclusionGroup(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates a new experiment exclusion group for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/createexclusiongroup
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/CreateExclusionGroup",
@@ -22,6 +26,10 @@ static func CreateExclusionGroup(dict_request, user_callback = null, dict_header
 
 
 static func CreateExperiment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates a new experiment for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/createexperiment
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/CreateExperiment",
@@ -34,6 +42,10 @@ static func CreateExperiment(dict_request, user_callback = null, dict_header_ext
 
 
 static func DeleteExclusionGroup(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Deletes an existing exclusion group for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/deleteexclusiongroup
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/DeleteExclusionGroup",
@@ -46,6 +58,10 @@ static func DeleteExclusionGroup(dict_request, user_callback = null, dict_header
 
 
 static func DeleteExperiment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Deletes an existing experiment for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/deleteexperiment
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/DeleteExperiment",
@@ -58,6 +74,10 @@ static func DeleteExperiment(dict_request, user_callback = null, dict_header_ext
 
 
 static func GetExclusionGroups(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the details of all exclusion groups for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getexclusiongroups
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/GetExclusionGroups",
@@ -70,6 +90,10 @@ static func GetExclusionGroups(dict_request, user_callback = null, dict_header_e
 
 
 static func GetExclusionGroupTraffic(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the details of all exclusion groups for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getexclusiongrouptraffic
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/GetExclusionGroupTraffic",
@@ -82,6 +106,10 @@ static func GetExclusionGroupTraffic(dict_request, user_callback = null, dict_he
 
 
 static func GetExperiments(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the details of all experiments for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getexperiments
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/GetExperiments",
@@ -94,6 +122,10 @@ static func GetExperiments(dict_request, user_callback = null, dict_header_extra
 
 
 static func GetLatestScorecard(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the latest scorecard of the experiment for the title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/getlatestscorecard
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/GetLatestScorecard",
@@ -106,6 +138,10 @@ static func GetLatestScorecard(dict_request, user_callback = null, dict_header_e
 
 
 static func GetTreatmentAssignment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the treatment assignments for a player for every running experiment in the title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/gettreatmentassignment
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/GetTreatmentAssignment",
@@ -118,6 +154,10 @@ static func GetTreatmentAssignment(dict_request, user_callback = null, dict_head
 
 
 static func StartExperiment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Starts an existing experiment for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/startexperiment
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/StartExperiment",
@@ -130,6 +170,10 @@ static func StartExperiment(dict_request, user_callback = null, dict_header_extr
 
 
 static func StopExperiment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Stops an existing experiment for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/stopexperiment
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/StopExperiment",
@@ -142,6 +186,10 @@ static func StopExperiment(dict_request, user_callback = null, dict_header_extra
 
 
 static func UpdateExclusionGroup(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates an existing exclusion group for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/updateexclusiongroup
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/UpdateExclusionGroup",
@@ -154,6 +202,10 @@ static func UpdateExclusionGroup(dict_request, user_callback = null, dict_header
 
 
 static func UpdateExperiment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates an existing experiment for a title.
+    https://docs.microsoft.com/rest/api/playfab/experimentation/experimentation/updateexperiment
+    """
 
     return PlayFab._http_cli.request_append(
         "/Experimentation/UpdateExperiment",

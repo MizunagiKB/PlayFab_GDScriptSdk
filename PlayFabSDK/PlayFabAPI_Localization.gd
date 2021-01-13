@@ -10,6 +10,10 @@ extends Node
 
 
 static func GetLanguageList(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the list of allowed languages, only accessible by title entities
+    https://docs.microsoft.com/rest/api/playfab/localization/localization/getlanguagelist
+    """
 
     return PlayFab._http_cli.request_append(
         "/Locale/GetLanguageList",

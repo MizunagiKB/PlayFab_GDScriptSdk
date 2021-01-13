@@ -10,6 +10,11 @@ extends Node
 
 
 static func ExecuteEntityCloudScript(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Cloud Script is one of PlayFab's most versatile features. It allows client code to request execution of any kind of
+    custom server-side functionality you can implement, and it can be used in conjunction with virtually anything.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/executeentitycloudscript
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/ExecuteEntityCloudScript",
@@ -22,6 +27,11 @@ static func ExecuteEntityCloudScript(dict_request, user_callback = null, dict_he
 
 
 static func ExecuteFunction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Cloud Script is one of PlayFab's most versatile features. It allows client code to request execution of any kind of
+    custom server-side functionality you can implement, and it can be used in conjunction with virtually anything.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/executefunction
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/ExecuteFunction",
@@ -34,6 +44,10 @@ static func ExecuteFunction(dict_request, user_callback = null, dict_header_extr
 
 
 static func ListFunctions(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Lists all currently registered Azure Functions for a given title.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listfunctions
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/ListFunctions",
@@ -46,6 +60,10 @@ static func ListFunctions(dict_request, user_callback = null, dict_header_extra 
 
 
 static func ListHttpFunctions(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Lists all currently registered HTTP triggered Azure Functions for a given title.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listhttpfunctions
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/ListHttpFunctions",
@@ -58,6 +76,10 @@ static func ListHttpFunctions(dict_request, user_callback = null, dict_header_ex
 
 
 static func ListQueuedFunctions(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Lists all currently registered Queue triggered Azure Functions for a given title.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/listqueuedfunctions
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/ListQueuedFunctions",
@@ -70,6 +92,10 @@ static func ListQueuedFunctions(dict_request, user_callback = null, dict_header_
 
 
 static func PostFunctionResultForEntityTriggeredAction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Generate an entity PlayStream event for the provided function result.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforentitytriggeredaction
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/PostFunctionResultForEntityTriggeredAction",
@@ -82,6 +108,10 @@ static func PostFunctionResultForEntityTriggeredAction(dict_request, user_callba
 
 
 static func PostFunctionResultForFunctionExecution(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Generate an entity PlayStream event for the provided function result.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforfunctionexecution
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/PostFunctionResultForFunctionExecution",
@@ -94,6 +124,10 @@ static func PostFunctionResultForFunctionExecution(dict_request, user_callback =
 
 
 static func PostFunctionResultForPlayerTriggeredAction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Generate a player PlayStream event for the provided function result.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforplayertriggeredaction
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/PostFunctionResultForPlayerTriggeredAction",
@@ -106,6 +140,10 @@ static func PostFunctionResultForPlayerTriggeredAction(dict_request, user_callba
 
 
 static func PostFunctionResultForScheduledTask(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Generate a PlayStream event for the provided function result.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/postfunctionresultforscheduledtask
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/PostFunctionResultForScheduledTask",
@@ -118,6 +156,10 @@ static func PostFunctionResultForScheduledTask(dict_request, user_callback = nul
 
 
 static func RegisterHttpFunction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Registers an HTTP triggered Azure function with a title.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/registerhttpfunction
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/RegisterHttpFunction",
@@ -130,6 +172,10 @@ static func RegisterHttpFunction(dict_request, user_callback = null, dict_header
 
 
 static func RegisterQueuedFunction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Registers a queue triggered Azure Function with a title.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/registerqueuedfunction
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/RegisterQueuedFunction",
@@ -142,6 +188,10 @@ static func RegisterQueuedFunction(dict_request, user_callback = null, dict_head
 
 
 static func UnregisterFunction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unregisters an Azure Function with a title.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/unregisterfunction
+    """
 
     return PlayFab._http_cli.request_append(
         "/CloudScript/UnregisterFunction",

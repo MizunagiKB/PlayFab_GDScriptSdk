@@ -10,6 +10,11 @@ extends Node
 
 
 static func GetDetails(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the current values for the Insights performance and data storage retention, list of pending operations, and the
+    performance and data storage retention limits.
+    https://docs.microsoft.com/rest/api/playfab/insights/analytics/getdetails
+    """
 
     return PlayFab._http_cli.request_append(
         "/Insights/GetDetails",
@@ -22,6 +27,11 @@ static func GetDetails(dict_request, user_callback = null, dict_header_extra = {
 
 
 static func GetLimits(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the range of allowed values for performance and data storage retention values as well as the submeter details
+    for each performance level.
+    https://docs.microsoft.com/rest/api/playfab/insights/analytics/getlimits
+    """
 
     return PlayFab._http_cli.request_append(
         "/Insights/GetLimits",
@@ -34,6 +44,10 @@ static func GetLimits(dict_request, user_callback = null, dict_header_extra = {}
 
 
 static func GetOperationStatus(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the status of a SetPerformance or SetStorageRetention operation.
+    https://docs.microsoft.com/rest/api/playfab/insights/analytics/getoperationstatus
+    """
 
     return PlayFab._http_cli.request_append(
         "/Insights/GetOperationStatus",
@@ -46,6 +60,10 @@ static func GetOperationStatus(dict_request, user_callback = null, dict_header_e
 
 
 static func GetPendingOperations(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets a list of pending SetPerformance and/or SetStorageRetention operations for the title.
+    https://docs.microsoft.com/rest/api/playfab/insights/analytics/getpendingoperations
+    """
 
     return PlayFab._http_cli.request_append(
         "/Insights/GetPendingOperations",
@@ -58,6 +76,10 @@ static func GetPendingOperations(dict_request, user_callback = null, dict_header
 
 
 static func SetPerformance(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets the Insights performance level value for the title.
+    https://docs.microsoft.com/rest/api/playfab/insights/analytics/setperformance
+    """
 
     return PlayFab._http_cli.request_append(
         "/Insights/SetPerformance",
@@ -70,6 +92,10 @@ static func SetPerformance(dict_request, user_callback = null, dict_header_extra
 
 
 static func SetStorageRetention(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets the Insights data storage retention days value for the title.
+    https://docs.microsoft.com/rest/api/playfab/insights/analytics/setstorageretention
+    """
 
     return PlayFab._http_cli.request_append(
         "/Insights/SetStorageRetention",

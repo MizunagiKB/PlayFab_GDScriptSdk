@@ -10,6 +10,10 @@ extends Node
 
 
 static func GetGlobalPolicy(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the global title access policy
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/getglobalpolicy
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/GetGlobalPolicy",
@@ -22,6 +26,10 @@ static func GetGlobalPolicy(dict_request, user_callback = null, dict_header_extr
 
 
 static func GetProfile(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the entity's profile.
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/getprofile
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/GetProfile",
@@ -34,6 +42,10 @@ static func GetProfile(dict_request, user_callback = null, dict_header_extra = {
 
 
 static func GetProfiles(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the entity's profile.
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/getprofiles
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/GetProfiles",
@@ -46,6 +58,10 @@ static func GetProfiles(dict_request, user_callback = null, dict_header_extra = 
 
 
 static func GetTitlePlayersFromMasterPlayerAccountIds(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title player accounts associated with the given master player account.
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/gettitleplayersfrommasterplayeraccountids
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/GetTitlePlayersFromMasterPlayerAccountIds",
@@ -58,6 +74,10 @@ static func GetTitlePlayersFromMasterPlayerAccountIds(dict_request, user_callbac
 
 
 static func SetGlobalPolicy(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets the global title access policy
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/setglobalpolicy
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/SetGlobalPolicy",
@@ -70,6 +90,11 @@ static func SetGlobalPolicy(dict_request, user_callback = null, dict_header_extr
 
 
 static func SetProfileLanguage(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates the entity's language. The precedence hierarchy for communication to the player is Title Player Account
+    language, Master Player Account language, and then title default language if the first two aren't set or supported.
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/setprofilelanguage
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/SetProfileLanguage",
@@ -82,6 +107,10 @@ static func SetProfileLanguage(dict_request, user_callback = null, dict_header_e
 
 
 static func SetProfilePolicy(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets the profiles access policy
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/setprofilepolicy
+    """
 
     return PlayFab._http_cli.request_append(
         "/Profile/SetProfilePolicy",
