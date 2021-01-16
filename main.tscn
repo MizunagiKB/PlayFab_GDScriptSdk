@@ -155,6 +155,26 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="btn_event" type="Button" parent="ui"]
+margin_left = 8.0
+margin_top = 288.0
+margin_right = 200.0
+margin_bottom = 312.0
+text = "WriteEvent"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_reset" type="Button" parent="ui"]
+margin_left = 8.0
+margin_top = 480.0
+margin_right = 200.0
+margin_bottom = 504.0
+text = "reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="lbl_h_request" type="Label" parent="ui"]
 margin_left = 696.0
 margin_top = 64.0
@@ -241,15 +261,49 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="btn_event" type="Button" parent="ui"]
-margin_left = 8.0
-margin_top = 288.0
-margin_right = 200.0
-margin_bottom = 312.0
-text = "WriteEvent"
+[node name="lbl_queue_size" type="Label" parent="."]
+margin_left = 208.0
+margin_top = 512.0
+margin_right = 416.0
+margin_bottom = 536.0
+text = "PlayFabHTTPClient QueueSize ="
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="lbl_queue_size"]
+margin_left = 208.0
+margin_right = 272.0
+margin_bottom = 24.0
+text = "0"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_status" type="Label" parent="."]
+margin_left = 544.0
+margin_top = 512.0
+margin_right = 720.0
+margin_bottom = 536.0
+text = "PlayFabHTTPClient status ="
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="value" type="Label" parent="lbl_status"]
+margin_left = 192.0
+margin_right = 408.0
+margin_bottom = 24.0
+text = "STATUS_[]"
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 [connection signal="pressed" from="ui/btn_register" to="." method="_on_btn_register_pressed"]
 [connection signal="pressed" from="ui/btn_login" to="." method="_on_btn_login_pressed"]
 [connection signal="pressed" from="ui/btn_event" to="." method="_on_btn_event_pressed"]
+[connection signal="pressed" from="ui/btn_reset" to="." method="_on_btn_reset_pressed"]

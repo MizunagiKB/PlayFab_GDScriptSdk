@@ -33,6 +33,11 @@ func _ready():
     PlayFabSettings.DeveloperSecretKey = res.result["developerSecretKey"]
 
 
+func _process(delta):
+    $lbl_queue_size/value.text = String(PlayFab.request_queue_size())
+    $lbl_status/value.text = PlayFab.status_ntoa(PlayFab.get_status())
+
+
 func _on_btn_register_pressed():
     var dict_request = {
         "TitleId": PlayFabSettings.TitleId,
@@ -64,7 +69,6 @@ func _on_btn_login_pressed():
 
 
 func _on_btn_event_pressed():
-
     var dict_request = {
         "Events": [
             {"EventNamespace": "custom.test", "Name": "TESTEVENT", "Payload": {"ABCDEFGH": "01234567"}}
@@ -76,17 +80,7 @@ func _on_btn_event_pressed():
         funcref(self, "_request_completed")
     )
 
-"""
-func _on_btn_initiate_file_uploads_pressed():
-    
-    var id = PlayFabSettings._internalSettings.EntityToken["Entity"]["Id"]
-    var dict_request = {
-        "Entity": {"Id": id, "Type": "title_player_account"},
-        "FileNames": "Test"
-       }
-    
-    PlayFab.Data.InitiateFileUploads(
-        dict_request,
-        funcref(self, "_request_completed")
-    )
-"""
+
+func _on_btn_reset_pressed():
+    PlayFab.reset()
+

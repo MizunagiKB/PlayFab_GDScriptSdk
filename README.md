@@ -10,12 +10,15 @@ To generate them individually, you need API_Specs and SDKGenerator, which are fo
 > Each has a branch called gdscript.
 
 ## Example of manual generation
-```
+```bash
+# 1)
 mkdir PlayFab_GDScriptSdk
+# 2)
 git clone https://github.com/MizunagiKB/API_Specs
 cd API_Specs
 git checkout gdscript
 cd ..
+# 3)
 git clone https://github.com/MizunagiKB/SDKGenerator
 cd SDKGenerator
 git checkout gdscript
@@ -75,6 +78,7 @@ func _request_completed(
     json_parse_result: JSONParseResult
     ):
     pass
+    # Describe here what you want to do.
 
 # on function call
 PlayFab.Client.RegisterPlayFabUser(
@@ -82,6 +86,19 @@ PlayFab.Client.RegisterPlayFabUser(
     funcref(self, "_request_completed")
 )
 ```
+
+### Useful functions
+
+* PlayFab.is_valid()
+  * Check to see if you can call PlayFab from GDScript.
+* PlayFab.reset()
+  * Resets the current state and returns it to its initial state.<br>(Any information or requests in communication will be discarded.)
+* PlayFab.get_status()
+  * Returns the current communication status. HTTPClient.get_status information can be obtained from the data.
+* PlayFab.status_ntoa()
+  * get_status the information into readable information.
+* PlayFab.request_queue_size()
+  * Returns the number of waiting requests.
 
 ## PlayFab API Reference
 

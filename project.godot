@@ -8,9 +8,14 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "HTTPClient",
+"class": "PlayFabHTTPClient",
+"language": "GDScript",
+"path": "res://PlayFabSDK/PlayFabHttpClient.gd"
+} ]
 _global_script_class_icons={
-
+"PlayFabHTTPClient": ""
 }
 
 [application]

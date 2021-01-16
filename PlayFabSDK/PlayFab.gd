@@ -39,13 +39,66 @@ const Profiles = preload("res://PlayFabSDK/PlayFabAPI_Profiles.gd")
 
 
 # --------------------------------------------------------------------- var(s)
-var _http_cli = null
+var _http_cli: PlayFabHTTPClient = null
 
 
 # ------------------------------------------------------------------ signal(s)
 # -------------------------------------------------------------------- func(s)
+func status_ntoa(n):
+    match n:
+        HTTPClient.STATUS_DISCONNECTED:
+            return "STATUS_DISCONNECTED"
+        HTTPClient.STATUS_RESOLVING:
+            return "STATUS_RESOLVING"
+        HTTPClient.STATUS_CANT_RESOLVE:
+            return "STATUS_CANT_RESOLVE"
+        HTTPClient.STATUS_CONNECTING:
+            return "STATUS_CONNECTING"
+        HTTPClient.STATUS_CANT_CONNECT:
+            return "STATUS_CANT_CONNECT"
+        HTTPClient.STATUS_CONNECTED:
+            return "STATUS_CONNECTED"
+        HTTPClient.STATUS_REQUESTING:
+            return "STATUS_REQUESTING"
+        HTTPClient.STATUS_BODY:
+            return "STATUS_BODY"
+        HTTPClient.STATUS_CONNECTION_ERROR:
+            return "STATUS_CONNECTION_ERROR"
+        HTTPClient.STATUS_SSL_HANDSHAKE_ERROR:
+            return "STATUS_SSL_HANDSHAKE_ERROR"
+        var unknown_status_code:
+            return "STATUS_[UNKNOWN %d]" % (unknown_status_code)
+
+
+func is_valid() -> bool:
+    return _http_cli != null
+
+
+func reset():
+    if is_valid() == true:
+        _http_cli.reset()
+
+
+func get_status():
+    if is_valid() == false:
+        return HTTPClient.STATUS_DISCONNECTED
+    else:
+        return _http_cli.status_curr
+
+
+func request_queue_size() -> int:
+    if is_valid() == false:
+        return 0
+    else:
+        var queue_size = _http_cli._request_buffers.size()
+        if _http_cli._current_request != null:
+            queue_size += 1
+        return queue_size
+
+
 func _ready():
     _http_cli = load("res://PlayFabSDK/PlayFabHttpClient.gd").new()
+
 
 func _process(delta):
     _http_cli.update(delta)

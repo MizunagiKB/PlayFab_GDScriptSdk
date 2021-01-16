@@ -1,4 +1,5 @@
 extends HTTPClient
+class_name PlayFabHTTPClient
 
 
 # -------------------------------------------------------------------- enum(s)
@@ -270,17 +271,34 @@ func dispatch(o_request: CRequest):
 
 
 func reset():
+    close()
+
     _current_request = null
-    _request_buffers = []
+    _request_buffers.clear()
+    status_curr = get_status()
 
     connecting = false
 
-    close()
+
+func request_cancel(h_request):
+    var pos = 0
+    var list_remove_target = []
+
+    for req in _request_buffers:
+        if req.h_request == h_request:
+            list_remove_target.append(pos)
+        pos += 1
+
+    for n in list_remove_target:
+        _request_buffers.remove(n)
+
+    return list_remove_target.size() > 0
 
 
 func update(delta):
     if poll() == OK:
-        status_curr = get_status()
+        pass
+    status_curr = get_status()
 
     if _current_request == null:
         if _request_buffers.size() > 0:
