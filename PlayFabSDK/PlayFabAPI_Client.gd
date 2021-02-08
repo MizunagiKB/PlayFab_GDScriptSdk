@@ -231,6 +231,23 @@ static func ConsumeMicrosoftStoreEntitlements(dict_request, user_callback = null
     )
 
 
+static func ConsumePS5Entitlements(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Checks for any new PS5 entitlements. If any are found, they are consumed (if they're consumables) and added as PlayFab
+    items
+    https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumeps5entitlements
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Client/ConsumePS5Entitlements",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
+        []
+    )
+
+
 static func ConsumePSNEntitlements(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Checks for any new consumable entitlements. If any are found, they are consumed and added as PlayFab items

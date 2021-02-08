@@ -204,6 +204,22 @@ static func CreateServerMatchmakingTicket(dict_request, user_callback = null, di
     )
 
 
+static func CreateTitleMultiplayerServersQuotaChange(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates a request to change a title's multiplayer server quotas.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/createtitlemultiplayerserversquotachange
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/MultiplayerServer/CreateTitleMultiplayerServersQuotaChange",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func DeleteAsset(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Deletes a multiplayer server game asset for a title.
@@ -540,6 +556,22 @@ static func GetTitleEnabledForMultiplayerServersStatus(dict_request, user_callba
     )
 
 
+static func GetTitleMultiplayerServersQuotaChange(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets a title's server quota change request.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/gettitlemultiplayerserversquotachange
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/MultiplayerServer/GetTitleMultiplayerServersQuotaChange",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func GetTitleMultiplayerServersQuotas(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Gets the quotas for a title in relation to multiplayer servers.
@@ -767,6 +799,22 @@ static func ListServerBackfillTicketsForPlayer(dict_request, user_callback = nul
     )
 
 
+static func ListTitleMultiplayerServersQuotaChanges(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    List all server quota change requests for a title.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/listtitlemultiplayerserversquotachanges
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/MultiplayerServer/ListTitleMultiplayerServersQuotaChanges",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func ListVirtualMachineSummaries(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Lists virtual machines for a title.
@@ -856,6 +904,22 @@ static func UpdateBuildAlias(dict_request, user_callback = null, dict_header_ext
 
     return PlayFab._http_cli.request_append(
         "/MultiplayerServer/UpdateBuildAlias",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func UpdateBuildName(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Updates a multiplayer server build's name.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/updatebuildname
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/MultiplayerServer/UpdateBuildName",
         dict_request,
         user_callback,
         dict_header_extra,
