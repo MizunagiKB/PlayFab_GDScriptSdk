@@ -621,23 +621,6 @@ static func ListBuildAliases(dict_request, user_callback = null, dict_header_ext
     )
 
 
-static func ListBuildSummaries(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Lists summarized details of all multiplayer server builds for a title. Accepts tokens for title and if game client
-    access is enabled, allows game client to request list of builds with player entity token.
-    https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/listbuildsummaries
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/MultiplayerServer/ListBuildSummaries",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
-        []
-    )
-
-
 static func ListBuildSummariesV2(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Lists summarized details of all multiplayer server builds for a title. Accepts tokens for title and if game client

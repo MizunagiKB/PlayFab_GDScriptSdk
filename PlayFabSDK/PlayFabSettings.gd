@@ -68,3 +68,7 @@ class InternalSettings:
     }
 
 var _internalSettings = InternalSettings.new()
+
+
+func reset():
+    _internalSettings = InternalSettings.new()

@@ -21,6 +21,8 @@ func _on_PlayFab_response(h_request: int, response_code: int, headers, json_pars
 
 func _on_request_completed(result: int, response_code: int, list_header: PoolStringArray, body: PoolByteArray):
 
+    if PlayFabSettings._internalSettings.EntityToken == null: return
+
     var ETag = ""
     var dict_request = {
         "Entity": {
@@ -72,6 +74,8 @@ func _on_PlayFab_initiate_file_uploads(h_request: int, response_code: int, heade
 
 func _on_btn_abort_file_uploads_pressed():
 
+    if PlayFabSettings._internalSettings.EntityToken == null: return
+
     var dict_request = {
         "Entity": {
             "Id": PlayFabSettings._internalSettings.EntityToken["Entity"]["Id"],
@@ -90,6 +94,8 @@ func _on_btn_abort_file_uploads_pressed():
 
 
 func _on_btn_delete_files_pressed():
+
+    if PlayFabSettings._internalSettings.EntityToken == null: return
 
     var dict_request = {
         "Entity": {
@@ -110,6 +116,8 @@ func _on_btn_delete_files_pressed():
 
 func _on_btn_finalize_file_uploads_pressed():
 
+    if PlayFabSettings._internalSettings.EntityToken == null: return
+
     var dict_request = {
         "Entity": {
             "Id": PlayFabSettings._internalSettings.EntityToken["Entity"]["Id"],
@@ -129,6 +137,8 @@ func _on_btn_finalize_file_uploads_pressed():
 
 func _on_btn_get_files_pressed():
 
+    if PlayFabSettings._internalSettings.EntityToken == null: return
+
     var dict_request = {
         "Entity": {
             "Id": PlayFabSettings._internalSettings.EntityToken["Entity"]["Id"],
@@ -144,6 +154,8 @@ func _on_btn_get_files_pressed():
 
 
 func _on_btn_initiate_file_uploads_pressed():
+
+    if PlayFabSettings._internalSettings.EntityToken == null: return
 
     var dict_request = {
         "Entity": {
@@ -163,6 +175,8 @@ func _on_btn_initiate_file_uploads_pressed():
 
 
 func _on_btn_file_upload_test_pressed():
+
+    if PlayFabSettings._internalSettings.EntityToken == null: return
 
     var dict_request = {
         "Entity": {

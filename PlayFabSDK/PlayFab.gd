@@ -77,6 +77,7 @@ func is_valid() -> bool:
 func reset():
     if is_valid() == true:
         _http_cli.reset()
+        PlayFabSettings.reset()
 
 
 func get_status():
