@@ -1191,22 +1191,6 @@ static func GetUserReadOnlyData(dict_request, user_callback = null, dict_header_
     )
 
 
-static func GetWindowsHelloChallenge(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Requests a challenge from the server to be signed by Windows Hello Passport service to authenticate.
-    https://docs.microsoft.com/rest/api/playfab/client/authentication/getwindowshellochallenge
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/GetWindowsHelloChallenge",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [],
-        []
-    )
-
-
 static func GrantCharacterToUser(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Grants the specified character type to the user. CharacterIds are not globally unique; characterId must be evaluated
@@ -1306,7 +1290,10 @@ static func LinkFacebookInstantGamesId(dict_request, user_callback = null, dict_
 
 static func LinkGameCenterAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Links the Game Center account associated with the provided Game Center ID to the user's PlayFab account
+    Links the Game Center account associated with the provided Game Center ID to the user's PlayFab account. Logging in with
+    a Game Center ID is insecure if you do not include the optional PublicKeyUrl, Salt, Signature, and Timestamp parameters
+    in this request. It is recommended you require these parameters on all Game Center calls by going to the Apple Add-ons
+    page in the PlayFab Game Manager and enabling the 'Require secure authentication only for this app' option.
     https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgamecenteraccount
     """
 
@@ -1465,22 +1452,6 @@ static func LinkTwitch(dict_request, user_callback = null, dict_header_extra = {
     )
 
 
-static func LinkWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Link Windows Hello authentication to the current PlayFab Account
-    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkwindowshello
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/LinkWindowsHello",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
-        []
-    )
-
-
 static func LinkXboxAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Links the Xbox Live account associated with the provided access code to the user's PlayFab account
@@ -1603,7 +1574,10 @@ static func LoginWithFacebookInstantGamesId(dict_request, user_callback = null, 
 static func LoginWithGameCenter(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Signs the user in using an iOS Game Center player identifier, returning a session identifier that can subsequently be
-    used for API calls which require an authenticated user
+    used for API calls which require an authenticated user. Logging in with a Game Center ID is insecure if you do not
+    include the optional PublicKeyUrl, Salt, Signature, and Timestamp parameters in this request. It is recommended you
+    require these parameters on all Game Center calls by going to the Apple Add-ons page in the PlayFab Game Manager and
+    enabling the 'Require secure authentication only for this app' option.
     https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgamecenter
     """
 
@@ -1785,25 +1759,6 @@ static func LoginWithTwitch(dict_request, user_callback = null, dict_header_extr
     )
 
 
-static func LoginWithWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Completes the Windows Hello login flow by returning the signed value of the challange from GetWindowsHelloChallenge.
-    Windows Hello has a 2 step client to server authentication scheme. Step one is to request from the server a challenge
-    string. Step two is to request the user sign the string via Windows Hello and then send the signed value back to the
-    server.
-    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithwindowshello
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/LoginWithWindowsHello",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.USE_TITLE_ID],
-        [PlayFab.E_EPI.UPD_SESSION_TICKET, PlayFab.E_EPI.UPD_ENTITY_TOKEN, PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN]
-    )
-
-
 static func LoginWithXbox(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Signs the user in using a Xbox Live Token, returning a session identifier that can subsequently be used for API calls
@@ -1954,23 +1909,6 @@ static func RegisterPlayFabUser(dict_request, user_callback = null, dict_header_
         dict_header_extra,
         [PlayFab.E_PRO.USE_TITLE_ID],
         [PlayFab.E_EPI.UPD_SESSION_TICKET, PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN]
-    )
-
-
-static func RegisterWithWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Registers a new PlayFab user account using Windows Hello authentication, returning a session ticket that can
-    subsequently be used for API calls which require an authenticated user
-    https://docs.microsoft.com/rest/api/playfab/client/authentication/registerwithwindowshello
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/RegisterWithWindowsHello",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.USE_TITLE_ID],
-        [PlayFab.E_EPI.UPD_SESSION_TICKET, PlayFab.E_EPI.UPD_ENTITY_TOKEN, PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN]
     )
 
 
@@ -2457,22 +2395,6 @@ static func UnlinkTwitch(dict_request, user_callback = null, dict_header_extra =
 
     return PlayFab._http_cli.request_append(
         "/Client/UnlinkTwitch",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
-        []
-    )
-
-
-static func UnlinkWindowsHello(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Unlink Windows Hello authentication from the current PlayFab Account
-    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkwindowshello
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/UnlinkWindowsHello",
         dict_request,
         user_callback,
         dict_header_extra,

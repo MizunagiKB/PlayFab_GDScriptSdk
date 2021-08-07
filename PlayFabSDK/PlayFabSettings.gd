@@ -62,7 +62,7 @@ class InternalSettings:
     This is automatically populated by any PlayFabClientApi.Login method.
     """
     var ClientSessionTicket = null
-    var SdkVersionString = "GDScriptSdk-0.0.210125"
+    var SdkVersionString = "GDScriptSdk-0.0.210802"
     var RequestGetParams = {
         "sdk": SdkVersionString
     }

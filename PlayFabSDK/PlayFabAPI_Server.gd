@@ -1227,6 +1227,23 @@ static func LoginWithServerCustomId(dict_request, user_callback = null, dict_hea
     )
 
 
+static func LoginWithSteamId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using an Steam ID, returning a session identifier that can subsequently be used for API calls which
+    require an authenticated user
+    https://docs.microsoft.com/rest/api/playfab/server/authentication/loginwithsteamid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/LoginWithSteamId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func LoginWithXbox(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Signs the user in using a Xbox Live Token from an external server backend, returning a session identifier that can
