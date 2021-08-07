@@ -16,12 +16,10 @@ mkdir PlayFab_GDScriptSdk
 # 2)
 git clone https://github.com/MizunagiKB/API_Specs
 cd API_Specs
-git checkout gdscript
 cd ..
 # 3)
 git clone https://github.com/MizunagiKB/SDKGenerator
 cd SDKGenerator
-git checkout gdscript
 node generate.js GDScriptSdk=../PlayFab_GDScriptSdk -apiSpecPath ../API_Specs
 ```
 
