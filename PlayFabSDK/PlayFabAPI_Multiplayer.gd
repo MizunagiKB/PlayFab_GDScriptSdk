@@ -351,7 +351,7 @@ static func EnableMultiplayerServersForTitle(dict_request, user_callback = null,
 static func GetAssetDownloadUrl(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Gets a URL that can be used to download the specified asset. A sample pre-authenticated url -
-    https://sampleStorageAccount.blob.core.windows.net/gameassets/gameserver.zip?sv=2015-04-05&ss=b&srt=sco&sp=rw&st=<startDate>&se=<endDate>&spr=https&sig=<sampleSig>&api-version=2017-07-29
+    https://sampleStorageAccount.blob.core.windows.net/gameassets/gameserver.zip?sv=2015-04-05&ss=b&srt=sco&sp=rw&st=startDate&se=endDate&spr=https&sig=sampleSig&api-version=2017-07-29
     https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/getassetdownloadurl
     """
 
@@ -368,7 +368,7 @@ static func GetAssetDownloadUrl(dict_request, user_callback = null, dict_header_
 static func GetAssetUploadUrl(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Gets the URL to upload assets to. A sample pre-authenticated url -
-    https://sampleStorageAccount.blob.core.windows.net/gameassets/gameserver.zip?sv=2015-04-05&ss=b&srt=sco&sp=rw&st=<startDate>&se=<endDate>&spr=https&sig=<sampleSig>&api-version=2017-07-29
+    https://sampleStorageAccount.blob.core.windows.net/gameassets/gameserver.zip?sv=2015-04-05&ss=b&srt=sco&sp=rw&st=startDate&se=endDate&spr=https&sig=sampleSig&api-version=2017-07-29
     https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/getassetuploadurl
     """
 
