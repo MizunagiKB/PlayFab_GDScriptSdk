@@ -302,6 +302,22 @@ static func DeleteMasterPlayerAccount(dict_request, user_callback = null, dict_h
     )
 
 
+static func DeleteMembershipSubscription(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Deletes a player's subscription
+    https://docs.microsoft.com/rest/api/playfab/admin/account-management/deletemembershipsubscription
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Admin/DeleteMembershipSubscription",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func DeleteOpenIdConnection(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Removes a relationship between a title and an OpenID Connect provider.
@@ -1460,6 +1476,22 @@ static func SetCatalogItems(dict_request, user_callback = null, dict_header_extr
 
     return PlayFab._http_cli.request_append(
         "/Admin/SetCatalogItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func SetMembershipOverride(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets the override expiration for a membership subscription
+    https://docs.microsoft.com/rest/api/playfab/admin/account-management/setmembershipoverride
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Admin/SetMembershipOverride",
         dict_request,
         user_callback,
         dict_header_extra,

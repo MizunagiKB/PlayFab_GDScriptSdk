@@ -43,6 +43,22 @@ static func ExecuteFunction(dict_request, user_callback = null, dict_header_extr
     )
 
 
+static func GetFunction(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets registered Azure Functions for a given title id and function name.
+    https://docs.microsoft.com/rest/api/playfab/cloudscript/server-side-cloud-script/getfunction
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/CloudScript/GetFunction",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func ListFunctions(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Lists all currently registered Azure Functions for a given title.
