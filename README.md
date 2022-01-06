@@ -2,26 +2,11 @@
 > PlayFabSDK for GDScript
 
 This is a PlayFabSDK for GDScript generated using the forked PlayFab/SDKGenerator.
-To generate them individually, you need API_Specs and SDKGenerator, which are forked.
+If you want to generate it by hand, use PlayFab_GDScriptTemplate.
 
-- https://github.com/MizunagiKB/API_Specs
-- https://github.com/MizunagiKB/SDKGenerator
+- https://github.com/MizunagiKB/PlayFab_GDScriptTemplate
 
 > Each has a branch called gdscript.
-
-## Example of manual generation
-```bash
-# 1)
-mkdir PlayFab_GDScriptSdk
-# 2)
-git clone https://github.com/MizunagiKB/API_Specs
-cd API_Specs
-cd ..
-# 3)
-git clone https://github.com/MizunagiKB/SDKGenerator
-cd SDKGenerator
-node generate.js GDScriptSdk=../PlayFab_GDScriptSdk -apiSpecPath ../API_Specs
-```
 
 ## Usage
 
@@ -40,7 +25,7 @@ node generate.js GDScriptSdk=../PlayFab_GDScriptSdk -apiSpecPath ../API_Specs
 
 or
 
-```
+```python
 PlayFabSettings.TitleId = "00000"
 PlayFabSettings.DeveloperSecretKey = "XXXXXXXX"
 ```
