@@ -6,7 +6,6 @@ If you want to generate it by hand, use PlayFab_GDScriptTemplate.
 
 - https://github.com/MizunagiKB/PlayFab_GDScriptTemplate
 
-> Each has a branch called gdscript.
 
 ## Usage
 
