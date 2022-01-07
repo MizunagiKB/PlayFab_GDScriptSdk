@@ -303,6 +303,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="ui/btn_register" to="." method="_on_btn_register_pressed"]
 [connection signal="pressed" from="ui/btn_login" to="." method="_on_btn_login_pressed"]
 [connection signal="pressed" from="ui/btn_event" to="." method="_on_btn_event_pressed"]

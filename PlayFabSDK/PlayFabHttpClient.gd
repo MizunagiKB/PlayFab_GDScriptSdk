@@ -18,6 +18,8 @@ var connecting = false
 class CRequest:
     var h_request: int
     var host: String
+    var port: int = 443
+    var is_ssl: bool = true
     var url: String
     var dict_request: Dictionary
     var user_callback = null
@@ -158,22 +160,22 @@ func epi_req_multi_step_client_login(json_result):
         PlayFab.Client.AttributeInstall(dict_request)
 
 
-func build_host():
+func build_host() -> Array:
     if not PlayFabSettings.TitleId:
         assert(false)
 
-    var url: String
+    var host: String = ""
+    var port: int = 443
+    var is_ssl: bool = true
     if not PlayFabSettings.ProductionEnvironmentURL.begins_with("http"):
         if PlayFabSettings.VerticalName:
-            url += "https://"
-            url += PlayFabSettings.VerticalName
+            host = PlayFabSettings.VerticalName
         else:
-            url += "https://"
-            url += PlayFabSettings.TitleId
+            host = PlayFabSettings.TitleId
 
-    url += PlayFabSettings.ProductionEnvironmentURL
+    host += PlayFabSettings.ProductionEnvironmentURL
 
-    return url
+    return [host, port, is_ssl]
 
 
 func request_append(
@@ -185,7 +187,6 @@ func request_append(
     list_epilogue_work = []
     ):
 
-    var host = build_host()
     var list_header = [
             "Content-Type: application/json",
             "X-PlayFabSDK: " + PlayFabSettings._internalSettings.SdkVersionString,
@@ -198,6 +199,7 @@ func request_append(
             var v = PlayFabSettings._internalSettings.RequestGetParams[k]
             if idx == 0:
                 url_path += "?"
+                url_path += k
             else:
                 url_path += "&"
                 url_path += k
@@ -228,7 +230,11 @@ func request_append(
 
     _request_counter += 1
     var o = CRequest.new(_request_counter)
-    o.host = host
+    var list_host = build_host()
+
+    o.host = list_host[0]
+    o.port = list_host[1]
+    o.is_ssl = list_host[2]
     o.url = url_path
     o.dict_request = dict_request
     o.user_callback = user_callback
@@ -247,17 +253,18 @@ func dispatch(o_request: CRequest):
     var parse_result = JSON.parse(raw_text)
     
     if parse_result.error == OK:
-        if parse_result.result["code"] == 200:
-            for e_val in o_request.list_epilogue_work:
-                match e_val:
-                    PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN:
-                        epi_req_multi_step_client_login(parse_result)
-                    PlayFab.E_EPI.UPD_ATTRIBUTE:
-                        epi_upd_attribute()
-                    PlayFab.E_EPI.UPD_ENTITY_TOKEN:
-                        epi_upd_entity_token(parse_result)
-                    PlayFab.E_EPI.UPD_SESSION_TICKET:
-                        epi_upd_session_ticket(parse_result)
+        if parse_result.result.has("code") == true:
+            if parse_result.result["code"] == 200:
+                for e_val in o_request.list_epilogue_work:
+                    match e_val:
+                        PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN:
+                            epi_req_multi_step_client_login(parse_result)
+                        PlayFab.E_EPI.UPD_ATTRIBUTE:
+                            epi_upd_attribute()
+                        PlayFab.E_EPI.UPD_ENTITY_TOKEN:
+                            epi_upd_entity_token(parse_result)
+                        PlayFab.E_EPI.UPD_SESSION_TICKET:
+                            epi_upd_session_ticket(parse_result)
 
     if o_request.user_callback != null:
         o_request.user_callback.call_func(
@@ -304,11 +311,21 @@ func update(delta):
         if _request_buffers.size() > 0:
             _current_request = _request_buffers.pop_front()
             status_curr == STATUS_DISCONNECTED
+        else:
+            if status_curr == STATUS_CONNECTION_ERROR:
+                close()
     else:
         if status_curr == STATUS_DISCONNECTED:
             if connecting == false:
-                connect_to_host(_current_request.host, -1, true)
-                connecting = true
+                var err = connect_to_host(
+                    _current_request.host,
+                    _current_request.port,
+                    _current_request.is_ssl
+                )
+                if err == OK:
+                    connecting = true
+                else:
+                    assert(false)
 
         elif status_curr == STATUS_CONNECTED:
             connecting = false
