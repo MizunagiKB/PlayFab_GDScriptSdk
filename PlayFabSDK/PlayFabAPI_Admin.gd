@@ -73,23 +73,6 @@ static func AddPlayerTag(dict_request, user_callback = null, dict_header_extra =
     )
 
 
-static func AddServerBuild(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Adds the game server executable specified (previously uploaded - see GetServerBuildUploadUrl) to the set of those a
-    client is permitted to request in a call to StartGame
-    https://docs.microsoft.com/rest/api/playfab/admin/custom-server-management/addserverbuild
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/AddServerBuild",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Increments the specified virtual currency by the stated amount
@@ -856,39 +839,6 @@ static func GetSegments(dict_request, user_callback = null, dict_header_extra = 
     )
 
 
-static func GetServerBuildInfo(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Retrieves the build details for the specified game server executable
-    https://docs.microsoft.com/rest/api/playfab/admin/custom-server-management/getserverbuildinfo
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/GetServerBuildInfo",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func GetServerBuildUploadUrl(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Retrieves the pre-authorized URL for uploading a game server package containing a build (does not enable the build for
-    use - see AddServerBuild)
-    https://docs.microsoft.com/rest/api/playfab/admin/custom-server-management/getserverbuilduploadurl
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/GetServerBuildUploadUrl",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func GetStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Retrieves the set of items defined for the specified store, including all prices defined
@@ -1177,22 +1127,6 @@ static func ListOpenIdConnection(dict_request, user_callback = null, dict_header
     )
 
 
-static func ListServerBuilds(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Retrieves the build details for all game server executables which are currently defined for the title
-    https://docs.microsoft.com/rest/api/playfab/admin/custom-server-management/listserverbuilds
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/ListServerBuilds",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func ListVirtualCurrencyTypes(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Retuns the list of all defined virtual currencies for the title
@@ -1201,22 +1135,6 @@ static func ListVirtualCurrencyTypes(dict_request, user_callback = null, dict_he
 
     return PlayFab._http_cli.request_append(
         "/Admin/ListVirtualCurrencyTypes",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func ModifyMatchmakerGameModes(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Updates the game server mode details for the specified game server executable
-    https://docs.microsoft.com/rest/api/playfab/admin/matchmaking/modifymatchmakergamemodes
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/ModifyMatchmakerGameModes",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -1265,23 +1183,6 @@ static func RemovePlayerTag(dict_request, user_callback = null, dict_header_extr
 
     return PlayFab._http_cli.request_append(
         "/Admin/RemovePlayerTag",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func RemoveServerBuild(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Removes the game server executable specified from the set of those a client is permitted to request in a call to
-    StartGame
-    https://docs.microsoft.com/rest/api/playfab/admin/custom-server-management/removeserverbuild
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/RemoveServerBuild",
         dict_request,
         user_callback,
         dict_header_extra,

@@ -137,6 +137,22 @@ static func CreateBuildWithProcessBasedServer(dict_request, user_callback = null
     )
 
 
+static func CreateLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Create a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/createlobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/CreateLobby",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func CreateMatchmakingTicket(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Create a matchmaking ticket as a client.
@@ -316,6 +332,22 @@ static func DeleteContainerImageRepository(dict_request, user_callback = null, d
     )
 
 
+static func DeleteLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Delete a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/deletelobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/DeleteLobby",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func DeleteRemoteUser(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Deletes a remote user to log on to a VM for a multiplayer server build.
@@ -340,6 +372,38 @@ static func EnableMultiplayerServersForTitle(dict_request, user_callback = null,
 
     return PlayFab._http_cli.request_append(
         "/MultiplayerServer/EnableMultiplayerServersForTitle",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func FindFriendLobbies(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Find lobbies which match certain criteria, and which friends are in.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/findfriendlobbies
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/FindFriendLobbies",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func FindLobbies(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Find all the lobbies that match certain criteria.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/findlobbies
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/FindLobbies",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -422,6 +486,22 @@ static func GetContainerRegistryCredentials(dict_request, user_callback = null, 
 
     return PlayFab._http_cli.request_append(
         "/MultiplayerServer/GetContainerRegistryCredentials",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func GetLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/getlobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/GetLobby",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -606,6 +686,54 @@ static func GetTitleMultiplayerServersQuotas(dict_request, user_callback = null,
     )
 
 
+static func InviteToLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Send a notification to invite a player to a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/invitetolobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/InviteToLobby",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func JoinArrangedLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Join an Arranged lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/joinarrangedlobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/JoinArrangedLobby",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func JoinLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Join a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/joinlobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/JoinLobby",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func JoinMatchmakingTicket(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Join a matchmaking ticket.
@@ -614,6 +742,22 @@ static func JoinMatchmakingTicket(dict_request, user_callback = null, dict_heade
 
     return PlayFab._http_cli.request_append(
         "/Match/JoinMatchmakingTicket",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func LeaveLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Leave a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/leavelobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/LeaveLobby",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -849,6 +993,22 @@ static func ListVirtualMachineSummaries(dict_request, user_callback = null, dict
     )
 
 
+static func RemoveMember(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Remove a member from a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/removemember
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/RemoveMember",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func RequestMultiplayerServer(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Request a multiplayer server session. Accepts tokens for title and if game client access is enabled, allows game client
@@ -890,6 +1050,38 @@ static func ShutdownMultiplayerServer(dict_request, user_callback = null, dict_h
 
     return PlayFab._http_cli.request_append(
         "/MultiplayerServer/ShutdownMultiplayerServer",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func SubscribeToLobbyResource(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Subscribe to lobby resource notifications.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/subscribetolobbyresource
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/SubscribeToLobbyResource",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func UnsubscribeFromLobbyResource(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unsubscribe from lobby notifications.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/unsubscribefromlobbyresource
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/UnsubscribeFromLobbyResource",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -970,6 +1162,22 @@ static func UpdateBuildRegions(dict_request, user_callback = null, dict_header_e
 
     return PlayFab._http_cli.request_append(
         "/MultiplayerServer/UpdateBuildRegions",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func UpdateLobby(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Update a lobby.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/lobby/updatelobby
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Lobby/UpdateLobby",
         dict_request,
         user_callback,
         dict_header_extra,

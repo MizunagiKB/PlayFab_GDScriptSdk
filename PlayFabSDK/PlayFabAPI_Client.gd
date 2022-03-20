@@ -2112,22 +2112,6 @@ static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extr
     )
 
 
-static func StartGame(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Start a new game server with a given configuration, add the current player and return the connection information.
-    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/startgame
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/StartGame",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
-        []
-    )
-
-
 static func StartPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Creates an order for a list of items from the title catalog
