@@ -302,7 +302,8 @@ static func CreateSharedGroup(dict_request, user_callback = null, dict_header_ex
 
 static func ExecuteCloudScript(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Executes a CloudScript function, with the 'currentPlayerId' set to the PlayFab ID of the authenticated player.
+    Executes a CloudScript function, with the 'currentPlayerId' set to the PlayFab ID of the authenticated player. The
+    PlayFab ID is the entity ID of the player's master_player_account entity.
     https://docs.microsoft.com/rest/api/playfab/client/server-side-cloud-script/executecloudscript
     """
 
@@ -880,9 +881,25 @@ static func GetPlayFabIDsFromKongregateIDs(dict_request, user_callback = null, d
     )
 
 
+static func GetPlayFabIDsFromNintendoServiceAccountIds(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Nintendo Service Account identifiers.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromnintendoserviceaccountids
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Client/GetPlayFabIDsFromNintendoServiceAccountIds",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
+        []
+    )
+
+
 static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the unique PlayFab identifiers for the given set of Nintendo Switch identifiers.
+    Retrieves the unique PlayFab identifiers for the given set of Nintendo Switch Device identifiers.
     https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromnintendoswitchdeviceids
     """
 

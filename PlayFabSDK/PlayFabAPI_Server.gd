@@ -295,7 +295,8 @@ static func EvaluateRandomResultTable(dict_request, user_callback = null, dict_h
 
 static func ExecuteCloudScript(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Executes a CloudScript function, with the 'currentPlayerId' variable set to the specified PlayFabId parameter value.
+    Executes a CloudScript function, with the 'currentPlayerId' set to the PlayFab ID of the authenticated player. The
+    PlayFab ID is the entity ID of the player's master_player_account entity.
     https://docs.microsoft.com/rest/api/playfab/server/server-side-cloud-script/executecloudscript
     """
 
@@ -733,6 +734,22 @@ static func GetPlayFabIDsFromGenericIDs(dict_request, user_callback = null, dict
 
     return PlayFab._http_cli.request_append(
         "/Server/GetPlayFabIDsFromGenericIDs",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func GetPlayFabIDsFromNintendoServiceAccountIds(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Nintendo Service Account identifiers.
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromnintendoserviceaccountids
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/GetPlayFabIDsFromNintendoServiceAccountIds",
         dict_request,
         user_callback,
         dict_header_extra,

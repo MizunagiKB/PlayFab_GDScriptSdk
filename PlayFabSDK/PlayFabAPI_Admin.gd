@@ -446,6 +446,24 @@ static func ExportMasterPlayerData(dict_request, user_callback = null, dict_head
     )
 
 
+static func ExportPlayersInSegment(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Starts an export for the player profiles in a segment. This API creates a snapshot of all the player profiles which
+    match the segment definition at the time of the API call. Profiles which change while an export is in progress will not
+    be reflected in the results.
+    https://docs.microsoft.com/rest/api/playfab/admin/playstream/exportplayersinsegment
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Admin/ExportPlayersInSegment",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func GetActionsOnPlayersInSegmentTaskInstance(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Get information about a ActionsOnPlayersInSegment task instance.
@@ -815,6 +833,25 @@ static func GetRandomResultTables(dict_request, user_callback = null, dict_heade
 
     return PlayFab._http_cli.request_append(
         "/Admin/GetRandomResultTables",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func GetSegmentExport(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the result of an export started by ExportPlayersInSegment API. If the ExportPlayersInSegment is successful and
+    complete, this API returns the IndexUrl from which the index file can be downloaded. The index file has a list of urls
+    from which the files containing the player profile data can be downloaded. Otherwise, it returns the current 'State' of
+    the export
+    https://docs.microsoft.com/rest/api/playfab/admin/playstream/getsegmentexport
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Admin/GetSegmentExport",
         dict_request,
         user_callback,
         dict_header_extra,
