@@ -776,7 +776,7 @@ static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, user_callback
 
 static func GetPlayFabIDsFromPSNAccountIDs(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the unique PlayFab identifiers for the given set of PlayStation Network identifiers.
+    Retrieves the unique PlayFab identifiers for the given set of PlayStation :tm: Network identifiers.
     https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfrompsnaccountids
     """
 
@@ -799,6 +799,24 @@ static func GetPlayFabIDsFromSteamIDs(dict_request, user_callback = null, dict_h
 
     return PlayFab._http_cli.request_append(
         "/Server/GetPlayFabIDsFromSteamIDs",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func GetPlayFabIDsFromTwitchIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Twitch identifiers. The Twitch identifiers are the IDs for
+    the user accounts, available as "_id" from the Twitch API methods (ex:
+    https://github.com/justintv/Twitch-API/blob/master/v3_resources/users.md#get-usersuser).
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/getplayfabidsfromtwitchids
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/GetPlayFabIDsFromTwitchIDs",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -1179,9 +1197,41 @@ static func GrantItemsToUsers(dict_request, user_callback = null, dict_header_ex
     )
 
 
+static func LinkNintendoServiceAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Nintendo account associated with the token to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/linknintendoserviceaccount
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/LinkNintendoServiceAccount",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func LinkNintendoSwitchDeviceId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the NintendoSwitchDeviceId to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/linknintendoswitchdeviceid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/LinkNintendoSwitchDeviceId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func LinkPSNAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Links the PlayStation Network account associated with the provided access code to the user's PlayFab account
+    Links the PlayStation :tm: Network account associated with the provided access code to the user's PlayFab account
     https://docs.microsoft.com/rest/api/playfab/server/account-management/linkpsnaccount
     """
 
@@ -1834,9 +1884,41 @@ static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict
     )
 
 
+static func UnlinkNintendoServiceAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Nintendo account from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinknintendoserviceaccount
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/UnlinkNintendoServiceAccount",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func UnlinkNintendoSwitchDeviceId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related NintendoSwitchDeviceId from the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinknintendoswitchdeviceid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/UnlinkNintendoSwitchDeviceId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func UnlinkPSNAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Unlinks the related PSN account from the user's PlayFab account
+    Unlinks the related PlayStation :tm: Network account from the user's PlayFab account
     https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinkpsnaccount
     """
 
