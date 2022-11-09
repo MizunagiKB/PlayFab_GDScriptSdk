@@ -9,6 +9,22 @@ extends Node
 # -------------------------------------------------------------------- func(s)
 
 
+static func AddInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Add inventory items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/addinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/AddInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func CreateDraftItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Creates a new item in the working catalog using provided metadata.
@@ -57,6 +73,38 @@ static func DeleteEntityItemReviews(dict_request, user_callback = null, dict_hea
     )
 
 
+static func DeleteInventoryCollection(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Delete an Inventory Collection
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/deleteinventorycollection
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/DeleteInventoryCollection",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func DeleteInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Delete inventory items
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/deleteinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/DeleteInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func DeleteItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Removes an item from working catalog and all published versions from the public catalog.
@@ -65,6 +113,22 @@ static func DeleteItem(dict_request, user_callback = null, dict_header_extra = {
 
     return PlayFab._http_cli.request_append(
         "/Catalog/DeleteItem",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func ExecuteInventoryOperations(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Execute a list of Inventory Operations
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/executeinventoryoperations
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/ExecuteInventoryOperations",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -153,6 +217,38 @@ static func GetEntityItemReview(dict_request, user_callback = null, dict_header_
     )
 
 
+static func GetInventoryCollectionIds(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get Inventory Collection Ids
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/getinventorycollectionids
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/GetInventoryCollectionIds",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func GetInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get current inventory items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/getinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/GetInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func GetItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Retrieves an item from the public catalog.
@@ -161,6 +257,22 @@ static func GetItem(dict_request, user_callback = null, dict_header_extra = {}):
 
     return PlayFab._http_cli.request_append(
         "/Catalog/GetItem",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func GetItemContainers(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Search for a given item and return a set of bundles and stores containing the item
+    https://docs.microsoft.com/rest/api/playfab/economy/catalog/getitemcontainers
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Catalog/GetItemContainers",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -249,6 +361,22 @@ static func GetItems(dict_request, user_callback = null, dict_header_extra = {})
     )
 
 
+static func GetMicrosoftStoreAccessTokens(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets the access tokens.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/getmicrosoftstoreaccesstokens
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/GetMicrosoftStoreAccessTokens",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func PublishDraftItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Initiates a publish of an item from the working catalog to the public catalog.
@@ -257,6 +385,118 @@ static func PublishDraftItem(dict_request, user_callback = null, dict_header_ext
 
     return PlayFab._http_cli.request_append(
         "/Catalog/PublishDraftItem",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func PurchaseInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Purchase an item or bundle
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/purchaseinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/PurchaseInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func RedeemAppleAppStoreInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Redeem items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/redeemappleappstoreinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/RedeemAppleAppStoreInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func RedeemGooglePlayInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Redeem items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/redeemgoogleplayinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/RedeemGooglePlayInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func RedeemMicrosoftStoreInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Redeem items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/redeemmicrosoftstoreinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/RedeemMicrosoftStoreInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func RedeemNintendoEShopInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Redeem items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/redeemnintendoeshopinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/RedeemNintendoEShopInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func RedeemPlayStationStoreInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Redeem items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/redeemplaystationstoreinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/RedeemPlayStationStoreInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func RedeemSteamInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Redeem items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/redeemsteaminventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/RedeemSteamInventoryItems",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -362,6 +602,22 @@ static func SubmitItemReviewVote(dict_request, user_callback = null, dict_header
     )
 
 
+static func SubtractInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Subtract inventory items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/subtractinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/SubtractInventoryItems",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func TakedownItemReviews(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Submit a request to takedown one or more reviews.
@@ -370,6 +626,22 @@ static func TakedownItemReviews(dict_request, user_callback = null, dict_header_
 
     return PlayFab._http_cli.request_append(
         "/Catalog/TakedownItemReviews",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func TransferInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Transfer inventory items.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/transferinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/TransferInventoryItems",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -402,6 +674,22 @@ static func UpdateDraftItem(dict_request, user_callback = null, dict_header_extr
 
     return PlayFab._http_cli.request_append(
         "/Catalog/UpdateDraftItem",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func UpdateInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Update inventory items
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/updateinventoryitems
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/UpdateInventoryItems",
         dict_request,
         user_callback,
         dict_header_extra,

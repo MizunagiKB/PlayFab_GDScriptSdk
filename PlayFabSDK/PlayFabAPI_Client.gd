@@ -233,8 +233,8 @@ static func ConsumeMicrosoftStoreEntitlements(dict_request, user_callback = null
 
 static func ConsumePS5Entitlements(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Checks for any new PS5 entitlements. If any are found, they are consumed (if they're consumables) and added as PlayFab
-    items
+    Checks for any new consumable entitlements. If any are found, they are consumed (if they're consumables) and added as
+    PlayFab items
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/consumeps5entitlements
     """
 
@@ -863,6 +863,24 @@ static func GetPlayFabIDsFromGoogleIDs(dict_request, user_callback = null, dict_
     )
 
 
+static func GetPlayFabIDsFromGooglePlayGamesPlayerIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the unique PlayFab identifiers for the given set of Google Play Games identifiers. The Google Play Games
+    identifiers are the IDs for the user accounts, available as "playerId" in the Google Play Games Services - Players API
+    calls.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfromgoogleplaygamesplayerids
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Client/GetPlayFabIDsFromGooglePlayGamesPlayerIDs",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
+        []
+    )
+
+
 static func GetPlayFabIDsFromKongregateIDs(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Retrieves the unique PlayFab identifiers for the given set of Kongregate identifiers. The Kongregate identifiers are the
@@ -915,7 +933,7 @@ static func GetPlayFabIDsFromNintendoSwitchDeviceIds(dict_request, user_callback
 
 static func GetPlayFabIDsFromPSNAccountIDs(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the unique PlayFab identifiers for the given set of PlayStation Network identifiers.
+    Retrieves the unique PlayFab identifiers for the given set of PlayStation :tm: Network identifiers.
     https://docs.microsoft.com/rest/api/playfab/client/account-management/getplayfabidsfrompsnaccountids
     """
 
@@ -1340,6 +1358,23 @@ static func LinkGoogleAccount(dict_request, user_callback = null, dict_header_ex
     )
 
 
+static func LinkGooglePlayGamesServicesAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the currently signed-in user account to their Google Play Games account, using their Google Play Games account
+    credentials
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/linkgoogleplaygamesservicesaccount
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Client/LinkGooglePlayGamesServicesAccount",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
+        []
+    )
+
+
 static func LinkIOSDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Links the vendor-specific iOS device identifier to the user's PlayFab account
@@ -1423,7 +1458,7 @@ static func LinkOpenIdConnect(dict_request, user_callback = null, dict_header_ex
 
 static func LinkPSNAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Links the PlayStation Network account associated with the provided access code to the user's PlayFab account
+    Links the PlayStation :tm: Network account associated with the provided access code to the user's PlayFab account
     https://docs.microsoft.com/rest/api/playfab/client/account-management/linkpsnaccount
     """
 
@@ -1624,6 +1659,22 @@ static func LoginWithGoogleAccount(dict_request, user_callback = null, dict_head
     )
 
 
+static func LoginWithGooglePlayGamesServices(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Signs the user in using their Google Play Games account credentials
+    https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithgoogleplaygamesservices
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Client/LoginWithGooglePlayGamesServices",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.USE_TITLE_ID],
+        [PlayFab.E_EPI.UPD_SESSION_TICKET, PlayFab.E_EPI.UPD_ENTITY_TOKEN, PlayFab.E_EPI.REQ_MULTI_STEP_CLIENT_LOGIN]
+    )
+
+
 static func LoginWithIOSDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Signs the user in using the vendor-specific iOS device identifier, returning a session identifier that can subsequently
@@ -1728,8 +1779,8 @@ static func LoginWithPlayFab(dict_request, user_callback = null, dict_header_ext
 
 static func LoginWithPSN(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Signs the user in using a PlayStation Network authentication code, returning a session identifier that can subsequently
-    be used for API calls which require an authenticated user
+    Signs the user in using a PlayStation :tm: Network authentication code, returning a session identifier that can
+    subsequently be used for API calls which require an authenticated user
     https://docs.microsoft.com/rest/api/playfab/client/authentication/loginwithpsn
     """
 
@@ -1882,7 +1933,7 @@ static func RedeemCoupon(dict_request, user_callback = null, dict_header_extra =
 
 static func RefreshPSNAuthToken(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Uses the supplied OAuth code to refresh the internally cached player PSN auth token
+    Uses the supplied OAuth code to refresh the internally cached player PlayStation :tm: Network auth token
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/refreshpsnauthtoken
     """
 
@@ -2275,6 +2326,22 @@ static func UnlinkGoogleAccount(dict_request, user_callback = null, dict_header_
     )
 
 
+static func UnlinkGooglePlayGamesServicesAccount(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the related Google Play Games account from the user's PlayFab account.
+    https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkgoogleplaygamesservicesaccount
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Client/UnlinkGooglePlayGamesServicesAccount",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
+        []
+    )
+
+
 static func UnlinkIOSDeviceID(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Unlinks the related iOS device identifier from the user's PlayFab account
@@ -2358,7 +2425,7 @@ static func UnlinkOpenIdConnect(dict_request, user_callback = null, dict_header_
 
 static func UnlinkPSNAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Unlinks the related PSN account from the user's PlayFab account
+    Unlinks the related PlayStation :tm: Network account from the user's PlayFab account
     https://docs.microsoft.com/rest/api/playfab/client/account-management/unlinkpsnaccount
     """
 

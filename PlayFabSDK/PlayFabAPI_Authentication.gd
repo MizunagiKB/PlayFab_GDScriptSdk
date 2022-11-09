@@ -9,6 +9,38 @@ extends Node
 # -------------------------------------------------------------------- func(s)
 
 
+static func AuthenticateGameServerWithCustomId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Create a game_server entity token and return a new or existing game_server entity.
+    https://docs.microsoft.com/rest/api/playfab/authentication/authentication/authenticategameserverwithcustomid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/GameServerIdentity/AuthenticateGameServerWithCustomId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func Delete(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Delete a game_server entity.
+    https://docs.microsoft.com/rest/api/playfab/authentication/authentication/delete
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/GameServerIdentity/Delete",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func GetEntityToken(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Method to exchange a legacy AuthenticationTicket or title SecretKey for an Entity Token or to refresh a still valid
