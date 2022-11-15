@@ -1,0 +1,120 @@
+= PlayFab_GDScriptSdk README
+:description: PlayFabSDK for GDScript
+:url-repo: https://github.com/MizunagiKB/PlayFab_GDScriptSdk
+
+This program is an *unofficial* implementation for using https://www,playfab.com[Microsoft PlayFab] from the GDScript(https://godotengine.org/[Godot Engine]).
+
+CAUTION: Currently, only Godot 3.5 or higher is supported. +
+Godot 4 is not supported.
+
+This program can be used as-is by incorporating it into a Godot project.
+
+This program is automatically generated based on the https://github.com/PlayFab/API_Specs[API_Specs] published by PlayFab.
+
+If you want to customize the generated content, you can use the following to generate it on your own.
+
+* https://nodejs.org/en/[Node.js]
+* https://github.com/PlayFab/SDKGenerator[SDKGenerator]
+* https://github.com/MizunagiKB/PlayFab_GDScriptTemplate[PlayFab_GDScriptTemplate]
+
+
+## Usage
+
+1. Copy PlayFabSDK folder to GodotEngine project folder.
+2. Added res://PlayFabSDK/PlayFab.gd to AutoLoad under the name PlayFab.
+3. Added res://PlayFabSDK/PlayFabSettings.gd to AutoLoad under the name PlayFabSettings.
+4. Create testTitleData.json to GodotEngine project folder.
+
+[source,javascript]
+----
+{
+    "TitleId": "*****",
+    "developerSecretKey": "********",
+    "userEmail": "****@****.***"
+}
+----
+
+Or, it can be embedded directly in the program as follows.
+
+[source,gdscript]
+----
+PlayFabSettings.TitleId = "00000"
+PlayFabSettings.DeveloperSecretKey = "XXXXXXXX"
+----
+
+
+### API Call
+
+The API is called by _PlayFab_ . _{{category}}_ . _{{API name}}_.
+
+To call the RegisterPlayFabUser function, write as follows.
+
+[source,gdscript]
+----
+PlayFab.Client.RegisterPlayFabUser(...)
+----
+
+The parameters required to call the API are specified in the _Dictionary_.
+
+[source,gdscript]
+----
+var dict_request = {
+    "TitleId": "00000",
+    "DisplayName": "****",
+    "Username": "****",
+    "Password": "****",
+    "RequireBothUsernameAndEmail": false
+}
+
+PlayFab.Client.RegisterPlayFabUser(dict_request)
+----
+
+### Result
+
+Use funcref to get the results.
+
+[source,gdscript]
+----
+# callback function
+func _request_completed(
+    h_request: int,
+    response_code: int,
+    headers,
+    json_parse_result: JSONParseResult
+    ):
+    pass
+    # Describe here what you want to do.
+
+# on function call
+PlayFab.Client.RegisterPlayFabUser(
+    dict_request,
+    funcref(self, "_request_completed")
+)
+----
+
+
+### Useful functions
+
+PlayFab.is_valid()::
+Check to see if you can call PlayFab from GDScript.
+PlayFab.reset()::
+Resets the current state and returns it to its initial state.<br>(Any information or requests in communication will be discarded.)
+PlayFab.get_status()::
+Returns the current communication status. HTTPClient.get_status information can be obtained from the data.
+PlayFab.status_ntoa()::
+get_status the information into readable information.
+PlayFab.request_queue_size()::
+Returns the number of waiting requests.
+
+
+### Operating Specifications
+
+* API calls are made in the order in which they are registered and are not processed in parallel.
+* Only one person can log in within a single program. This is because only one EntityToken or ClientSessionTicket is stored in PlayFabSettings.gd.
+
+
+## PlayFab API Reference
+
+See below for specific uses of the API.
+
+https://docs.microsoft.com/en-us/gaming/playfab/api-references/

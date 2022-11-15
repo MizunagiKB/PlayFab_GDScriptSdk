@@ -1,3 +1,7 @@
+
+
+
+
 # PlayFab_GDScriptSdk README
 > PlayFabSDK for GDScript
 
@@ -71,8 +75,9 @@ PlayFab.Client.RegisterPlayFabUser(
 
 ### Useful functions
 
-* PlayFab.is_valid()
-  * Check to see if you can call PlayFab from GDScript.
+PlayFab.is_valid()::
+Check to see if you can call PlayFab from GDScript.
+
 * PlayFab.reset()
   * Resets the current state and returns it to its initial state.<br>(Any information or requests in communication will be discarded.)
 * PlayFab.get_status()
@@ -83,6 +88,10 @@ PlayFab.Client.RegisterPlayFabUser(
   * Returns the number of waiting requests.
 
 ## PlayFab API Reference
+
+* API calls are made in the order in which they are registered and are not processed in parallel.
+* Only one person can log in within a single program. (This is because only one EntityToken or ClientSessionTicket is stored in PlayFabSettings.gd.)
+
 
 See below for specific uses of the API.
 
