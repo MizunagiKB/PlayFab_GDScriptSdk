@@ -17,6 +17,7 @@ If you want to customize the generated content, you can use the following to gen
 * https://github.com/PlayFab/SDKGenerator[SDKGenerator]
 * https://github.com/MizunagiKB/PlayFab_GDScriptTemplate[PlayFab_GDScriptTemplate]
 
+NOTE: See the https://github.com/MizunagiKB/PlayFab_GDScriptTemplate/blob/main/README.md[README.md] at https://github.com/MizunagiKB/PlayFab_GDScriptTemplate[PlayFab_GDScriptTemplate] for easy generation instructions.
 
 ## Usage
 
