@@ -8,10 +8,25 @@ func reset_ui():
     $ui/lbl_json_parse_result/value.text = ""
     
 
+func _request_LoginWithPlayFab_completed(h_request: int, response_code: int, headers, json_parse_result: JSONParseResult):
+    $ui/lbl_h_request/value.text = String(h_request)
+    $ui/lbl_response_code/value.text = String(response_code)
+    $ui/lbl_headers/value.text = String(headers)
+
+    if json_parse_result.error == OK:
+        if json_parse_result.result.code == 200:
+            var res := PlayFab.ClientDataModels.PFLoginResult.new(json_parse_result.result.data)
+        else:
+            var res := PlayFab.ErrorDataModels.PFApiErrorWrapper.new(json_parse_result.result)
+
+        $ui/lbl_json_parse_result/value.text = String(json_parse_result.result)
+
+
 func _request_completed(h_request: int, response_code: int, headers, json_parse_result: JSONParseResult):
     $ui/lbl_h_request/value.text = String(h_request)
     $ui/lbl_response_code/value.text = String(response_code)
     $ui/lbl_headers/value.text = String(headers)
+
     if json_parse_result.error == OK:
         $ui/lbl_json_parse_result/value.text = String(json_parse_result.result)
 
@@ -55,16 +70,15 @@ func _on_btn_register_pressed():
 
 
 func _on_btn_login_pressed():
-    var dict_request = {
-        "TitleId": PlayFabSettings.TitleId,
-        "Username": $ui/lbl_username/value.text,
-        "Password": $ui/lbl_password/value.text
-    }
+    var o_request := PlayFab.ClientDataModels.PFLoginWithPlayFabRequest.new()
+    o_request.TitleId = PlayFabSettings.TitleId
+    o_request.Username = $ui/lbl_username/value.text
+    o_request.Password = $ui/lbl_password/value.text
 
     reset_ui()
     PlayFab.Client.LoginWithPlayFab(
-        dict_request,
-        funcref(self, "_request_completed")
+        o_request.get_dict(),
+        funcref(self, "_request_LoginWithPlayFab_completed")
     )
 
 
