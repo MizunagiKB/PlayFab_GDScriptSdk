@@ -38,6 +38,23 @@ const Localization = preload("res://PlayFabSDK/PlayFabAPI_Localization.gd")
 const Multiplayer = preload("res://PlayFabSDK/PlayFabAPI_Multiplayer.gd")
 const Profiles = preload("res://PlayFabSDK/PlayFabAPI_Profiles.gd")
 
+const AdminDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Admin.gd")
+const ClientDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Client.gd")
+const MatchmakerDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Matchmaker.gd")
+const ServerDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Server.gd")
+const AuthenticationDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Authentication.gd")
+const CloudScriptDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_CloudScript.gd")
+const DataDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Data.gd")
+const EconomyDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Economy.gd")
+const EventsDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Events.gd")
+const ExperimentationDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Experimentation.gd")
+const InsightsDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Insights.gd")
+const GroupsDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Groups.gd")
+const LocalizationDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Localization.gd")
+const MultiplayerDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Multiplayer.gd")
+const ProfilesDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Profiles.gd")
+const ErrorDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Error.gd")
+
 
 # --------------------------------------------------------------------- var(s)
 var _http_cli: PlayFabHTTPClient = null

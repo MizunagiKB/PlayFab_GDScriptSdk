@@ -61,13 +61,24 @@ The parameters required to call the API are specified in the _Dictionary_.
 ----
 var dict_request = {
     "TitleId": "00000",
-    "DisplayName": "****",
-    "Username": "****",
-    "Password": "****",
-    "RequireBothUsernameAndEmail": false
+    "Username": "USERNAME",
+    "Password": "********"
 }
 
-PlayFab.Client.RegisterPlayFabUser(dict_request)
+PlayFab.Client.LoginWithPlayFab(dict_request)
+----
+
+If you do not want to deal directly with Dictionary, you can use the data model.
+
+[source,gdscript]
+----
+var o_request := PlayFab.ClientDataModels.PFLoginWithPlayFabRequest.new()
+o_request.TitleId = "00000"
+o_request.Username = "USERNAME"
+o_request.Password = "********"
+
+
+PlayFab.Client.LoginWithPlayFab(o_request.get_dict())
 ----
 
 ### Result
@@ -83,14 +94,25 @@ func _request_completed(
     headers,
     json_parse_result: JSONParseResult
     ):
-    pass
-    # Describe here what you want to do.
+    if json_parse_result.error == OK:
+        # DataModel can also be used.
+        if json_parse_result.result.code == 200:
+            var res := PlayFab.ClientDataModels.PFLoginResult.new(json_parse_result.result.data)
+        else:
+            var res := PlayFab.ErrorDataModels.PFApiErrorWrapper.new(json_parse_result.result)
 
 # on function call
-PlayFab.Client.RegisterPlayFabUser(
-    dict_request,
-    funcref(self, "_request_completed")
-)
+func _on_btn_login_pressed():
+
+    var o_request := PlayFab.ClientDataModels.PFLoginWithPlayFabRequest.new()
+    o_request.TitleId = "00000"
+    o_request.Username = "USERNAME"
+    o_request.Password = "********"
+
+    PlayFab.Client.RegisterPlayFabUser(
+        o_request.get_dict(),
+        funcref(self, "_request_completed")
+    )
 ----
 
 
@@ -110,8 +132,17 @@ Returns the number of waiting requests.
 
 ### Operating Specifications
 
-* API calls are made in the order in which they are registered and are not processed in parallel.
-* Only one person can log in within a single program. This is because only one EntityToken or ClientSessionTicket is stored in PlayFabSettings.gd.
+DataModel has not been fully tested.::
+The DateTime type is treated as a string.::
+Be careful when handling DateTime as there is no correct DateTime to handle as JSON.
+Names are different in some places to prevent reserved words from colliding.::
+* The property named OS is renamed OperatingSystem.
+* All data model names are prefixed with PF. +
+ex) _GetFileMetadata_ to _PFGetFileMetadata_
+API calls are serialized.::
+API calls are made in the order in which they are registered and are not processed in parallel.
+Multiple accounts cannot be used at the same time.::
+Only one person can log in within a single program. This is because only one EntityToken or ClientSessionTicket is stored in PlayFabSettings.gd.
 
 
 ## PlayFab API Reference
