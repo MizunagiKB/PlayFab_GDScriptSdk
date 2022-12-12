@@ -1227,6 +1227,13 @@ class PFCharacterResult:
         return dict_result
 
 
+class PFChurnRiskLevel: # enum
+    # 4 items(s)
+    const NoData := "NoData"
+    const LowRisk := "LowRisk"
+    const MediumRisk := "MediumRisk"
+    const HighRisk := "HighRisk"
+
 class PFCloudScriptRevisionOption: # enum
     # 3 items(s)
     const Live := "Live"
@@ -2457,23 +2464,12 @@ class PFExecuteCloudScriptServerRequest:
 
 
 class PFExternalFriendSources: # enum
-    # 17 items(s)
+    # 6 items(s)
     const None := "None"
     const Steam := "Steam"
     const Facebook := "Facebook"
-    const SteamOrFacebook := "SteamOrFacebook"
     const Xbox := "Xbox"
-    const SteamOrXbox := "SteamOrXbox"
-    const FacebookOrXbox := "FacebookOrXbox"
-    const SteamOrFacebookOrXbox := "SteamOrFacebookOrXbox"
     const Psn := "Psn"
-    const SteamOrPsn := "SteamOrPsn"
-    const FacebookOrPsn := "FacebookOrPsn"
-    const SteamOrFacebookOrPsn := "SteamOrFacebookOrPsn"
-    const XboxOrPsn := "XboxOrPsn"
-    const SteamOrXboxOrPsn := "SteamOrXboxOrPsn"
-    const FacebookOrXboxOrPsn := "FacebookOrXboxOrPsn"
-    const SteamOrFacebookOrXboxOrPsn := "SteamOrFacebookOrXboxOrPsn"
     const All := "All"
 
 class PFFacebookInstantGamesPlayFabIdPair:
@@ -3170,9 +3166,9 @@ class PFGenericErrorCodes: # enum
     const AutomationRuleAlreadyExists := "AutomationRuleAlreadyExists"
     const AutomationRuleLimitExceeded := "AutomationRuleLimitExceeded"
     const InvalidGooglePlayGamesServerAuthCode := "InvalidGooglePlayGamesServerAuthCode"
-    const StorageAccountNotFound := "StorageAccountNotFound"
     const PlayStreamConnectionFailed := "PlayStreamConnectionFailed"
     const InvalidEventContents := "InvalidEventContents"
+    const InsightsV1Deprecated := "InsightsV1Deprecated"
     const MatchmakingEntityInvalid := "MatchmakingEntityInvalid"
     const MatchmakingPlayerAttributesInvalid := "MatchmakingPlayerAttributesInvalid"
     const MatchmakingQueueNotFound := "MatchmakingQueueNotFound"
@@ -9022,10 +9018,11 @@ class PFPlayerLocation:
 
 
 class PFPlayerProfile:
-    # 21 items(s)
+    # 22 items(s)
     var AdCampaignAttributions: Array # Array[PFAdCampaignAttribution]
     var AvatarUrl: String # String
     var BannedUntil: String # DateTime
+    var ChurnPrediction: String # ChurnRiskLevel
     var ContactEmailAddresses: Array # Array[PFContactEmailInfo]
     var Created: String # DateTime
     var DisplayName: String # String
@@ -9070,6 +9067,8 @@ class PFPlayerProfile:
             self.AvatarUrl = dict_param["AvatarUrl"]
         if "BannedUntil" in dict_param:
             self.BannedUntil = dict_param["BannedUntil"]
+        if "ChurnPrediction" in dict_param:
+            self.ChurnPrediction = dict_param["ChurnPrediction"]
         if "ContactEmailAddresses" in dict_param:
             self.ContactEmailAddresses = []
             for v in dict_param["ContactEmailAddresses"]:
@@ -9145,6 +9144,9 @@ class PFPlayerProfile:
             # String(DateTime)
             if self.BannedUntil.empty() != true:
                 dict_result["BannedUntil"] = self.BannedUntil
+        if self.ChurnPrediction != null:
+            # ChurnRiskLevel
+            dict_result["ChurnPrediction"] = self.ChurnPrediction
         if self.ContactEmailAddresses != null:
             if self.ContactEmailAddresses.size() > 0:
                 var list_temp: Array = []

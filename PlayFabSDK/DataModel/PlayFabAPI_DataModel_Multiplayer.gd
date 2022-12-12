@@ -3224,23 +3224,12 @@ class PFEntityKey:
 
 
 class PFExternalFriendSources: # enum
-    # 17 items(s)
+    # 6 items(s)
     const None := "None"
     const Steam := "Steam"
     const Facebook := "Facebook"
-    const SteamOrFacebook := "SteamOrFacebook"
     const Xbox := "Xbox"
-    const SteamOrXbox := "SteamOrXbox"
-    const FacebookOrXbox := "FacebookOrXbox"
-    const SteamOrFacebookOrXbox := "SteamOrFacebookOrXbox"
     const Psn := "Psn"
-    const SteamOrPsn := "SteamOrPsn"
-    const FacebookOrPsn := "FacebookOrPsn"
-    const SteamOrFacebookOrPsn := "SteamOrFacebookOrPsn"
-    const XboxOrPsn := "XboxOrPsn"
-    const SteamOrXboxOrPsn := "SteamOrXboxOrPsn"
-    const FacebookOrXboxOrPsn := "FacebookOrXboxOrPsn"
-    const SteamOrFacebookOrXboxOrPsn := "SteamOrFacebookOrXboxOrPsn"
     const All := "All"
 
 class PFFindFriendLobbiesRequest:

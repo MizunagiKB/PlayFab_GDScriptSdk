@@ -377,6 +377,22 @@ static func GetMicrosoftStoreAccessTokens(dict_request, user_callback = null, di
     )
 
 
+static func GetTransactionHistory(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Get transaction history.
+    https://docs.microsoft.com/rest/api/playfab/economy/inventory/gettransactionhistory
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Inventory/GetTransactionHistory",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func PublishDraftItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Initiates a publish of an item from the working catalog to the public catalog.

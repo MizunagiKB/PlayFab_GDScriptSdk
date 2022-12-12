@@ -3,13 +3,15 @@ extends Object
 
 
 class PFAddInventoryItemsOperation:
-    # 2 items(s)
+    # 3 items(s)
     var Amount: int # int32
     var Item: PFInventoryItemReference # InventoryItemReference
+    var NewStackValues: PFInitialValues # InitialValues
 
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFInventoryItemReference.new()
+        self.NewStackValues = PFInitialValues.new()
         self.set_dict(dict_param);
 
     func set_dict(dict_param: Dictionary):
@@ -18,6 +20,8 @@ class PFAddInventoryItemsOperation:
             self.Amount = dict_param["Amount"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
+        if "NewStackValues" in dict_param:
+            self.NewStackValues = PFInitialValues.new(dict_param["NewStackValues"])
 
     func get_dict() -> Dictionary:
         
@@ -28,24 +32,29 @@ class PFAddInventoryItemsOperation:
             dict_result["Amount"] = self.Amount
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
+        if self.NewStackValues != null:
+            dict_result["NewStackValues"] = self.NewStackValues.get_dict()
         
         return dict_result
 
 
 class PFAddInventoryItemsRequest:
-    # 6 items(s)
+    # 8 items(s)
     var Amount: int # int32
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
     var IdempotencyId: String # String
     var Item: PFInventoryItemReference # InventoryItemReference
+    var NewStackValues: PFInitialValues # InitialValues
 
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Item = PFInventoryItemReference.new()
+        self.NewStackValues = PFInitialValues.new()
         self.set_dict(dict_param);
 
     func set_dict(dict_param: Dictionary):
@@ -60,10 +69,14 @@ class PFAddInventoryItemsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
+        if "NewStackValues" in dict_param:
+            self.NewStackValues = PFInitialValues.new(dict_param["NewStackValues"])
 
     func get_dict() -> Dictionary:
         
@@ -86,18 +99,25 @@ class PFAddInventoryItemsRequest:
                 dict_result["CustomTags"] = dict_temp
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
                 dict_result["IdempotencyId"] = self.IdempotencyId
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
+        if self.NewStackValues != null:
+            dict_result["NewStackValues"] = self.NewStackValues.get_dict()
         
         return dict_result
 
 
 class PFAddInventoryItemsResponse:
-    # 2 items(s)
+    # 3 items(s)
+    var ETag: String # String
     var IdempotencyId: String # String
     var TransactionIds: Array # Array[String]
 
@@ -108,6 +128,8 @@ class PFAddInventoryItemsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "TransactionIds" in dict_param:
@@ -119,6 +141,10 @@ class PFAddInventoryItemsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -1446,10 +1472,11 @@ class PFDeleteEntityItemReviewsResponse:
 
 
 class PFDeleteInventoryCollectionRequest:
-    # 3 items(s)
+    # 4 items(s)
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
 
     func _init(dict_param: Dictionary = {}):
         
@@ -1467,6 +1494,8 @@ class PFDeleteInventoryCollectionRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
 
     func get_dict() -> Dictionary:
         
@@ -1486,6 +1515,10 @@ class PFDeleteInventoryCollectionRequest:
                 dict_result["CustomTags"] = dict_temp
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         
         return dict_result
 
@@ -1534,10 +1567,11 @@ class PFDeleteInventoryItemsOperation:
 
 
 class PFDeleteInventoryItemsRequest:
-    # 5 items(s)
+    # 6 items(s)
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
     var IdempotencyId: String # String
     var Item: PFInventoryItemReference # InventoryItemReference
 
@@ -1558,6 +1592,8 @@ class PFDeleteInventoryItemsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "Item" in dict_param:
@@ -1581,6 +1617,10 @@ class PFDeleteInventoryItemsRequest:
                 dict_result["CustomTags"] = dict_temp
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -1592,7 +1632,8 @@ class PFDeleteInventoryItemsRequest:
 
 
 class PFDeleteInventoryItemsResponse:
-    # 2 items(s)
+    # 3 items(s)
+    var ETag: String # String
     var IdempotencyId: String # String
     var TransactionIds: Array # Array[String]
 
@@ -1603,6 +1644,8 @@ class PFDeleteInventoryItemsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "TransactionIds" in dict_param:
@@ -1614,6 +1657,10 @@ class PFDeleteInventoryItemsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -1772,10 +1819,11 @@ class PFEntityKey:
 
 
 class PFExecuteInventoryOperationsRequest:
-    # 5 items(s)
+    # 6 items(s)
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
     var IdempotencyId: String # String
     var Operations: Array # Array[PFInventoryOperation]
 
@@ -1796,6 +1844,8 @@ class PFExecuteInventoryOperationsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "Operations" in dict_param:
@@ -1821,6 +1871,10 @@ class PFExecuteInventoryOperationsRequest:
                 dict_result["CustomTags"] = dict_temp
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -1836,7 +1890,8 @@ class PFExecuteInventoryOperationsRequest:
 
 
 class PFExecuteInventoryOperationsResponse:
-    # 2 items(s)
+    # 3 items(s)
+    var ETag: String # String
     var IdempotencyId: String # String
     var TransactionIds: Array # Array[String]
 
@@ -1847,6 +1902,8 @@ class PFExecuteInventoryOperationsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "TransactionIds" in dict_param:
@@ -1858,6 +1915,10 @@ class PFExecuteInventoryOperationsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -2509,8 +2570,9 @@ class PFGetInventoryItemsRequest:
 
 
 class PFGetInventoryItemsResponse:
-    # 2 items(s)
+    # 3 items(s)
     var ContinuationToken: String # String
+    var ETag: String # String
     var Items: Array # Array[PFInventoryItem]
 
     func _init(dict_param: Dictionary = {}):
@@ -2522,6 +2584,8 @@ class PFGetInventoryItemsResponse:
         
         if "ContinuationToken" in dict_param:
             self.ContinuationToken = dict_param["ContinuationToken"]
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "Items" in dict_param:
             self.Items = []
             for v in dict_param["Items"]:
@@ -2535,6 +2599,10 @@ class PFGetInventoryItemsResponse:
             # String
             if self.ContinuationToken.empty() != true:
                 dict_result["ContinuationToken"] = self.ContinuationToken
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.Items != null:
             if self.Items.size() > 0:
                 var list_temp: Array = []
@@ -3219,6 +3287,108 @@ class PFGetMicrosoftStoreAccessTokensResponse:
         return dict_result
 
 
+class PFGetTransactionHistoryRequest:
+    # 6 items(s)
+    var CollectionId: String # String
+    var ContinuationToken: String # String
+    var Count: int # int32
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Entity: PFEntityKey # EntityKey
+    var Filter: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.Entity = PFEntityKey.new()
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CollectionId" in dict_param:
+            self.CollectionId = dict_param["CollectionId"]
+        if "ContinuationToken" in dict_param:
+            self.ContinuationToken = dict_param["ContinuationToken"]
+        if "Count" in dict_param:
+            self.Count = dict_param["Count"]
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Entity" in dict_param:
+            self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "Filter" in dict_param:
+            self.Filter = dict_param["Filter"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CollectionId != null:
+            # String
+            if self.CollectionId.empty() != true:
+                dict_result["CollectionId"] = self.CollectionId
+        if self.ContinuationToken != null:
+            # String
+            if self.ContinuationToken.empty() != true:
+                dict_result["ContinuationToken"] = self.ContinuationToken
+        if self.Count != null:
+            # int32
+            dict_result["Count"] = self.Count
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Entity != null:
+            dict_result["Entity"] = self.Entity.get_dict()
+        if self.Filter != null:
+            # String
+            if self.Filter.empty() != true:
+                dict_result["Filter"] = self.Filter
+        
+        return dict_result
+
+
+class PFGetTransactionHistoryResponse:
+    # 2 items(s)
+    var ContinuationToken: String # String
+    var Transactions: Array # Array[PFTransaction]
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.Transactions = []
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "ContinuationToken" in dict_param:
+            self.ContinuationToken = dict_param["ContinuationToken"]
+        if "Transactions" in dict_param:
+            self.Transactions = []
+            for v in dict_param["Transactions"]:
+                self.Transactions.push_back(PFTransaction.new(v))
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.ContinuationToken != null:
+            # String
+            if self.ContinuationToken.empty() != true:
+                dict_result["ContinuationToken"] = self.ContinuationToken
+        if self.Transactions != null:
+            if self.Transactions.size() > 0:
+                var list_temp: Array = []
+                for v in self.Transactions:
+                    list_temp.push_back(v.get_dict())
+                dict_result["Transactions"] = list_temp
+        
+        return dict_result
+
+
 class PFGooglePlayProductPurchase:
     # 2 items(s)
     var ProductId: String # String
@@ -3335,9 +3505,34 @@ class PFImageConfig:
         return dict_result
 
 
+class PFInitialValues:
+    # 1 items(s)
+    var DisplayProperties: Dictionary # object
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "DisplayProperties" in dict_param:
+            self.DisplayProperties = dict_param["DisplayProperties"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.DisplayProperties != null:
+            # object
+            dict_result["DisplayProperties"] = self.DisplayProperties
+        
+        return dict_result
+
+
 class PFInventoryItem:
-    # 4 items(s)
+    # 5 items(s)
     var Amount: int # int32
+    var DisplayProperties: Dictionary # object
     var Id: String # String
     var StackId: String # String
     var Type: String # String
@@ -3350,6 +3545,8 @@ class PFInventoryItem:
         
         if "Amount" in dict_param:
             self.Amount = dict_param["Amount"]
+        if "DisplayProperties" in dict_param:
+            self.DisplayProperties = dict_param["DisplayProperties"]
         if "Id" in dict_param:
             self.Id = dict_param["Id"]
         if "StackId" in dict_param:
@@ -3364,6 +3561,9 @@ class PFInventoryItem:
         if self.Amount != null:
             # int32
             dict_result["Amount"] = self.Amount
+        if self.DisplayProperties != null:
+            # object
+            dict_result["DisplayProperties"] = self.DisplayProperties
         if self.Id != null:
             # String
             if self.Id.empty() != true:
@@ -3654,16 +3854,18 @@ class PFPublishResult: # enum
     const Canceled := "Canceled"
 
 class PFPurchaseInventoryItemsOperation:
-    # 5 items(s)
+    # 6 items(s)
     var Amount: int # int32
     var DeleteEmptyStacks: bool # Boolean
     var Item: PFInventoryItemReference # InventoryItemReference
+    var NewStackValues: PFInitialValues # InitialValues
     var PriceAmounts: Array # Array[PFPurchasePriceAmount]
     var StoreId: String # String
 
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFInventoryItemReference.new()
+        self.NewStackValues = PFInitialValues.new()
         self.PriceAmounts = []
         self.set_dict(dict_param);
 
@@ -3675,6 +3877,8 @@ class PFPurchaseInventoryItemsOperation:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
+        if "NewStackValues" in dict_param:
+            self.NewStackValues = PFInitialValues.new(dict_param["NewStackValues"])
         if "PriceAmounts" in dict_param:
             self.PriceAmounts = []
             for v in dict_param["PriceAmounts"]:
@@ -3694,6 +3898,8 @@ class PFPurchaseInventoryItemsOperation:
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
+        if self.NewStackValues != null:
+            dict_result["NewStackValues"] = self.NewStackValues.get_dict()
         if self.PriceAmounts != null:
             if self.PriceAmounts.size() > 0:
                 var list_temp: Array = []
@@ -3709,14 +3915,16 @@ class PFPurchaseInventoryItemsOperation:
 
 
 class PFPurchaseInventoryItemsRequest:
-    # 9 items(s)
+    # 11 items(s)
     var Amount: int # int32
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var DeleteEmptyStacks: bool # Boolean
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
     var IdempotencyId: String # String
     var Item: PFInventoryItemReference # InventoryItemReference
+    var NewStackValues: PFInitialValues # InitialValues
     var PriceAmounts: Array # Array[PFPurchasePriceAmount]
     var StoreId: String # String
 
@@ -3725,6 +3933,7 @@ class PFPurchaseInventoryItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Item = PFInventoryItemReference.new()
+        self.NewStackValues = PFInitialValues.new()
         self.PriceAmounts = []
         self.set_dict(dict_param);
 
@@ -3742,10 +3951,14 @@ class PFPurchaseInventoryItemsRequest:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
+        if "NewStackValues" in dict_param:
+            self.NewStackValues = PFInitialValues.new(dict_param["NewStackValues"])
         if "PriceAmounts" in dict_param:
             self.PriceAmounts = []
             for v in dict_param["PriceAmounts"]:
@@ -3777,12 +3990,18 @@ class PFPurchaseInventoryItemsRequest:
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
                 dict_result["IdempotencyId"] = self.IdempotencyId
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
+        if self.NewStackValues != null:
+            dict_result["NewStackValues"] = self.NewStackValues.get_dict()
         if self.PriceAmounts != null:
             if self.PriceAmounts.size() > 0:
                 var list_temp: Array = []
@@ -3798,7 +4017,8 @@ class PFPurchaseInventoryItemsRequest:
 
 
 class PFPurchaseInventoryItemsResponse:
-    # 2 items(s)
+    # 3 items(s)
+    var ETag: String # String
     var IdempotencyId: String # String
     var TransactionIds: Array # Array[String]
 
@@ -3809,6 +4029,8 @@ class PFPurchaseInventoryItemsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "TransactionIds" in dict_param:
@@ -3820,6 +4042,10 @@ class PFPurchaseInventoryItemsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -5518,12 +5744,13 @@ class PFSubtractInventoryItemsOperation:
 
 
 class PFSubtractInventoryItemsRequest:
-    # 7 items(s)
+    # 8 items(s)
     var Amount: int # int32
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var DeleteEmptyStacks: bool # Boolean
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
     var IdempotencyId: String # String
     var Item: PFInventoryItemReference # InventoryItemReference
 
@@ -5548,6 +5775,8 @@ class PFSubtractInventoryItemsRequest:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "Item" in dict_param:
@@ -5577,6 +5806,10 @@ class PFSubtractInventoryItemsRequest:
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -5588,7 +5821,8 @@ class PFSubtractInventoryItemsRequest:
 
 
 class PFSubtractInventoryItemsResponse:
-    # 2 items(s)
+    # 3 items(s)
+    var ETag: String # String
     var IdempotencyId: String # String
     var TransactionIds: Array # Array[String]
 
@@ -5599,6 +5833,8 @@ class PFSubtractInventoryItemsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "TransactionIds" in dict_param:
@@ -5610,6 +5846,10 @@ class PFSubtractInventoryItemsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -5689,16 +5929,268 @@ class PFTakedownItemReviewsResponse:
         return dict_result
 
 
+class PFTransaction:
+    # 9 items(s)
+    var ApiName: String # String
+    var ItemType: String # String
+    var Operations: Array # Array[PFTransactionOperation]
+    var OperationType: String # String
+    var PurchaseDetails: PFTransactionPurchaseDetails # TransactionPurchaseDetails
+    var RedeemDetails: PFTransactionRedeemDetails # TransactionRedeemDetails
+    var Timestamp: String # DateTime
+    var TransactionId: String # String
+    var TransferDetails: PFTransactionTransferDetails # TransactionTransferDetails
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.Operations = []
+        self.PurchaseDetails = PFTransactionPurchaseDetails.new()
+        self.RedeemDetails = PFTransactionRedeemDetails.new()
+        self.TransferDetails = PFTransactionTransferDetails.new()
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "ApiName" in dict_param:
+            self.ApiName = dict_param["ApiName"]
+        if "ItemType" in dict_param:
+            self.ItemType = dict_param["ItemType"]
+        if "Operations" in dict_param:
+            self.Operations = []
+            for v in dict_param["Operations"]:
+                self.Operations.push_back(PFTransactionOperation.new(v))
+        if "OperationType" in dict_param:
+            self.OperationType = dict_param["OperationType"]
+        if "PurchaseDetails" in dict_param:
+            self.PurchaseDetails = PFTransactionPurchaseDetails.new(dict_param["PurchaseDetails"])
+        if "RedeemDetails" in dict_param:
+            self.RedeemDetails = PFTransactionRedeemDetails.new(dict_param["RedeemDetails"])
+        if "Timestamp" in dict_param:
+            self.Timestamp = dict_param["Timestamp"]
+        if "TransactionId" in dict_param:
+            self.TransactionId = dict_param["TransactionId"]
+        if "TransferDetails" in dict_param:
+            self.TransferDetails = PFTransactionTransferDetails.new(dict_param["TransferDetails"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.ApiName != null:
+            # String
+            if self.ApiName.empty() != true:
+                dict_result["ApiName"] = self.ApiName
+        if self.ItemType != null:
+            # String
+            if self.ItemType.empty() != true:
+                dict_result["ItemType"] = self.ItemType
+        if self.Operations != null:
+            if self.Operations.size() > 0:
+                var list_temp: Array = []
+                for v in self.Operations:
+                    list_temp.push_back(v.get_dict())
+                dict_result["Operations"] = list_temp
+        if self.OperationType != null:
+            # String
+            if self.OperationType.empty() != true:
+                dict_result["OperationType"] = self.OperationType
+        if self.PurchaseDetails != null:
+            dict_result["PurchaseDetails"] = self.PurchaseDetails.get_dict()
+        if self.RedeemDetails != null:
+            dict_result["RedeemDetails"] = self.RedeemDetails.get_dict()
+        if self.Timestamp != null:
+            # String(DateTime)
+            if self.Timestamp.empty() != true:
+                dict_result["Timestamp"] = self.Timestamp
+        if self.TransactionId != null:
+            # String
+            if self.TransactionId.empty() != true:
+                dict_result["TransactionId"] = self.TransactionId
+        if self.TransferDetails != null:
+            dict_result["TransferDetails"] = self.TransferDetails.get_dict()
+        
+        return dict_result
+
+
+class PFTransactionOperation:
+    # 5 items(s)
+    var Amount: int # int32
+    var ItemId: String # String
+    var ItemType: String # String
+    var StackId: String # String
+    var Type: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Amount" in dict_param:
+            self.Amount = dict_param["Amount"]
+        if "ItemId" in dict_param:
+            self.ItemId = dict_param["ItemId"]
+        if "ItemType" in dict_param:
+            self.ItemType = dict_param["ItemType"]
+        if "StackId" in dict_param:
+            self.StackId = dict_param["StackId"]
+        if "Type" in dict_param:
+            self.Type = dict_param["Type"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Amount != null:
+            # int32
+            dict_result["Amount"] = self.Amount
+        if self.ItemId != null:
+            # String
+            if self.ItemId.empty() != true:
+                dict_result["ItemId"] = self.ItemId
+        if self.ItemType != null:
+            # String
+            if self.ItemType.empty() != true:
+                dict_result["ItemType"] = self.ItemType
+        if self.StackId != null:
+            # String
+            if self.StackId.empty() != true:
+                dict_result["StackId"] = self.StackId
+        if self.Type != null:
+            # String
+            if self.Type.empty() != true:
+                dict_result["Type"] = self.Type
+        
+        return dict_result
+
+
+class PFTransactionPurchaseDetails:
+    # 1 items(s)
+    var StoreId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "StoreId" in dict_param:
+            self.StoreId = dict_param["StoreId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.StoreId != null:
+            # String
+            if self.StoreId.empty() != true:
+                dict_result["StoreId"] = self.StoreId
+        
+        return dict_result
+
+
+class PFTransactionRedeemDetails:
+    # 3 items(s)
+    var Marketplace: String # String
+    var MarketplaceTransactionId: String # String
+    var OfferId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Marketplace" in dict_param:
+            self.Marketplace = dict_param["Marketplace"]
+        if "MarketplaceTransactionId" in dict_param:
+            self.MarketplaceTransactionId = dict_param["MarketplaceTransactionId"]
+        if "OfferId" in dict_param:
+            self.OfferId = dict_param["OfferId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Marketplace != null:
+            # String
+            if self.Marketplace.empty() != true:
+                dict_result["Marketplace"] = self.Marketplace
+        if self.MarketplaceTransactionId != null:
+            # String
+            if self.MarketplaceTransactionId.empty() != true:
+                dict_result["MarketplaceTransactionId"] = self.MarketplaceTransactionId
+        if self.OfferId != null:
+            # String
+            if self.OfferId.empty() != true:
+                dict_result["OfferId"] = self.OfferId
+        
+        return dict_result
+
+
+class PFTransactionTransferDetails:
+    # 5 items(s)
+    var GivingCollectionId: String # String
+    var GivingEntity: PFEntityKey # EntityKey
+    var ReceivingCollectionId: String # String
+    var ReceivingEntity: PFEntityKey # EntityKey
+    var TransferId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.GivingEntity = PFEntityKey.new()
+        self.ReceivingEntity = PFEntityKey.new()
+        self.set_dict(dict_param);
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "GivingCollectionId" in dict_param:
+            self.GivingCollectionId = dict_param["GivingCollectionId"]
+        if "GivingEntity" in dict_param:
+            self.GivingEntity = PFEntityKey.new(dict_param["GivingEntity"])
+        if "ReceivingCollectionId" in dict_param:
+            self.ReceivingCollectionId = dict_param["ReceivingCollectionId"]
+        if "ReceivingEntity" in dict_param:
+            self.ReceivingEntity = PFEntityKey.new(dict_param["ReceivingEntity"])
+        if "TransferId" in dict_param:
+            self.TransferId = dict_param["TransferId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.GivingCollectionId != null:
+            # String
+            if self.GivingCollectionId.empty() != true:
+                dict_result["GivingCollectionId"] = self.GivingCollectionId
+        if self.GivingEntity != null:
+            dict_result["GivingEntity"] = self.GivingEntity.get_dict()
+        if self.ReceivingCollectionId != null:
+            # String
+            if self.ReceivingCollectionId.empty() != true:
+                dict_result["ReceivingCollectionId"] = self.ReceivingCollectionId
+        if self.ReceivingEntity != null:
+            dict_result["ReceivingEntity"] = self.ReceivingEntity.get_dict()
+        if self.TransferId != null:
+            # String
+            if self.TransferId.empty() != true:
+                dict_result["TransferId"] = self.TransferId
+        
+        return dict_result
+
+
 class PFTransferInventoryItemsOperation:
-    # 4 items(s)
+    # 5 items(s)
     var Amount: int # int32
     var DeleteEmptyStacks: bool # Boolean
     var GivingItem: PFInventoryItemReference # InventoryItemReference
+    var NewStackValues: PFInitialValues # InitialValues
     var ReceivingItem: PFInventoryItemReference # InventoryItemReference
 
     func _init(dict_param: Dictionary = {}):
         
         self.GivingItem = PFInventoryItemReference.new()
+        self.NewStackValues = PFInitialValues.new()
         self.ReceivingItem = PFInventoryItemReference.new()
         self.set_dict(dict_param);
 
@@ -5710,6 +6202,8 @@ class PFTransferInventoryItemsOperation:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
         if "GivingItem" in dict_param:
             self.GivingItem = PFInventoryItemReference.new(dict_param["GivingItem"])
+        if "NewStackValues" in dict_param:
+            self.NewStackValues = PFInitialValues.new(dict_param["NewStackValues"])
         if "ReceivingItem" in dict_param:
             self.ReceivingItem = PFInventoryItemReference.new(dict_param["ReceivingItem"])
 
@@ -5725,6 +6219,8 @@ class PFTransferInventoryItemsOperation:
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
         if self.GivingItem != null:
             dict_result["GivingItem"] = self.GivingItem.get_dict()
+        if self.NewStackValues != null:
+            dict_result["NewStackValues"] = self.NewStackValues.get_dict()
         if self.ReceivingItem != null:
             dict_result["ReceivingItem"] = self.ReceivingItem.get_dict()
         
@@ -5732,14 +6228,16 @@ class PFTransferInventoryItemsOperation:
 
 
 class PFTransferInventoryItemsRequest:
-    # 10 items(s)
+    # 12 items(s)
     var Amount: int # int32
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var DeleteEmptyStacks: bool # Boolean
     var GivingCollectionId: String # String
     var GivingEntity: PFEntityKey # EntityKey
+    var GivingETag: String # String
     var GivingItem: PFInventoryItemReference # InventoryItemReference
     var IdempotencyId: String # String
+    var NewStackValues: PFInitialValues # InitialValues
     var ReceivingCollectionId: String # String
     var ReceivingEntity: PFEntityKey # EntityKey
     var ReceivingItem: PFInventoryItemReference # InventoryItemReference
@@ -5749,6 +6247,7 @@ class PFTransferInventoryItemsRequest:
         self.CustomTags = {}
         self.GivingEntity = PFEntityKey.new()
         self.GivingItem = PFInventoryItemReference.new()
+        self.NewStackValues = PFInitialValues.new()
         self.ReceivingEntity = PFEntityKey.new()
         self.ReceivingItem = PFInventoryItemReference.new()
         self.set_dict(dict_param);
@@ -5767,10 +6266,14 @@ class PFTransferInventoryItemsRequest:
             self.GivingCollectionId = dict_param["GivingCollectionId"]
         if "GivingEntity" in dict_param:
             self.GivingEntity = PFEntityKey.new(dict_param["GivingEntity"])
+        if "GivingETag" in dict_param:
+            self.GivingETag = dict_param["GivingETag"]
         if "GivingItem" in dict_param:
             self.GivingItem = PFInventoryItemReference.new(dict_param["GivingItem"])
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
+        if "NewStackValues" in dict_param:
+            self.NewStackValues = PFInitialValues.new(dict_param["NewStackValues"])
         if "ReceivingCollectionId" in dict_param:
             self.ReceivingCollectionId = dict_param["ReceivingCollectionId"]
         if "ReceivingEntity" in dict_param:
@@ -5802,12 +6305,18 @@ class PFTransferInventoryItemsRequest:
                 dict_result["GivingCollectionId"] = self.GivingCollectionId
         if self.GivingEntity != null:
             dict_result["GivingEntity"] = self.GivingEntity.get_dict()
+        if self.GivingETag != null:
+            # String
+            if self.GivingETag.empty() != true:
+                dict_result["GivingETag"] = self.GivingETag
         if self.GivingItem != null:
             dict_result["GivingItem"] = self.GivingItem.get_dict()
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
                 dict_result["IdempotencyId"] = self.IdempotencyId
+        if self.NewStackValues != null:
+            dict_result["NewStackValues"] = self.NewStackValues.get_dict()
         if self.ReceivingCollectionId != null:
             # String
             if self.ReceivingCollectionId.empty() != true:
@@ -5821,7 +6330,8 @@ class PFTransferInventoryItemsRequest:
 
 
 class PFTransferInventoryItemsResponse:
-    # 3 items(s)
+    # 4 items(s)
+    var GivingETag: String # String
     var GivingTransactionIds: Array # Array[String]
     var IdempotencyId: String # String
     var ReceivingTransactionIds: Array # Array[String]
@@ -5834,6 +6344,8 @@ class PFTransferInventoryItemsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "GivingETag" in dict_param:
+            self.GivingETag = dict_param["GivingETag"]
         if "GivingTransactionIds" in dict_param:
             self.GivingTransactionIds = []
             for v in dict_param["GivingTransactionIds"]:
@@ -5849,6 +6361,10 @@ class PFTransferInventoryItemsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.GivingETag != null:
+            # String
+            if self.GivingETag.empty() != true:
+                dict_result["GivingETag"] = self.GivingETag
         if self.GivingTransactionIds != null:
             if self.GivingTransactionIds.size() > 0:
                 var list_temp: Array = []
@@ -6023,10 +6539,11 @@ class PFUpdateInventoryItemsOperation:
 
 
 class PFUpdateInventoryItemsRequest:
-    # 5 items(s)
+    # 6 items(s)
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
+    var ETag: String # String
     var IdempotencyId: String # String
     var Item: PFInventoryItem # InventoryItem
 
@@ -6047,6 +6564,8 @@ class PFUpdateInventoryItemsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "Item" in dict_param:
@@ -6070,6 +6589,10 @@ class PFUpdateInventoryItemsRequest:
                 dict_result["CustomTags"] = dict_temp
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
@@ -6081,7 +6604,8 @@ class PFUpdateInventoryItemsRequest:
 
 
 class PFUpdateInventoryItemsResponse:
-    # 2 items(s)
+    # 3 items(s)
+    var ETag: String # String
     var IdempotencyId: String # String
     var TransactionIds: Array # Array[String]
 
@@ -6092,6 +6616,8 @@ class PFUpdateInventoryItemsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "ETag" in dict_param:
+            self.ETag = dict_param["ETag"]
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
         if "TransactionIds" in dict_param:
@@ -6103,6 +6629,10 @@ class PFUpdateInventoryItemsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.ETag != null:
+            # String
+            if self.ETag.empty() != true:
+                dict_result["ETag"] = self.ETag
         if self.IdempotencyId != null:
             # String
             if self.IdempotencyId.empty() != true:
