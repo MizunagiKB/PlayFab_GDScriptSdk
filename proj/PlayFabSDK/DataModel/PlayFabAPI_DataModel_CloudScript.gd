@@ -1596,9 +1596,8 @@ class PFPostFunctionResultForFunctionExecutionRequest:
 
 
 class PFPostFunctionResultForPlayerTriggeredActionRequest:
-    # 5 items(s)
+    # 4 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var Entity: PFEntityKey # EntityKey
     var FunctionResult: PFExecuteFunctionResult # ExecuteFunctionResult
     var PlayerProfile: PFPlayerProfileModel # PlayerProfileModel
     var PlayStreamEventEnvelope: PFPlayStreamEventEnvelopeModel # PlayStreamEventEnvelopeModel
@@ -1606,7 +1605,6 @@ class PFPostFunctionResultForPlayerTriggeredActionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.Entity = PFEntityKey.new()
         self.FunctionResult = PFExecuteFunctionResult.new()
         self.PlayerProfile = PFPlayerProfileModel.new()
         self.PlayStreamEventEnvelope = PFPlayStreamEventEnvelopeModel.new()
@@ -1618,8 +1616,6 @@ class PFPostFunctionResultForPlayerTriggeredActionRequest:
             self.CustomTags = {}
             for k in dict_param["CustomTags"]:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "Entity" in dict_param:
-            self.Entity = PFEntityKey.new(dict_param["Entity"])
         if "FunctionResult" in dict_param:
             self.FunctionResult = PFExecuteFunctionResult.new(dict_param["FunctionResult"])
         if "PlayerProfile" in dict_param:
@@ -1639,8 +1635,6 @@ class PFPostFunctionResultForPlayerTriggeredActionRequest:
                     if self.CustomTags[k].empty() != true:
                         dict_temp[k] = self.CustomTags[k]
                 dict_result["CustomTags"] = dict_temp
-        if self.Entity != null:
-            dict_result["Entity"] = self.Entity.get_dict()
         if self.FunctionResult != null:
             dict_result["FunctionResult"] = self.FunctionResult.get_dict()
         if self.PlayerProfile != null:
@@ -1652,16 +1646,14 @@ class PFPostFunctionResultForPlayerTriggeredActionRequest:
 
 
 class PFPostFunctionResultForScheduledTaskRequest:
-    # 4 items(s)
+    # 3 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var Entity: PFEntityKey # EntityKey
     var FunctionResult: PFExecuteFunctionResult # ExecuteFunctionResult
     var ScheduledTaskId: PFNameIdentifier # NameIdentifier
 
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.Entity = PFEntityKey.new()
         self.FunctionResult = PFExecuteFunctionResult.new()
         self.ScheduledTaskId = PFNameIdentifier.new()
         self.set_dict(dict_param);
@@ -1672,8 +1664,6 @@ class PFPostFunctionResultForScheduledTaskRequest:
             self.CustomTags = {}
             for k in dict_param["CustomTags"]:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "Entity" in dict_param:
-            self.Entity = PFEntityKey.new(dict_param["Entity"])
         if "FunctionResult" in dict_param:
             self.FunctionResult = PFExecuteFunctionResult.new(dict_param["FunctionResult"])
         if "ScheduledTaskId" in dict_param:
@@ -1691,8 +1681,6 @@ class PFPostFunctionResultForScheduledTaskRequest:
                     if self.CustomTags[k].empty() != true:
                         dict_temp[k] = self.CustomTags[k]
                 dict_result["CustomTags"] = dict_temp
-        if self.Entity != null:
-            dict_result["Entity"] = self.Entity.get_dict()
         if self.FunctionResult != null:
             dict_result["FunctionResult"] = self.FunctionResult.get_dict()
         if self.ScheduledTaskId != null:

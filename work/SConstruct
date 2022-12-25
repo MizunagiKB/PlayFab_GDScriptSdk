@@ -60,7 +60,7 @@ def run_build():
             [
                 "node",
                 "generate.js",
-                "gdscriptsdk=../PlayFab_GDScriptSdk",
+                "gdscriptsdk=../../proj",
                 "-apiSpecPath",
                 "../API_Specs",
             ]
