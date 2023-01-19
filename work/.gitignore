@@ -1,3 +1,5 @@
 API_Specs
+node_modules
 SDKGenerator
 .sconsign.dblite
+package-lock.json
