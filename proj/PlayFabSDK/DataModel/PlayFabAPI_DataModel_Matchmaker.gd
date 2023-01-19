@@ -8,7 +8,7 @@ class PFAuthUserRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -34,7 +34,7 @@ class PFAuthUserResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -80,7 +80,7 @@ class PFItemInstance:
         
         self.BundleContents = []
         self.CustomData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -201,7 +201,7 @@ class PFPlayerJoinedRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -243,7 +243,7 @@ class PFPlayerJoinedResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -266,7 +266,7 @@ class PFPlayerLeftRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -308,7 +308,7 @@ class PFPlayerLeftResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -331,7 +331,7 @@ class PFUserInfoRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -383,7 +383,7 @@ class PFUserInfoResponse:
         self.Inventory = []
         self.VirtualCurrency = {}
         self.VirtualCurrencyRechargeTimes = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -463,7 +463,7 @@ class PFVirtualCurrencyRechargeTime:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

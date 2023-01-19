@@ -9,7 +9,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -49,7 +49,7 @@ class PFEventContents:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -122,7 +122,7 @@ class PFWriteEventsRequest:
         
         self.CustomTags = {}
         self.Events = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -164,7 +164,7 @@ class PFWriteEventsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.AssignedEventIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

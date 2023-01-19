@@ -15,7 +15,7 @@ class PFAssetReference:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -47,7 +47,7 @@ class PFAssetReferenceParams:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -80,7 +80,7 @@ class PFAssetSummary:
     func _init(dict_param: Dictionary = {}):
         
         self.Metadata = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -235,7 +235,7 @@ class PFBuildAliasDetailsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.BuildSelectionCriteria = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -276,7 +276,7 @@ class PFBuildAliasParams:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -313,7 +313,7 @@ class PFBuildRegion:
         self.CurrentServerStats = PFCurrentServerStats.new()
         self.DynamicStandbySettings = PFDynamicStandbySettings.new()
         self.ScheduledStandbySettings = PFScheduledStandbySettings.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -389,7 +389,7 @@ class PFBuildRegionParams:
         
         self.DynamicStandbySettings = PFDynamicStandbySettings.new()
         self.ScheduledStandbySettings = PFScheduledStandbySettings.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -443,7 +443,7 @@ class PFBuildSelectionCriterion:
     func _init(dict_param: Dictionary = {}):
         
         self.BuildWeightDistribution = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -478,7 +478,7 @@ class PFBuildSummary:
         
         self.Metadata = {}
         self.RegionConfigurations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -541,7 +541,7 @@ class PFCancelAllMatchmakingTicketsForPlayerRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -581,7 +581,7 @@ class PFCancelAllMatchmakingTicketsForPlayerResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -605,7 +605,7 @@ class PFCancelAllServerBackfillTicketsForPlayerRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -645,7 +645,7 @@ class PFCancelAllServerBackfillTicketsForPlayerResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -674,7 +674,7 @@ class PFCancelMatchmakingTicketRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -716,7 +716,7 @@ class PFCancelMatchmakingTicketResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -739,7 +739,7 @@ class PFCancelServerBackfillTicketRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -781,7 +781,7 @@ class PFCancelServerBackfillTicketResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -803,7 +803,7 @@ class PFCertificate:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -841,7 +841,7 @@ class PFCertificateSummary:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -872,7 +872,7 @@ class PFConnectedPlayer:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -905,7 +905,7 @@ class PFContainerImageReference:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -939,7 +939,7 @@ class PFCoreCapacity:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -981,7 +981,7 @@ class PFCoreCapacityChange:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1020,7 +1020,7 @@ class PFCreateBuildAliasRequest:
         
         self.BuildSelectionCriteria = []
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1093,7 +1093,7 @@ class PFCreateBuildWithCustomContainerRequest:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1257,7 +1257,7 @@ class PFCreateBuildWithCustomContainerResponse:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1432,7 +1432,7 @@ class PFCreateBuildWithManagedContainerRequest:
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
         self.WindowsCrashDumpConfiguration = PFWindowsCrashDumpConfiguration.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1601,7 +1601,7 @@ class PFCreateBuildWithManagedContainerResponse:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1775,7 +1775,7 @@ class PFCreateBuildWithProcessBasedServerRequest:
         self.MonitoringApplicationConfiguration = PFMonitoringApplicationConfigurationParams.new()
         self.Ports = []
         self.RegionConfigurations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1941,7 +1941,7 @@ class PFCreateBuildWithProcessBasedServerResponse:
         self.MonitoringApplicationConfiguration = PFMonitoringApplicationConfiguration.new()
         self.Ports = []
         self.RegionConfigurations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2105,7 +2105,7 @@ class PFCreateLobbyRequest:
         self.Members = []
         self.Owner = PFEntityKey.new()
         self.SearchData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2195,7 +2195,7 @@ class PFCreateLobbyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2233,7 +2233,7 @@ class PFCreateMatchmakingTicketRequest:
         self.Creator = PFMatchmakingPlayer.new()
         self.CustomTags = {}
         self.MembersToMatchWith = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2289,7 +2289,7 @@ class PFCreateMatchmakingTicketResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2320,7 +2320,7 @@ class PFCreateRemoteUserRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2383,7 +2383,7 @@ class PFCreateRemoteUserResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2427,7 +2427,7 @@ class PFCreateServerBackfillTicketRequest:
         self.CustomTags = {}
         self.Members = []
         self.ServerDetails = PFServerDetails.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2483,7 +2483,7 @@ class PFCreateServerBackfillTicketResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2513,7 +2513,7 @@ class PFCreateServerMatchmakingTicketRequest:
         
         self.CustomTags = {}
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2572,7 +2572,7 @@ class PFCreateTitleMultiplayerServersQuotaChangeRequest:
         
         self.Changes = []
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2638,7 +2638,7 @@ class PFCreateTitleMultiplayerServersQuotaChangeResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2671,7 +2671,7 @@ class PFCurrentServerStats:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2712,7 +2712,7 @@ class PFDeleteAssetRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2751,7 +2751,7 @@ class PFDeleteBuildAliasRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2791,7 +2791,7 @@ class PFDeleteBuildRegionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2836,7 +2836,7 @@ class PFDeleteBuildRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2875,7 +2875,7 @@ class PFDeleteCertificateRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2914,7 +2914,7 @@ class PFDeleteContainerImageRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2953,7 +2953,7 @@ class PFDeleteLobbyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2995,7 +2995,7 @@ class PFDeleteRemoteUserRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3053,7 +3053,7 @@ class PFDynamicStandbySettings:
     func _init(dict_param: Dictionary = {}):
         
         self.DynamicFloorMultiplierThresholds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3093,7 +3093,7 @@ class PFDynamicStandbyThreshold:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3121,7 +3121,7 @@ class PFEmptyResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3142,7 +3142,7 @@ class PFEnableMultiplayerServersForTitleRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3173,7 +3173,7 @@ class PFEnableMultiplayerServersForTitleResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3198,7 +3198,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3247,7 +3247,7 @@ class PFFindFriendLobbiesRequest:
         
         self.CustomTags = {}
         self.Pagination = PFPaginationRequest.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3318,7 +3318,7 @@ class PFFindFriendLobbiesResult:
         
         self.Lobbies = []
         self.Pagination = PFPaginationResponse.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3356,7 +3356,7 @@ class PFFindLobbiesRequest:
         
         self.CustomTags = {}
         self.Pagination = PFPaginationRequest.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3406,7 +3406,7 @@ class PFFindLobbiesResult:
         
         self.Lobbies = []
         self.Pagination = PFPaginationResponse.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3449,7 +3449,7 @@ class PFFriendLobbySummary:
         self.Friends = []
         self.Owner = PFEntityKey.new()
         self.SearchData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3522,7 +3522,7 @@ class PFGameCertificateReference:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3554,7 +3554,7 @@ class PFGameCertificateReferenceParams:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3587,7 +3587,7 @@ class PFGetAssetDownloadUrlRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3625,7 +3625,7 @@ class PFGetAssetDownloadUrlResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3658,7 +3658,7 @@ class PFGetAssetUploadUrlRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3696,7 +3696,7 @@ class PFGetAssetUploadUrlResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3729,7 +3729,7 @@ class PFGetBuildAliasRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3768,7 +3768,7 @@ class PFGetBuildRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3832,7 +3832,7 @@ class PFGetBuildResponse:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3984,7 +3984,7 @@ class PFGetContainerRegistryCredentialsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4017,7 +4017,7 @@ class PFGetContainerRegistryCredentialsResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4056,7 +4056,7 @@ class PFGetLobbyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4094,7 +4094,7 @@ class PFGetLobbyResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Lobby = PFLobby.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4121,7 +4121,7 @@ class PFGetMatchmakingTicketRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4182,7 +4182,7 @@ class PFGetMatchmakingTicketResult:
         self.Creator = PFEntityKey.new()
         self.Members = []
         self.MembersToMatchWith = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4276,7 +4276,7 @@ class PFGetMatchRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4336,7 +4336,7 @@ class PFGetMatchResult:
         self.Members = []
         self.RegionPreferences = []
         self.ServerDetails = PFServerDetails.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4395,7 +4395,7 @@ class PFGetMultiplayerServerDetailsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4444,7 +4444,7 @@ class PFGetMultiplayerServerDetailsResponse:
         
         self.ConnectedPlayers = []
         self.Ports = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4539,7 +4539,7 @@ class PFGetMultiplayerServerLogsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4576,7 +4576,7 @@ class PFGetMultiplayerServerLogsResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4603,7 +4603,7 @@ class PFGetMultiplayerSessionLogsBySessionIdRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4642,7 +4642,7 @@ class PFGetQueueStatisticsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4681,7 +4681,7 @@ class PFGetQueueStatisticsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.TimeToMatchStatisticsInSeconds = PFStatistics.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4713,7 +4713,7 @@ class PFGetRemoteLoginEndpointRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4763,7 +4763,7 @@ class PFGetRemoteLoginEndpointResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4797,7 +4797,7 @@ class PFGetServerBackfillTicketRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4855,7 +4855,7 @@ class PFGetServerBackfillTicketResult:
         
         self.Members = []
         self.ServerDetails = PFServerDetails.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4930,7 +4930,7 @@ class PFGetTitleEnabledForMultiplayerServersStatusRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4961,7 +4961,7 @@ class PFGetTitleEnabledForMultiplayerServersStatusResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4987,7 +4987,7 @@ class PFGetTitleMultiplayerServersQuotaChangeRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5025,7 +5025,7 @@ class PFGetTitleMultiplayerServersQuotaChangeResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Change = PFQuotaChange.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5049,7 +5049,7 @@ class PFGetTitleMultiplayerServersQuotasRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5081,7 +5081,7 @@ class PFGetTitleMultiplayerServersQuotasResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Quotas = PFTitleMultiplayerServersQuotas.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5106,7 +5106,7 @@ class PFInstrumentationConfiguration:
     func _init(dict_param: Dictionary = {}):
         
         self.ProcessesToMonitor = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5148,7 +5148,7 @@ class PFInviteToLobbyRequest:
         self.CustomTags = {}
         self.InviteeEntity = PFEntityKey.new()
         self.MemberEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5203,7 +5203,7 @@ class PFJoinArrangedLobbyRequest:
         self.CustomTags = {}
         self.MemberData = {}
         self.MemberEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5282,7 +5282,7 @@ class PFJoinLobbyRequest:
         self.CustomTags = {}
         self.MemberData = {}
         self.MemberEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5335,7 +5335,7 @@ class PFJoinLobbyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5365,7 +5365,7 @@ class PFJoinMatchmakingTicketRequest:
         
         self.CustomTags = {}
         self.Member = PFMatchmakingPlayer.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5411,7 +5411,7 @@ class PFJoinMatchmakingTicketResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5435,7 +5435,7 @@ class PFLeaveLobbyRequest:
         
         self.CustomTags = {}
         self.MemberEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5476,7 +5476,7 @@ class PFLinuxInstrumentationConfiguration:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5503,7 +5503,7 @@ class PFListAssetSummariesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5548,7 +5548,7 @@ class PFListAssetSummariesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.AssetSummaries = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5591,7 +5591,7 @@ class PFListBuildAliasesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5636,7 +5636,7 @@ class PFListBuildAliasesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.BuildAliases = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5679,7 +5679,7 @@ class PFListBuildSummariesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5724,7 +5724,7 @@ class PFListBuildSummariesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.BuildSummaries = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5767,7 +5767,7 @@ class PFListCertificateSummariesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5812,7 +5812,7 @@ class PFListCertificateSummariesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.CertificateSummaries = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5855,7 +5855,7 @@ class PFListContainerImagesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5900,7 +5900,7 @@ class PFListContainerImagesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Images = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5944,7 +5944,7 @@ class PFListContainerImageTagsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5982,7 +5982,7 @@ class PFListContainerImageTagsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6017,7 +6017,7 @@ class PFListMatchmakingTicketsForPlayerRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6059,7 +6059,7 @@ class PFListMatchmakingTicketsForPlayerResult:
     func _init(dict_param: Dictionary = {}):
         
         self.TicketIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6095,7 +6095,7 @@ class PFListMultiplayerServersRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6152,7 +6152,7 @@ class PFListMultiplayerServersResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.MultiplayerServerSummaries = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6193,7 +6193,7 @@ class PFListPartyQosServersRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6227,7 +6227,7 @@ class PFListPartyQosServersResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.QosServers = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6269,7 +6269,7 @@ class PFListQosServersForTitleRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6308,7 +6308,7 @@ class PFListQosServersForTitleResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.QosServers = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6352,7 +6352,7 @@ class PFListServerBackfillTicketsForPlayerRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6394,7 +6394,7 @@ class PFListServerBackfillTicketsForPlayerResult:
     func _init(dict_param: Dictionary = {}):
         
         self.TicketIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6426,7 +6426,7 @@ class PFListTitleMultiplayerServersQuotaChangesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6458,7 +6458,7 @@ class PFListTitleMultiplayerServersQuotaChangesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Changes = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6492,7 +6492,7 @@ class PFListVirtualMachineSummariesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6549,7 +6549,7 @@ class PFListVirtualMachineSummariesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.VirtualMachines = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6605,7 +6605,7 @@ class PFLobby:
         self.Members = []
         self.Owner = PFEntityKey.new()
         self.SearchData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6709,7 +6709,7 @@ class PFLobbyEmptyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6737,7 +6737,7 @@ class PFLobbySummary:
         
         self.Owner = PFEntityKey.new()
         self.SearchData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6802,7 +6802,7 @@ class PFMatchmakingPlayer:
         
         self.Attributes = PFMatchmakingPlayerAttributes.new()
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6830,7 +6830,7 @@ class PFMatchmakingPlayerAttributes:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6864,7 +6864,7 @@ class PFMatchmakingPlayerWithTeamAssignment:
         
         self.Attributes = PFMatchmakingPlayerAttributes.new()
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6901,7 +6901,7 @@ class PFMember:
         
         self.MemberData = {}
         self.MemberEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6951,7 +6951,7 @@ class PFMonitoringApplicationConfiguration:
     func _init(dict_param: Dictionary = {}):
         
         self.AssetReference = PFAssetReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6995,7 +6995,7 @@ class PFMonitoringApplicationConfigurationParams:
     func _init(dict_param: Dictionary = {}):
         
         self.AssetReference = PFAssetReferenceParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7042,7 +7042,7 @@ class PFMultiplayerServerSummary:
     func _init(dict_param: Dictionary = {}):
         
         self.ConnectedPlayers = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7120,7 +7120,7 @@ class PFPaginationRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7151,7 +7151,7 @@ class PFPaginationResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7183,7 +7183,7 @@ class PFPort:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7224,7 +7224,7 @@ class PFQosServer:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7262,7 +7262,7 @@ class PFQuotaChange:
     func _init(dict_param: Dictionary = {}):
         
         self.Changes = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7330,7 +7330,7 @@ class PFRemoveMemberFromLobbyRequest:
         
         self.CustomTags = {}
         self.MemberEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7386,7 +7386,7 @@ class PFRequestMultiplayerServerRequest:
         self.CustomTags = {}
         self.InitialPlayers = []
         self.PreferredRegions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7475,7 +7475,7 @@ class PFRequestMultiplayerServerResponse:
         
         self.ConnectedPlayers = []
         self.Ports = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7569,7 +7569,7 @@ class PFRolloverContainerRegistryCredentialsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7602,7 +7602,7 @@ class PFRolloverContainerRegistryCredentialsResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7644,7 +7644,7 @@ class PFSchedule:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7698,7 +7698,7 @@ class PFScheduledStandbySettings:
     func _init(dict_param: Dictionary = {}):
         
         self.ScheduleList = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7736,7 +7736,7 @@ class PFServerDetails:
     func _init(dict_param: Dictionary = {}):
         
         self.Ports = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7784,7 +7784,7 @@ class PFServerResourceConstraintParams:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7820,7 +7820,7 @@ class PFShutdownMultiplayerServerRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7860,7 +7860,7 @@ class PFStatistics:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7906,7 +7906,7 @@ class PFSubscribeToLobbyResourceRequest:
         
         self.CustomTags = {}
         self.EntityKey = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7963,7 +7963,7 @@ class PFSubscribeToLobbyResourceResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8000,7 +8000,7 @@ class PFTitleMultiplayerServersQuotas:
     func _init(dict_param: Dictionary = {}):
         
         self.CoreCapacities = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8036,7 +8036,7 @@ class PFUnsubscribeFromLobbyResourceRequest:
         
         self.CustomTags = {}
         self.EntityKey = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8096,7 +8096,7 @@ class PFUntagContainerImageRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8144,7 +8144,7 @@ class PFUpdateBuildAliasRequest:
         
         self.BuildSelectionCriteria = []
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8200,7 +8200,7 @@ class PFUpdateBuildNameRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8247,7 +8247,7 @@ class PFUpdateBuildRegionRequest:
         
         self.BuildRegion = PFBuildRegionParams.new()
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8292,7 +8292,7 @@ class PFUpdateBuildRegionsRequest:
         
         self.BuildRegions = []
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8360,7 +8360,7 @@ class PFUpdateLobbyRequest:
         self.Owner = PFEntityKey.new()
         self.SearchData = {}
         self.SearchDataToDelete = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8495,7 +8495,7 @@ class PFUploadCertificateRequest:
         
         self.CustomTags = {}
         self.GameCertificate = PFCertificate.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8532,7 +8532,7 @@ class PFVirtualMachineSummary:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8571,7 +8571,7 @@ class PFWindowsCrashDumpConfiguration:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

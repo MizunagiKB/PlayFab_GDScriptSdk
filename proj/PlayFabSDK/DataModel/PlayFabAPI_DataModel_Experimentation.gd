@@ -21,7 +21,7 @@ class PFCreateExclusionGroupRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -64,7 +64,7 @@ class PFCreateExclusionGroupResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -102,7 +102,7 @@ class PFCreateExperimentRequest:
         self.CustomTags = {}
         self.TitlePlayerAccountTestIds = []
         self.Variants = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -201,7 +201,7 @@ class PFCreateExperimentResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -228,7 +228,7 @@ class PFDeleteExclusionGroupRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -267,7 +267,7 @@ class PFDeleteExperimentRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -303,7 +303,7 @@ class PFEmptyResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -324,7 +324,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -356,7 +356,7 @@ class PFExclusionGroupTrafficAllocation:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -399,7 +399,7 @@ class PFExperiment:
         
         self.TitlePlayerAccountTestIds = []
         self.Variants = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -499,7 +499,7 @@ class PFExperimentExclusionGroup:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -549,7 +549,7 @@ class PFGetExclusionGroupsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -581,7 +581,7 @@ class PFGetExclusionGroupsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.ExclusionGroups = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -612,7 +612,7 @@ class PFGetExclusionGroupTrafficRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -650,7 +650,7 @@ class PFGetExclusionGroupTrafficResult:
     func _init(dict_param: Dictionary = {}):
         
         self.TrafficAllocations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -680,7 +680,7 @@ class PFGetExperimentsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -712,7 +712,7 @@ class PFGetExperimentsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Experiments = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -743,7 +743,7 @@ class PFGetLatestScorecardRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -781,7 +781,7 @@ class PFGetLatestScorecardResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Scorecard = PFScorecard.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -807,7 +807,7 @@ class PFGetTreatmentAssignmentRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -843,7 +843,7 @@ class PFGetTreatmentAssignmentResult:
     func _init(dict_param: Dictionary = {}):
         
         self.TreatmentAssignment = PFTreatmentAssignment.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -878,7 +878,7 @@ class PFMetricData:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -974,7 +974,7 @@ class PFScorecard:
     func _init(dict_param: Dictionary = {}):
         
         self.ScorecardDataRows = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1046,7 +1046,7 @@ class PFScorecardDataRow:
     func _init(dict_param: Dictionary = {}):
         
         self.MetricDataRows = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1093,7 +1093,7 @@ class PFStartExperimentRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1132,7 +1132,7 @@ class PFStopExperimentRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1172,7 +1172,7 @@ class PFTreatmentAssignment:
         
         self.Variables = []
         self.Variants = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1217,7 +1217,7 @@ class PFUpdateExclusionGroupRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1280,7 +1280,7 @@ class PFUpdateExperimentRequest:
         self.CustomTags = {}
         self.TitlePlayerAccountTestIds = []
         self.Variants = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1386,7 +1386,7 @@ class PFVariable:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1424,7 +1424,7 @@ class PFVariant:
     func _init(dict_param: Dictionary = {}):
         
         self.Variables = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

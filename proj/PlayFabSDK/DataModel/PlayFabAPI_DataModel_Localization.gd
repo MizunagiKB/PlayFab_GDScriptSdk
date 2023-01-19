@@ -9,7 +9,7 @@ class PFGetLanguageListRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -41,7 +41,7 @@ class PFGetLanguageListResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.LanguageList = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

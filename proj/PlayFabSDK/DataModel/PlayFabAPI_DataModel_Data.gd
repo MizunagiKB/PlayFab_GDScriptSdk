@@ -14,7 +14,7 @@ class PFAbortFileUploadsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.FileNames = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -68,7 +68,7 @@ class PFAbortFileUploadsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -102,7 +102,7 @@ class PFDeleteFilesRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.FileNames = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -156,7 +156,7 @@ class PFDeleteFilesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -185,7 +185,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -222,7 +222,7 @@ class PFFinalizeFileUploadsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.FileNames = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -278,7 +278,7 @@ class PFFinalizeFileUploadsResponse:
         
         self.Entity = PFEntityKey.new()
         self.Metadata = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -320,7 +320,7 @@ class PFGetFileMetadata:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -371,7 +371,7 @@ class PFGetFilesRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -410,7 +410,7 @@ class PFGetFilesResponse:
         
         self.Entity = PFEntityKey.new()
         self.Metadata = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -452,7 +452,7 @@ class PFGetObjectsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -496,7 +496,7 @@ class PFGetObjectsResponse:
         
         self.Entity = PFEntityKey.new()
         self.Objects = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -535,7 +535,7 @@ class PFInitiateFileUploadMetadata:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -572,7 +572,7 @@ class PFInitiateFileUploadsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.FileNames = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -628,7 +628,7 @@ class PFInitiateFileUploadsResponse:
         
         self.Entity = PFEntityKey.new()
         self.UploadDetails = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -668,7 +668,7 @@ class PFObjectResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -714,7 +714,7 @@ class PFSetObject:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -757,7 +757,7 @@ class PFSetObjectInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -799,7 +799,7 @@ class PFSetObjectsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Objects = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -851,7 +851,7 @@ class PFSetObjectsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.SetResults = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

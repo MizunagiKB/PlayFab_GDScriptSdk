@@ -13,7 +13,7 @@ class PFAcceptGroupApplicationRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -57,7 +57,7 @@ class PFAcceptGroupInvitationRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -102,7 +102,7 @@ class PFAddMembersRequest:
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -159,7 +159,7 @@ class PFApplyToGroupRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -207,7 +207,7 @@ class PFApplyToGroupResponse:
         
         self.Entity = PFEntityWithLineage.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -245,7 +245,7 @@ class PFBlockEntityRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -291,7 +291,7 @@ class PFChangeMemberRoleRequest:
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -352,7 +352,7 @@ class PFCreateGroupRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -401,7 +401,7 @@ class PFCreateGroupResponse:
         
         self.Group = PFEntityKey.new()
         self.Roles = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -470,7 +470,7 @@ class PFCreateGroupRoleRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -519,7 +519,7 @@ class PFCreateGroupRoleResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -558,7 +558,7 @@ class PFDeleteGroupRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -597,7 +597,7 @@ class PFDeleteRoleRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -637,7 +637,7 @@ class PFEmptyResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -658,7 +658,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -692,7 +692,7 @@ class PFEntityMemberRole:
     func _init(dict_param: Dictionary = {}):
         
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -736,7 +736,7 @@ class PFEntityWithLineage:
         
         self.Key = PFEntityKey.new()
         self.Lineage = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -773,7 +773,7 @@ class PFGetGroupRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -822,7 +822,7 @@ class PFGetGroupResponse:
         
         self.Group = PFEntityKey.new()
         self.Roles = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -890,7 +890,7 @@ class PFGroupApplication:
         
         self.Entity = PFEntityWithLineage.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -926,7 +926,7 @@ class PFGroupBlock:
         
         self.Entity = PFEntityWithLineage.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -960,7 +960,7 @@ class PFGroupInvitation:
         self.Group = PFEntityKey.new()
         self.InvitedByEntity = PFEntityWithLineage.new()
         self.InvitedEntity = PFEntityWithLineage.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1004,7 +1004,7 @@ class PFGroupRole:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1040,7 +1040,7 @@ class PFGroupWithRoles:
         
         self.Group = PFEntityKey.new()
         self.Roles = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1091,7 +1091,7 @@ class PFInviteToGroupRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1148,7 +1148,7 @@ class PFInviteToGroupResponse:
         self.Group = PFEntityKey.new()
         self.InvitedByEntity = PFEntityWithLineage.new()
         self.InvitedEntity = PFEntityWithLineage.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1197,7 +1197,7 @@ class PFIsMemberRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1242,7 +1242,7 @@ class PFIsMemberResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1269,7 +1269,7 @@ class PFListGroupApplicationsRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1305,7 +1305,7 @@ class PFListGroupApplicationsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Applications = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1337,7 +1337,7 @@ class PFListGroupBlocksRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1373,7 +1373,7 @@ class PFListGroupBlocksResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.BlockedEntities = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1405,7 +1405,7 @@ class PFListGroupInvitationsRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1441,7 +1441,7 @@ class PFListGroupInvitationsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Invitations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1473,7 +1473,7 @@ class PFListGroupMembersRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1509,7 +1509,7 @@ class PFListGroupMembersResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1541,7 +1541,7 @@ class PFListMembershipOpportunitiesRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1579,7 +1579,7 @@ class PFListMembershipOpportunitiesResponse:
         
         self.Applications = []
         self.Invitations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1621,7 +1621,7 @@ class PFListMembershipRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1657,7 +1657,7 @@ class PFListMembershipResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Groups = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1698,7 +1698,7 @@ class PFRemoveGroupApplicationRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1742,7 +1742,7 @@ class PFRemoveGroupInvitationRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1787,7 +1787,7 @@ class PFRemoveMembersRequest:
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1843,7 +1843,7 @@ class PFUnblockEntityRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1889,7 +1889,7 @@ class PFUpdateGroupRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1949,7 +1949,7 @@ class PFUpdateGroupResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1990,7 +1990,7 @@ class PFUpdateGroupRoleRequest:
         
         self.CustomTags = {}
         self.Group = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2044,7 +2044,7 @@ class PFUpdateGroupRoleResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

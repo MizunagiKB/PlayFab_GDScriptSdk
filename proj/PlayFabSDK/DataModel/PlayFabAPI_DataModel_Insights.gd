@@ -9,7 +9,7 @@ class PFInsightsEmptyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -47,7 +47,7 @@ class PFInsightsGetDetailsResponse:
         
         self.Limits = PFInsightsGetLimitsResponse.new()
         self.PendingOperations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -106,7 +106,7 @@ class PFInsightsGetLimitsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.SubMeters = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -157,7 +157,7 @@ class PFInsightsGetOperationStatusRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -201,7 +201,7 @@ class PFInsightsGetOperationStatusResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -269,7 +269,7 @@ class PFInsightsGetPendingOperationsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -307,7 +307,7 @@ class PFInsightsGetPendingOperationsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.PendingOperations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -338,7 +338,7 @@ class PFInsightsOperationResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -382,7 +382,7 @@ class PFInsightsPerformanceLevel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -443,7 +443,7 @@ class PFInsightsSetPerformanceRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -481,7 +481,7 @@ class PFInsightsSetStorageRetentionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

@@ -15,7 +15,7 @@ class PFEntityDataObject:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -52,7 +52,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -88,7 +88,7 @@ class PFEntityLineage:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -148,7 +148,7 @@ class PFEntityPermissionStatement:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -220,7 +220,7 @@ class PFEntityProfileBody:
         self.Objects = {}
         self.Permissions = []
         self.Statistics = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -343,7 +343,7 @@ class PFEntityProfileFileMetadata:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -387,7 +387,7 @@ class PFEntityStatisticChildValue:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -428,7 +428,7 @@ class PFEntityStatisticValue:
     func _init(dict_param: Dictionary = {}):
         
         self.ChildStatistics = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -483,7 +483,7 @@ class PFGetEntityProfileRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -524,7 +524,7 @@ class PFGetEntityProfileResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Profile = PFEntityProfileBody.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -551,7 +551,7 @@ class PFGetEntityProfilesRequest:
         
         self.CustomTags = {}
         self.Entities = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -598,7 +598,7 @@ class PFGetEntityProfilesResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Profiles = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -630,7 +630,7 @@ class PFGetGlobalPolicyRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -666,7 +666,7 @@ class PFGetGlobalPolicyResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Permissions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -699,7 +699,7 @@ class PFGetTitlePlayersFromMasterPlayerAccountIdsRequest:
         
         self.CustomTags = {}
         self.MasterPlayerAccountIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -750,7 +750,7 @@ class PFGetTitlePlayersFromMasterPlayerAccountIdsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TitlePlayerAccounts = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -797,7 +797,7 @@ class PFSetEntityProfilePolicyRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Statements = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -843,7 +843,7 @@ class PFSetEntityProfilePolicyResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Permissions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -875,7 +875,7 @@ class PFSetGlobalPolicyRequest:
         
         self.CustomTags = {}
         self.Permissions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -915,7 +915,7 @@ class PFSetGlobalPolicyResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -940,7 +940,7 @@ class PFSetProfileLanguageRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -987,7 +987,7 @@ class PFSetProfileLanguageResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

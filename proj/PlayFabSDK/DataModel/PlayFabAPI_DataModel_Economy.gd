@@ -12,7 +12,7 @@ class PFAddInventoryItemsOperation:
         
         self.Item = PFInventoryItemReference.new()
         self.NewStackValues = PFInitialValues.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -55,7 +55,7 @@ class PFAddInventoryItemsRequest:
         self.Entity = PFEntityKey.new()
         self.Item = PFInventoryItemReference.new()
         self.NewStackValues = PFInitialValues.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -124,7 +124,7 @@ class PFAddInventoryItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -168,7 +168,7 @@ class PFAlternateId:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -200,7 +200,7 @@ class PFCatalogAlternateId:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -249,7 +249,7 @@ class PFCatalogConfig:
         self.Platforms = []
         self.ReviewerEntities = []
         self.UserGeneratedContent = PFUserGeneratedContentSpecificConfig.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -381,7 +381,7 @@ class PFCatalogItem:
         self.StoreDetails = PFStoreDetails.new()
         self.Tags = []
         self.Title = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -595,7 +595,7 @@ class PFCatalogItemReference:
     func _init(dict_param: Dictionary = {}):
         
         self.PriceOptions = PFCatalogPriceOptions.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -630,7 +630,7 @@ class PFCatalogPrice:
     func _init(dict_param: Dictionary = {}):
         
         self.Amounts = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -660,7 +660,7 @@ class PFCatalogPriceAmount:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -692,7 +692,7 @@ class PFCatalogPriceAmountOverride:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -728,7 +728,7 @@ class PFCatalogPriceOptions:
     func _init(dict_param: Dictionary = {}):
         
         self.Prices = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -758,7 +758,7 @@ class PFCatalogPriceOptionsOverride:
     func _init(dict_param: Dictionary = {}):
         
         self.Prices = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -788,7 +788,7 @@ class PFCatalogPriceOverride:
     func _init(dict_param: Dictionary = {}):
         
         self.Amounts = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -820,7 +820,7 @@ class PFCatalogSpecificConfig:
         
         self.ContentTypes = []
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -882,7 +882,7 @@ class PFContent:
     func _init(dict_param: Dictionary = {}):
         
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -942,7 +942,7 @@ class PFContentFeed:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1218,7 +1218,7 @@ class PFCreateDraftItemRequest:
         
         self.CustomTags = {}
         self.Item = PFCatalogItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1259,7 +1259,7 @@ class PFCreateDraftItemResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFCatalogItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1285,7 +1285,7 @@ class PFCreateUploadUrlsRequest:
         
         self.CustomTags = {}
         self.Files = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1327,7 +1327,7 @@ class PFCreateUploadUrlsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.UploadUrls = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1357,7 +1357,7 @@ class PFDeepLink:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1389,7 +1389,7 @@ class PFDeepLinkFormat:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1423,7 +1423,7 @@ class PFDeleteEntityItemReviewsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1457,7 +1457,7 @@ class PFDeleteEntityItemReviewsResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1482,7 +1482,7 @@ class PFDeleteInventoryCollectionRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1528,7 +1528,7 @@ class PFDeleteInventoryCollectionResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1549,7 +1549,7 @@ class PFDeleteInventoryItemsOperation:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFInventoryItemReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1580,7 +1580,7 @@ class PFDeleteInventoryItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Item = PFInventoryItemReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1640,7 +1640,7 @@ class PFDeleteInventoryItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1689,7 +1689,7 @@ class PFDeleteItemRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1733,7 +1733,7 @@ class PFDeleteItemResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1754,7 +1754,7 @@ class PFDisplayPropertyIndexInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1793,7 +1793,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1832,7 +1832,7 @@ class PFExecuteInventoryOperationsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Operations = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1898,7 +1898,7 @@ class PFExecuteInventoryOperationsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1944,7 +1944,7 @@ class PFFileConfig:
         
         self.ContentTypes = []
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1988,7 +1988,7 @@ class PFFilterOptions:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2019,7 +2019,7 @@ class PFGetCatalogConfigRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2051,7 +2051,7 @@ class PFGetCatalogConfigResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Config = PFCatalogConfig.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2080,7 +2080,7 @@ class PFGetDraftItemRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2126,7 +2126,7 @@ class PFGetDraftItemResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFCatalogItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2156,7 +2156,7 @@ class PFGetDraftItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Ids = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2215,7 +2215,7 @@ class PFGetDraftItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Items = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2256,7 +2256,7 @@ class PFGetEntityDraftItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2310,7 +2310,7 @@ class PFGetEntityDraftItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Items = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2351,7 +2351,7 @@ class PFGetEntityItemReviewRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2397,7 +2397,7 @@ class PFGetEntityItemReviewResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Review = PFReview.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2425,7 +2425,7 @@ class PFGetInventoryCollectionIdsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2473,7 +2473,7 @@ class PFGetInventoryCollectionIdsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.CollectionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2517,7 +2517,7 @@ class PFGetInventoryItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2578,7 +2578,7 @@ class PFGetInventoryItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Items = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2627,7 +2627,7 @@ class PFGetItemContainersRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2685,7 +2685,7 @@ class PFGetItemContainersResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Containers = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2724,7 +2724,7 @@ class PFGetItemModerationStateRequest:
         
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2766,7 +2766,7 @@ class PFGetItemModerationStateResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.State = PFModerationState.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2795,7 +2795,7 @@ class PFGetItemPublishStatusRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2841,7 +2841,7 @@ class PFGetItemPublishStatusResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2877,7 +2877,7 @@ class PFGetItemRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2923,7 +2923,7 @@ class PFGetItemResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFCatalogItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2953,7 +2953,7 @@ class PFGetItemReviewsRequest:
         
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3013,7 +3013,7 @@ class PFGetItemReviewsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Reviews = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3052,7 +3052,7 @@ class PFGetItemReviewSummaryRequest:
         
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3099,7 +3099,7 @@ class PFGetItemReviewSummaryResponse:
         self.LeastFavorableReview = PFReview.new()
         self.MostFavorableReview = PFReview.new()
         self.Rating = PFRating.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3142,7 +3142,7 @@ class PFGetItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Ids = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3200,7 +3200,7 @@ class PFGetItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Items = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3230,7 +3230,7 @@ class PFGetMicrosoftStoreAccessTokensRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3262,7 +3262,7 @@ class PFGetMicrosoftStoreAccessTokensResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3300,7 +3300,7 @@ class PFGetTransactionHistoryRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3360,7 +3360,7 @@ class PFGetTransactionHistoryResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Transactions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3396,7 +3396,7 @@ class PFGooglePlayProductPurchase:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3436,7 +3436,7 @@ class PFImage:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3480,7 +3480,7 @@ class PFImageConfig:
     func _init(dict_param: Dictionary = {}):
         
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3511,7 +3511,7 @@ class PFInitialValues:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3539,7 +3539,7 @@ class PFInventoryItem:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3589,7 +3589,7 @@ class PFInventoryItemReference:
     func _init(dict_param: Dictionary = {}):
         
         self.AlternateId = PFAlternateId.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3635,7 +3635,7 @@ class PFInventoryOperation:
         self.Subtract = PFSubtractInventoryItemsOperation.new()
         self.Transfer = PFTransferInventoryItemsOperation.new()
         self.Update = PFUpdateInventoryItemsOperation.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3679,7 +3679,7 @@ class PFKeywordSet:
     func _init(dict_param: Dictionary = {}):
         
         self.Values = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3712,7 +3712,7 @@ class PFModerationState:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3754,7 +3754,7 @@ class PFPayoutDetails:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3781,7 +3781,7 @@ class PFPublishDraftItemRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3831,7 +3831,7 @@ class PFPublishDraftItemResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3867,7 +3867,7 @@ class PFPurchaseInventoryItemsOperation:
         self.Item = PFInventoryItemReference.new()
         self.NewStackValues = PFInitialValues.new()
         self.PriceAmounts = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3935,7 +3935,7 @@ class PFPurchaseInventoryItemsRequest:
         self.Item = PFInventoryItemReference.new()
         self.NewStackValues = PFInitialValues.new()
         self.PriceAmounts = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4025,7 +4025,7 @@ class PFPurchaseInventoryItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4067,7 +4067,7 @@ class PFPurchaseOverride:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4089,7 +4089,7 @@ class PFPurchasePriceAmount:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4131,7 +4131,7 @@ class PFRating:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4190,7 +4190,7 @@ class PFRedeemAppleAppStoreInventoryItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4242,7 +4242,7 @@ class PFRedeemAppleAppStoreInventoryItemsResponse:
         self.Failed = []
         self.Succeeded = []
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4299,7 +4299,7 @@ class PFRedeemGooglePlayInventoryItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Purchases = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4355,7 +4355,7 @@ class PFRedeemGooglePlayInventoryItemsResponse:
         self.Failed = []
         self.Succeeded = []
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4412,7 +4412,7 @@ class PFRedeemMicrosoftStoreInventoryItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4470,7 +4470,7 @@ class PFRedeemMicrosoftStoreInventoryItemsResponse:
         self.Failed = []
         self.Succeeded = []
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4526,7 +4526,7 @@ class PFRedeemNintendoEShopInventoryItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4578,7 +4578,7 @@ class PFRedeemNintendoEShopInventoryItemsResponse:
         self.Failed = []
         self.Succeeded = []
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4635,7 +4635,7 @@ class PFRedeemPlayStationStoreInventoryItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4693,7 +4693,7 @@ class PFRedeemPlayStationStoreInventoryItemsResponse:
         self.Failed = []
         self.Succeeded = []
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4748,7 +4748,7 @@ class PFRedeemSteamInventoryItemsRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4794,7 +4794,7 @@ class PFRedeemSteamInventoryItemsResponse:
         self.Failed = []
         self.Succeeded = []
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4848,7 +4848,7 @@ class PFRedemptionFailure:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4893,7 +4893,7 @@ class PFRedemptionSuccess:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4938,7 +4938,7 @@ class PFReportItemRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4993,7 +4993,7 @@ class PFReportItemResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5022,7 +5022,7 @@ class PFReportItemReviewRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5083,7 +5083,7 @@ class PFReportItemReviewResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5116,7 +5116,7 @@ class PFReview:
     func _init(dict_param: Dictionary = {}):
         
         self.ReviewerEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5215,7 +5215,7 @@ class PFReviewItemRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Review = PFReview.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5263,7 +5263,7 @@ class PFReviewItemResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5286,7 +5286,7 @@ class PFReviewTakedown:
     func _init(dict_param: Dictionary = {}):
         
         self.AlternateId = PFCatalogAlternateId.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5321,7 +5321,7 @@ class PFScanResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5357,7 +5357,7 @@ class PFSearchItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Store = PFStoreReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5433,7 +5433,7 @@ class PFSearchItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Items = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5474,7 +5474,7 @@ class PFSetItemModerationStateRequest:
         
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5525,7 +5525,7 @@ class PFSetItemModerationStateResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5548,7 +5548,7 @@ class PFStoreDetails:
         
         self.FilterOptions = PFFilterOptions.new()
         self.PriceOptionsOverride = PFCatalogPriceOptionsOverride.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5577,7 +5577,7 @@ class PFStoreReference:
     func _init(dict_param: Dictionary = {}):
         
         self.AlternateId = PFCatalogAlternateId.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5614,7 +5614,7 @@ class PFSubmitItemReviewVoteRequest:
         self.AlternateId = PFCatalogAlternateId.new()
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5669,7 +5669,7 @@ class PFSubmitItemReviewVoteResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5689,7 +5689,7 @@ class PFSubscriptionDetails:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5716,7 +5716,7 @@ class PFSubtractInventoryItemsOperation:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFInventoryItemReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5759,7 +5759,7 @@ class PFSubtractInventoryItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Item = PFInventoryItemReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5829,7 +5829,7 @@ class PFSubtractInventoryItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5875,7 +5875,7 @@ class PFTakedownItemReviewsRequest:
         
         self.CustomTags = {}
         self.Reviews = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5915,7 +5915,7 @@ class PFTakedownItemReviewsResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5947,7 +5947,7 @@ class PFTransaction:
         self.PurchaseDetails = PFTransactionPurchaseDetails.new()
         self.RedeemDetails = PFTransactionRedeemDetails.new()
         self.TransferDetails = PFTransactionTransferDetails.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6022,7 +6022,7 @@ class PFTransactionOperation:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6070,7 +6070,7 @@ class PFTransactionPurchaseDetails:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6097,7 +6097,7 @@ class PFTransactionRedeemDetails:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6140,7 +6140,7 @@ class PFTransactionTransferDetails:
         
         self.GivingEntity = PFEntityKey.new()
         self.ReceivingEntity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6192,7 +6192,7 @@ class PFTransferInventoryItemsOperation:
         self.GivingItem = PFInventoryItemReference.new()
         self.NewStackValues = PFInitialValues.new()
         self.ReceivingItem = PFInventoryItemReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6250,7 +6250,7 @@ class PFTransferInventoryItemsRequest:
         self.NewStackValues = PFInitialValues.new()
         self.ReceivingEntity = PFEntityKey.new()
         self.ReceivingItem = PFInventoryItemReference.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6340,7 +6340,7 @@ class PFTransferInventoryItemsResponse:
         
         self.GivingTransactionIds = []
         self.ReceivingTransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6398,7 +6398,7 @@ class PFUpdateCatalogConfigRequest:
         
         self.Config = PFCatalogConfig.new()
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6432,7 +6432,7 @@ class PFUpdateCatalogConfigResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6456,7 +6456,7 @@ class PFUpdateDraftItemRequest:
         
         self.CustomTags = {}
         self.Item = PFCatalogItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6497,7 +6497,7 @@ class PFUpdateDraftItemResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFCatalogItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6521,7 +6521,7 @@ class PFUpdateInventoryItemsOperation:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFInventoryItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6552,7 +6552,7 @@ class PFUpdateInventoryItemsRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.Item = PFInventoryItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6612,7 +6612,7 @@ class PFUpdateInventoryItemsResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.TransactionIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6655,7 +6655,7 @@ class PFUploadInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6682,7 +6682,7 @@ class PFUploadUrlMetadata:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6722,7 +6722,7 @@ class PFUserGeneratedContentSpecificConfig:
         
         self.ContentTypes = []
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

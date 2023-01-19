@@ -10,7 +10,7 @@ class PFAdCampaignAttribution:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -49,7 +49,7 @@ class PFAdCampaignAttributionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -91,7 +91,7 @@ class PFAddCharacterVirtualCurrencyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -149,7 +149,7 @@ class PFAddFriendRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -200,7 +200,7 @@ class PFAddGenericIDRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.GenericId = PFGenericServiceId.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -232,7 +232,7 @@ class PFAddPlayerTagRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -274,7 +274,7 @@ class PFAddPlayerTagResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -296,7 +296,7 @@ class PFAddSharedGroupMembersRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.PlayFabIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -332,7 +332,7 @@ class PFAddSharedGroupMembersResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -356,7 +356,7 @@ class PFAddUserVirtualCurrencyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -406,7 +406,7 @@ class PFAdvancedPushPlatformMsg:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -441,7 +441,7 @@ class PFAuthenticateSessionTicketRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -468,7 +468,7 @@ class PFAuthenticateSessionTicketResult:
     func _init(dict_param: Dictionary = {}):
         
         self.UserInfo = PFUserAccountInfo.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -498,7 +498,7 @@ class PFAwardSteamAchievementItem:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -535,7 +535,7 @@ class PFAwardSteamAchievementRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Achievements = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -565,7 +565,7 @@ class PFAwardSteamAchievementResult:
     func _init(dict_param: Dictionary = {}):
         
         self.AchievementResults = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -600,7 +600,7 @@ class PFBanInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -663,7 +663,7 @@ class PFBanRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -708,7 +708,7 @@ class PFBanUsersRequest:
         
         self.Bans = []
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -750,7 +750,7 @@ class PFBanUsersResult:
     func _init(dict_param: Dictionary = {}):
         
         self.BanData = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -802,7 +802,7 @@ class PFCatalogItem:
         self.RealCurrencyPrices = {}
         self.Tags = []
         self.VirtualCurrencyPrices = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -937,7 +937,7 @@ class PFCatalogItemBundleInfo:
         self.BundledItems = []
         self.BundledResultTables = []
         self.BundledVirtualCurrencies = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -992,7 +992,7 @@ class PFCatalogItemConsumableInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1033,7 +1033,7 @@ class PFCatalogItemContainerInfo:
         self.ItemContents = []
         self.ResultTableContents = []
         self.VirtualCurrencyContents = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1094,7 +1094,7 @@ class PFCharacterInventory:
     func _init(dict_param: Dictionary = {}):
         
         self.Inventory = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1135,7 +1135,7 @@ class PFCharacterLeaderboardEntry:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1196,7 +1196,7 @@ class PFCharacterResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1251,7 +1251,7 @@ class PFConsumeItemRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1306,7 +1306,7 @@ class PFConsumeItemResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1338,7 +1338,7 @@ class PFContactEmailInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1376,7 +1376,7 @@ class PFContactEmailInfoModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1674,7 +1674,7 @@ class PFCreateSharedGroupRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1699,7 +1699,7 @@ class PFCreateSharedGroupResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1893,7 +1893,7 @@ class PFDeleteCharacterFromUserRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1940,7 +1940,7 @@ class PFDeleteCharacterFromUserResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1960,7 +1960,7 @@ class PFDeletePlayerRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1984,7 +1984,7 @@ class PFDeletePlayerResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2004,7 +2004,7 @@ class PFDeletePushNotificationTemplateRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2028,7 +2028,7 @@ class PFDeletePushNotificationTemplateResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2048,7 +2048,7 @@ class PFDeleteSharedGroupRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2075,7 +2075,7 @@ class PFDeregisterGameRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2111,7 +2111,7 @@ class PFDeregisterGameResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2136,7 +2136,7 @@ class PFEmptyResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2155,7 +2155,7 @@ class PFEmptyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2176,7 +2176,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2210,7 +2210,7 @@ class PFEntityTokenResponse:
     func _init(dict_param: Dictionary = {}):
         
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2246,7 +2246,7 @@ class PFEvaluateRandomResultTableRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2277,7 +2277,7 @@ class PFEvaluateRandomResultTableResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2315,7 +2315,7 @@ class PFExecuteCloudScriptResult:
         
         self.Error = PFScriptExecutionError.new()
         self.Logs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2406,7 +2406,7 @@ class PFExecuteCloudScriptServerRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2479,7 +2479,7 @@ class PFFacebookInstantGamesPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2511,7 +2511,7 @@ class PFFacebookPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2558,7 +2558,7 @@ class PFFriendInfo:
         self.SteamInfo = PFUserSteamInfo.new()
         self.Tags = []
         self.XboxInfo = PFUserXboxInfo.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3339,7 +3339,7 @@ class PFGenericPlayFabIdPair:
     func _init(dict_param: Dictionary = {}):
         
         self.GenericId = PFGenericServiceId.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3369,7 +3369,7 @@ class PFGenericServiceId:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3399,7 +3399,7 @@ class PFGetAllSegmentsRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3420,7 +3420,7 @@ class PFGetAllSegmentsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Segments = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3449,7 +3449,7 @@ class PFGetCatalogItemsRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3475,7 +3475,7 @@ class PFGetCatalogItemsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Catalog = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3508,7 +3508,7 @@ class PFGetCharacterDataRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Keys = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3560,7 +3560,7 @@ class PFGetCharacterDataResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3610,7 +3610,7 @@ class PFGetCharacterInventoryRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3666,7 +3666,7 @@ class PFGetCharacterInventoryResult:
         self.Inventory = []
         self.VirtualCurrency = {}
         self.VirtualCurrencyRechargeTimes = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3729,7 +3729,7 @@ class PFGetCharacterLeaderboardRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3765,7 +3765,7 @@ class PFGetCharacterLeaderboardResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Leaderboard = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3795,7 +3795,7 @@ class PFGetCharacterStatisticsRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3829,7 +3829,7 @@ class PFGetCharacterStatisticsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.CharacterStatistics = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3872,7 +3872,7 @@ class PFGetContentDownloadUrlRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3908,7 +3908,7 @@ class PFGetContentDownloadUrlResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -3945,7 +3945,7 @@ class PFGetFriendLeaderboardRequest:
         
         self.CustomTags = {}
         self.ProfileConstraints = PFPlayerProfileViewConstraints.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4036,7 +4036,7 @@ class PFGetFriendsListRequest:
         
         self.CustomTags = {}
         self.ProfileConstraints = PFPlayerProfileViewConstraints.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4099,7 +4099,7 @@ class PFGetFriendsListResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Friends = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4131,7 +4131,7 @@ class PFGetLeaderboardAroundCharacterRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4174,7 +4174,7 @@ class PFGetLeaderboardAroundCharacterResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Leaderboard = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4210,7 +4210,7 @@ class PFGetLeaderboardAroundUserRequest:
         
         self.CustomTags = {}
         self.ProfileConstraints = PFPlayerProfileViewConstraints.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4270,7 +4270,7 @@ class PFGetLeaderboardAroundUserResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Leaderboard = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4311,7 +4311,7 @@ class PFGetLeaderboardForUsersCharactersRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4343,7 +4343,7 @@ class PFGetLeaderboardForUsersCharactersResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Leaderboard = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4379,7 +4379,7 @@ class PFGetLeaderboardRequest:
         
         self.CustomTags = {}
         self.ProfileConstraints = PFPlayerProfileViewConstraints.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4438,7 +4438,7 @@ class PFGetLeaderboardResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Leaderboard = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4482,7 +4482,7 @@ class PFGetPlayerCombinedInfoRequest:
         
         self.CustomTags = {}
         self.InfoRequestParameters = PFGetPlayerCombinedInfoRequestParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4542,7 +4542,7 @@ class PFGetPlayerCombinedInfoRequestParams:
         self.TitleDataKeys = []
         self.UserDataKeys = []
         self.UserReadOnlyDataKeys = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4665,7 +4665,7 @@ class PFGetPlayerCombinedInfoResult:
     func _init(dict_param: Dictionary = {}):
         
         self.InfoResultPayload = PFGetPlayerCombinedInfoResultPayload.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4717,7 +4717,7 @@ class PFGetPlayerCombinedInfoResultPayload:
         self.UserReadOnlyData = {}
         self.UserVirtualCurrency = {}
         self.UserVirtualCurrencyRechargeTimes = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4850,7 +4850,7 @@ class PFGetPlayerProfileRequest:
         
         self.CustomTags = {}
         self.ProfileConstraints = PFPlayerProfileViewConstraints.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4892,7 +4892,7 @@ class PFGetPlayerProfileResult:
     func _init(dict_param: Dictionary = {}):
         
         self.PlayerProfile = PFPlayerProfileModel.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4916,7 +4916,7 @@ class PFGetPlayerSegmentsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Segments = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -4951,7 +4951,7 @@ class PFGetPlayersInSegmentRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5012,7 +5012,7 @@ class PFGetPlayersInSegmentResult:
     func _init(dict_param: Dictionary = {}):
         
         self.PlayerProfiles = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5054,7 +5054,7 @@ class PFGetPlayersSegmentsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5097,7 +5097,7 @@ class PFGetPlayerStatisticsRequest:
         self.CustomTags = {}
         self.StatisticNames = []
         self.StatisticNameVersions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5158,7 +5158,7 @@ class PFGetPlayerStatisticsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Statistics = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5195,7 +5195,7 @@ class PFGetPlayerStatisticVersionsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5233,7 +5233,7 @@ class PFGetPlayerStatisticVersionsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.StatisticVersions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5265,7 +5265,7 @@ class PFGetPlayerTagsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5310,7 +5310,7 @@ class PFGetPlayerTagsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5348,7 +5348,7 @@ class PFGetPlayFabIDsFromFacebookIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.FacebookIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5380,7 +5380,7 @@ class PFGetPlayFabIDsFromFacebookIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5410,7 +5410,7 @@ class PFGetPlayFabIDsFromFacebookInstantGamesIdsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.FacebookInstantGamesIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5442,7 +5442,7 @@ class PFGetPlayFabIDsFromFacebookInstantGamesIdsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5472,7 +5472,7 @@ class PFGetPlayFabIDsFromGenericIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.GenericIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5502,7 +5502,7 @@ class PFGetPlayFabIDsFromGenericIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5532,7 +5532,7 @@ class PFGetPlayFabIDsFromNintendoServiceAccountIdsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.NintendoAccountIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5564,7 +5564,7 @@ class PFGetPlayFabIDsFromNintendoServiceAccountIdsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5594,7 +5594,7 @@ class PFGetPlayFabIDsFromNintendoSwitchDeviceIdsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.NintendoSwitchDeviceIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5626,7 +5626,7 @@ class PFGetPlayFabIDsFromNintendoSwitchDeviceIdsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5657,7 +5657,7 @@ class PFGetPlayFabIDsFromPSNAccountIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.PSNAccountIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5694,7 +5694,7 @@ class PFGetPlayFabIDsFromPSNAccountIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5724,7 +5724,7 @@ class PFGetPlayFabIDsFromSteamIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.SteamStringIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5756,7 +5756,7 @@ class PFGetPlayFabIDsFromSteamIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5786,7 +5786,7 @@ class PFGetPlayFabIDsFromTwitchIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.TwitchIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5818,7 +5818,7 @@ class PFGetPlayFabIDsFromTwitchIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5849,7 +5849,7 @@ class PFGetPlayFabIDsFromXboxLiveIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.XboxLiveAccountIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5887,7 +5887,7 @@ class PFGetPlayFabIDsFromXboxLiveIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5917,7 +5917,7 @@ class PFGetPublisherDataRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Keys = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5949,7 +5949,7 @@ class PFGetPublisherDataResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -5982,7 +5982,7 @@ class PFGetRandomResultTablesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.TableIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6020,7 +6020,7 @@ class PFGetRandomResultTablesResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Tables = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6051,7 +6051,7 @@ class PFGetSegmentResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6089,7 +6089,7 @@ class PFGetServerCustomIDsFromPlayFabIDsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.PlayFabIDs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6121,7 +6121,7 @@ class PFGetServerCustomIDsFromPlayFabIDsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6153,7 +6153,7 @@ class PFGetSharedGroupDataRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Keys = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6198,7 +6198,7 @@ class PFGetSharedGroupDataResult:
         
         self.Data = {}
         self.Members = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6245,7 +6245,7 @@ class PFGetStoreItemsResult:
         
         self.MarketingData = PFStoreMarketingModel.new()
         self.Store = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6299,7 +6299,7 @@ class PFGetStoreItemsServerRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6347,7 +6347,7 @@ class PFGetTimeRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6367,7 +6367,7 @@ class PFGetTimeResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6394,7 +6394,7 @@ class PFGetTitleDataRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Keys = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6432,7 +6432,7 @@ class PFGetTitleDataResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6463,7 +6463,7 @@ class PFGetTitleNewsRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6488,7 +6488,7 @@ class PFGetTitleNewsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.News = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6517,7 +6517,7 @@ class PFGetUserAccountInfoRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6543,7 +6543,7 @@ class PFGetUserAccountInfoResult:
     func _init(dict_param: Dictionary = {}):
         
         self.UserInfo = PFUserAccountInfo.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6566,7 +6566,7 @@ class PFGetUserBansRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6592,7 +6592,7 @@ class PFGetUserBansResult:
     func _init(dict_param: Dictionary = {}):
         
         self.BanData = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6624,7 +6624,7 @@ class PFGetUserDataRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Keys = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6669,7 +6669,7 @@ class PFGetUserDataResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Data = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6711,7 +6711,7 @@ class PFGetUserInventoryRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6754,7 +6754,7 @@ class PFGetUserInventoryResult:
         self.Inventory = []
         self.VirtualCurrency = {}
         self.VirtualCurrencyRechargeTimes = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6813,7 +6813,7 @@ class PFGrantCharacterToUserRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6862,7 +6862,7 @@ class PFGrantCharacterToUserResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -6906,7 +6906,7 @@ class PFGrantedItemInstance:
         
         self.BundleContents = []
         self.CustomData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7048,7 +7048,7 @@ class PFGrantItemsToCharacterRequest:
         
         self.CustomTags = {}
         self.ItemIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7116,7 +7116,7 @@ class PFGrantItemsToCharacterResult:
     func _init(dict_param: Dictionary = {}):
         
         self.ItemGrantResults = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7151,7 +7151,7 @@ class PFGrantItemsToUserRequest:
         
         self.CustomTags = {}
         self.ItemIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7213,7 +7213,7 @@ class PFGrantItemsToUserResult:
     func _init(dict_param: Dictionary = {}):
         
         self.ItemGrantResults = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7246,7 +7246,7 @@ class PFGrantItemsToUsersRequest:
         
         self.CustomTags = {}
         self.ItemGrants = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7294,7 +7294,7 @@ class PFGrantItemsToUsersResult:
     func _init(dict_param: Dictionary = {}):
         
         self.ItemGrantResults = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7330,7 +7330,7 @@ class PFItemGrant:
         
         self.Data = {}
         self.KeysToRemove = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7413,7 +7413,7 @@ class PFItemInstance:
         
         self.BundleContents = []
         self.CustomData = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7534,7 +7534,7 @@ class PFLinkedPlatformAccountModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7580,7 +7580,7 @@ class PFLinkNintendoServiceAccountRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7632,7 +7632,7 @@ class PFLinkNintendoSwitchDeviceIdRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7679,7 +7679,7 @@ class PFLinkNintendoSwitchDeviceIdResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7705,7 +7705,7 @@ class PFLinkPSNAccountRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7763,7 +7763,7 @@ class PFLinkPSNAccountResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7787,7 +7787,7 @@ class PFLinkServerCustomIdRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7834,7 +7834,7 @@ class PFLinkServerCustomIdResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7858,7 +7858,7 @@ class PFLinkXboxAccountRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7905,7 +7905,7 @@ class PFLinkXboxAccountResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7925,7 +7925,7 @@ class PFListUsersCharactersRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7951,7 +7951,7 @@ class PFListUsersCharactersResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Characters = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -7981,7 +7981,7 @@ class PFLocalizedPushNotificationProperties:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8016,7 +8016,7 @@ class PFLocationModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8092,7 +8092,7 @@ class PFLoginWithServerCustomIdRequest:
         
         self.CustomTags = {}
         self.InfoRequestParameters = PFGetPlayerCombinedInfoRequestParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8149,7 +8149,7 @@ class PFLoginWithSteamIdRequest:
         
         self.CustomTags = {}
         self.InfoRequestParameters = PFGetPlayerCombinedInfoRequestParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8201,7 +8201,7 @@ class PFLoginWithXboxIdRequest:
         
         self.CustomTags = {}
         self.InfoRequestParameters = PFGetPlayerCombinedInfoRequestParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8258,7 +8258,7 @@ class PFLoginWithXboxRequest:
         
         self.CustomTags = {}
         self.InfoRequestParameters = PFGetPlayerCombinedInfoRequestParams.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8306,7 +8306,7 @@ class PFLogStatement:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8347,7 +8347,7 @@ class PFMembershipModel:
     func _init(dict_param: Dictionary = {}):
         
         self.Subscriptions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8400,7 +8400,7 @@ class PFModifyCharacterVirtualCurrencyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8434,7 +8434,7 @@ class PFModifyItemUsesRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8483,7 +8483,7 @@ class PFModifyItemUsesResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8516,7 +8516,7 @@ class PFModifyUserVirtualCurrencyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8560,7 +8560,7 @@ class PFMoveItemToCharacterFromCharacterRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8602,7 +8602,7 @@ class PFMoveItemToCharacterFromCharacterResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8624,7 +8624,7 @@ class PFMoveItemToCharacterFromUserRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8660,7 +8660,7 @@ class PFMoveItemToCharacterFromUserResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8682,7 +8682,7 @@ class PFMoveItemToUserFromCharacterRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8718,7 +8718,7 @@ class PFMoveItemToUserFromCharacterResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8739,7 +8739,7 @@ class PFNintendoServiceAccountPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8771,7 +8771,7 @@ class PFNintendoSwitchPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8805,7 +8805,7 @@ class PFNotifyMatchmakerPlayerLeftRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8848,7 +8848,7 @@ class PFNotifyMatchmakerPlayerLeftResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8884,7 +8884,7 @@ class PFPlayerLeaderboardEntry:
     func _init(dict_param: Dictionary = {}):
         
         self.Profile = PFPlayerProfileModel.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8932,7 +8932,7 @@ class PFPlayerLinkedAccount:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -8978,7 +8978,7 @@ class PFPlayerLocation:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9055,7 +9055,7 @@ class PFPlayerProfile:
         self.Tags = []
         self.ValuesToDate = {}
         self.VirtualCurrencyBalances = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9280,7 +9280,7 @@ class PFPlayerProfileModel:
         self.Statistics = []
         self.Tags = []
         self.ValuesToDate = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9475,7 +9475,7 @@ class PFPlayerProfileViewConstraints:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9582,7 +9582,7 @@ class PFPlayerStatistic:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9628,7 +9628,7 @@ class PFPlayerStatisticVersion:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9683,7 +9683,7 @@ class PFPSNAccountPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9719,7 +9719,7 @@ class PFPushNotificationPackage:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9779,7 +9779,7 @@ class PFPushNotificationRegistration:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9810,7 +9810,7 @@ class PFPushNotificationRegistrationModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9843,7 +9843,7 @@ class PFRandomResultTableListing:
     func _init(dict_param: Dictionary = {}):
         
         self.Nodes = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9889,7 +9889,7 @@ class PFRedeemCouponRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9945,7 +9945,7 @@ class PFRedeemCouponResult:
     func _init(dict_param: Dictionary = {}):
         
         self.GrantedItems = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -9977,7 +9977,7 @@ class PFRedeemMatchmakerTicketRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10023,7 +10023,7 @@ class PFRedeemMatchmakerTicketResult:
     func _init(dict_param: Dictionary = {}):
         
         self.UserInfo = PFUserAccountInfo.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10057,7 +10057,7 @@ class PFRefreshGameServerInstanceHeartbeatRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10081,7 +10081,7 @@ class PFRefreshGameServerInstanceHeartbeatResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10122,7 +10122,7 @@ class PFRegisterGameRequest:
         
         self.CustomTags = {}
         self.Tags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10212,7 +10212,7 @@ class PFRegisterGameResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10238,7 +10238,7 @@ class PFRemoveFriendRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10271,7 +10271,7 @@ class PFRemoveGenericIDRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.GenericId = PFGenericServiceId.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10303,7 +10303,7 @@ class PFRemovePlayerTagRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10345,7 +10345,7 @@ class PFRemovePlayerTagResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10367,7 +10367,7 @@ class PFRemoveSharedGroupMembersRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.PlayFabIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10403,7 +10403,7 @@ class PFRemoveSharedGroupMembersResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10427,7 +10427,7 @@ class PFReportPlayerServerRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10476,7 +10476,7 @@ class PFReportPlayerServerResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10502,7 +10502,7 @@ class PFResultTableNode:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10542,7 +10542,7 @@ class PFRevokeAllBansForUserRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10568,7 +10568,7 @@ class PFRevokeAllBansForUserResult:
     func _init(dict_param: Dictionary = {}):
         
         self.BanData = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10598,7 +10598,7 @@ class PFRevokeBansRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.BanIds = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10630,7 +10630,7 @@ class PFRevokeBansResult:
     func _init(dict_param: Dictionary = {}):
         
         self.BanData = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10661,7 +10661,7 @@ class PFRevokeInventoryItem:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10700,7 +10700,7 @@ class PFRevokeInventoryItemRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10738,7 +10738,7 @@ class PFRevokeInventoryItemsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Items = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10768,7 +10768,7 @@ class PFRevokeInventoryItemsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Errors = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10796,7 +10796,7 @@ class PFRevokeInventoryResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10818,7 +10818,7 @@ class PFRevokeItemError:
     func _init(dict_param: Dictionary = {}):
         
         self.Item = PFRevokeInventoryItem.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10851,7 +10851,7 @@ class PFSavePushNotificationTemplateRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.LocalizedPushNotificationTemplates = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10904,7 +10904,7 @@ class PFSavePushNotificationTemplateResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10931,7 +10931,7 @@ class PFScriptExecutionError:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -10972,7 +10972,7 @@ class PFSendCustomAccountRecoveryEmailRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11020,7 +11020,7 @@ class PFSendCustomAccountRecoveryEmailResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11043,7 +11043,7 @@ class PFSendEmailFromTemplateRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11085,7 +11085,7 @@ class PFSendEmailFromTemplateResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11108,7 +11108,7 @@ class PFSendPushNotificationFromTemplateRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11161,7 +11161,7 @@ class PFSendPushNotificationRequest:
         self.CustomTags = {}
         self.Package = PFPushNotificationPackage.new()
         self.TargetPlatforms = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11233,7 +11233,7 @@ class PFSendPushNotificationResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11254,7 +11254,7 @@ class PFServerCustomIDPlayFabIDPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11296,7 +11296,7 @@ class PFServerLoginResult:
         self.InfoResultPayload = PFGetPlayerCombinedInfoResultPayload.new()
         self.SettingsForUser = PFUserSettings.new()
         self.TreatmentAssignment = PFTreatmentAssignment.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11357,7 +11357,7 @@ class PFSetFriendTagsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Tags = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11401,7 +11401,7 @@ class PFSetGameServerInstanceDataRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11431,7 +11431,7 @@ class PFSetGameServerInstanceDataResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11452,7 +11452,7 @@ class PFSetGameServerInstanceStateRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11481,7 +11481,7 @@ class PFSetGameServerInstanceStateResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11503,7 +11503,7 @@ class PFSetGameServerInstanceTagsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Tags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11539,7 +11539,7 @@ class PFSetGameServerInstanceTagsResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11560,7 +11560,7 @@ class PFSetPlayerSecretRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11590,7 +11590,7 @@ class PFSetPlayerSecretResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11611,7 +11611,7 @@ class PFSetPublisherDataRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11641,7 +11641,7 @@ class PFSetPublisherDataResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11662,7 +11662,7 @@ class PFSetTitleDataRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11692,7 +11692,7 @@ class PFSetTitleDataResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11715,7 +11715,7 @@ class PFSharedGroupDataRecord:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11769,7 +11769,7 @@ class PFStatisticModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11805,7 +11805,7 @@ class PFStatisticNameVersion:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11837,7 +11837,7 @@ class PFStatisticUpdate:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11874,7 +11874,7 @@ class PFStatisticValue:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11910,7 +11910,7 @@ class PFSteamPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -11947,7 +11947,7 @@ class PFStoreItem:
         
         self.RealCurrencyPrices = {}
         self.VirtualCurrencyPrices = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12004,7 +12004,7 @@ class PFStoreMarketingModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12046,7 +12046,7 @@ class PFSubscriptionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12121,7 +12121,7 @@ class PFSubtractCharacterVirtualCurrencyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12179,7 +12179,7 @@ class PFSubtractUserVirtualCurrencyRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12227,7 +12227,7 @@ class PFTagModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12263,7 +12263,7 @@ class PFTitleNewsItem:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12309,7 +12309,7 @@ class PFTreatmentAssignment:
         
         self.Variables = []
         self.Variants = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12351,7 +12351,7 @@ class PFTwitchPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12384,7 +12384,7 @@ class PFUnlinkNintendoServiceAccountRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12424,7 +12424,7 @@ class PFUnlinkNintendoSwitchDeviceIdRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12466,7 +12466,7 @@ class PFUnlinkNintendoSwitchDeviceIdResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12488,7 +12488,7 @@ class PFUnlinkPSNAccountRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12524,7 +12524,7 @@ class PFUnlinkPSNAccountResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12547,7 +12547,7 @@ class PFUnlinkServerCustomIdRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12589,7 +12589,7 @@ class PFUnlinkServerCustomIdResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12611,7 +12611,7 @@ class PFUnlinkXboxAccountRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12647,7 +12647,7 @@ class PFUnlinkXboxAccountResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12673,7 +12673,7 @@ class PFUnlockContainerInstanceRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12739,7 +12739,7 @@ class PFUnlockContainerItemRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12799,7 +12799,7 @@ class PFUnlockContainerItemResult:
         
         self.GrantedItems = []
         self.VirtualCurrency = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12851,7 +12851,7 @@ class PFUpdateAvatarUrlRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12887,7 +12887,7 @@ class PFUpdateBanRequest:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12941,7 +12941,7 @@ class PFUpdateBansRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.Bans = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -12971,7 +12971,7 @@ class PFUpdateBansResult:
     func _init(dict_param: Dictionary = {}):
         
         self.BanData = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13008,7 +13008,7 @@ class PFUpdateCharacterDataRequest:
         self.CustomTags = {}
         self.Data = {}
         self.KeysToRemove = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13080,7 +13080,7 @@ class PFUpdateCharacterDataResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13109,7 +13109,7 @@ class PFUpdateCharacterStatisticsRequest:
         
         self.CharacterStatistics = {}
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13161,7 +13161,7 @@ class PFUpdateCharacterStatisticsResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13186,7 +13186,7 @@ class PFUpdatePlayerStatisticsRequest:
         
         self.CustomTags = {}
         self.Statistics = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13237,7 +13237,7 @@ class PFUpdatePlayerStatisticsResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13264,7 +13264,7 @@ class PFUpdateSharedGroupDataRequest:
         self.CustomTags = {}
         self.Data = {}
         self.KeysToRemove = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13329,7 +13329,7 @@ class PFUpdateSharedGroupDataResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13356,7 +13356,7 @@ class PFUpdateUserDataRequest:
         self.CustomTags = {}
         self.Data = {}
         self.KeysToRemove = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13422,7 +13422,7 @@ class PFUpdateUserDataResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13452,7 +13452,7 @@ class PFUpdateUserInternalDataRequest:
         self.CustomTags = {}
         self.Data = {}
         self.KeysToRemove = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13521,7 +13521,7 @@ class PFUpdateUserInventoryItemDataRequest:
         self.CustomTags = {}
         self.Data = {}
         self.KeysToRemove = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13634,7 +13634,7 @@ class PFUserAccountInfo:
         self.TitleInfo = PFUserTitleInfo.new()
         self.TwitchInfo = PFUserTwitchInfo.new()
         self.XboxInfo = PFUserXboxInfo.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13753,7 +13753,7 @@ class PFUserAndroidDeviceInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13778,7 +13778,7 @@ class PFUserAppleIdInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13803,7 +13803,7 @@ class PFUserCustomIdInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13835,7 +13835,7 @@ class PFUserDataRecord:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13872,7 +13872,7 @@ class PFUserFacebookInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13903,7 +13903,7 @@ class PFUserFacebookInstantGamesIdInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13928,7 +13928,7 @@ class PFUserGameCenterInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -13957,7 +13957,7 @@ class PFUserGoogleInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14008,7 +14008,7 @@ class PFUserGooglePlayGamesInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14045,7 +14045,7 @@ class PFUserIosDeviceInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14071,7 +14071,7 @@ class PFUserKongregateInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14102,7 +14102,7 @@ class PFUserNintendoSwitchAccountIdInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14127,7 +14127,7 @@ class PFUserNintendoSwitchDeviceIdInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14154,7 +14154,7 @@ class PFUserOpenIdInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14218,7 +14218,7 @@ class PFUserPrivateAccountInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14244,7 +14244,7 @@ class PFUserPsnInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14277,7 +14277,7 @@ class PFUserSettings:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14315,7 +14315,7 @@ class PFUserSteamInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14370,7 +14370,7 @@ class PFUserTitleInfo:
     func _init(dict_param: Dictionary = {}):
         
         self.TitlePlayerAccount = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14434,7 +14434,7 @@ class PFUserTwitchInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14466,7 +14466,7 @@ class PFUserXboxInfo:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14499,7 +14499,7 @@ class PFValueToDateModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14536,7 +14536,7 @@ class PFVariable:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14569,7 +14569,7 @@ class PFVirtualCurrencyRechargeTime:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14604,7 +14604,7 @@ class PFWriteEventResponse:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14636,7 +14636,7 @@ class PFWriteServerCharacterEventRequest:
         
         self.Body = {}
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14707,7 +14707,7 @@ class PFWriteServerPlayerEventRequest:
         
         self.Body = {}
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14771,7 +14771,7 @@ class PFWriteTitleEventRequest:
         
         self.Body = {}
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -14825,7 +14825,7 @@ class PFXboxLiveAccountPlayFabIdPair:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         

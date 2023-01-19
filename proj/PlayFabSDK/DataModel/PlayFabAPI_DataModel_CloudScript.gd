@@ -10,7 +10,7 @@ class PFAdCampaignAttributionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -55,7 +55,7 @@ class PFContactEmailInfoModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -358,7 +358,7 @@ class PFEmptyResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -379,7 +379,7 @@ class PFEntityKey:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -423,7 +423,7 @@ class PFExecuteCloudScriptResult:
         
         self.Error = PFScriptExecutionError.new()
         self.Logs = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -515,7 +515,7 @@ class PFExecuteEntityCloudScriptRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -582,7 +582,7 @@ class PFExecuteFunctionRequest:
         
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -638,7 +638,7 @@ class PFExecuteFunctionResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Error = PFFunctionExecutionError.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -684,7 +684,7 @@ class PFFunctionExecutionError:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -723,7 +723,7 @@ class PFFunctionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -762,7 +762,7 @@ class PFGetFunctionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -802,7 +802,7 @@ class PFGetFunctionResult:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -846,7 +846,7 @@ class PFHttpFunctionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -880,7 +880,7 @@ class PFLinkedPlatformAccountModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -923,7 +923,7 @@ class PFListFunctionsRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -955,7 +955,7 @@ class PFListFunctionsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Functions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -985,7 +985,7 @@ class PFListHttpFunctionsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Functions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1015,7 +1015,7 @@ class PFListQueuedFunctionsResult:
     func _init(dict_param: Dictionary = {}):
         
         self.Functions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1048,7 +1048,7 @@ class PFLocationModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1120,7 +1120,7 @@ class PFLogStatement:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1161,7 +1161,7 @@ class PFMembershipModel:
     func _init(dict_param: Dictionary = {}):
         
         self.Subscriptions = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1214,7 +1214,7 @@ class PFNameIdentifier:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1274,7 +1274,7 @@ class PFPlayerProfileModel:
         self.Statistics = []
         self.Tags = []
         self.ValuesToDate = []
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1458,7 +1458,7 @@ class PFPlayStreamEventEnvelopeModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1518,7 +1518,7 @@ class PFPostFunctionResultForEntityTriggeredActionRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.FunctionResult = PFExecuteFunctionResult.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1562,7 +1562,7 @@ class PFPostFunctionResultForFunctionExecutionRequest:
         self.CustomTags = {}
         self.Entity = PFEntityKey.new()
         self.FunctionResult = PFExecuteFunctionResult.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1608,7 +1608,7 @@ class PFPostFunctionResultForPlayerTriggeredActionRequest:
         self.FunctionResult = PFExecuteFunctionResult.new()
         self.PlayerProfile = PFPlayerProfileModel.new()
         self.PlayStreamEventEnvelope = PFPlayStreamEventEnvelopeModel.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1656,7 +1656,7 @@ class PFPostFunctionResultForScheduledTaskRequest:
         self.CustomTags = {}
         self.FunctionResult = PFExecuteFunctionResult.new()
         self.ScheduledTaskId = PFNameIdentifier.new()
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1701,7 +1701,7 @@ class PFPushNotificationRegistrationModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1733,7 +1733,7 @@ class PFQueuedFunctionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1773,7 +1773,7 @@ class PFRegisterHttpFunctionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1820,7 +1820,7 @@ class PFRegisterQueuedFunctionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1871,7 +1871,7 @@ class PFScriptExecutionError:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1910,7 +1910,7 @@ class PFStatisticModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -1951,7 +1951,7 @@ class PFSubscriptionModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2021,7 +2021,7 @@ class PFTagModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2053,7 +2053,7 @@ class PFUnregisterFunctionRequest:
     func _init(dict_param: Dictionary = {}):
         
         self.CustomTags = {}
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
@@ -2092,7 +2092,7 @@ class PFValueToDateModel:
 
     func _init(dict_param: Dictionary = {}):
         
-        self.set_dict(dict_param);
+        self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
