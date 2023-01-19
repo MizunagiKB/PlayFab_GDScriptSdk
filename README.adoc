@@ -12,7 +12,7 @@
 :stem:
 
 == About
-This program is an *unofficial* implementation for using https://www,playfab.com[Microsoft PlayFab] from the GDScript(https://godotengine.org/[Godot Engine]).
+This program is an *unofficial* implementation for using https://www.playfab.com[Microsoft PlayFab] from the GDScript(https://godotengine.org/[Godot Engine]).
 
 CAUTION: Currently, only Godot 3.5 or higher is supported. +
 Godot 4 is not supported.
