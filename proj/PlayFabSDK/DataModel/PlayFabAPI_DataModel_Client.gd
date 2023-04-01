@@ -9275,13 +9275,14 @@ class PFLoginWithGameCenterRequest:
 
 
 class PFLoginWithGoogleAccountRequest:
-    # 7 items(s)
+    # 8 items(s)
     var CreateAccount: bool # Boolean
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var EncryptedRequest: String # String
     var InfoRequestParameters: PFGetPlayerCombinedInfoRequestParams # GetPlayerCombinedInfoRequestParams
     var PlayerSecret: String # String
     var ServerAuthCode: String # String
+    var SetEmail: bool # Boolean
     var TitleId: String # String
 
     func _init(dict_param: Dictionary = {}):
@@ -9306,6 +9307,8 @@ class PFLoginWithGoogleAccountRequest:
             self.PlayerSecret = dict_param["PlayerSecret"]
         if "ServerAuthCode" in dict_param:
             self.ServerAuthCode = dict_param["ServerAuthCode"]
+        if "SetEmail" in dict_param:
+            self.SetEmail = dict_param["SetEmail"]
         if "TitleId" in dict_param:
             self.TitleId = dict_param["TitleId"]
 
@@ -9338,6 +9341,9 @@ class PFLoginWithGoogleAccountRequest:
             # String
             if self.ServerAuthCode.empty() != true:
                 dict_result["ServerAuthCode"] = self.ServerAuthCode
+        if self.SetEmail != null:
+            # Boolean
+            dict_result["SetEmail"] = self.SetEmail
         if self.TitleId != null:
             # String
             if self.TitleId.empty() != true:

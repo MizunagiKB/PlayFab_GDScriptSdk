@@ -39,10 +39,11 @@ class PFAddInventoryItemsOperation:
 
 
 class PFAddInventoryItemsRequest:
-    # 8 items(s)
+    # 9 items(s)
     var Amount: int # int32
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var DurationInSeconds: float # double
     var Entity: PFEntityKey # EntityKey
     var ETag: String # String
     var IdempotencyId: String # String
@@ -67,6 +68,8 @@ class PFAddInventoryItemsRequest:
             self.CustomTags = {}
             for k in dict_param["CustomTags"]:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
         if "ETag" in dict_param:
@@ -97,6 +100,9 @@ class PFAddInventoryItemsRequest:
                     if self.CustomTags[k].empty() != true:
                         dict_temp[k] = self.CustomTags[k]
                 dict_result["CustomTags"] = dict_temp
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
         if self.ETag != null:
@@ -336,13 +342,14 @@ class PFCatalogConfig:
 
 
 class PFCatalogItem:
-    # 26 items(s)
+    # 27 items(s)
     var AlternateIds: Array # Array[PFCatalogAlternateId]
     var Contents: Array # Array[PFContent]
     var ContentType: String # String
     var CreationDate: String # DateTime
     var CreatorEntity: PFEntityKey # EntityKey
     var DeepLinks: Array # Array[PFDeepLink]
+    var DefaultStackId: String # String
     var Description: Dictionary # Dictionary[String, String(String)]
     var DisplayProperties: Dictionary # object
     var DisplayVersion: String # String
@@ -403,6 +410,8 @@ class PFCatalogItem:
             self.DeepLinks = []
             for v in dict_param["DeepLinks"]:
                 self.DeepLinks.push_back(PFDeepLink.new(v))
+        if "DefaultStackId" in dict_param:
+            self.DefaultStackId = dict_param["DefaultStackId"]
         if "Description" in dict_param:
             self.Description = {}
             for k in dict_param["Description"]:
@@ -490,6 +499,10 @@ class PFCatalogItem:
                 for v in self.DeepLinks:
                     list_temp.push_back(v.get_dict())
                 dict_result["DeepLinks"] = list_temp
+        if self.DefaultStackId != null:
+            # String
+            if self.DefaultStackId.empty() != true:
+                dict_result["DefaultStackId"] = self.DefaultStackId
         if self.Description != null:
             if self.Description.size() > 0:
                 var dict_temp: Dictionary = {}
@@ -624,8 +637,9 @@ class PFCatalogItemReference:
 
 
 class PFCatalogPrice:
-    # 1 items(s)
+    # 2 items(s)
     var Amounts: Array # Array[PFCatalogPriceAmount]
+    var UnitDurationInSeconds: float # double
 
     func _init(dict_param: Dictionary = {}):
         
@@ -638,6 +652,8 @@ class PFCatalogPrice:
             self.Amounts = []
             for v in dict_param["Amounts"]:
                 self.Amounts.push_back(PFCatalogPriceAmount.new(v))
+        if "UnitDurationInSeconds" in dict_param:
+            self.UnitDurationInSeconds = dict_param["UnitDurationInSeconds"]
 
     func get_dict() -> Dictionary:
         
@@ -649,6 +665,9 @@ class PFCatalogPrice:
                 for v in self.Amounts:
                     list_temp.push_back(v.get_dict())
                 dict_result["Amounts"] = list_temp
+        if self.UnitDurationInSeconds != null:
+            # double
+            dict_result["UnitDurationInSeconds"] = self.UnitDurationInSeconds
         
         return dict_result
 
@@ -3530,9 +3549,10 @@ class PFInitialValues:
 
 
 class PFInventoryItem:
-    # 5 items(s)
+    # 6 items(s)
     var Amount: int # int32
     var DisplayProperties: Dictionary # object
+    var ExpirationDate: String # DateTime
     var Id: String # String
     var StackId: String # String
     var Type: String # String
@@ -3547,6 +3567,8 @@ class PFInventoryItem:
             self.Amount = dict_param["Amount"]
         if "DisplayProperties" in dict_param:
             self.DisplayProperties = dict_param["DisplayProperties"]
+        if "ExpirationDate" in dict_param:
+            self.ExpirationDate = dict_param["ExpirationDate"]
         if "Id" in dict_param:
             self.Id = dict_param["Id"]
         if "StackId" in dict_param:
@@ -3564,6 +3586,10 @@ class PFInventoryItem:
         if self.DisplayProperties != null:
             # object
             dict_result["DisplayProperties"] = self.DisplayProperties
+        if self.ExpirationDate != null:
+            # String(DateTime)
+            if self.ExpirationDate.empty() != true:
+                dict_result["ExpirationDate"] = self.ExpirationDate
         if self.Id != null:
             # String
             if self.Id.empty() != true:
@@ -3854,9 +3880,10 @@ class PFPublishResult: # enum
     const Canceled := "Canceled"
 
 class PFPurchaseInventoryItemsOperation:
-    # 6 items(s)
+    # 7 items(s)
     var Amount: int # int32
     var DeleteEmptyStacks: bool # Boolean
+    var DurationInSeconds: float # double
     var Item: PFInventoryItemReference # InventoryItemReference
     var NewStackValues: PFInitialValues # InitialValues
     var PriceAmounts: Array # Array[PFPurchasePriceAmount]
@@ -3875,6 +3902,8 @@ class PFPurchaseInventoryItemsOperation:
             self.Amount = dict_param["Amount"]
         if "DeleteEmptyStacks" in dict_param:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
         if "NewStackValues" in dict_param:
@@ -3896,6 +3925,9 @@ class PFPurchaseInventoryItemsOperation:
         if self.DeleteEmptyStacks != null:
             # Boolean
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
         if self.NewStackValues != null:
@@ -3915,11 +3947,12 @@ class PFPurchaseInventoryItemsOperation:
 
 
 class PFPurchaseInventoryItemsRequest:
-    # 11 items(s)
+    # 12 items(s)
     var Amount: int # int32
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var DeleteEmptyStacks: bool # Boolean
+    var DurationInSeconds: float # double
     var Entity: PFEntityKey # EntityKey
     var ETag: String # String
     var IdempotencyId: String # String
@@ -3949,6 +3982,8 @@ class PFPurchaseInventoryItemsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "DeleteEmptyStacks" in dict_param:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
         if "ETag" in dict_param:
@@ -3988,6 +4023,9 @@ class PFPurchaseInventoryItemsRequest:
         if self.DeleteEmptyStacks != null:
             # Boolean
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
         if self.ETag != null:
@@ -5708,9 +5746,10 @@ class PFSubscriptionDetails:
 
 
 class PFSubtractInventoryItemsOperation:
-    # 3 items(s)
+    # 4 items(s)
     var Amount: int # int32
     var DeleteEmptyStacks: bool # Boolean
+    var DurationInSeconds: float # double
     var Item: PFInventoryItemReference # InventoryItemReference
 
     func _init(dict_param: Dictionary = {}):
@@ -5724,6 +5763,8 @@ class PFSubtractInventoryItemsOperation:
             self.Amount = dict_param["Amount"]
         if "DeleteEmptyStacks" in dict_param:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
 
@@ -5737,6 +5778,9 @@ class PFSubtractInventoryItemsOperation:
         if self.DeleteEmptyStacks != null:
             # Boolean
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
         
@@ -5744,11 +5788,12 @@ class PFSubtractInventoryItemsOperation:
 
 
 class PFSubtractInventoryItemsRequest:
-    # 8 items(s)
+    # 9 items(s)
     var Amount: int # int32
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var DeleteEmptyStacks: bool # Boolean
+    var DurationInSeconds: float # double
     var Entity: PFEntityKey # EntityKey
     var ETag: String # String
     var IdempotencyId: String # String
@@ -5773,6 +5818,8 @@ class PFSubtractInventoryItemsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "DeleteEmptyStacks" in dict_param:
             self.DeleteEmptyStacks = dict_param["DeleteEmptyStacks"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
         if "ETag" in dict_param:
@@ -5804,6 +5851,9 @@ class PFSubtractInventoryItemsRequest:
         if self.DeleteEmptyStacks != null:
             # Boolean
             dict_result["DeleteEmptyStacks"] = self.DeleteEmptyStacks
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
         if self.ETag != null:
@@ -6013,8 +6063,9 @@ class PFTransaction:
 
 
 class PFTransactionOperation:
-    # 5 items(s)
+    # 6 items(s)
     var Amount: int # int32
+    var DurationInSeconds: float # double
     var ItemId: String # String
     var ItemType: String # String
     var StackId: String # String
@@ -6028,6 +6079,8 @@ class PFTransactionOperation:
         
         if "Amount" in dict_param:
             self.Amount = dict_param["Amount"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "ItemId" in dict_param:
             self.ItemId = dict_param["ItemId"]
         if "ItemType" in dict_param:
@@ -6044,6 +6097,9 @@ class PFTransactionOperation:
         if self.Amount != null:
             # int32
             dict_result["Amount"] = self.Amount
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.ItemId != null:
             # String
             if self.ItemId.empty() != true:

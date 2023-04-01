@@ -3495,7 +3495,7 @@ class PFGameModeInfo:
 
 
 class PFGenericErrorCodes: # enum
-    # 698 items(s)
+    # 716 items(s)
     const Success := "Success"
     const UnkownError := "UnkownError"
     const InvalidParams := "InvalidParams"
@@ -4033,6 +4033,18 @@ class PFGenericErrorCodes: # enum
     const PlayStreamConnectionFailed := "PlayStreamConnectionFailed"
     const InvalidEventContents := "InvalidEventContents"
     const InsightsV1Deprecated := "InsightsV1Deprecated"
+    const AnalysisSubscriptionNotFound := "AnalysisSubscriptionNotFound"
+    const AnalysisSubscriptionFailed := "AnalysisSubscriptionFailed"
+    const AnalysisSubscriptionFoundAlready := "AnalysisSubscriptionFoundAlready"
+    const AnalysisSubscriptionManagementInvalidInput := "AnalysisSubscriptionManagementInvalidInput"
+    const InvalidGameCenterId := "InvalidGameCenterId"
+    const InvalidNintendoSwitchAccountId := "InvalidNintendoSwitchAccountId"
+    const EntityAPIKeysNotSupported := "EntityAPIKeysNotSupported"
+    const IpAddressBanned := "IpAddressBanned"
+    const EntityLineageBanned := "EntityLineageBanned"
+    const NamespaceMismatch := "NamespaceMismatch"
+    const InvalidServiceConfiguration := "InvalidServiceConfiguration"
+    const InvalidNamespaceMismatch := "InvalidNamespaceMismatch"
     const MatchmakingEntityInvalid := "MatchmakingEntityInvalid"
     const MatchmakingPlayerAttributesInvalid := "MatchmakingPlayerAttributesInvalid"
     const MatchmakingQueueNotFound := "MatchmakingQueueNotFound"
@@ -4179,6 +4191,12 @@ class PFGenericErrorCodes: # enum
     const EventSamplingInvalidEventNamespace := "EventSamplingInvalidEventNamespace"
     const EventSamplingInvalidEventName := "EventSamplingInvalidEventName"
     const EventSamplingRatioNotFound := "EventSamplingRatioNotFound"
+    const TelemetryKeyNotFound := "TelemetryKeyNotFound"
+    const TelemetryKeyInvalidName := "TelemetryKeyInvalidName"
+    const TelemetryKeyAlreadyExists := "TelemetryKeyAlreadyExists"
+    const TelemetryKeyInvalid := "TelemetryKeyInvalid"
+    const TelemetryKeyCountOverLimit := "TelemetryKeyCountOverLimit"
+    const TelemetryKeyDeactivated := "TelemetryKeyDeactivated"
     const EventSinkConnectionInvalid := "EventSinkConnectionInvalid"
     const EventSinkConnectionUnauthorized := "EventSinkConnectionUnauthorized"
     const EventSinkRegionInvalid := "EventSinkRegionInvalid"

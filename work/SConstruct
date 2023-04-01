@@ -1,3 +1,4 @@
+import sys
 import os
 import subprocess
 import pathlib
@@ -30,11 +31,9 @@ def pre_build():
 
     work_dir = pathlib.Path("API_Specs")
     if work_dir.exists():
-        os.chdir("API_Specs")
-        subprocess.check_output(["git", "pull", REPOS_SDK_API])
-        os.chdir("..")
-    else:
-        subprocess.check_output(["git", "clone", REPOS_SDK_API])
+        print("Delete folder, {:s}".format(work_dir))
+        sys.exit(1)
+    subprocess.check_output(["git", "clone", REPOS_SDK_API])
 
     #
     os.chdir("SDKGenerator")

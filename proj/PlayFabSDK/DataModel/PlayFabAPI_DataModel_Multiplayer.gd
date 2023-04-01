@@ -1062,7 +1062,7 @@ class PFCreateBuildAliasRequest:
 
 
 class PFCreateBuildWithCustomContainerRequest:
-    # 17 items(s)
+    # 18 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildName: String # String
     var ContainerFlavor: String # ContainerFlavor
@@ -1080,6 +1080,7 @@ class PFCreateBuildWithCustomContainerRequest:
     var ServerResourceConstraints: PFServerResourceConstraintParams # ServerResourceConstraintParams
     var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptParams # VmStartupScriptParams
 
     func _init(dict_param: Dictionary = {}):
         
@@ -1093,6 +1094,7 @@ class PFCreateBuildWithCustomContainerRequest:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
+        self.VmStartupScriptConfiguration = PFVmStartupScriptParams.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -1143,6 +1145,8 @@ class PFCreateBuildWithCustomContainerRequest:
             self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptParams.new(dict_param["VmStartupScriptConfiguration"])
 
     func get_dict() -> Dictionary:
         
@@ -1219,12 +1223,14 @@ class PFCreateBuildWithCustomContainerRequest:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         
         return dict_result
 
 
 class PFCreateBuildWithCustomContainerResponse:
-    # 20 items(s)
+    # 21 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildId: String # String
     var BuildName: String # String
@@ -1245,6 +1251,7 @@ class PFCreateBuildWithCustomContainerResponse:
     var ServerType: String # String
     var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptConfiguration # VmStartupScriptConfiguration
 
     func _init(dict_param: Dictionary = {}):
         
@@ -1257,6 +1264,7 @@ class PFCreateBuildWithCustomContainerResponse:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
+        self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -1311,6 +1319,8 @@ class PFCreateBuildWithCustomContainerResponse:
             self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new(dict_param["VmStartupScriptConfiguration"])
 
     func get_dict() -> Dictionary:
         
@@ -1395,12 +1405,14 @@ class PFCreateBuildWithCustomContainerResponse:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         
         return dict_result
 
 
 class PFCreateBuildWithManagedContainerRequest:
-    # 18 items(s)
+    # 19 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildName: String # String
     var ContainerFlavor: String # ContainerFlavor
@@ -1418,6 +1430,7 @@ class PFCreateBuildWithManagedContainerRequest:
     var StartMultiplayerServerCommand: String # String
     var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptParams # VmStartupScriptParams
     var WindowsCrashDumpConfiguration: PFWindowsCrashDumpConfiguration # WindowsCrashDumpConfiguration
 
     func _init(dict_param: Dictionary = {}):
@@ -1431,6 +1444,7 @@ class PFCreateBuildWithManagedContainerRequest:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
+        self.VmStartupScriptConfiguration = PFVmStartupScriptParams.new()
         self.WindowsCrashDumpConfiguration = PFWindowsCrashDumpConfiguration.new()
         self.set_dict(dict_param)
 
@@ -1482,6 +1496,8 @@ class PFCreateBuildWithManagedContainerRequest:
             self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptParams.new(dict_param["VmStartupScriptConfiguration"])
         if "WindowsCrashDumpConfiguration" in dict_param:
             self.WindowsCrashDumpConfiguration = PFWindowsCrashDumpConfiguration.new(dict_param["WindowsCrashDumpConfiguration"])
 
@@ -1562,6 +1578,8 @@ class PFCreateBuildWithManagedContainerRequest:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         if self.WindowsCrashDumpConfiguration != null:
             dict_result["WindowsCrashDumpConfiguration"] = self.WindowsCrashDumpConfiguration.get_dict()
         
@@ -1569,7 +1587,7 @@ class PFCreateBuildWithManagedContainerRequest:
 
 
 class PFCreateBuildWithManagedContainerResponse:
-    # 20 items(s)
+    # 21 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildId: String # String
     var BuildName: String # String
@@ -1590,6 +1608,7 @@ class PFCreateBuildWithManagedContainerResponse:
     var StartMultiplayerServerCommand: String # String
     var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptConfiguration # VmStartupScriptConfiguration
 
     func _init(dict_param: Dictionary = {}):
         
@@ -1601,6 +1620,7 @@ class PFCreateBuildWithManagedContainerResponse:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
+        self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -1655,6 +1675,8 @@ class PFCreateBuildWithManagedContainerResponse:
             self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new(dict_param["VmStartupScriptConfiguration"])
 
     func get_dict() -> Dictionary:
         
@@ -1741,12 +1763,14 @@ class PFCreateBuildWithManagedContainerResponse:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         
         return dict_result
 
 
 class PFCreateBuildWithProcessBasedServerRequest:
-    # 17 items(s)
+    # 18 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildName: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
@@ -1764,6 +1788,7 @@ class PFCreateBuildWithProcessBasedServerRequest:
     var StartMultiplayerServerCommand: String # String
     var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptParams # VmStartupScriptParams
 
     func _init(dict_param: Dictionary = {}):
         
@@ -1775,6 +1800,7 @@ class PFCreateBuildWithProcessBasedServerRequest:
         self.MonitoringApplicationConfiguration = PFMonitoringApplicationConfigurationParams.new()
         self.Ports = []
         self.RegionConfigurations = []
+        self.VmStartupScriptConfiguration = PFVmStartupScriptParams.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -1825,6 +1851,8 @@ class PFCreateBuildWithProcessBasedServerRequest:
             self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptParams.new(dict_param["VmStartupScriptConfiguration"])
 
     func get_dict() -> Dictionary:
         
@@ -1905,12 +1933,14 @@ class PFCreateBuildWithProcessBasedServerRequest:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         
         return dict_result
 
 
 class PFCreateBuildWithProcessBasedServerResponse:
-    # 20 items(s)
+    # 21 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildId: String # String
     var BuildName: String # String
@@ -1931,6 +1961,7 @@ class PFCreateBuildWithProcessBasedServerResponse:
     var StartMultiplayerServerCommand: String # String
     var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptConfiguration # VmStartupScriptConfiguration
 
     func _init(dict_param: Dictionary = {}):
         
@@ -1941,6 +1972,7 @@ class PFCreateBuildWithProcessBasedServerResponse:
         self.MonitoringApplicationConfiguration = PFMonitoringApplicationConfiguration.new()
         self.Ports = []
         self.RegionConfigurations = []
+        self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -1995,6 +2027,8 @@ class PFCreateBuildWithProcessBasedServerResponse:
             self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new(dict_param["VmStartupScriptConfiguration"])
 
     func get_dict() -> Dictionary:
         
@@ -2082,6 +2116,8 @@ class PFCreateBuildWithProcessBasedServerResponse:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         
         return dict_result
 
@@ -8559,6 +8595,54 @@ class PFVirtualMachineSummary:
             # String
             if self.VmId.empty() != true:
                 dict_result["VmId"] = self.VmId
+        
+        return dict_result
+
+
+class PFVmStartupScriptConfiguration:
+    # 1 items(s)
+    var VmStartupScriptAssetReference: PFAssetReference # AssetReference
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.VmStartupScriptAssetReference = PFAssetReference.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "VmStartupScriptAssetReference" in dict_param:
+            self.VmStartupScriptAssetReference = PFAssetReference.new(dict_param["VmStartupScriptAssetReference"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.VmStartupScriptAssetReference != null:
+            dict_result["VmStartupScriptAssetReference"] = self.VmStartupScriptAssetReference.get_dict()
+        
+        return dict_result
+
+
+class PFVmStartupScriptParams:
+    # 1 items(s)
+    var VmStartupScriptAssetReference: PFAssetReferenceParams # AssetReferenceParams
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.VmStartupScriptAssetReference = PFAssetReferenceParams.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "VmStartupScriptAssetReference" in dict_param:
+            self.VmStartupScriptAssetReference = PFAssetReferenceParams.new(dict_param["VmStartupScriptAssetReference"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.VmStartupScriptAssetReference != null:
+            dict_result["VmStartupScriptAssetReference"] = self.VmStartupScriptAssetReference.get_dict()
         
         return dict_result
 
