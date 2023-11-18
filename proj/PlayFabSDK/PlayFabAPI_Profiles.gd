@@ -73,6 +73,22 @@ static func GetTitlePlayersFromMasterPlayerAccountIds(dict_request, user_callbac
     )
 
 
+static func GetTitlePlayersFromXboxLiveIDs(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Retrieves the title player accounts associated with the given XUIDs.
+    https://docs.microsoft.com/rest/api/playfab/profiles/account-management/gettitleplayersfromxboxliveids
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Profile/GetTitlePlayersFromXboxLiveIDs",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func SetGlobalPolicy(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Sets the global title access policy

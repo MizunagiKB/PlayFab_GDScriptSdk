@@ -9,6 +9,86 @@ extends Node
 # -------------------------------------------------------------------- func(s)
 
 
+static func CreateTelemetryKey(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Creates a new telemetry key for the title.
+    https://docs.microsoft.com/rest/api/playfab/events/playstream-events/createtelemetrykey
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Event/CreateTelemetryKey",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func DeleteTelemetryKey(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Deletes a telemetry key configured for the title.
+    https://docs.microsoft.com/rest/api/playfab/events/playstream-events/deletetelemetrykey
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Event/DeleteTelemetryKey",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func GetTelemetryKey(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Gets information about a telemetry key configured for the title.
+    https://docs.microsoft.com/rest/api/playfab/events/playstream-events/gettelemetrykey
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Event/GetTelemetryKey",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func ListTelemetryKeys(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Lists all telemetry keys configured for the title.
+    https://docs.microsoft.com/rest/api/playfab/events/playstream-events/listtelemetrykeys
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Event/ListTelemetryKeys",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
+static func SetTelemetryKeyActive(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Sets a telemetry key to the active or deactivated state.
+    https://docs.microsoft.com/rest/api/playfab/events/playstream-events/settelemetrykeyactive
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Event/SetTelemetryKeyActive",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func WriteEvents(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Write batches of entity based events to PlayStream. The namespace of the Event must be 'custom' or start with 'custom.'.

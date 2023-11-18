@@ -1026,6 +1026,22 @@ static func RequestMultiplayerServer(dict_request, user_callback = null, dict_he
     )
 
 
+static func RequestPartyService(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Request a party session.
+    https://docs.microsoft.com/rest/api/playfab/multiplayer/multiplayerserver/requestpartyservice
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Party/RequestPartyService",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_ENTITY_TOKEN, PlayFab.E_PRO.USE_AUTH_ENTITY_TOKEN],
+        []
+    )
+
+
 static func RolloverContainerRegistryCredentials(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Rolls over the credentials to the container registry.

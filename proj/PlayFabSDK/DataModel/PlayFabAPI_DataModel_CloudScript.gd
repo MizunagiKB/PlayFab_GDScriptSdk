@@ -86,7 +86,7 @@ class PFContactEmailInfoModel:
 
 
 class PFContinentCode: # enum
-    # 7 items(s)
+    # 8 items(s)
     const AF := "AF"
     const AN := "AN"
     const AS := "AS"
@@ -94,9 +94,10 @@ class PFContinentCode: # enum
     const NA := "NA"
     const OC := "OC"
     const SA := "SA"
+    const Unknown := "Unknown"
 
 class PFCountryCode: # enum
-    # 249 items(s)
+    # 250 items(s)
     const AF := "AF"
     const AX := "AX"
     const AL := "AL"
@@ -346,6 +347,7 @@ class PFCountryCode: # enum
     const YE := "YE"
     const ZM := "ZM"
     const ZW := "ZW"
+    const Unknown := "Unknown"
 
 class PFEmailVerificationStatus: # enum
     # 3 items(s)

@@ -1407,7 +1407,7 @@ class PFContactEmailInfoModel:
 
 
 class PFContinentCode: # enum
-    # 7 items(s)
+    # 8 items(s)
     const AF := "AF"
     const AN := "AN"
     const AS := "AS"
@@ -1415,9 +1415,10 @@ class PFContinentCode: # enum
     const NA := "NA"
     const OC := "OC"
     const SA := "SA"
+    const Unknown := "Unknown"
 
 class PFCountryCode: # enum
-    # 249 items(s)
+    # 250 items(s)
     const AF := "AF"
     const AX := "AX"
     const AL := "AL"
@@ -1667,6 +1668,7 @@ class PFCountryCode: # enum
     const YE := "YE"
     const ZM := "ZM"
     const ZW := "ZW"
+    const Unknown := "Unknown"
 
 class PFCreateSharedGroupRequest:
     # 1 items(s)
@@ -2063,64 +2065,6 @@ class PFDeleteSharedGroupRequest:
             # String
             if self.SharedGroupId.empty() != true:
                 dict_result["SharedGroupId"] = self.SharedGroupId
-        
-        return dict_result
-
-
-class PFDeregisterGameRequest:
-    # 2 items(s)
-    var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var LobbyId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.CustomTags = {}
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "CustomTags" in dict_param:
-            self.CustomTags = {}
-            for k in dict_param["CustomTags"]:
-                self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.CustomTags != null:
-            if self.CustomTags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.CustomTags:
-                    # Dictionary[String, String]
-                    if self.CustomTags[k].empty() != true:
-                        dict_temp[k] = self.CustomTags[k]
-                dict_result["CustomTags"] = dict_temp
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        
-        return dict_result
-
-
-class PFDeregisterGameResponse:
-    # 0 items(s)
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        pass
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
         
         return dict_result
 
@@ -2625,13 +2569,8 @@ class PFFriendInfo:
         return dict_result
 
 
-class PFGameInstanceState: # enum
-    # 2 items(s)
-    const Open := "Open"
-    const Closed := "Closed"
-
 class PFGenericErrorCodes: # enum
-    # 716 items(s)
+    # 748 items(s)
     const Success := "Success"
     const UnkownError := "UnkownError"
     const InvalidParams := "InvalidParams"
@@ -3181,6 +3120,9 @@ class PFGenericErrorCodes: # enum
     const NamespaceMismatch := "NamespaceMismatch"
     const InvalidServiceConfiguration := "InvalidServiceConfiguration"
     const InvalidNamespaceMismatch := "InvalidNamespaceMismatch"
+    const LeaderboardColumnLengthMismatch := "LeaderboardColumnLengthMismatch"
+    const InvalidStatisticScore := "InvalidStatisticScore"
+    const LeaderboardColumnsNotSpecified := "LeaderboardColumnsNotSpecified"
     const MatchmakingEntityInvalid := "MatchmakingEntityInvalid"
     const MatchmakingPlayerAttributesInvalid := "MatchmakingPlayerAttributesInvalid"
     const MatchmakingQueueNotFound := "MatchmakingQueueNotFound"
@@ -3270,6 +3212,7 @@ class PFGenericErrorCodes: # enum
     const MultiplayerServerBuildReferencedByMatchmakingQueue := "MultiplayerServerBuildReferencedByMatchmakingQueue"
     const MultiplayerServerBuildReferencedByBuildAlias := "MultiplayerServerBuildReferencedByBuildAlias"
     const MultiplayerServerBuildAliasReferencedByMatchmakingQueue := "MultiplayerServerBuildAliasReferencedByMatchmakingQueue"
+    const PartySerializationError := "PartySerializationError"
     const ExperimentationExperimentStopped := "ExperimentationExperimentStopped"
     const ExperimentationExperimentRunning := "ExperimentationExperimentRunning"
     const ExperimentationExperimentNotFound := "ExperimentationExperimentNotFound"
@@ -3309,6 +3252,7 @@ class PFGenericErrorCodes: # enum
     const AsyncExportNotInFlight := "AsyncExportNotInFlight"
     const AsyncExportNotFound := "AsyncExportNotFound"
     const AsyncExportRateLimitExceeded := "AsyncExportRateLimitExceeded"
+    const AnalyticsSegmentCountOverLimit := "AnalyticsSegmentCountOverLimit"
     const SnapshotNotFound := "SnapshotNotFound"
     const InventoryApiNotImplemented := "InventoryApiNotImplemented"
     const LobbyDoesNotExist := "LobbyDoesNotExist"
@@ -3323,6 +3267,12 @@ class PFGenericErrorCodes: # enum
     const LobbyNewOwnerMustBeConnected := "LobbyNewOwnerMustBeConnected"
     const LobbyCurrentOwnerStillConnected := "LobbyCurrentOwnerStillConnected"
     const LobbyMemberIsNotOwner := "LobbyMemberIsNotOwner"
+    const LobbyAssociatedServerMismatch := "LobbyAssociatedServerMismatch"
+    const LobbyAssociatedServerNotFound := "LobbyAssociatedServerNotFound"
+    const LobbyAssociatedToDifferentServer := "LobbyAssociatedToDifferentServer"
+    const LobbyServerAlreadyAssociated := "LobbyServerAlreadyAssociated"
+    const LobbyIsNotClientOwned := "LobbyIsNotClientOwned"
+    const LobbyDoesNotUseConnections := "LobbyDoesNotUseConnections"
     const EventSamplingInvalidRatio := "EventSamplingInvalidRatio"
     const EventSamplingInvalidEventNamespace := "EventSamplingInvalidEventNamespace"
     const EventSamplingInvalidEventName := "EventSamplingInvalidEventName"
@@ -3333,6 +3283,7 @@ class PFGenericErrorCodes: # enum
     const TelemetryKeyInvalid := "TelemetryKeyInvalid"
     const TelemetryKeyCountOverLimit := "TelemetryKeyCountOverLimit"
     const TelemetryKeyDeactivated := "TelemetryKeyDeactivated"
+    const TelemetryKeyLongInsightsRetentionNotAllowed := "TelemetryKeyLongInsightsRetentionNotAllowed"
     const EventSinkConnectionInvalid := "EventSinkConnectionInvalid"
     const EventSinkConnectionUnauthorized := "EventSinkConnectionUnauthorized"
     const EventSinkRegionInvalid := "EventSinkRegionInvalid"
@@ -3345,9 +3296,29 @@ class PFGenericErrorCodes: # enum
     const EventSinkTenantNotFound := "EventSinkTenantNotFound"
     const EventSinkAadNotFound := "EventSinkAadNotFound"
     const EventSinkDatabaseNotFound := "EventSinkDatabaseNotFound"
+    const EventSinkTitleUnauthorized := "EventSinkTitleUnauthorized"
     const OperationCanceled := "OperationCanceled"
     const InvalidDisplayNameRandomSuffixLength := "InvalidDisplayNameRandomSuffixLength"
     const AllowNonUniquePlayerDisplayNamesDisableNotAllowed := "AllowNonUniquePlayerDisplayNamesDisableNotAllowed"
+    const PartitionedEventInvalid := "PartitionedEventInvalid"
+    const PartitionedEventCountOverLimit := "PartitionedEventCountOverLimit"
+    const ManageEventNamespaceInvalid := "ManageEventNamespaceInvalid"
+    const ManageEventNameInvalid := "ManageEventNameInvalid"
+    const ManagedEventNotFound := "ManagedEventNotFound"
+    const ManageEventsInvalidRatio := "ManageEventsInvalidRatio"
+    const ManagedEventInvalid := "ManagedEventInvalid"
+    const PlayerCustomPropertiesPropertyNameTooLong := "PlayerCustomPropertiesPropertyNameTooLong"
+    const PlayerCustomPropertiesPropertyNameIsInvalid := "PlayerCustomPropertiesPropertyNameIsInvalid"
+    const PlayerCustomPropertiesStringPropertyValueTooLong := "PlayerCustomPropertiesStringPropertyValueTooLong"
+    const PlayerCustomPropertiesValueIsInvalidType := "PlayerCustomPropertiesValueIsInvalidType"
+    const PlayerCustomPropertiesVersionMismatch := "PlayerCustomPropertiesVersionMismatch"
+    const PlayerCustomPropertiesPropertyCountTooHigh := "PlayerCustomPropertiesPropertyCountTooHigh"
+    const PlayerCustomPropertiesDuplicatePropertyName := "PlayerCustomPropertiesDuplicatePropertyName"
+    const PlayerCustomPropertiesPropertyDoesNotExist := "PlayerCustomPropertiesPropertyDoesNotExist"
+    const AddonAlreadyExists := "AddonAlreadyExists"
+    const AddonDoesntExist := "AddonDoesntExist"
+    const CopilotDisabled := "CopilotDisabled"
+    const CopilotInvalidRequest := "CopilotInvalidRequest"
 
 class PFGenericPlayFabIdPair:
     # 2 items(s)
@@ -3946,11 +3917,9 @@ class PFGetContentDownloadUrlResult:
 
 
 class PFGetFriendLeaderboardRequest:
-    # 11 items(s)
+    # 9 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var ExternalPlatformFriends: String # ExternalFriendSources
-    var IncludeFacebookFriends: bool # Boolean
-    var IncludeSteamFriends: bool # Boolean
     var MaxResultsCount: int # int32
     var PlayFabId: String # String
     var ProfileConstraints: PFPlayerProfileViewConstraints # PlayerProfileViewConstraints
@@ -3973,10 +3942,6 @@ class PFGetFriendLeaderboardRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "ExternalPlatformFriends" in dict_param:
             self.ExternalPlatformFriends = dict_param["ExternalPlatformFriends"]
-        if "IncludeFacebookFriends" in dict_param:
-            self.IncludeFacebookFriends = dict_param["IncludeFacebookFriends"]
-        if "IncludeSteamFriends" in dict_param:
-            self.IncludeSteamFriends = dict_param["IncludeSteamFriends"]
         if "MaxResultsCount" in dict_param:
             self.MaxResultsCount = dict_param["MaxResultsCount"]
         if "PlayFabId" in dict_param:
@@ -4007,12 +3972,6 @@ class PFGetFriendLeaderboardRequest:
         if self.ExternalPlatformFriends != null:
             # ExternalFriendSources
             dict_result["ExternalPlatformFriends"] = self.ExternalPlatformFriends
-        if self.IncludeFacebookFriends != null:
-            # Boolean
-            dict_result["IncludeFacebookFriends"] = self.IncludeFacebookFriends
-        if self.IncludeSteamFriends != null:
-            # Boolean
-            dict_result["IncludeSteamFriends"] = self.IncludeSteamFriends
         if self.MaxResultsCount != null:
             # int32
             dict_result["MaxResultsCount"] = self.MaxResultsCount
@@ -4041,11 +4000,9 @@ class PFGetFriendLeaderboardRequest:
 
 
 class PFGetFriendsListRequest:
-    # 7 items(s)
+    # 5 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var ExternalPlatformFriends: String # ExternalFriendSources
-    var IncludeFacebookFriends: bool # Boolean
-    var IncludeSteamFriends: bool # Boolean
     var PlayFabId: String # String
     var ProfileConstraints: PFPlayerProfileViewConstraints # PlayerProfileViewConstraints
     var XboxToken: String # String
@@ -4064,10 +4021,6 @@ class PFGetFriendsListRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "ExternalPlatformFriends" in dict_param:
             self.ExternalPlatformFriends = dict_param["ExternalPlatformFriends"]
-        if "IncludeFacebookFriends" in dict_param:
-            self.IncludeFacebookFriends = dict_param["IncludeFacebookFriends"]
-        if "IncludeSteamFriends" in dict_param:
-            self.IncludeSteamFriends = dict_param["IncludeSteamFriends"]
         if "PlayFabId" in dict_param:
             self.PlayFabId = dict_param["PlayFabId"]
         if "ProfileConstraints" in dict_param:
@@ -4090,12 +4043,6 @@ class PFGetFriendsListRequest:
         if self.ExternalPlatformFriends != null:
             # ExternalFriendSources
             dict_result["ExternalPlatformFriends"] = self.ExternalPlatformFriends
-        if self.IncludeFacebookFriends != null:
-            # Boolean
-            dict_result["IncludeFacebookFriends"] = self.IncludeFacebookFriends
-        if self.IncludeSteamFriends != null:
-            # Boolean
-            dict_result["IncludeSteamFriends"] = self.IncludeSteamFriends
         if self.PlayFabId != null:
             # String
             if self.PlayFabId.empty() != true:
@@ -7640,6 +7587,58 @@ class PFLinkNintendoServiceAccountRequest:
         return dict_result
 
 
+class PFLinkNintendoServiceAccountSubjectRequest:
+    # 4 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var ForceLink: bool # Boolean
+    var PlayFabId: String # String
+    var Subject: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "ForceLink" in dict_param:
+            self.ForceLink = dict_param["ForceLink"]
+        if "PlayFabId" in dict_param:
+            self.PlayFabId = dict_param["PlayFabId"]
+        if "Subject" in dict_param:
+            self.Subject = dict_param["Subject"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.ForceLink != null:
+            # Boolean
+            dict_result["ForceLink"] = self.ForceLink
+        if self.PlayFabId != null:
+            # String
+            if self.PlayFabId.empty() != true:
+                dict_result["PlayFabId"] = self.PlayFabId
+        if self.Subject != null:
+            # String
+            if self.Subject.empty() != true:
+                dict_result["Subject"] = self.Subject
+        
+        return dict_result
+
+
 class PFLinkNintendoSwitchDeviceIdRequest:
     # 4 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
@@ -7795,6 +7794,83 @@ class PFLinkPSNAccountResult:
         return dict_result
 
 
+class PFLinkPSNIdRequest:
+    # 5 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var ForceLink: bool # Boolean
+    var IssuerId: int # int32
+    var PlayFabId: String # String
+    var PSNUserId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "ForceLink" in dict_param:
+            self.ForceLink = dict_param["ForceLink"]
+        if "IssuerId" in dict_param:
+            self.IssuerId = dict_param["IssuerId"]
+        if "PlayFabId" in dict_param:
+            self.PlayFabId = dict_param["PlayFabId"]
+        if "PSNUserId" in dict_param:
+            self.PSNUserId = dict_param["PSNUserId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.ForceLink != null:
+            # Boolean
+            dict_result["ForceLink"] = self.ForceLink
+        if self.IssuerId != null:
+            # int32
+            dict_result["IssuerId"] = self.IssuerId
+        if self.PlayFabId != null:
+            # String
+            if self.PlayFabId.empty() != true:
+                dict_result["PlayFabId"] = self.PlayFabId
+        if self.PSNUserId != null:
+            # String
+            if self.PSNUserId.empty() != true:
+                dict_result["PSNUserId"] = self.PSNUserId
+        
+        return dict_result
+
+
+class PFLinkPSNIdResponse:
+    # 0 items(s)
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        pass
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        
+        return dict_result
+
+
 class PFLinkServerCustomIdRequest:
     # 4 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
@@ -7848,6 +7924,77 @@ class PFLinkServerCustomIdRequest:
 
 
 class PFLinkServerCustomIdResult:
+    # 0 items(s)
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        pass
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        
+        return dict_result
+
+
+class PFLinkSteamIdRequest:
+    # 4 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var ForceLink: bool # Boolean
+    var PlayFabId: String # String
+    var SteamId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "ForceLink" in dict_param:
+            self.ForceLink = dict_param["ForceLink"]
+        if "PlayFabId" in dict_param:
+            self.PlayFabId = dict_param["PlayFabId"]
+        if "SteamId" in dict_param:
+            self.SteamId = dict_param["SteamId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.ForceLink != null:
+            # Boolean
+            dict_result["ForceLink"] = self.ForceLink
+        if self.PlayFabId != null:
+            # String
+            if self.PlayFabId.empty() != true:
+                dict_result["PlayFabId"] = self.PlayFabId
+        if self.SteamId != null:
+            # String
+            if self.SteamId.empty() != true:
+                dict_result["SteamId"] = self.SteamId
+        
+        return dict_result
+
+
+class PFLinkSteamIdResult:
     # 0 items(s)
 
     func _init(dict_param: Dictionary = {}):
@@ -8813,83 +8960,6 @@ class PFNintendoSwitchPlayFabIdPair:
         
         return dict_result
 
-
-class PFNotifyMatchmakerPlayerLeftRequest:
-    # 3 items(s)
-    var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var LobbyId: String # String
-    var PlayFabId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.CustomTags = {}
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "CustomTags" in dict_param:
-            self.CustomTags = {}
-            for k in dict_param["CustomTags"]:
-                self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-        if "PlayFabId" in dict_param:
-            self.PlayFabId = dict_param["PlayFabId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.CustomTags != null:
-            if self.CustomTags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.CustomTags:
-                    # Dictionary[String, String]
-                    if self.CustomTags[k].empty() != true:
-                        dict_temp[k] = self.CustomTags[k]
-                dict_result["CustomTags"] = dict_temp
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        if self.PlayFabId != null:
-            # String
-            if self.PlayFabId.empty() != true:
-                dict_result["PlayFabId"] = self.PlayFabId
-        
-        return dict_result
-
-
-class PFNotifyMatchmakerPlayerLeftResult:
-    # 1 items(s)
-    var PlayerState: String # PlayerConnectionState
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "PlayerState" in dict_param:
-            self.PlayerState = dict_param["PlayerState"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.PlayerState != null:
-            # PlayerConnectionState
-            dict_result["PlayerState"] = self.PlayerState
-        
-        return dict_result
-
-
-class PFPlayerConnectionState: # enum
-    # 4 items(s)
-    const Unassigned := "Unassigned"
-    const Connecting := "Connecting"
-    const Participating := "Participating"
-    const Participated := "Participated"
 
 class PFPlayerLeaderboardEntry:
     # 5 items(s)
@@ -9982,269 +10052,6 @@ class PFRedeemCouponResult:
                 for v in self.GrantedItems:
                     list_temp.push_back(v.get_dict())
                 dict_result["GrantedItems"] = list_temp
-        
-        return dict_result
-
-
-class PFRedeemMatchmakerTicketRequest:
-    # 3 items(s)
-    var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var LobbyId: String # String
-    var Ticket: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.CustomTags = {}
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "CustomTags" in dict_param:
-            self.CustomTags = {}
-            for k in dict_param["CustomTags"]:
-                self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-        if "Ticket" in dict_param:
-            self.Ticket = dict_param["Ticket"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.CustomTags != null:
-            if self.CustomTags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.CustomTags:
-                    # Dictionary[String, String]
-                    if self.CustomTags[k].empty() != true:
-                        dict_temp[k] = self.CustomTags[k]
-                dict_result["CustomTags"] = dict_temp
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        if self.Ticket != null:
-            # String
-            if self.Ticket.empty() != true:
-                dict_result["Ticket"] = self.Ticket
-        
-        return dict_result
-
-
-class PFRedeemMatchmakerTicketResult:
-    # 3 items(s)
-    var Error: String # String
-    var TicketIsValid: bool # Boolean
-    var UserInfo: PFUserAccountInfo # UserAccountInfo
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.UserInfo = PFUserAccountInfo.new()
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "Error" in dict_param:
-            self.Error = dict_param["Error"]
-        if "TicketIsValid" in dict_param:
-            self.TicketIsValid = dict_param["TicketIsValid"]
-        if "UserInfo" in dict_param:
-            self.UserInfo = PFUserAccountInfo.new(dict_param["UserInfo"])
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.Error != null:
-            # String
-            if self.Error.empty() != true:
-                dict_result["Error"] = self.Error
-        if self.TicketIsValid != null:
-            # Boolean
-            dict_result["TicketIsValid"] = self.TicketIsValid
-        if self.UserInfo != null:
-            dict_result["UserInfo"] = self.UserInfo.get_dict()
-        
-        return dict_result
-
-
-class PFRefreshGameServerInstanceHeartbeatRequest:
-    # 1 items(s)
-    var LobbyId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        
-        return dict_result
-
-
-class PFRefreshGameServerInstanceHeartbeatResult:
-    # 0 items(s)
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        pass
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        
-        return dict_result
-
-
-class PFRegion: # enum
-    # 7 items(s)
-    const USCentral := "USCentral"
-    const USEast := "USEast"
-    const EUWest := "EUWest"
-    const Singapore := "Singapore"
-    const Japan := "Japan"
-    const Brazil := "Brazil"
-    const Australia := "Australia"
-
-class PFRegisterGameRequest:
-    # 10 items(s)
-    var Build: String # String
-    var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var GameMode: String # String
-    var LobbyId: String # String
-    var Region: String # Region
-    var ServerIPV4Address: String # String
-    var ServerIPV6Address: String # String
-    var ServerPort: String # String
-    var ServerPublicDNSName: String # String
-    var Tags: Dictionary # Dictionary[String, String(String)]
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.CustomTags = {}
-        self.Tags = {}
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "Build" in dict_param:
-            self.Build = dict_param["Build"]
-        if "CustomTags" in dict_param:
-            self.CustomTags = {}
-            for k in dict_param["CustomTags"]:
-                self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "GameMode" in dict_param:
-            self.GameMode = dict_param["GameMode"]
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-        if "Region" in dict_param:
-            self.Region = dict_param["Region"]
-        if "ServerIPV4Address" in dict_param:
-            self.ServerIPV4Address = dict_param["ServerIPV4Address"]
-        if "ServerIPV6Address" in dict_param:
-            self.ServerIPV6Address = dict_param["ServerIPV6Address"]
-        if "ServerPort" in dict_param:
-            self.ServerPort = dict_param["ServerPort"]
-        if "ServerPublicDNSName" in dict_param:
-            self.ServerPublicDNSName = dict_param["ServerPublicDNSName"]
-        if "Tags" in dict_param:
-            self.Tags = {}
-            for k in dict_param["Tags"]:
-                self.Tags[k] = dict_param["Tags"][k]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.Build != null:
-            # String
-            if self.Build.empty() != true:
-                dict_result["Build"] = self.Build
-        if self.CustomTags != null:
-            if self.CustomTags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.CustomTags:
-                    # Dictionary[String, String]
-                    if self.CustomTags[k].empty() != true:
-                        dict_temp[k] = self.CustomTags[k]
-                dict_result["CustomTags"] = dict_temp
-        if self.GameMode != null:
-            # String
-            if self.GameMode.empty() != true:
-                dict_result["GameMode"] = self.GameMode
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        if self.Region != null:
-            # Region
-            dict_result["Region"] = self.Region
-        if self.ServerIPV4Address != null:
-            # String
-            if self.ServerIPV4Address.empty() != true:
-                dict_result["ServerIPV4Address"] = self.ServerIPV4Address
-        if self.ServerIPV6Address != null:
-            # String
-            if self.ServerIPV6Address.empty() != true:
-                dict_result["ServerIPV6Address"] = self.ServerIPV6Address
-        if self.ServerPort != null:
-            # String
-            if self.ServerPort.empty() != true:
-                dict_result["ServerPort"] = self.ServerPort
-        if self.ServerPublicDNSName != null:
-            # String
-            if self.ServerPublicDNSName.empty() != true:
-                dict_result["ServerPublicDNSName"] = self.ServerPublicDNSName
-        if self.Tags != null:
-            if self.Tags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.Tags:
-                    # Dictionary[String, String]
-                    if self.Tags[k].empty() != true:
-                        dict_temp[k] = self.Tags[k]
-                dict_result["Tags"] = dict_temp
-        
-        return dict_result
-
-
-class PFRegisterGameResponse:
-    # 1 items(s)
-    var LobbyId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
         
         return dict_result
 
@@ -11412,165 +11219,6 @@ class PFSetFriendTagsRequest:
         return dict_result
 
 
-class PFSetGameServerInstanceDataRequest:
-    # 2 items(s)
-    var GameServerData: String # String
-    var LobbyId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "GameServerData" in dict_param:
-            self.GameServerData = dict_param["GameServerData"]
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.GameServerData != null:
-            # String
-            if self.GameServerData.empty() != true:
-                dict_result["GameServerData"] = self.GameServerData
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        
-        return dict_result
-
-
-class PFSetGameServerInstanceDataResult:
-    # 0 items(s)
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        pass
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        
-        return dict_result
-
-
-class PFSetGameServerInstanceStateRequest:
-    # 2 items(s)
-    var LobbyId: String # String
-    var State: String # GameInstanceState
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-        if "State" in dict_param:
-            self.State = dict_param["State"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        if self.State != null:
-            # GameInstanceState
-            dict_result["State"] = self.State
-        
-        return dict_result
-
-
-class PFSetGameServerInstanceStateResult:
-    # 0 items(s)
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        pass
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        
-        return dict_result
-
-
-class PFSetGameServerInstanceTagsRequest:
-    # 2 items(s)
-    var LobbyId: String # String
-    var Tags: Dictionary # Dictionary[String, String(String)]
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.Tags = {}
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-        if "Tags" in dict_param:
-            self.Tags = {}
-            for k in dict_param["Tags"]:
-                self.Tags[k] = dict_param["Tags"][k]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        if self.Tags != null:
-            if self.Tags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.Tags:
-                    # Dictionary[String, String]
-                    if self.Tags[k].empty() != true:
-                        dict_temp[k] = self.Tags[k]
-                dict_result["Tags"] = dict_temp
-        
-        return dict_result
-
-
-class PFSetGameServerInstanceTagsResult:
-    # 0 items(s)
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        pass
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        
-        return dict_result
-
-
 class PFSetPlayerSecretRequest:
     # 2 items(s)
     var PlayerSecret: String # String
@@ -12621,6 +12269,64 @@ class PFUnlinkServerCustomIdResult:
         return dict_result
 
 
+class PFUnlinkSteamIdRequest:
+    # 2 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var PlayFabId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "PlayFabId" in dict_param:
+            self.PlayFabId = dict_param["PlayFabId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.PlayFabId != null:
+            # String
+            if self.PlayFabId.empty() != true:
+                dict_result["PlayFabId"] = self.PlayFabId
+        
+        return dict_result
+
+
+class PFUnlinkSteamIdResult:
+    # 0 items(s)
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        pass
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        
+        return dict_result
+
+
 class PFUnlinkXboxAccountRequest:
     # 2 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
@@ -13607,7 +13313,7 @@ class PFUpdateUserInventoryItemDataRequest:
 
 
 class PFUserAccountInfo:
-    # 22 items(s)
+    # 23 items(s)
     var AndroidDeviceInfo: PFUserAndroidDeviceInfo # UserAndroidDeviceInfo
     var AppleAccountInfo: PFUserAppleIdInfo # UserAppleIdInfo
     var Created: String # DateTime
@@ -13625,6 +13331,7 @@ class PFUserAccountInfo:
     var PlayFabId: String # String
     var PrivateInfo: PFUserPrivateAccountInfo # UserPrivateAccountInfo
     var PsnInfo: PFUserPsnInfo # UserPsnInfo
+    var ServerCustomIdInfo: PFUserServerCustomIdInfo # UserServerCustomIdInfo
     var SteamInfo: PFUserSteamInfo # UserSteamInfo
     var TitleInfo: PFUserTitleInfo # UserTitleInfo
     var TwitchInfo: PFUserTwitchInfo # UserTwitchInfo
@@ -13648,6 +13355,7 @@ class PFUserAccountInfo:
         self.OpenIdInfo = []
         self.PrivateInfo = PFUserPrivateAccountInfo.new()
         self.PsnInfo = PFUserPsnInfo.new()
+        self.ServerCustomIdInfo = PFUserServerCustomIdInfo.new()
         self.SteamInfo = PFUserSteamInfo.new()
         self.TitleInfo = PFUserTitleInfo.new()
         self.TwitchInfo = PFUserTwitchInfo.new()
@@ -13692,6 +13400,8 @@ class PFUserAccountInfo:
             self.PrivateInfo = PFUserPrivateAccountInfo.new(dict_param["PrivateInfo"])
         if "PsnInfo" in dict_param:
             self.PsnInfo = PFUserPsnInfo.new(dict_param["PsnInfo"])
+        if "ServerCustomIdInfo" in dict_param:
+            self.ServerCustomIdInfo = PFUserServerCustomIdInfo.new(dict_param["ServerCustomIdInfo"])
         if "SteamInfo" in dict_param:
             self.SteamInfo = PFUserSteamInfo.new(dict_param["SteamInfo"])
         if "TitleInfo" in dict_param:
@@ -13749,6 +13459,8 @@ class PFUserAccountInfo:
             dict_result["PrivateInfo"] = self.PrivateInfo.get_dict()
         if self.PsnInfo != null:
             dict_result["PsnInfo"] = self.PsnInfo.get_dict()
+        if self.ServerCustomIdInfo != null:
+            dict_result["ServerCustomIdInfo"] = self.ServerCustomIdInfo.get_dict()
         if self.SteamInfo != null:
             dict_result["SteamInfo"] = self.SteamInfo.get_dict()
         if self.TitleInfo != null:
@@ -14283,6 +13995,31 @@ class PFUserPsnInfo:
             # String
             if self.PsnOnlineId.empty() != true:
                 dict_result["PsnOnlineId"] = self.PsnOnlineId
+        
+        return dict_result
+
+
+class PFUserServerCustomIdInfo:
+    # 1 items(s)
+    var CustomId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomId" in dict_param:
+            self.CustomId = dict_param["CustomId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomId != null:
+            # String
+            if self.CustomId.empty() != true:
+                dict_result["CustomId"] = self.CustomId
         
         return dict_result
 

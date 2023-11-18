@@ -3,8 +3,9 @@ extends Object
 
 
 class PFAddInventoryItemsOperation:
-    # 3 items(s)
+    # 4 items(s)
     var Amount: int # int32
+    var DurationInSeconds: float # double
     var Item: PFInventoryItemReference # InventoryItemReference
     var NewStackValues: PFInitialValues # InitialValues
 
@@ -18,6 +19,8 @@ class PFAddInventoryItemsOperation:
         
         if "Amount" in dict_param:
             self.Amount = dict_param["Amount"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
         if "Item" in dict_param:
             self.Item = PFInventoryItemReference.new(dict_param["Item"])
         if "NewStackValues" in dict_param:
@@ -30,6 +33,9 @@ class PFAddInventoryItemsOperation:
         if self.Amount != null:
             # int32
             dict_result["Amount"] = self.Amount
+        if self.DurationInSeconds != null:
+            # double
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
         if self.Item != null:
             dict_result["Item"] = self.Item.get_dict()
         if self.NewStackValues != null:
@@ -637,8 +643,9 @@ class PFCatalogItemReference:
 
 
 class PFCatalogPrice:
-    # 2 items(s)
+    # 3 items(s)
     var Amounts: Array # Array[PFCatalogPriceAmount]
+    var UnitAmount: int # int32
     var UnitDurationInSeconds: float # double
 
     func _init(dict_param: Dictionary = {}):
@@ -652,6 +659,8 @@ class PFCatalogPrice:
             self.Amounts = []
             for v in dict_param["Amounts"]:
                 self.Amounts.push_back(PFCatalogPriceAmount.new(v))
+        if "UnitAmount" in dict_param:
+            self.UnitAmount = dict_param["UnitAmount"]
         if "UnitDurationInSeconds" in dict_param:
             self.UnitDurationInSeconds = dict_param["UnitDurationInSeconds"]
 
@@ -665,6 +674,9 @@ class PFCatalogPrice:
                 for v in self.Amounts:
                     list_temp.push_back(v.get_dict())
                 dict_result["Amounts"] = list_temp
+        if self.UnitAmount != null:
+            # int32
+            dict_result["UnitAmount"] = self.UnitAmount
         if self.UnitDurationInSeconds != null:
             # double
             dict_result["UnitDurationInSeconds"] = self.UnitDurationInSeconds
@@ -976,7 +988,7 @@ class PFContentFeed:
 
 
 class PFCountryCode: # enum
-    # 249 items(s)
+    # 250 items(s)
     const AF := "AF"
     const AX := "AX"
     const AL := "AL"
@@ -1226,6 +1238,7 @@ class PFCountryCode: # enum
     const YE := "YE"
     const ZM := "ZM"
     const ZW := "ZW"
+    const Unknown := "Unknown"
 
 class PFCreateDraftItemRequest:
     # 3 items(s)
@@ -4119,6 +4132,25 @@ class PFPurchaseOverride:
         return dict_result
 
 
+class PFPurchaseOverridesInfo:
+    # 0 items(s)
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        pass
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        
+        return dict_result
+
+
 class PFPurchasePriceAmount:
     # 3 items(s)
     var Amount: int # int32
@@ -4662,11 +4694,12 @@ class PFRedeemNintendoEShopInventoryItemsResponse:
 
 
 class PFRedeemPlayStationStoreInventoryItemsRequest:
-    # 5 items(s)
+    # 6 items(s)
     var AuthorizationCode: String # String
     var CollectionId: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
+    var RedirectUri: String # String
     var ServiceLabel: String # String
 
     func _init(dict_param: Dictionary = {}):
@@ -4687,6 +4720,8 @@ class PFRedeemPlayStationStoreInventoryItemsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "Entity" in dict_param:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "RedirectUri" in dict_param:
+            self.RedirectUri = dict_param["RedirectUri"]
         if "ServiceLabel" in dict_param:
             self.ServiceLabel = dict_param["ServiceLabel"]
 
@@ -4712,6 +4747,10 @@ class PFRedeemPlayStationStoreInventoryItemsRequest:
                 dict_result["CustomTags"] = dict_temp
         if self.Entity != null:
             dict_result["Entity"] = self.Entity.get_dict()
+        if self.RedirectUri != null:
+            # String
+            if self.RedirectUri.empty() != true:
+                dict_result["RedirectUri"] = self.RedirectUri
         if self.ServiceLabel != null:
             # String
             if self.ServiceLabel.empty() != true:
@@ -5379,12 +5418,13 @@ class PFScanResult:
 
 
 class PFSearchItemsRequest:
-    # 9 items(s)
+    # 10 items(s)
     var ContinuationToken: String # String
     var Count: int # int32
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var Entity: PFEntityKey # EntityKey
     var Filter: String # String
+    var Language: String # String
     var OrderBy: String # String
     var Search: String # String
     var Select: String # String
@@ -5411,6 +5451,8 @@ class PFSearchItemsRequest:
             self.Entity = PFEntityKey.new(dict_param["Entity"])
         if "Filter" in dict_param:
             self.Filter = dict_param["Filter"]
+        if "Language" in dict_param:
+            self.Language = dict_param["Language"]
         if "OrderBy" in dict_param:
             self.OrderBy = dict_param["OrderBy"]
         if "Search" in dict_param:
@@ -5445,6 +5487,10 @@ class PFSearchItemsRequest:
             # String
             if self.Filter.empty() != true:
                 dict_result["Filter"] = self.Filter
+        if self.Language != null:
+            # String
+            if self.Language.empty() != true:
+                dict_result["Language"] = self.Language
         if self.OrderBy != null:
             # String
             if self.OrderBy.empty() != true:
@@ -6386,10 +6432,11 @@ class PFTransferInventoryItemsRequest:
 
 
 class PFTransferInventoryItemsResponse:
-    # 4 items(s)
+    # 5 items(s)
     var GivingETag: String # String
     var GivingTransactionIds: Array # Array[String]
     var IdempotencyId: String # String
+    var OperationStatus: String # String
     var ReceivingTransactionIds: Array # Array[String]
 
     func _init(dict_param: Dictionary = {}):
@@ -6408,6 +6455,8 @@ class PFTransferInventoryItemsResponse:
                 self.GivingTransactionIds.push_back(v)
         if "IdempotencyId" in dict_param:
             self.IdempotencyId = dict_param["IdempotencyId"]
+        if "OperationStatus" in dict_param:
+            self.OperationStatus = dict_param["OperationStatus"]
         if "ReceivingTransactionIds" in dict_param:
             self.ReceivingTransactionIds = []
             for v in dict_param["ReceivingTransactionIds"]:
@@ -6433,6 +6482,10 @@ class PFTransferInventoryItemsResponse:
             # String
             if self.IdempotencyId.empty() != true:
                 dict_result["IdempotencyId"] = self.IdempotencyId
+        if self.OperationStatus != null:
+            # String
+            if self.OperationStatus.empty() != true:
+                dict_result["OperationStatus"] = self.OperationStatus
         if self.ReceivingTransactionIds != null:
             if self.ReceivingTransactionIds.size() > 0:
                 var list_temp: Array = []

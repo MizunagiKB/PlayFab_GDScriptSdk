@@ -118,7 +118,8 @@ static func AddUsernamePassword(dict_request, user_callback = null, dict_header_
 
 static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Increments the user's balance of the specified virtual currency by the stated amount
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Increments the user's balance of the specified virtual currency by the stated amount
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/adduservirtualcurrency
     """
 
@@ -184,8 +185,9 @@ static func CancelTrade(dict_request, user_callback = null, dict_header_extra = 
 
 static func ConfirmPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Confirms with the payment provider that the purchase was approved (if applicable) and adjusts inventory and virtual
-    currency balances as appropriate
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Confirms with the payment provider that the purchase was approved (if applicable) and adjusts inventory and
+    virtual currency balances as appropriate
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/confirmpurchase
     """
 
@@ -201,7 +203,9 @@ static func ConfirmPurchase(dict_request, user_callback = null, dict_header_extr
 
 static func ConsumeItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Consume uses of a consumable item. When all uses are consumed, it will be removed from the player's inventory.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Consume uses of a consumable item. When all uses are consumed, it will be removed from the player's
+    inventory.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/consumeitem
     """
 
@@ -368,7 +372,8 @@ static func GetAllUsersCharacters(dict_request, user_callback = null, dict_heade
 
 static func GetCatalogItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
     https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getcatalogitems
     """
 
@@ -400,7 +405,8 @@ static func GetCharacterData(dict_request, user_callback = null, dict_header_ext
 
 static func GetCharacterInventory(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified character's current inventory of virtual goods
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified character's current inventory of virtual goods
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getcharacterinventory
     """
 
@@ -483,22 +489,6 @@ static func GetContentDownloadUrl(dict_request, user_callback = null, dict_heade
     )
 
 
-static func GetCurrentGames(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Get details about all current running game servers matching the given parameters.
-    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/getcurrentgames
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/GetCurrentGames",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
-        []
-    )
-
-
 static func GetFriendLeaderboard(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Retrieves a list of ranked friends of the current player for the given statistic, starting from the indicated point in
@@ -542,22 +532,6 @@ static func GetFriendsList(dict_request, user_callback = null, dict_header_extra
 
     return PlayFab._http_cli.request_append(
         "/Client/GetFriendsList",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
-        []
-    )
-
-
-static func GetGameServerRegions(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Get details about the regions hosting game servers matching the given parameters.
-    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/getgameserverregions
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/GetGameServerRegions",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -633,9 +607,10 @@ static func GetLeaderboardForUserCharacters(dict_request, user_callback = null, 
 
 static func GetPaymentToken(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    For payments flows where the provider requires playfab (the fulfiller) to initiate the transaction, but the client
-    completes the rest of the flow. In the Xsolla case, the token returned here will be passed to Xsolla by the client to
-    create a cart. Poll GetPurchase using the returned OrderId once you've completed the payment.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ For payments flows where the provider requires playfab (the fulfiller) to initiate the transaction, but the
+    client completes the rest of the flow. In the Xsolla case, the token returned here will be passed to Xsolla by the
+    client to create a cart. Poll GetPurchase using the returned OrderId once you've completed the payment.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getpaymenttoken
     """
 
@@ -1016,8 +991,9 @@ static func GetPublisherData(dict_request, user_callback = null, dict_header_ext
 
 static func GetPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves a purchase along with its current PlayFab status. Returns inventory items from the purchase that are still
-    active.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves a purchase along with its current PlayFab status. Returns inventory items from the purchase that
+    are still active.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getpurchase
     """
 
@@ -1052,7 +1028,8 @@ static func GetSharedGroupData(dict_request, user_callback = null, dict_header_e
 
 static func GetStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the set of items defined for the specified store, including all prices defined
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the set of items defined for the specified store, including all prices defined
     https://docs.microsoft.com/rest/api/playfab/client/title-wide-data-management/getstoreitems
     """
 
@@ -1164,7 +1141,8 @@ static func GetUserData(dict_request, user_callback = null, dict_header_extra = 
 
 static func GetUserInventory(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the user's current inventory of virtual goods
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the user's current inventory of virtual goods
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/getuserinventory
     """
 
@@ -1844,27 +1822,6 @@ static func LoginWithXbox(dict_request, user_callback = null, dict_header_extra 
     )
 
 
-static func Matchmake(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Attempts to locate a game session matching the given parameters. If the goal is to match the player into a specific
-    active session, only the LobbyId is required. Otherwise, the BuildVersion, GameMode, and Region are all required
-    parameters. Note that parameters specified in the search are required (they are not weighting factors). If a slot is
-    found in a server instance matching the parameters, the slot will be assigned to that player, removing it from the
-    availabe set. In that case, the information on the game session will be returned, otherwise the Status returned will be
-    GameNotFound.
-    https://docs.microsoft.com/rest/api/playfab/client/matchmaking/matchmake
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Client/Matchmake",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SESSION_TICKET, PlayFab.E_PRO.USE_AUTH_AUTHORIZATION],
-        []
-    )
-
-
 static func OpenTrade(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Opens a new outstanding trade. Note that a given item instance may only be in one open trade at a time.
@@ -1883,7 +1840,8 @@ static func OpenTrade(dict_request, user_callback = null, dict_header_extra = {}
 
 static func PayForPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Selects a payment option for purchase order created via StartPurchase
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Selects a payment option for purchase order created via StartPurchase
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/payforpurchase
     """
 
@@ -1899,8 +1857,9 @@ static func PayForPurchase(dict_request, user_callback = null, dict_header_extra
 
 static func PurchaseItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Buys a single item with virtual currency. You must specify both the virtual currency to use to purchase, as well as what
-    the client believes the price to be. This lets the server fail the purchase if the price has changed.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Buys a single item with virtual currency. You must specify both the virtual currency to use to purchase, as
+    well as what the client believes the price to be. This lets the server fail the purchase if the price has changed.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/purchaseitem
     """
 
@@ -1916,7 +1875,8 @@ static func PurchaseItem(dict_request, user_callback = null, dict_header_extra =
 
 static func RedeemCoupon(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds the virtual goods associated with the coupon to the user's inventory. Coupons can be generated via the
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds the virtual goods associated with the coupon to the user's inventory. Coupons can be generated via the
     Economy->Catalogs tab in the PlayFab Game Manager.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/redeemcoupon
     """
@@ -1966,7 +1926,7 @@ static func RegisterForIOSPushNotification(dict_request, user_callback = null, d
 static func RegisterPlayFabUser(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Registers a new Playfab user account, returning a session identifier that can subsequently be used for API calls which
-    require an authenticated user. You must supply either a username or an email address.
+    require an authenticated user. You must supply a username and an email address.
     https://docs.microsoft.com/rest/api/playfab/client/authentication/registerplayfabuser
     """
 
@@ -2099,7 +2059,8 @@ static func ReportPlayer(dict_request, user_callback = null, dict_header_extra =
 
 static func RestoreIOSPurchases(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Restores all in-app purchases based on the given restore receipt
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Restores all in-app purchases based on the given restore receipt
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/restoreiospurchases
     """
 
@@ -2182,7 +2143,8 @@ static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extr
 
 static func StartPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Creates an order for a list of items from the title catalog
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Creates an order for a list of items from the title catalog
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/startpurchase
     """
 
@@ -2198,8 +2160,9 @@ static func StartPurchase(dict_request, user_callback = null, dict_header_extra 
 
 static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Decrements the user's balance of the specified virtual currency by the stated amount. It is possible to make a VC
-    balance negative with this API.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Decrements the user's balance of the specified virtual currency by the stated amount. It is possible to make
+    a VC balance negative with this API.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/subtractuservirtualcurrency
     """
 
@@ -2489,9 +2452,10 @@ static func UnlinkXboxAccount(dict_request, user_callback = null, dict_header_ex
 
 static func UnlockContainerInstance(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Opens the specified container, with the specified key (when required), and returns the contents of the opened container.
-    If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented,
-    consistent with the operation of ConsumeItem.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Opens the specified container, with the specified key (when required), and returns the contents of the
+    opened container. If the container (and key when relevant) are consumable (RemainingUses > 0), their RemainingUses will
+    be decremented, consistent with the operation of ConsumeItem.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/unlockcontainerinstance
     """
 
@@ -2507,8 +2471,9 @@ static func UnlockContainerInstance(dict_request, user_callback = null, dict_hea
 
 static func UnlockContainerItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Searches target inventory for an ItemInstance matching the given CatalogItemId, if necessary unlocks it using an
-    appropriate key, and returns the contents of the opened container. If the container (and key when relevant) are
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Searches target inventory for an ItemInstance matching the given CatalogItemId, if necessary unlocks it
+    using an appropriate key, and returns the contents of the opened container. If the container (and key when relevant) are
     consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.
     https://docs.microsoft.com/rest/api/playfab/client/player-item-management/unlockcontaineritem
     """
@@ -2659,8 +2624,9 @@ static func UpdateUserTitleDisplayName(dict_request, user_callback = null, dict_
 
 static func ValidateAmazonIAPReceipt(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Validates with Amazon that the receipt for an Amazon App Store in-app purchase is valid and that it matches the
-    purchased catalog item
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Validates with Amazon that the receipt for an Amazon App Store in-app purchase is valid and that it matches
+    the purchased catalog item
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validateamazoniapreceipt
     """
 
@@ -2676,7 +2642,8 @@ static func ValidateAmazonIAPReceipt(dict_request, user_callback = null, dict_he
 
 static func ValidateGooglePlayPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Validates a Google Play purchase and gives the corresponding item to the player.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Validates a Google Play purchase and gives the corresponding item to the player.
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validategoogleplaypurchase
     """
 
@@ -2692,8 +2659,9 @@ static func ValidateGooglePlayPurchase(dict_request, user_callback = null, dict_
 
 static func ValidateIOSReceipt(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Validates with the Apple store that the receipt for an iOS in-app purchase is valid and that it matches the purchased
-    catalog item
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Validates with the Apple store that the receipt for an iOS in-app purchase is valid and that it matches the
+    purchased catalog item
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validateiosreceipt
     """
 
@@ -2709,8 +2677,9 @@ static func ValidateIOSReceipt(dict_request, user_callback = null, dict_header_e
 
 static func ValidateWindowsStoreReceipt(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Validates with Windows that the receipt for an Windows App Store in-app purchase is valid and that it matches the
-    purchased catalog item
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Validates with Windows that the receipt for an Windows App Store in-app purchase is valid and that it
+    matches the purchased catalog item
     https://docs.microsoft.com/rest/api/playfab/client/platform-specific-methods/validatewindowsstorereceipt
     """
 

@@ -48,6 +48,7 @@ class CResult:
                 self.size = client.get_response_body_length()
                 self.data = PoolByteArray()
 
+    func update_chunk(client: HTTPClient):
         var chunk = client.read_response_body_chunk()
         if chunk.size() > 0:
             self.data = self.data + chunk
@@ -342,6 +343,8 @@ func update(delta):
         elif status_curr == STATUS_BODY:
             if has_response():
                 _current_request.o_result.update(self)
+            else:
+                _current_request.o_result.update_chunk(self)
 
         if status_curr != STATUS_BODY:
             if _current_request.o_result != null:

@@ -41,19 +41,112 @@ class PFAbortTaskInstanceRequest:
         return dict_result
 
 
-class PFActionsOnPlayersInSegmentTaskParameter:
-    # 2 items(s)
-    var ActionId: String # String
-    var SegmentId: String # String
+class PFAction:
+    # 12 items(s)
+    var AddInventoryItemV2Content: PFAddInventoryItemV2Content # AddInventoryItemV2Content
+    var BanPlayerContent: PFBanPlayerContent # BanPlayerContent
+    var DeleteInventoryItemV2Content: PFDeleteInventoryItemV2Content # DeleteInventoryItemV2Content
+    var DeletePlayerContent: PFDeletePlayerContent # DeletePlayerContent
+    var ExecuteCloudScriptContent: PFExecuteCloudScriptContent # ExecuteCloudScriptContent
+    var ExecuteFunctionContent: PFExecuteFunctionContent # ExecuteFunctionContent
+    var GrantItemContent: PFGrantItemContent # GrantItemContent
+    var GrantVirtualCurrencyContent: PFGrantVirtualCurrencyContent # GrantVirtualCurrencyContent
+    var IncrementPlayerStatisticContent: PFIncrementPlayerStatisticContent # IncrementPlayerStatisticContent
+    var PushNotificationContent: PFPushNotificationContent # PushNotificationContent
+    var SendEmailContent: PFSendEmailContent # SendEmailContent
+    var SubtractInventoryItemV2Content: PFSubtractInventoryItemV2Content # SubtractInventoryItemV2Content
 
     func _init(dict_param: Dictionary = {}):
         
+        self.AddInventoryItemV2Content = PFAddInventoryItemV2Content.new()
+        self.BanPlayerContent = PFBanPlayerContent.new()
+        self.DeleteInventoryItemV2Content = PFDeleteInventoryItemV2Content.new()
+        self.DeletePlayerContent = PFDeletePlayerContent.new()
+        self.ExecuteCloudScriptContent = PFExecuteCloudScriptContent.new()
+        self.ExecuteFunctionContent = PFExecuteFunctionContent.new()
+        self.GrantItemContent = PFGrantItemContent.new()
+        self.GrantVirtualCurrencyContent = PFGrantVirtualCurrencyContent.new()
+        self.IncrementPlayerStatisticContent = PFIncrementPlayerStatisticContent.new()
+        self.PushNotificationContent = PFPushNotificationContent.new()
+        self.SendEmailContent = PFSendEmailContent.new()
+        self.SubtractInventoryItemV2Content = PFSubtractInventoryItemV2Content.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
-        if "ActionId" in dict_param:
-            self.ActionId = dict_param["ActionId"]
+        if "AddInventoryItemV2Content" in dict_param:
+            self.AddInventoryItemV2Content = PFAddInventoryItemV2Content.new(dict_param["AddInventoryItemV2Content"])
+        if "BanPlayerContent" in dict_param:
+            self.BanPlayerContent = PFBanPlayerContent.new(dict_param["BanPlayerContent"])
+        if "DeleteInventoryItemV2Content" in dict_param:
+            self.DeleteInventoryItemV2Content = PFDeleteInventoryItemV2Content.new(dict_param["DeleteInventoryItemV2Content"])
+        if "DeletePlayerContent" in dict_param:
+            self.DeletePlayerContent = PFDeletePlayerContent.new(dict_param["DeletePlayerContent"])
+        if "ExecuteCloudScriptContent" in dict_param:
+            self.ExecuteCloudScriptContent = PFExecuteCloudScriptContent.new(dict_param["ExecuteCloudScriptContent"])
+        if "ExecuteFunctionContent" in dict_param:
+            self.ExecuteFunctionContent = PFExecuteFunctionContent.new(dict_param["ExecuteFunctionContent"])
+        if "GrantItemContent" in dict_param:
+            self.GrantItemContent = PFGrantItemContent.new(dict_param["GrantItemContent"])
+        if "GrantVirtualCurrencyContent" in dict_param:
+            self.GrantVirtualCurrencyContent = PFGrantVirtualCurrencyContent.new(dict_param["GrantVirtualCurrencyContent"])
+        if "IncrementPlayerStatisticContent" in dict_param:
+            self.IncrementPlayerStatisticContent = PFIncrementPlayerStatisticContent.new(dict_param["IncrementPlayerStatisticContent"])
+        if "PushNotificationContent" in dict_param:
+            self.PushNotificationContent = PFPushNotificationContent.new(dict_param["PushNotificationContent"])
+        if "SendEmailContent" in dict_param:
+            self.SendEmailContent = PFSendEmailContent.new(dict_param["SendEmailContent"])
+        if "SubtractInventoryItemV2Content" in dict_param:
+            self.SubtractInventoryItemV2Content = PFSubtractInventoryItemV2Content.new(dict_param["SubtractInventoryItemV2Content"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.AddInventoryItemV2Content != null:
+            dict_result["AddInventoryItemV2Content"] = self.AddInventoryItemV2Content.get_dict()
+        if self.BanPlayerContent != null:
+            dict_result["BanPlayerContent"] = self.BanPlayerContent.get_dict()
+        if self.DeleteInventoryItemV2Content != null:
+            dict_result["DeleteInventoryItemV2Content"] = self.DeleteInventoryItemV2Content.get_dict()
+        if self.DeletePlayerContent != null:
+            dict_result["DeletePlayerContent"] = self.DeletePlayerContent.get_dict()
+        if self.ExecuteCloudScriptContent != null:
+            dict_result["ExecuteCloudScriptContent"] = self.ExecuteCloudScriptContent.get_dict()
+        if self.ExecuteFunctionContent != null:
+            dict_result["ExecuteFunctionContent"] = self.ExecuteFunctionContent.get_dict()
+        if self.GrantItemContent != null:
+            dict_result["GrantItemContent"] = self.GrantItemContent.get_dict()
+        if self.GrantVirtualCurrencyContent != null:
+            dict_result["GrantVirtualCurrencyContent"] = self.GrantVirtualCurrencyContent.get_dict()
+        if self.IncrementPlayerStatisticContent != null:
+            dict_result["IncrementPlayerStatisticContent"] = self.IncrementPlayerStatisticContent.get_dict()
+        if self.PushNotificationContent != null:
+            dict_result["PushNotificationContent"] = self.PushNotificationContent.get_dict()
+        if self.SendEmailContent != null:
+            dict_result["SendEmailContent"] = self.SendEmailContent.get_dict()
+        if self.SubtractInventoryItemV2Content != null:
+            dict_result["SubtractInventoryItemV2Content"] = self.SubtractInventoryItemV2Content.get_dict()
+        
+        return dict_result
+
+
+class PFActionsOnPlayersInSegmentTaskParameter:
+    # 2 items(s)
+    var Actions: Array # Array[PFAction]
+    var SegmentId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.Actions = []
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Actions" in dict_param:
+            self.Actions = []
+            for v in dict_param["Actions"]:
+                self.Actions.push_back(PFAction.new(v))
         if "SegmentId" in dict_param:
             self.SegmentId = dict_param["SegmentId"]
 
@@ -61,10 +154,12 @@ class PFActionsOnPlayersInSegmentTaskParameter:
         
         var dict_result: Dictionary = {}
         
-        if self.ActionId != null:
-            # String
-            if self.ActionId.empty() != true:
-                dict_result["ActionId"] = self.ActionId
+        if self.Actions != null:
+            if self.Actions.size() > 0:
+                var list_temp: Array = []
+                for v in self.Actions:
+                    list_temp.push_back(v.get_dict())
+                dict_result["Actions"] = list_temp
         if self.SegmentId != null:
             # String
             if self.SegmentId.empty() != true:
@@ -280,6 +375,57 @@ class PFAdCampaignSegmentFilter:
         if self.Comparison != null:
             # SegmentFilterComparison
             dict_result["Comparison"] = self.Comparison
+        
+        return dict_result
+
+
+class PFAddInventoryItemV2Content:
+    # 5 items(s)
+    var Amount: int # int32
+    var CollectionId: String # String
+    var DurationInSeconds: int # int32
+    var ItemId: String # String
+    var StackId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Amount" in dict_param:
+            self.Amount = dict_param["Amount"]
+        if "CollectionId" in dict_param:
+            self.CollectionId = dict_param["CollectionId"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
+        if "ItemId" in dict_param:
+            self.ItemId = dict_param["ItemId"]
+        if "StackId" in dict_param:
+            self.StackId = dict_param["StackId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Amount != null:
+            # int32
+            dict_result["Amount"] = self.Amount
+        if self.CollectionId != null:
+            # String
+            if self.CollectionId.empty() != true:
+                dict_result["CollectionId"] = self.CollectionId
+        if self.DurationInSeconds != null:
+            # int32
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
+        if self.ItemId != null:
+            # String
+            if self.ItemId.empty() != true:
+                dict_result["ItemId"] = self.ItemId
+        if self.StackId != null:
+            # String
+            if self.StackId.empty() != true:
+                dict_result["StackId"] = self.StackId
         
         return dict_result
 
@@ -697,6 +843,37 @@ class PFBanInfo:
             # String
             if self.Reason.empty() != true:
                 dict_result["Reason"] = self.Reason
+        
+        return dict_result
+
+
+class PFBanPlayerContent:
+    # 2 items(s)
+    var BanDurationHours: int # int32
+    var BanReason: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "BanDurationHours" in dict_param:
+            self.BanDurationHours = dict_param["BanDurationHours"]
+        if "BanReason" in dict_param:
+            self.BanReason = dict_param["BanReason"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.BanDurationHours != null:
+            # int32
+            dict_result["BanDurationHours"] = self.BanDurationHours
+        if self.BanReason != null:
+            # String
+            if self.BanReason.empty() != true:
+                dict_result["BanReason"] = self.BanReason
         
         return dict_result
 
@@ -1572,7 +1749,7 @@ class PFContentInfo:
 
 
 class PFContinentCode: # enum
-    # 7 items(s)
+    # 8 items(s)
     const AF := "AF"
     const AN := "AN"
     const AS := "AS"
@@ -1580,9 +1757,10 @@ class PFContinentCode: # enum
     const NA := "NA"
     const OC := "OC"
     const SA := "SA"
+    const Unknown := "Unknown"
 
 class PFCountryCode: # enum
-    # 249 items(s)
+    # 250 items(s)
     const AF := "AF"
     const AX := "AX"
     const AL := "AL"
@@ -1832,6 +2010,7 @@ class PFCountryCode: # enum
     const YE := "YE"
     const ZM := "ZM"
     const ZW := "ZW"
+    const Unknown := "Unknown"
 
 class PFCreateActionsOnPlayerSegmentTaskRequest:
     # 6 items(s)
@@ -2029,13 +2208,14 @@ class PFCreateInsightsScheduledScalingTaskRequest:
 
 
 class PFCreateOpenIdConnectionRequest:
-    # 6 items(s)
+    # 7 items(s)
     var ClientId: String # String
     var ClientSecret: String # String
     var ConnectionId: String # String
     var IgnoreNonce: bool # Boolean
     var IssuerDiscoveryUrl: String # String
     var IssuerInformation: PFOpenIdIssuerInformation # OpenIdIssuerInformation
+    var IssuerOverride: String # String
 
     func _init(dict_param: Dictionary = {}):
         
@@ -2056,6 +2236,8 @@ class PFCreateOpenIdConnectionRequest:
             self.IssuerDiscoveryUrl = dict_param["IssuerDiscoveryUrl"]
         if "IssuerInformation" in dict_param:
             self.IssuerInformation = PFOpenIdIssuerInformation.new(dict_param["IssuerInformation"])
+        if "IssuerOverride" in dict_param:
+            self.IssuerOverride = dict_param["IssuerOverride"]
 
     func get_dict() -> Dictionary:
         
@@ -2082,6 +2264,10 @@ class PFCreateOpenIdConnectionRequest:
                 dict_result["IssuerDiscoveryUrl"] = self.IssuerDiscoveryUrl
         if self.IssuerInformation != null:
             dict_result["IssuerInformation"] = self.IssuerInformation.get_dict()
+        if self.IssuerOverride != null:
+            # String
+            if self.IssuerOverride.empty() != true:
+                dict_result["IssuerOverride"] = self.IssuerOverride
         
         return dict_result
 
@@ -2482,6 +2668,45 @@ class PFDeleteContentRequest:
         return dict_result
 
 
+class PFDeleteInventoryItemV2Content:
+    # 3 items(s)
+    var CollectionId: String # String
+    var ItemId: String # String
+    var StackId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CollectionId" in dict_param:
+            self.CollectionId = dict_param["CollectionId"]
+        if "ItemId" in dict_param:
+            self.ItemId = dict_param["ItemId"]
+        if "StackId" in dict_param:
+            self.StackId = dict_param["StackId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CollectionId != null:
+            # String
+            if self.CollectionId.empty() != true:
+                dict_result["CollectionId"] = self.CollectionId
+        if self.ItemId != null:
+            # String
+            if self.ItemId.empty() != true:
+                dict_result["ItemId"] = self.ItemId
+        if self.StackId != null:
+            # String
+            if self.StackId.empty() != true:
+                dict_result["StackId"] = self.StackId
+        
+        return dict_result
+
+
 class PFDeleteMasterPlayerAccountRequest:
     # 2 items(s)
     var MetaData: String # String
@@ -2549,6 +2774,50 @@ class PFDeleteMasterPlayerAccountResult:
                     if v.empty() != true:
                         list_temp.push_back(v)
                 dict_result["TitleIds"] = list_temp
+        
+        return dict_result
+
+
+class PFDeleteMasterPlayerEventDataRequest:
+    # 1 items(s)
+    var PlayFabId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "PlayFabId" in dict_param:
+            self.PlayFabId = dict_param["PlayFabId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.PlayFabId != null:
+            # String
+            if self.PlayFabId.empty() != true:
+                dict_result["PlayFabId"] = self.PlayFabId
+        
+        return dict_result
+
+
+class PFDeleteMasterPlayerEventDataResult:
+    # 0 items(s)
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        pass
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
         
         return dict_result
 
@@ -2646,6 +2915,25 @@ class PFDeleteOpenIdConnectionRequest:
             # String
             if self.ConnectionId.empty() != true:
                 dict_result["ConnectionId"] = self.ConnectionId
+        
+        return dict_result
+
+
+class PFDeletePlayerContent:
+    # 0 items(s)
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        pass
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
         
         return dict_result
 
@@ -3134,6 +3422,44 @@ class PFExecuteAzureFunctionSegmentAction:
         return dict_result
 
 
+class PFExecuteCloudScriptContent:
+    # 3 items(s)
+    var CloudScriptMethodArguments: String # String
+    var CloudScriptMethodName: String # String
+    var PublishResultsToPlayStream: bool # Boolean
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CloudScriptMethodArguments" in dict_param:
+            self.CloudScriptMethodArguments = dict_param["CloudScriptMethodArguments"]
+        if "CloudScriptMethodName" in dict_param:
+            self.CloudScriptMethodName = dict_param["CloudScriptMethodName"]
+        if "PublishResultsToPlayStream" in dict_param:
+            self.PublishResultsToPlayStream = dict_param["PublishResultsToPlayStream"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CloudScriptMethodArguments != null:
+            # String
+            if self.CloudScriptMethodArguments.empty() != true:
+                dict_result["CloudScriptMethodArguments"] = self.CloudScriptMethodArguments
+        if self.CloudScriptMethodName != null:
+            # String
+            if self.CloudScriptMethodName.empty() != true:
+                dict_result["CloudScriptMethodName"] = self.CloudScriptMethodName
+        if self.PublishResultsToPlayStream != null:
+            # Boolean
+            dict_result["PublishResultsToPlayStream"] = self.PublishResultsToPlayStream
+        
+        return dict_result
+
+
 class PFExecuteCloudScriptResult:
     # 12 items(s)
     var APIRequestsIssued: int # int32
@@ -3271,6 +3597,44 @@ class PFExecuteCloudScriptSegmentAction:
             # String
             if self.FunctionParameterJson.empty() != true:
                 dict_result["FunctionParameterJson"] = self.FunctionParameterJson
+        
+        return dict_result
+
+
+class PFExecuteFunctionContent:
+    # 3 items(s)
+    var CloudScriptFunctionArguments: String # String
+    var CloudScriptFunctionName: String # String
+    var PublishResultsToPlayStream: bool # Boolean
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CloudScriptFunctionArguments" in dict_param:
+            self.CloudScriptFunctionArguments = dict_param["CloudScriptFunctionArguments"]
+        if "CloudScriptFunctionName" in dict_param:
+            self.CloudScriptFunctionName = dict_param["CloudScriptFunctionName"]
+        if "PublishResultsToPlayStream" in dict_param:
+            self.PublishResultsToPlayStream = dict_param["PublishResultsToPlayStream"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CloudScriptFunctionArguments != null:
+            # String
+            if self.CloudScriptFunctionArguments.empty() != true:
+                dict_result["CloudScriptFunctionArguments"] = self.CloudScriptFunctionArguments
+        if self.CloudScriptFunctionName != null:
+            # String
+            if self.CloudScriptFunctionName.empty() != true:
+                dict_result["CloudScriptFunctionName"] = self.CloudScriptFunctionName
+        if self.PublishResultsToPlayStream != null:
+            # Boolean
+            dict_result["PublishResultsToPlayStream"] = self.PublishResultsToPlayStream
         
         return dict_result
 
@@ -3443,59 +3807,8 @@ class PFFirstLoginTimespanSegmentFilter:
         return dict_result
 
 
-class PFGameBuildStatus: # enum
-    # 5 items(s)
-    const Available := "Available"
-    const Validating := "Validating"
-    const InvalidBuildPackage := "InvalidBuildPackage"
-    const Processing := "Processing"
-    const FailedToProcess := "FailedToProcess"
-
-class PFGameModeInfo:
-    # 4 items(s)
-    var Gamemode: String # String
-    var MaxPlayerCount: int # uint32
-    var MinPlayerCount: int # uint32
-    var StartOpen: bool # Boolean
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "Gamemode" in dict_param:
-            self.Gamemode = dict_param["Gamemode"]
-        if "MaxPlayerCount" in dict_param:
-            self.MaxPlayerCount = dict_param["MaxPlayerCount"]
-        if "MinPlayerCount" in dict_param:
-            self.MinPlayerCount = dict_param["MinPlayerCount"]
-        if "StartOpen" in dict_param:
-            self.StartOpen = dict_param["StartOpen"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.Gamemode != null:
-            # String
-            if self.Gamemode.empty() != true:
-                dict_result["Gamemode"] = self.Gamemode
-        if self.MaxPlayerCount != null:
-            # uint32
-            dict_result["MaxPlayerCount"] = self.MaxPlayerCount
-        if self.MinPlayerCount != null:
-            # uint32
-            dict_result["MinPlayerCount"] = self.MinPlayerCount
-        if self.StartOpen != null:
-            # Boolean
-            dict_result["StartOpen"] = self.StartOpen
-        
-        return dict_result
-
-
 class PFGenericErrorCodes: # enum
-    # 716 items(s)
+    # 748 items(s)
     const Success := "Success"
     const UnkownError := "UnkownError"
     const InvalidParams := "InvalidParams"
@@ -4045,6 +4358,9 @@ class PFGenericErrorCodes: # enum
     const NamespaceMismatch := "NamespaceMismatch"
     const InvalidServiceConfiguration := "InvalidServiceConfiguration"
     const InvalidNamespaceMismatch := "InvalidNamespaceMismatch"
+    const LeaderboardColumnLengthMismatch := "LeaderboardColumnLengthMismatch"
+    const InvalidStatisticScore := "InvalidStatisticScore"
+    const LeaderboardColumnsNotSpecified := "LeaderboardColumnsNotSpecified"
     const MatchmakingEntityInvalid := "MatchmakingEntityInvalid"
     const MatchmakingPlayerAttributesInvalid := "MatchmakingPlayerAttributesInvalid"
     const MatchmakingQueueNotFound := "MatchmakingQueueNotFound"
@@ -4134,6 +4450,7 @@ class PFGenericErrorCodes: # enum
     const MultiplayerServerBuildReferencedByMatchmakingQueue := "MultiplayerServerBuildReferencedByMatchmakingQueue"
     const MultiplayerServerBuildReferencedByBuildAlias := "MultiplayerServerBuildReferencedByBuildAlias"
     const MultiplayerServerBuildAliasReferencedByMatchmakingQueue := "MultiplayerServerBuildAliasReferencedByMatchmakingQueue"
+    const PartySerializationError := "PartySerializationError"
     const ExperimentationExperimentStopped := "ExperimentationExperimentStopped"
     const ExperimentationExperimentRunning := "ExperimentationExperimentRunning"
     const ExperimentationExperimentNotFound := "ExperimentationExperimentNotFound"
@@ -4173,6 +4490,7 @@ class PFGenericErrorCodes: # enum
     const AsyncExportNotInFlight := "AsyncExportNotInFlight"
     const AsyncExportNotFound := "AsyncExportNotFound"
     const AsyncExportRateLimitExceeded := "AsyncExportRateLimitExceeded"
+    const AnalyticsSegmentCountOverLimit := "AnalyticsSegmentCountOverLimit"
     const SnapshotNotFound := "SnapshotNotFound"
     const InventoryApiNotImplemented := "InventoryApiNotImplemented"
     const LobbyDoesNotExist := "LobbyDoesNotExist"
@@ -4187,6 +4505,12 @@ class PFGenericErrorCodes: # enum
     const LobbyNewOwnerMustBeConnected := "LobbyNewOwnerMustBeConnected"
     const LobbyCurrentOwnerStillConnected := "LobbyCurrentOwnerStillConnected"
     const LobbyMemberIsNotOwner := "LobbyMemberIsNotOwner"
+    const LobbyAssociatedServerMismatch := "LobbyAssociatedServerMismatch"
+    const LobbyAssociatedServerNotFound := "LobbyAssociatedServerNotFound"
+    const LobbyAssociatedToDifferentServer := "LobbyAssociatedToDifferentServer"
+    const LobbyServerAlreadyAssociated := "LobbyServerAlreadyAssociated"
+    const LobbyIsNotClientOwned := "LobbyIsNotClientOwned"
+    const LobbyDoesNotUseConnections := "LobbyDoesNotUseConnections"
     const EventSamplingInvalidRatio := "EventSamplingInvalidRatio"
     const EventSamplingInvalidEventNamespace := "EventSamplingInvalidEventNamespace"
     const EventSamplingInvalidEventName := "EventSamplingInvalidEventName"
@@ -4197,6 +4521,7 @@ class PFGenericErrorCodes: # enum
     const TelemetryKeyInvalid := "TelemetryKeyInvalid"
     const TelemetryKeyCountOverLimit := "TelemetryKeyCountOverLimit"
     const TelemetryKeyDeactivated := "TelemetryKeyDeactivated"
+    const TelemetryKeyLongInsightsRetentionNotAllowed := "TelemetryKeyLongInsightsRetentionNotAllowed"
     const EventSinkConnectionInvalid := "EventSinkConnectionInvalid"
     const EventSinkConnectionUnauthorized := "EventSinkConnectionUnauthorized"
     const EventSinkRegionInvalid := "EventSinkRegionInvalid"
@@ -4209,9 +4534,29 @@ class PFGenericErrorCodes: # enum
     const EventSinkTenantNotFound := "EventSinkTenantNotFound"
     const EventSinkAadNotFound := "EventSinkAadNotFound"
     const EventSinkDatabaseNotFound := "EventSinkDatabaseNotFound"
+    const EventSinkTitleUnauthorized := "EventSinkTitleUnauthorized"
     const OperationCanceled := "OperationCanceled"
     const InvalidDisplayNameRandomSuffixLength := "InvalidDisplayNameRandomSuffixLength"
     const AllowNonUniquePlayerDisplayNamesDisableNotAllowed := "AllowNonUniquePlayerDisplayNamesDisableNotAllowed"
+    const PartitionedEventInvalid := "PartitionedEventInvalid"
+    const PartitionedEventCountOverLimit := "PartitionedEventCountOverLimit"
+    const ManageEventNamespaceInvalid := "ManageEventNamespaceInvalid"
+    const ManageEventNameInvalid := "ManageEventNameInvalid"
+    const ManagedEventNotFound := "ManagedEventNotFound"
+    const ManageEventsInvalidRatio := "ManageEventsInvalidRatio"
+    const ManagedEventInvalid := "ManagedEventInvalid"
+    const PlayerCustomPropertiesPropertyNameTooLong := "PlayerCustomPropertiesPropertyNameTooLong"
+    const PlayerCustomPropertiesPropertyNameIsInvalid := "PlayerCustomPropertiesPropertyNameIsInvalid"
+    const PlayerCustomPropertiesStringPropertyValueTooLong := "PlayerCustomPropertiesStringPropertyValueTooLong"
+    const PlayerCustomPropertiesValueIsInvalidType := "PlayerCustomPropertiesValueIsInvalidType"
+    const PlayerCustomPropertiesVersionMismatch := "PlayerCustomPropertiesVersionMismatch"
+    const PlayerCustomPropertiesPropertyCountTooHigh := "PlayerCustomPropertiesPropertyCountTooHigh"
+    const PlayerCustomPropertiesDuplicatePropertyName := "PlayerCustomPropertiesDuplicatePropertyName"
+    const PlayerCustomPropertiesPropertyDoesNotExist := "PlayerCustomPropertiesPropertyDoesNotExist"
+    const AddonAlreadyExists := "AddonAlreadyExists"
+    const AddonDoesntExist := "AddonDoesntExist"
+    const CopilotDisabled := "CopilotDisabled"
+    const CopilotInvalidRequest := "CopilotInvalidRequest"
 
 class PFGetActionsOnPlayersInSegmentTaskInstanceResult:
     # 2 items(s)
@@ -4699,193 +5044,6 @@ class PFGetDataReportResult:
             # String
             if self.DownloadUrl.empty() != true:
                 dict_result["DownloadUrl"] = self.DownloadUrl
-        
-        return dict_result
-
-
-class PFGetMatchmakerGameInfoRequest:
-    # 1 items(s)
-    var LobbyId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        
-        return dict_result
-
-
-class PFGetMatchmakerGameInfoResult:
-    # 12 items(s)
-    var BuildVersion: String # String
-    var EndTime: String # DateTime
-    var LobbyId: String # String
-    var Mode: String # String
-    var Players: Array # Array[String]
-    var Region: String # Region
-    var ServerIPV4Address: String # String
-    var ServerIPV6Address: String # String
-    var ServerPort: int # uint32
-    var ServerPublicDNSName: String # String
-    var StartTime: String # DateTime
-    var TitleId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.Players = []
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "BuildVersion" in dict_param:
-            self.BuildVersion = dict_param["BuildVersion"]
-        if "EndTime" in dict_param:
-            self.EndTime = dict_param["EndTime"]
-        if "LobbyId" in dict_param:
-            self.LobbyId = dict_param["LobbyId"]
-        if "Mode" in dict_param:
-            self.Mode = dict_param["Mode"]
-        if "Players" in dict_param:
-            self.Players = []
-            for v in dict_param["Players"]:
-                self.Players.push_back(v)
-        if "Region" in dict_param:
-            self.Region = dict_param["Region"]
-        if "ServerIPV4Address" in dict_param:
-            self.ServerIPV4Address = dict_param["ServerIPV4Address"]
-        if "ServerIPV6Address" in dict_param:
-            self.ServerIPV6Address = dict_param["ServerIPV6Address"]
-        if "ServerPort" in dict_param:
-            self.ServerPort = dict_param["ServerPort"]
-        if "ServerPublicDNSName" in dict_param:
-            self.ServerPublicDNSName = dict_param["ServerPublicDNSName"]
-        if "StartTime" in dict_param:
-            self.StartTime = dict_param["StartTime"]
-        if "TitleId" in dict_param:
-            self.TitleId = dict_param["TitleId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.BuildVersion != null:
-            # String
-            if self.BuildVersion.empty() != true:
-                dict_result["BuildVersion"] = self.BuildVersion
-        if self.EndTime != null:
-            # String(DateTime)
-            if self.EndTime.empty() != true:
-                dict_result["EndTime"] = self.EndTime
-        if self.LobbyId != null:
-            # String
-            if self.LobbyId.empty() != true:
-                dict_result["LobbyId"] = self.LobbyId
-        if self.Mode != null:
-            # String
-            if self.Mode.empty() != true:
-                dict_result["Mode"] = self.Mode
-        if self.Players != null:
-            if self.Players.size() > 0:
-                var list_temp: Array = []
-                for v in self.Players:
-                    # Array[String]
-                    if v.empty() != true:
-                        list_temp.push_back(v)
-                dict_result["Players"] = list_temp
-        if self.Region != null:
-            # Region
-            dict_result["Region"] = self.Region
-        if self.ServerIPV4Address != null:
-            # String
-            if self.ServerIPV4Address.empty() != true:
-                dict_result["ServerIPV4Address"] = self.ServerIPV4Address
-        if self.ServerIPV6Address != null:
-            # String
-            if self.ServerIPV6Address.empty() != true:
-                dict_result["ServerIPV6Address"] = self.ServerIPV6Address
-        if self.ServerPort != null:
-            # uint32
-            dict_result["ServerPort"] = self.ServerPort
-        if self.ServerPublicDNSName != null:
-            # String
-            if self.ServerPublicDNSName.empty() != true:
-                dict_result["ServerPublicDNSName"] = self.ServerPublicDNSName
-        if self.StartTime != null:
-            # String(DateTime)
-            if self.StartTime.empty() != true:
-                dict_result["StartTime"] = self.StartTime
-        if self.TitleId != null:
-            # String
-            if self.TitleId.empty() != true:
-                dict_result["TitleId"] = self.TitleId
-        
-        return dict_result
-
-
-class PFGetMatchmakerGameModesRequest:
-    # 1 items(s)
-    var BuildVersion: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "BuildVersion" in dict_param:
-            self.BuildVersion = dict_param["BuildVersion"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.BuildVersion != null:
-            # String
-            if self.BuildVersion.empty() != true:
-                dict_result["BuildVersion"] = self.BuildVersion
-        
-        return dict_result
-
-
-class PFGetMatchmakerGameModesResult:
-    # 1 items(s)
-    var GameModes: Array # Array[PFGameModeInfo]
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.GameModes = []
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "GameModes" in dict_param:
-            self.GameModes = []
-            for v in dict_param["GameModes"]:
-                self.GameModes.push_back(PFGameModeInfo.new(v))
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.GameModes != null:
-            if self.GameModes.size() > 0:
-                var list_temp: Array = []
-                for v in self.GameModes:
-                    list_temp.push_back(v.get_dict())
-                dict_result["GameModes"] = list_temp
         
         return dict_result
 
@@ -6561,6 +6719,44 @@ class PFGrantedItemInstance:
         return dict_result
 
 
+class PFGrantItemContent:
+    # 3 items(s)
+    var CatalogVersion: String # String
+    var ItemId: String # String
+    var ItemQuantity: int # int32
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CatalogVersion" in dict_param:
+            self.CatalogVersion = dict_param["CatalogVersion"]
+        if "ItemId" in dict_param:
+            self.ItemId = dict_param["ItemId"]
+        if "ItemQuantity" in dict_param:
+            self.ItemQuantity = dict_param["ItemQuantity"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CatalogVersion != null:
+            # String
+            if self.CatalogVersion.empty() != true:
+                dict_result["CatalogVersion"] = self.CatalogVersion
+        if self.ItemId != null:
+            # String
+            if self.ItemId.empty() != true:
+                dict_result["ItemId"] = self.ItemId
+        if self.ItemQuantity != null:
+            # int32
+            dict_result["ItemQuantity"] = self.ItemQuantity
+        
+        return dict_result
+
+
 class PFGrantItemSegmentAction:
     # 3 items(s)
     var CatelogId: String # String
@@ -6680,6 +6876,37 @@ class PFGrantItemsToUsersResult:
         return dict_result
 
 
+class PFGrantVirtualCurrencyContent:
+    # 2 items(s)
+    var CurrencyAmount: int # int32
+    var CurrencyCode: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CurrencyAmount" in dict_param:
+            self.CurrencyAmount = dict_param["CurrencyAmount"]
+        if "CurrencyCode" in dict_param:
+            self.CurrencyCode = dict_param["CurrencyCode"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CurrencyAmount != null:
+            # int32
+            dict_result["CurrencyAmount"] = self.CurrencyAmount
+        if self.CurrencyCode != null:
+            # String
+            if self.CurrencyCode.empty() != true:
+                dict_result["CurrencyCode"] = self.CurrencyCode
+        
+        return dict_result
+
+
 class PFGrantVirtualCurrencySegmentAction:
     # 2 items(s)
     var Amount: int # int32
@@ -6778,6 +7005,37 @@ class PFIncrementLimitedEditionItemAvailabilityResult:
         
         var dict_result: Dictionary = {}
         
+        
+        return dict_result
+
+
+class PFIncrementPlayerStatisticContent:
+    # 2 items(s)
+    var StatisticChangeBy: int # int32
+    var StatisticName: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "StatisticChangeBy" in dict_param:
+            self.StatisticChangeBy = dict_param["StatisticChangeBy"]
+        if "StatisticName" in dict_param:
+            self.StatisticName = dict_param["StatisticName"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.StatisticChangeBy != null:
+            # int32
+            dict_result["StatisticChangeBy"] = self.StatisticChangeBy
+        if self.StatisticName != null:
+            # String
+            if self.StatisticName.empty() != true:
+                dict_result["StatisticName"] = self.StatisticName
         
         return dict_result
 
@@ -7629,187 +7887,6 @@ class PFMembershipModel:
         return dict_result
 
 
-class PFModifyServerBuildRequest:
-    # 9 items(s)
-    var ActiveRegions: Array # Array[String]
-    var BuildId: String # String
-    var CommandLineTemplate: String # String
-    var Comment: String # String
-    var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var ExecutablePath: String # String
-    var MaxGamesPerHost: int # int32
-    var MinFreeGameSlots: int # int32
-    var Timestamp: String # DateTime
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.ActiveRegions = []
-        self.CustomTags = {}
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "ActiveRegions" in dict_param:
-            self.ActiveRegions = []
-            for v in dict_param["ActiveRegions"]:
-                self.ActiveRegions.push_back(v)
-        if "BuildId" in dict_param:
-            self.BuildId = dict_param["BuildId"]
-        if "CommandLineTemplate" in dict_param:
-            self.CommandLineTemplate = dict_param["CommandLineTemplate"]
-        if "Comment" in dict_param:
-            self.Comment = dict_param["Comment"]
-        if "CustomTags" in dict_param:
-            self.CustomTags = {}
-            for k in dict_param["CustomTags"]:
-                self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "ExecutablePath" in dict_param:
-            self.ExecutablePath = dict_param["ExecutablePath"]
-        if "MaxGamesPerHost" in dict_param:
-            self.MaxGamesPerHost = dict_param["MaxGamesPerHost"]
-        if "MinFreeGameSlots" in dict_param:
-            self.MinFreeGameSlots = dict_param["MinFreeGameSlots"]
-        if "Timestamp" in dict_param:
-            self.Timestamp = dict_param["Timestamp"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.ActiveRegions != null:
-            if self.ActiveRegions.size() > 0:
-                var list_temp: Array = []
-                for v in self.ActiveRegions:
-                    list_temp.push_back(v)
-                dict_result["ActiveRegions"] = list_temp
-        if self.BuildId != null:
-            # String
-            if self.BuildId.empty() != true:
-                dict_result["BuildId"] = self.BuildId
-        if self.CommandLineTemplate != null:
-            # String
-            if self.CommandLineTemplate.empty() != true:
-                dict_result["CommandLineTemplate"] = self.CommandLineTemplate
-        if self.Comment != null:
-            # String
-            if self.Comment.empty() != true:
-                dict_result["Comment"] = self.Comment
-        if self.CustomTags != null:
-            if self.CustomTags.size() > 0:
-                var dict_temp: Dictionary = {}
-                for k in self.CustomTags:
-                    # Dictionary[String, String]
-                    if self.CustomTags[k].empty() != true:
-                        dict_temp[k] = self.CustomTags[k]
-                dict_result["CustomTags"] = dict_temp
-        if self.ExecutablePath != null:
-            # String
-            if self.ExecutablePath.empty() != true:
-                dict_result["ExecutablePath"] = self.ExecutablePath
-        if self.MaxGamesPerHost != null:
-            # int32
-            dict_result["MaxGamesPerHost"] = self.MaxGamesPerHost
-        if self.MinFreeGameSlots != null:
-            # int32
-            dict_result["MinFreeGameSlots"] = self.MinFreeGameSlots
-        if self.Timestamp != null:
-            # String(DateTime)
-            if self.Timestamp.empty() != true:
-                dict_result["Timestamp"] = self.Timestamp
-        
-        return dict_result
-
-
-class PFModifyServerBuildResult:
-    # 10 items(s)
-    var ActiveRegions: Array # Array[String]
-    var BuildId: String # String
-    var CommandLineTemplate: String # String
-    var Comment: String # String
-    var ExecutablePath: String # String
-    var MaxGamesPerHost: int # int32
-    var MinFreeGameSlots: int # int32
-    var Status: String # GameBuildStatus
-    var Timestamp: String # DateTime
-    var TitleId: String # String
-
-    func _init(dict_param: Dictionary = {}):
-        
-        self.ActiveRegions = []
-        self.set_dict(dict_param)
-
-    func set_dict(dict_param: Dictionary):
-        
-        if "ActiveRegions" in dict_param:
-            self.ActiveRegions = []
-            for v in dict_param["ActiveRegions"]:
-                self.ActiveRegions.push_back(v)
-        if "BuildId" in dict_param:
-            self.BuildId = dict_param["BuildId"]
-        if "CommandLineTemplate" in dict_param:
-            self.CommandLineTemplate = dict_param["CommandLineTemplate"]
-        if "Comment" in dict_param:
-            self.Comment = dict_param["Comment"]
-        if "ExecutablePath" in dict_param:
-            self.ExecutablePath = dict_param["ExecutablePath"]
-        if "MaxGamesPerHost" in dict_param:
-            self.MaxGamesPerHost = dict_param["MaxGamesPerHost"]
-        if "MinFreeGameSlots" in dict_param:
-            self.MinFreeGameSlots = dict_param["MinFreeGameSlots"]
-        if "Status" in dict_param:
-            self.Status = dict_param["Status"]
-        if "Timestamp" in dict_param:
-            self.Timestamp = dict_param["Timestamp"]
-        if "TitleId" in dict_param:
-            self.TitleId = dict_param["TitleId"]
-
-    func get_dict() -> Dictionary:
-        
-        var dict_result: Dictionary = {}
-        
-        if self.ActiveRegions != null:
-            if self.ActiveRegions.size() > 0:
-                var list_temp: Array = []
-                for v in self.ActiveRegions:
-                    list_temp.push_back(v)
-                dict_result["ActiveRegions"] = list_temp
-        if self.BuildId != null:
-            # String
-            if self.BuildId.empty() != true:
-                dict_result["BuildId"] = self.BuildId
-        if self.CommandLineTemplate != null:
-            # String
-            if self.CommandLineTemplate.empty() != true:
-                dict_result["CommandLineTemplate"] = self.CommandLineTemplate
-        if self.Comment != null:
-            # String
-            if self.Comment.empty() != true:
-                dict_result["Comment"] = self.Comment
-        if self.ExecutablePath != null:
-            # String
-            if self.ExecutablePath.empty() != true:
-                dict_result["ExecutablePath"] = self.ExecutablePath
-        if self.MaxGamesPerHost != null:
-            # int32
-            dict_result["MaxGamesPerHost"] = self.MaxGamesPerHost
-        if self.MinFreeGameSlots != null:
-            # int32
-            dict_result["MinFreeGameSlots"] = self.MinFreeGameSlots
-        if self.Status != null:
-            # GameBuildStatus
-            dict_result["Status"] = self.Status
-        if self.Timestamp != null:
-            # String(DateTime)
-            if self.Timestamp.empty() != true:
-                dict_result["Timestamp"] = self.Timestamp
-        if self.TitleId != null:
-            # String
-            if self.TitleId.empty() != true:
-                dict_result["TitleId"] = self.TitleId
-        
-        return dict_result
-
-
 class PFModifyUserVirtualCurrencyResult:
     # 4 items(s)
     var Balance: int # int32
@@ -7887,12 +7964,14 @@ class PFNameIdentifier:
 
 
 class PFOpenIdConnection:
-    # 5 items(s)
+    # 7 items(s)
     var ClientId: String # String
     var ClientSecret: String # String
     var ConnectionId: String # String
     var DiscoverConfiguration: bool # Boolean
+    var IgnoreNonce: bool # Boolean
     var IssuerInformation: PFOpenIdIssuerInformation # OpenIdIssuerInformation
+    var IssuerOverride: String # String
 
     func _init(dict_param: Dictionary = {}):
         
@@ -7909,8 +7988,12 @@ class PFOpenIdConnection:
             self.ConnectionId = dict_param["ConnectionId"]
         if "DiscoverConfiguration" in dict_param:
             self.DiscoverConfiguration = dict_param["DiscoverConfiguration"]
+        if "IgnoreNonce" in dict_param:
+            self.IgnoreNonce = dict_param["IgnoreNonce"]
         if "IssuerInformation" in dict_param:
             self.IssuerInformation = PFOpenIdIssuerInformation.new(dict_param["IssuerInformation"])
+        if "IssuerOverride" in dict_param:
+            self.IssuerOverride = dict_param["IssuerOverride"]
 
     func get_dict() -> Dictionary:
         
@@ -7931,8 +8014,15 @@ class PFOpenIdConnection:
         if self.DiscoverConfiguration != null:
             # Boolean
             dict_result["DiscoverConfiguration"] = self.DiscoverConfiguration
+        if self.IgnoreNonce != null:
+            # Boolean
+            dict_result["IgnoreNonce"] = self.IgnoreNonce
         if self.IssuerInformation != null:
             dict_result["IssuerInformation"] = self.IssuerInformation.get_dict()
+        if self.IssuerOverride != null:
+            # String
+            if self.IssuerOverride.empty() != true:
+                dict_result["IssuerOverride"] = self.IssuerOverride
         
         return dict_result
 
@@ -8939,6 +9029,45 @@ class PFPlayerStatisticVersion:
         return dict_result
 
 
+class PFPushNotificationContent:
+    # 3 items(s)
+    var Message: String # String
+    var PushNotificationTemplateId: String # String
+    var Subject: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Message" in dict_param:
+            self.Message = dict_param["Message"]
+        if "PushNotificationTemplateId" in dict_param:
+            self.PushNotificationTemplateId = dict_param["PushNotificationTemplateId"]
+        if "Subject" in dict_param:
+            self.Subject = dict_param["Subject"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Message != null:
+            # String
+            if self.Message.empty() != true:
+                dict_result["Message"] = self.Message
+        if self.PushNotificationTemplateId != null:
+            # String
+            if self.PushNotificationTemplateId.empty() != true:
+                dict_result["PushNotificationTemplateId"] = self.PushNotificationTemplateId
+        if self.Subject != null:
+            # String
+            if self.Subject.empty() != true:
+                dict_result["Subject"] = self.Subject
+        
+        return dict_result
+
+
 class PFPushNotificationPlatform: # enum
     # 2 items(s)
     const ApplePushNotificationService := "ApplePushNotificationService"
@@ -9205,16 +9334,6 @@ class PFRefundPurchaseResponse:
         
         return dict_result
 
-
-class PFRegion: # enum
-    # 7 items(s)
-    const USCentral := "USCentral"
-    const USEast := "USEast"
-    const EUWest := "EUWest"
-    const Singapore := "Singapore"
-    const Japan := "Japan"
-    const Brazil := "Brazil"
-    const Australia := "Australia"
 
 class PFRemovePlayerTagRequest:
     # 3 items(s)
@@ -10676,7 +10795,7 @@ class PFSegmentFilterComparison: # enum
     const NotContains := "NotContains"
 
 class PFSegmentLoginIdentityProvider: # enum
-    # 21 items(s)
+    # 22 items(s)
     const Unknown := "Unknown"
     const PlayFab := "PlayFab"
     const Custom := "Custom"
@@ -10698,6 +10817,7 @@ class PFSegmentLoginIdentityProvider: # enum
     const OpenIdConnect := "OpenIdConnect"
     const Apple := "Apple"
     const NintendoSwitchAccount := "NintendoSwitchAccount"
+    const GooglePlayGames := "GooglePlayGames"
 
 class PFSegmentModel:
     # 7 items(s)
@@ -10955,6 +11075,31 @@ class PFSendAccountRecoveryEmailResult:
         
         var dict_result: Dictionary = {}
         
+        
+        return dict_result
+
+
+class PFSendEmailContent:
+    # 1 items(s)
+    var EmailTemplateId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "EmailTemplateId" in dict_param:
+            self.EmailTemplateId = dict_param["EmailTemplateId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.EmailTemplateId != null:
+            # String
+            if self.EmailTemplateId.empty() != true:
+                dict_result["EmailTemplateId"] = self.EmailTemplateId
         
         return dict_result
 
@@ -11720,6 +11865,57 @@ class PFSubscriptionProviderStatus: # enum
     const FreeTrial := "FreeTrial"
     const PaymentPending := "PaymentPending"
 
+class PFSubtractInventoryItemV2Content:
+    # 5 items(s)
+    var Amount: int # int32
+    var CollectionId: String # String
+    var DurationInSeconds: int # int32
+    var ItemId: String # String
+    var StackId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Amount" in dict_param:
+            self.Amount = dict_param["Amount"]
+        if "CollectionId" in dict_param:
+            self.CollectionId = dict_param["CollectionId"]
+        if "DurationInSeconds" in dict_param:
+            self.DurationInSeconds = dict_param["DurationInSeconds"]
+        if "ItemId" in dict_param:
+            self.ItemId = dict_param["ItemId"]
+        if "StackId" in dict_param:
+            self.StackId = dict_param["StackId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Amount != null:
+            # int32
+            dict_result["Amount"] = self.Amount
+        if self.CollectionId != null:
+            # String
+            if self.CollectionId.empty() != true:
+                dict_result["CollectionId"] = self.CollectionId
+        if self.DurationInSeconds != null:
+            # int32
+            dict_result["DurationInSeconds"] = self.DurationInSeconds
+        if self.ItemId != null:
+            # String
+            if self.ItemId.empty() != true:
+                dict_result["ItemId"] = self.ItemId
+        if self.StackId != null:
+            # String
+            if self.StackId.empty() != true:
+                dict_result["StackId"] = self.StackId
+        
+        return dict_result
+
+
 class PFSubtractUserVirtualCurrencyRequest:
     # 4 items(s)
     var Amount: int # int32
@@ -12273,12 +12469,14 @@ class PFUpdateCloudScriptResult:
 
 
 class PFUpdateOpenIdConnectionRequest:
-    # 5 items(s)
+    # 7 items(s)
     var ClientId: String # String
     var ClientSecret: String # String
     var ConnectionId: String # String
+    var IgnoreNonce: bool # Boolean
     var IssuerDiscoveryUrl: String # String
     var IssuerInformation: PFOpenIdIssuerInformation # OpenIdIssuerInformation
+    var IssuerOverride: String # String
 
     func _init(dict_param: Dictionary = {}):
         
@@ -12293,10 +12491,14 @@ class PFUpdateOpenIdConnectionRequest:
             self.ClientSecret = dict_param["ClientSecret"]
         if "ConnectionId" in dict_param:
             self.ConnectionId = dict_param["ConnectionId"]
+        if "IgnoreNonce" in dict_param:
+            self.IgnoreNonce = dict_param["IgnoreNonce"]
         if "IssuerDiscoveryUrl" in dict_param:
             self.IssuerDiscoveryUrl = dict_param["IssuerDiscoveryUrl"]
         if "IssuerInformation" in dict_param:
             self.IssuerInformation = PFOpenIdIssuerInformation.new(dict_param["IssuerInformation"])
+        if "IssuerOverride" in dict_param:
+            self.IssuerOverride = dict_param["IssuerOverride"]
 
     func get_dict() -> Dictionary:
         
@@ -12314,12 +12516,19 @@ class PFUpdateOpenIdConnectionRequest:
             # String
             if self.ConnectionId.empty() != true:
                 dict_result["ConnectionId"] = self.ConnectionId
+        if self.IgnoreNonce != null:
+            # Boolean
+            dict_result["IgnoreNonce"] = self.IgnoreNonce
         if self.IssuerDiscoveryUrl != null:
             # String
             if self.IssuerDiscoveryUrl.empty() != true:
                 dict_result["IssuerDiscoveryUrl"] = self.IssuerDiscoveryUrl
         if self.IssuerInformation != null:
             dict_result["IssuerInformation"] = self.IssuerInformation.get_dict()
+        if self.IssuerOverride != null:
+            # String
+            if self.IssuerOverride.empty() != true:
+                dict_result["IssuerOverride"] = self.IssuerOverride
         
         return dict_result
 
@@ -13050,7 +13259,7 @@ class PFUpdateUserTitleDisplayNameResult:
 
 
 class PFUserAccountInfo:
-    # 22 items(s)
+    # 23 items(s)
     var AndroidDeviceInfo: PFUserAndroidDeviceInfo # UserAndroidDeviceInfo
     var AppleAccountInfo: PFUserAppleIdInfo # UserAppleIdInfo
     var Created: String # DateTime
@@ -13068,6 +13277,7 @@ class PFUserAccountInfo:
     var PlayFabId: String # String
     var PrivateInfo: PFUserPrivateAccountInfo # UserPrivateAccountInfo
     var PsnInfo: PFUserPsnInfo # UserPsnInfo
+    var ServerCustomIdInfo: PFUserServerCustomIdInfo # UserServerCustomIdInfo
     var SteamInfo: PFUserSteamInfo # UserSteamInfo
     var TitleInfo: PFUserTitleInfo # UserTitleInfo
     var TwitchInfo: PFUserTwitchInfo # UserTwitchInfo
@@ -13091,6 +13301,7 @@ class PFUserAccountInfo:
         self.OpenIdInfo = []
         self.PrivateInfo = PFUserPrivateAccountInfo.new()
         self.PsnInfo = PFUserPsnInfo.new()
+        self.ServerCustomIdInfo = PFUserServerCustomIdInfo.new()
         self.SteamInfo = PFUserSteamInfo.new()
         self.TitleInfo = PFUserTitleInfo.new()
         self.TwitchInfo = PFUserTwitchInfo.new()
@@ -13135,6 +13346,8 @@ class PFUserAccountInfo:
             self.PrivateInfo = PFUserPrivateAccountInfo.new(dict_param["PrivateInfo"])
         if "PsnInfo" in dict_param:
             self.PsnInfo = PFUserPsnInfo.new(dict_param["PsnInfo"])
+        if "ServerCustomIdInfo" in dict_param:
+            self.ServerCustomIdInfo = PFUserServerCustomIdInfo.new(dict_param["ServerCustomIdInfo"])
         if "SteamInfo" in dict_param:
             self.SteamInfo = PFUserSteamInfo.new(dict_param["SteamInfo"])
         if "TitleInfo" in dict_param:
@@ -13192,6 +13405,8 @@ class PFUserAccountInfo:
             dict_result["PrivateInfo"] = self.PrivateInfo.get_dict()
         if self.PsnInfo != null:
             dict_result["PsnInfo"] = self.PsnInfo.get_dict()
+        if self.ServerCustomIdInfo != null:
+            dict_result["ServerCustomIdInfo"] = self.ServerCustomIdInfo.get_dict()
         if self.SteamInfo != null:
             dict_result["SteamInfo"] = self.SteamInfo.get_dict()
         if self.TitleInfo != null:
@@ -13750,6 +13965,31 @@ class PFUserPsnInfo:
             # String
             if self.PsnOnlineId.empty() != true:
                 dict_result["PsnOnlineId"] = self.PsnOnlineId
+        
+        return dict_result
+
+
+class PFUserServerCustomIdInfo:
+    # 1 items(s)
+    var CustomId: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomId" in dict_param:
+            self.CustomId = dict_param["CustomId"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomId != null:
+            # String
+            if self.CustomId.empty() != true:
+                dict_result["CustomId"] = self.CustomId
         
         return dict_result
 

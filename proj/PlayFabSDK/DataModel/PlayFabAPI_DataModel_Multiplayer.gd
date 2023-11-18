@@ -112,7 +112,7 @@ class PFAssetSummary:
 
 
 class PFAzureRegion: # enum
-    # 23 items(s)
+    # 24 items(s)
     const AustraliaEast := "AustraliaEast"
     const AustraliaSoutheast := "AustraliaSoutheast"
     const BrazilSouth := "BrazilSouth"
@@ -136,9 +136,10 @@ class PFAzureRegion: # enum
     const CentralIndia := "CentralIndia"
     const UaeNorth := "UaeNorth"
     const UkSouth := "UkSouth"
+    const SwedenCentral := "SwedenCentral"
 
 class PFAzureVmFamily: # enum
-    # 18 items(s)
+    # 19 items(s)
     const A := "A"
     const Av2 := "Av2"
     const Dv2 := "Dv2"
@@ -147,6 +148,7 @@ class PFAzureVmFamily: # enum
     const Fsv2 := "Fsv2"
     const Dasv4 := "Dasv4"
     const Dav4 := "Dav4"
+    const Dadsv5 := "Dadsv5"
     const Eav4 := "Eav4"
     const Easv4 := "Easv4"
     const Ev4 := "Ev4"
@@ -159,7 +161,7 @@ class PFAzureVmFamily: # enum
     const HBv3 := "HBv3"
 
 class PFAzureVmSize: # enum
-    # 65 items(s)
+    # 69 items(s)
     const Standard_A1 := "Standard_A1"
     const Standard_A2 := "Standard_A2"
     const Standard_A3 := "Standard_A3"
@@ -194,6 +196,10 @@ class PFAzureVmSize: # enum
     const Standard_D4a_v4 := "Standard_D4a_v4"
     const Standard_D8a_v4 := "Standard_D8a_v4"
     const Standard_D16a_v4 := "Standard_D16a_v4"
+    const Standard_D2ads_v5 := "Standard_D2ads_v5"
+    const Standard_D4ads_v5 := "Standard_D4ads_v5"
+    const Standard_D8ads_v5 := "Standard_D8ads_v5"
+    const Standard_D16ads_v5 := "Standard_D16ads_v5"
     const Standard_E2a_v4 := "Standard_E2a_v4"
     const Standard_E4a_v4 := "Standard_E4a_v4"
     const Standard_E8a_v4 := "Standard_E8a_v4"
@@ -1062,7 +1068,7 @@ class PFCreateBuildAliasRequest:
 
 
 class PFCreateBuildWithCustomContainerRequest:
-    # 18 items(s)
+    # 17 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildName: String # String
     var ContainerFlavor: String # ContainerFlavor
@@ -1078,7 +1084,6 @@ class PFCreateBuildWithCustomContainerRequest:
     var Ports: Array # Array[PFPort]
     var RegionConfigurations: Array # Array[PFBuildRegionParams]
     var ServerResourceConstraints: PFServerResourceConstraintParams # ServerResourceConstraintParams
-    var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
     var VmStartupScriptConfiguration: PFVmStartupScriptParams # VmStartupScriptParams
 
@@ -1141,8 +1146,6 @@ class PFCreateBuildWithCustomContainerRequest:
                 self.RegionConfigurations.push_back(PFBuildRegionParams.new(v))
         if "ServerResourceConstraints" in dict_param:
             self.ServerResourceConstraints = PFServerResourceConstraintParams.new(dict_param["ServerResourceConstraints"])
-        if "UseStreamingForAssetDownloads" in dict_param:
-            self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
         if "VmStartupScriptConfiguration" in dict_param:
@@ -1217,9 +1220,6 @@ class PFCreateBuildWithCustomContainerRequest:
                 dict_result["RegionConfigurations"] = list_temp
         if self.ServerResourceConstraints != null:
             dict_result["ServerResourceConstraints"] = self.ServerResourceConstraints.get_dict()
-        if self.UseStreamingForAssetDownloads != null:
-            # Boolean
-            dict_result["UseStreamingForAssetDownloads"] = self.UseStreamingForAssetDownloads
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
@@ -1412,7 +1412,7 @@ class PFCreateBuildWithCustomContainerResponse:
 
 
 class PFCreateBuildWithManagedContainerRequest:
-    # 19 items(s)
+    # 18 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildName: String # String
     var ContainerFlavor: String # ContainerFlavor
@@ -1428,7 +1428,6 @@ class PFCreateBuildWithManagedContainerRequest:
     var RegionConfigurations: Array # Array[PFBuildRegionParams]
     var ServerResourceConstraints: PFServerResourceConstraintParams # ServerResourceConstraintParams
     var StartMultiplayerServerCommand: String # String
-    var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
     var VmStartupScriptConfiguration: PFVmStartupScriptParams # VmStartupScriptParams
     var WindowsCrashDumpConfiguration: PFWindowsCrashDumpConfiguration # WindowsCrashDumpConfiguration
@@ -1492,8 +1491,6 @@ class PFCreateBuildWithManagedContainerRequest:
             self.ServerResourceConstraints = PFServerResourceConstraintParams.new(dict_param["ServerResourceConstraints"])
         if "StartMultiplayerServerCommand" in dict_param:
             self.StartMultiplayerServerCommand = dict_param["StartMultiplayerServerCommand"]
-        if "UseStreamingForAssetDownloads" in dict_param:
-            self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
         if "VmStartupScriptConfiguration" in dict_param:
@@ -1572,9 +1569,6 @@ class PFCreateBuildWithManagedContainerRequest:
             # String
             if self.StartMultiplayerServerCommand.empty() != true:
                 dict_result["StartMultiplayerServerCommand"] = self.StartMultiplayerServerCommand
-        if self.UseStreamingForAssetDownloads != null:
-            # Boolean
-            dict_result["UseStreamingForAssetDownloads"] = self.UseStreamingForAssetDownloads
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
@@ -1770,7 +1764,7 @@ class PFCreateBuildWithManagedContainerResponse:
 
 
 class PFCreateBuildWithProcessBasedServerRequest:
-    # 18 items(s)
+    # 17 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildName: String # String
     var CustomTags: Dictionary # Dictionary[String, String(String)]
@@ -1786,7 +1780,6 @@ class PFCreateBuildWithProcessBasedServerRequest:
     var Ports: Array # Array[PFPort]
     var RegionConfigurations: Array # Array[PFBuildRegionParams]
     var StartMultiplayerServerCommand: String # String
-    var UseStreamingForAssetDownloads: bool # Boolean
     var VmSize: String # AzureVmSize
     var VmStartupScriptConfiguration: PFVmStartupScriptParams # VmStartupScriptParams
 
@@ -1847,8 +1840,6 @@ class PFCreateBuildWithProcessBasedServerRequest:
                 self.RegionConfigurations.push_back(PFBuildRegionParams.new(v))
         if "StartMultiplayerServerCommand" in dict_param:
             self.StartMultiplayerServerCommand = dict_param["StartMultiplayerServerCommand"]
-        if "UseStreamingForAssetDownloads" in dict_param:
-            self.UseStreamingForAssetDownloads = dict_param["UseStreamingForAssetDownloads"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
         if "VmStartupScriptConfiguration" in dict_param:
@@ -1927,9 +1918,6 @@ class PFCreateBuildWithProcessBasedServerRequest:
             # String
             if self.StartMultiplayerServerCommand.empty() != true:
                 dict_result["StartMultiplayerServerCommand"] = self.StartMultiplayerServerCommand
-        if self.UseStreamingForAssetDownloads != null:
-            # Boolean
-            dict_result["UseStreamingForAssetDownloads"] = self.UseStreamingForAssetDownloads
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
@@ -3080,6 +3068,17 @@ class PFDeleteRemoteUserRequest:
         return dict_result
 
 
+class PFDirectPeerConnectivityOptions: # enum
+    # 8 items(s)
+    const None := "None"
+    const SamePlatformType := "SamePlatformType"
+    const DifferentPlatformType := "DifferentPlatformType"
+    const AnyPlatformType := "AnyPlatformType"
+    const SameEntityLoginProvider := "SameEntityLoginProvider"
+    const DifferentEntityLoginProvider := "DifferentEntityLoginProvider"
+    const AnyEntityLoginProvider := "AnyEntityLoginProvider"
+    const AnyPlatformTypeAndEntityLoginProvider := "AnyPlatformTypeAndEntityLoginProvider"
+
 class PFDynamicStandbySettings:
     # 3 items(s)
     var DynamicFloorMultiplierThresholds: Array # Array[PFDynamicStandbyThreshold]
@@ -3269,10 +3268,8 @@ class PFExternalFriendSources: # enum
     const All := "All"
 
 class PFFindFriendLobbiesRequest:
-    # 8 items(s)
+    # 6 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
-    var ExcludeFacebookFriends: bool # Boolean
-    var ExcludeSteamFriends: bool # Boolean
     var ExternalPlatformFriends: String # ExternalFriendSources
     var Filter: String # String
     var OrderBy: String # String
@@ -3291,10 +3288,6 @@ class PFFindFriendLobbiesRequest:
             self.CustomTags = {}
             for k in dict_param["CustomTags"]:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
-        if "ExcludeFacebookFriends" in dict_param:
-            self.ExcludeFacebookFriends = dict_param["ExcludeFacebookFriends"]
-        if "ExcludeSteamFriends" in dict_param:
-            self.ExcludeSteamFriends = dict_param["ExcludeSteamFriends"]
         if "ExternalPlatformFriends" in dict_param:
             self.ExternalPlatformFriends = dict_param["ExternalPlatformFriends"]
         if "Filter" in dict_param:
@@ -3318,12 +3311,6 @@ class PFFindFriendLobbiesRequest:
                     if self.CustomTags[k].empty() != true:
                         dict_temp[k] = self.CustomTags[k]
                 dict_result["CustomTags"] = dict_temp
-        if self.ExcludeFacebookFriends != null:
-            # Boolean
-            dict_result["ExcludeFacebookFriends"] = self.ExcludeFacebookFriends
-        if self.ExcludeSteamFriends != null:
-            # Boolean
-            dict_result["ExcludeSteamFriends"] = self.ExcludeSteamFriends
         if self.ExternalPlatformFriends != null:
             # ExternalFriendSources
             dict_result["ExternalPlatformFriends"] = self.ExternalPlatformFriends
@@ -3836,7 +3823,7 @@ class PFGetBuildRequest:
 
 
 class PFGetBuildResponse:
-    # 20 items(s)
+    # 21 items(s)
     var AreAssetsReadonly: bool # Boolean
     var BuildId: String # String
     var BuildName: String # String
@@ -3857,6 +3844,7 @@ class PFGetBuildResponse:
     var ServerType: String # String
     var StartMultiplayerServerCommand: String # String
     var VmSize: String # AzureVmSize
+    var VmStartupScriptConfiguration: PFVmStartupScriptConfiguration # VmStartupScriptConfiguration
 
     func _init(dict_param: Dictionary = {}):
         
@@ -3868,6 +3856,7 @@ class PFGetBuildResponse:
         self.Ports = []
         self.RegionConfigurations = []
         self.ServerResourceConstraints = PFServerResourceConstraintParams.new()
+        self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -3922,6 +3911,8 @@ class PFGetBuildResponse:
             self.StartMultiplayerServerCommand = dict_param["StartMultiplayerServerCommand"]
         if "VmSize" in dict_param:
             self.VmSize = dict_param["VmSize"]
+        if "VmStartupScriptConfiguration" in dict_param:
+            self.VmStartupScriptConfiguration = PFVmStartupScriptConfiguration.new(dict_param["VmStartupScriptConfiguration"])
 
     func get_dict() -> Dictionary:
         
@@ -4009,6 +4000,8 @@ class PFGetBuildResponse:
         if self.VmSize != null:
             # AzureVmSize
             dict_result["VmSize"] = self.VmSize
+        if self.VmStartupScriptConfiguration != null:
+            dict_result["VmStartupScriptConfiguration"] = self.VmStartupScriptConfiguration.get_dict()
         
         return dict_result
 
@@ -4463,13 +4456,14 @@ class PFGetMultiplayerServerDetailsRequest:
 
 
 class PFGetMultiplayerServerDetailsResponse:
-    # 11 items(s)
+    # 12 items(s)
     var BuildId: String # String
     var ConnectedPlayers: Array # Array[PFConnectedPlayer]
     var FQDN: String # String
     var IPV4Address: String # String
     var LastStateTransitionTime: String # DateTime
     var Ports: Array # Array[PFPort]
+    var PublicIPV4Addresses: Array # Array[PFPublicIpAddress]
     var Region: String # String
     var ServerId: String # String
     var SessionId: String # String
@@ -4480,6 +4474,7 @@ class PFGetMultiplayerServerDetailsResponse:
         
         self.ConnectedPlayers = []
         self.Ports = []
+        self.PublicIPV4Addresses = []
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -4500,6 +4495,10 @@ class PFGetMultiplayerServerDetailsResponse:
             self.Ports = []
             for v in dict_param["Ports"]:
                 self.Ports.push_back(PFPort.new(v))
+        if "PublicIPV4Addresses" in dict_param:
+            self.PublicIPV4Addresses = []
+            for v in dict_param["PublicIPV4Addresses"]:
+                self.PublicIPV4Addresses.push_back(PFPublicIpAddress.new(v))
         if "Region" in dict_param:
             self.Region = dict_param["Region"]
         if "ServerId" in dict_param:
@@ -4543,6 +4542,12 @@ class PFGetMultiplayerServerDetailsResponse:
                 for v in self.Ports:
                     list_temp.push_back(v.get_dict())
                 dict_result["Ports"] = list_temp
+        if self.PublicIPV4Addresses != null:
+            if self.PublicIPV4Addresses.size() > 0:
+                var list_temp: Array = []
+                for v in self.PublicIPV4Addresses:
+                    list_temp.push_back(v.get_dict())
+                dict_result["PublicIPV4Addresses"] = list_temp
         if self.Region != null:
             # String
             if self.Region.empty() != true:
@@ -5973,9 +5978,11 @@ class PFListContainerImagesResponse:
 
 
 class PFListContainerImageTagsRequest:
-    # 2 items(s)
+    # 4 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
     var ImageName: String # String
+    var PageSize: int # int32
+    var SkipToken: String # String
 
     func _init(dict_param: Dictionary = {}):
         
@@ -5990,6 +5997,10 @@ class PFListContainerImageTagsRequest:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
         if "ImageName" in dict_param:
             self.ImageName = dict_param["ImageName"]
+        if "PageSize" in dict_param:
+            self.PageSize = dict_param["PageSize"]
+        if "SkipToken" in dict_param:
+            self.SkipToken = dict_param["SkipToken"]
 
     func get_dict() -> Dictionary:
         
@@ -6007,12 +6018,21 @@ class PFListContainerImageTagsRequest:
             # String
             if self.ImageName.empty() != true:
                 dict_result["ImageName"] = self.ImageName
+        if self.PageSize != null:
+            # int32
+            dict_result["PageSize"] = self.PageSize
+        if self.SkipToken != null:
+            # String
+            if self.SkipToken.empty() != true:
+                dict_result["SkipToken"] = self.SkipToken
         
         return dict_result
 
 
 class PFListContainerImageTagsResponse:
-    # 1 items(s)
+    # 3 items(s)
+    var PageSize: int # int32
+    var SkipToken: String # String
     var Tags: Array # Array[String]
 
     func _init(dict_param: Dictionary = {}):
@@ -6022,6 +6042,10 @@ class PFListContainerImageTagsResponse:
 
     func set_dict(dict_param: Dictionary):
         
+        if "PageSize" in dict_param:
+            self.PageSize = dict_param["PageSize"]
+        if "SkipToken" in dict_param:
+            self.SkipToken = dict_param["SkipToken"]
         if "Tags" in dict_param:
             self.Tags = []
             for v in dict_param["Tags"]:
@@ -6031,6 +6055,13 @@ class PFListContainerImageTagsResponse:
         
         var dict_result: Dictionary = {}
         
+        if self.PageSize != null:
+            # int32
+            dict_result["PageSize"] = self.PageSize
+        if self.SkipToken != null:
+            # String
+            if self.SkipToken.empty() != true:
+                dict_result["SkipToken"] = self.SkipToken
         if self.Tags != null:
             if self.Tags.size() > 0:
                 var list_temp: Array = []
@@ -7211,6 +7242,116 @@ class PFPaginationResponse:
         return dict_result
 
 
+class PFPartyInvitationConfiguration:
+    # 3 items(s)
+    var EntityKeys: Array # Array[PFEntityKey]
+    var Identifier: String # String
+    var Revocability: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.EntityKeys = []
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "EntityKeys" in dict_param:
+            self.EntityKeys = []
+            for v in dict_param["EntityKeys"]:
+                self.EntityKeys.push_back(PFEntityKey.new(v))
+        if "Identifier" in dict_param:
+            self.Identifier = dict_param["Identifier"]
+        if "Revocability" in dict_param:
+            self.Revocability = dict_param["Revocability"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.EntityKeys != null:
+            if self.EntityKeys.size() > 0:
+                var list_temp: Array = []
+                for v in self.EntityKeys:
+                    list_temp.push_back(v.get_dict())
+                dict_result["EntityKeys"] = list_temp
+        if self.Identifier != null:
+            # String
+            if self.Identifier.empty() != true:
+                dict_result["Identifier"] = self.Identifier
+        if self.Revocability != null:
+            # String
+            if self.Revocability.empty() != true:
+                dict_result["Revocability"] = self.Revocability
+        
+        return dict_result
+
+
+class PFPartyInvitationRevocability: # enum
+    # 2 items(s)
+    const Creator := "Creator"
+    const Anyone := "Anyone"
+
+class PFPartyNetworkConfiguration:
+    # 7 items(s)
+    var DirectPeerConnectivityOptions: String # String
+    var MaxDevices: int # uint32
+    var MaxDevicesPerUser: int # uint32
+    var MaxEndpointsPerDevice: int # uint32
+    var MaxUsers: int # uint32
+    var MaxUsersPerDevice: int # uint32
+    var PartyInvitationConfiguration: PFPartyInvitationConfiguration # PartyInvitationConfiguration
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.PartyInvitationConfiguration = PFPartyInvitationConfiguration.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "DirectPeerConnectivityOptions" in dict_param:
+            self.DirectPeerConnectivityOptions = dict_param["DirectPeerConnectivityOptions"]
+        if "MaxDevices" in dict_param:
+            self.MaxDevices = dict_param["MaxDevices"]
+        if "MaxDevicesPerUser" in dict_param:
+            self.MaxDevicesPerUser = dict_param["MaxDevicesPerUser"]
+        if "MaxEndpointsPerDevice" in dict_param:
+            self.MaxEndpointsPerDevice = dict_param["MaxEndpointsPerDevice"]
+        if "MaxUsers" in dict_param:
+            self.MaxUsers = dict_param["MaxUsers"]
+        if "MaxUsersPerDevice" in dict_param:
+            self.MaxUsersPerDevice = dict_param["MaxUsersPerDevice"]
+        if "PartyInvitationConfiguration" in dict_param:
+            self.PartyInvitationConfiguration = PFPartyInvitationConfiguration.new(dict_param["PartyInvitationConfiguration"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.DirectPeerConnectivityOptions != null:
+            # String
+            if self.DirectPeerConnectivityOptions.empty() != true:
+                dict_result["DirectPeerConnectivityOptions"] = self.DirectPeerConnectivityOptions
+        if self.MaxDevices != null:
+            # uint32
+            dict_result["MaxDevices"] = self.MaxDevices
+        if self.MaxDevicesPerUser != null:
+            # uint32
+            dict_result["MaxDevicesPerUser"] = self.MaxDevicesPerUser
+        if self.MaxEndpointsPerDevice != null:
+            # uint32
+            dict_result["MaxEndpointsPerDevice"] = self.MaxEndpointsPerDevice
+        if self.MaxUsers != null:
+            # uint32
+            dict_result["MaxUsers"] = self.MaxUsers
+        if self.MaxUsersPerDevice != null:
+            # uint32
+            dict_result["MaxUsersPerDevice"] = self.MaxUsersPerDevice
+        if self.PartyInvitationConfiguration != null:
+            dict_result["PartyInvitationConfiguration"] = self.PartyInvitationConfiguration.get_dict()
+        
+        return dict_result
+
+
 class PFPort:
     # 3 items(s)
     var Name: String # String
@@ -7252,6 +7393,45 @@ class PFProtocolType: # enum
     # 2 items(s)
     const TCP := "TCP"
     const UDP := "UDP"
+
+class PFPublicIpAddress:
+    # 3 items(s)
+    var FQDN: String # String
+    var IpAddress: String # String
+    var RoutingType: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "FQDN" in dict_param:
+            self.FQDN = dict_param["FQDN"]
+        if "IpAddress" in dict_param:
+            self.IpAddress = dict_param["IpAddress"]
+        if "RoutingType" in dict_param:
+            self.RoutingType = dict_param["RoutingType"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.FQDN != null:
+            # String
+            if self.FQDN.empty() != true:
+                dict_result["FQDN"] = self.FQDN
+        if self.IpAddress != null:
+            # String
+            if self.IpAddress.empty() != true:
+                dict_result["IpAddress"] = self.IpAddress
+        if self.RoutingType != null:
+            # String
+            if self.RoutingType.empty() != true:
+                dict_result["RoutingType"] = self.RoutingType
+        
+        return dict_result
+
 
 class PFQosServer:
     # 2 items(s)
@@ -7494,13 +7674,14 @@ class PFRequestMultiplayerServerRequest:
 
 
 class PFRequestMultiplayerServerResponse:
-    # 11 items(s)
+    # 12 items(s)
     var BuildId: String # String
     var ConnectedPlayers: Array # Array[PFConnectedPlayer]
     var FQDN: String # String
     var IPV4Address: String # String
     var LastStateTransitionTime: String # DateTime
     var Ports: Array # Array[PFPort]
+    var PublicIPV4Addresses: Array # Array[PFPublicIpAddress]
     var Region: String # String
     var ServerId: String # String
     var SessionId: String # String
@@ -7511,6 +7692,7 @@ class PFRequestMultiplayerServerResponse:
         
         self.ConnectedPlayers = []
         self.Ports = []
+        self.PublicIPV4Addresses = []
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
@@ -7531,6 +7713,10 @@ class PFRequestMultiplayerServerResponse:
             self.Ports = []
             for v in dict_param["Ports"]:
                 self.Ports.push_back(PFPort.new(v))
+        if "PublicIPV4Addresses" in dict_param:
+            self.PublicIPV4Addresses = []
+            for v in dict_param["PublicIPV4Addresses"]:
+                self.PublicIPV4Addresses.push_back(PFPublicIpAddress.new(v))
         if "Region" in dict_param:
             self.Region = dict_param["Region"]
         if "ServerId" in dict_param:
@@ -7574,6 +7760,12 @@ class PFRequestMultiplayerServerResponse:
                 for v in self.Ports:
                     list_temp.push_back(v.get_dict())
                 dict_result["Ports"] = list_temp
+        if self.PublicIPV4Addresses != null:
+            if self.PublicIPV4Addresses.size() > 0:
+                var list_temp: Array = []
+                for v in self.PublicIPV4Addresses:
+                    list_temp.push_back(v.get_dict())
+                dict_result["PublicIPV4Addresses"] = list_temp
         if self.Region != null:
             # String
             if self.Region.empty() != true:
@@ -7594,6 +7786,104 @@ class PFRequestMultiplayerServerResponse:
             # String
             if self.VmId.empty() != true:
                 dict_result["VmId"] = self.VmId
+        
+        return dict_result
+
+
+class PFRequestPartyServiceRequest:
+    # 4 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var NetworkConfiguration: PFPartyNetworkConfiguration # PartyNetworkConfiguration
+    var PartyId: String # String
+    var PreferredRegions: Array # Array[String]
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.NetworkConfiguration = PFPartyNetworkConfiguration.new()
+        self.PreferredRegions = []
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "NetworkConfiguration" in dict_param:
+            self.NetworkConfiguration = PFPartyNetworkConfiguration.new(dict_param["NetworkConfiguration"])
+        if "PartyId" in dict_param:
+            self.PartyId = dict_param["PartyId"]
+        if "PreferredRegions" in dict_param:
+            self.PreferredRegions = []
+            for v in dict_param["PreferredRegions"]:
+                self.PreferredRegions.push_back(v)
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.NetworkConfiguration != null:
+            dict_result["NetworkConfiguration"] = self.NetworkConfiguration.get_dict()
+        if self.PartyId != null:
+            # String
+            if self.PartyId.empty() != true:
+                dict_result["PartyId"] = self.PartyId
+        if self.PreferredRegions != null:
+            if self.PreferredRegions.size() > 0:
+                var list_temp: Array = []
+                for v in self.PreferredRegions:
+                    # Array[String]
+                    if v.empty() != true:
+                        list_temp.push_back(v)
+                dict_result["PreferredRegions"] = list_temp
+        
+        return dict_result
+
+
+class PFRequestPartyServiceResponse:
+    # 3 items(s)
+    var InvitationId: String # String
+    var PartyId: String # String
+    var SerializedNetworkDescriptor: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "InvitationId" in dict_param:
+            self.InvitationId = dict_param["InvitationId"]
+        if "PartyId" in dict_param:
+            self.PartyId = dict_param["PartyId"]
+        if "SerializedNetworkDescriptor" in dict_param:
+            self.SerializedNetworkDescriptor = dict_param["SerializedNetworkDescriptor"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.InvitationId != null:
+            # String
+            if self.InvitationId.empty() != true:
+                dict_result["InvitationId"] = self.InvitationId
+        if self.PartyId != null:
+            # String
+            if self.PartyId.empty() != true:
+                dict_result["PartyId"] = self.PartyId
+        if self.SerializedNetworkDescriptor != null:
+            # String
+            if self.SerializedNetworkDescriptor.empty() != true:
+                dict_result["SerializedNetworkDescriptor"] = self.SerializedNetworkDescriptor
         
         return dict_result
 
@@ -7668,6 +7958,11 @@ class PFRolloverContainerRegistryCredentialsResponse:
         
         return dict_result
 
+
+class PFRoutingType: # enum
+    # 2 items(s)
+    const Microsoft := "Microsoft"
+    const Internet := "Internet"
 
 class PFSchedule:
     # 6 items(s)
@@ -8523,8 +8818,9 @@ class PFUpdateLobbyRequest:
 
 
 class PFUploadCertificateRequest:
-    # 2 items(s)
+    # 3 items(s)
     var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var ForceUpdate: bool # Boolean
     var GameCertificate: PFCertificate # Certificate
 
     func _init(dict_param: Dictionary = {}):
@@ -8539,6 +8835,8 @@ class PFUploadCertificateRequest:
             self.CustomTags = {}
             for k in dict_param["CustomTags"]:
                 self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "ForceUpdate" in dict_param:
+            self.ForceUpdate = dict_param["ForceUpdate"]
         if "GameCertificate" in dict_param:
             self.GameCertificate = PFCertificate.new(dict_param["GameCertificate"])
 
@@ -8554,6 +8852,9 @@ class PFUploadCertificateRequest:
                     if self.CustomTags[k].empty() != true:
                         dict_temp[k] = self.CustomTags[k]
                 dict_result["CustomTags"] = dict_temp
+        if self.ForceUpdate != null:
+            # Boolean
+            dict_result["ForceUpdate"] = self.ForceUpdate
         if self.GameCertificate != null:
             dict_result["GameCertificate"] = self.GameCertificate.get_dict()
         
@@ -8600,16 +8901,22 @@ class PFVirtualMachineSummary:
 
 
 class PFVmStartupScriptConfiguration:
-    # 1 items(s)
+    # 2 items(s)
+    var PortRequests: Array # Array[PFVmStartupScriptPortRequest]
     var VmStartupScriptAssetReference: PFAssetReference # AssetReference
 
     func _init(dict_param: Dictionary = {}):
         
+        self.PortRequests = []
         self.VmStartupScriptAssetReference = PFAssetReference.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
+        if "PortRequests" in dict_param:
+            self.PortRequests = []
+            for v in dict_param["PortRequests"]:
+                self.PortRequests.push_back(PFVmStartupScriptPortRequest.new(v))
         if "VmStartupScriptAssetReference" in dict_param:
             self.VmStartupScriptAssetReference = PFAssetReference.new(dict_param["VmStartupScriptAssetReference"])
 
@@ -8617,6 +8924,12 @@ class PFVmStartupScriptConfiguration:
         
         var dict_result: Dictionary = {}
         
+        if self.PortRequests != null:
+            if self.PortRequests.size() > 0:
+                var list_temp: Array = []
+                for v in self.PortRequests:
+                    list_temp.push_back(v.get_dict())
+                dict_result["PortRequests"] = list_temp
         if self.VmStartupScriptAssetReference != null:
             dict_result["VmStartupScriptAssetReference"] = self.VmStartupScriptAssetReference.get_dict()
         
@@ -8624,16 +8937,22 @@ class PFVmStartupScriptConfiguration:
 
 
 class PFVmStartupScriptParams:
-    # 1 items(s)
+    # 2 items(s)
+    var PortRequests: Array # Array[PFVmStartupScriptPortRequestParams]
     var VmStartupScriptAssetReference: PFAssetReferenceParams # AssetReferenceParams
 
     func _init(dict_param: Dictionary = {}):
         
+        self.PortRequests = []
         self.VmStartupScriptAssetReference = PFAssetReferenceParams.new()
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
+        if "PortRequests" in dict_param:
+            self.PortRequests = []
+            for v in dict_param["PortRequests"]:
+                self.PortRequests.push_back(PFVmStartupScriptPortRequestParams.new(v))
         if "VmStartupScriptAssetReference" in dict_param:
             self.VmStartupScriptAssetReference = PFAssetReferenceParams.new(dict_param["VmStartupScriptAssetReference"])
 
@@ -8641,8 +8960,76 @@ class PFVmStartupScriptParams:
         
         var dict_result: Dictionary = {}
         
+        if self.PortRequests != null:
+            if self.PortRequests.size() > 0:
+                var list_temp: Array = []
+                for v in self.PortRequests:
+                    list_temp.push_back(v.get_dict())
+                dict_result["PortRequests"] = list_temp
         if self.VmStartupScriptAssetReference != null:
             dict_result["VmStartupScriptAssetReference"] = self.VmStartupScriptAssetReference.get_dict()
+        
+        return dict_result
+
+
+class PFVmStartupScriptPortRequest:
+    # 2 items(s)
+    var Name: String # String
+    var Protocol: String # ProtocolType
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Name" in dict_param:
+            self.Name = dict_param["Name"]
+        if "Protocol" in dict_param:
+            self.Protocol = dict_param["Protocol"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Name != null:
+            # String
+            if self.Name.empty() != true:
+                dict_result["Name"] = self.Name
+        if self.Protocol != null:
+            # ProtocolType
+            dict_result["Protocol"] = self.Protocol
+        
+        return dict_result
+
+
+class PFVmStartupScriptPortRequestParams:
+    # 2 items(s)
+    var Name: String # String
+    var Protocol: String # ProtocolType
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Name" in dict_param:
+            self.Name = dict_param["Name"]
+        if "Protocol" in dict_param:
+            self.Protocol = dict_param["Protocol"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Name != null:
+            # String
+            if self.Name.empty() != true:
+                dict_result["Name"] = self.Name
+        if self.Protocol != null:
+            # ProtocolType
+            dict_result["Protocol"] = self.Protocol
         
         return dict_result
 

@@ -2,6 +2,144 @@ extends Object
 # class_name PFEventsDataModels
 
 
+class PFCreateTelemetryKeyRequest:
+    # 3 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Entity: PFEntityKey # EntityKey
+    var KeyName: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.Entity = PFEntityKey.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Entity" in dict_param:
+            self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "KeyName" in dict_param:
+            self.KeyName = dict_param["KeyName"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Entity != null:
+            dict_result["Entity"] = self.Entity.get_dict()
+        if self.KeyName != null:
+            # String
+            if self.KeyName.empty() != true:
+                dict_result["KeyName"] = self.KeyName
+        
+        return dict_result
+
+
+class PFCreateTelemetryKeyResponse:
+    # 1 items(s)
+    var NewKeyDetails: PFTelemetryKeyDetails # TelemetryKeyDetails
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.NewKeyDetails = PFTelemetryKeyDetails.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "NewKeyDetails" in dict_param:
+            self.NewKeyDetails = PFTelemetryKeyDetails.new(dict_param["NewKeyDetails"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.NewKeyDetails != null:
+            dict_result["NewKeyDetails"] = self.NewKeyDetails.get_dict()
+        
+        return dict_result
+
+
+class PFDeleteTelemetryKeyRequest:
+    # 3 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Entity: PFEntityKey # EntityKey
+    var KeyName: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.Entity = PFEntityKey.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Entity" in dict_param:
+            self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "KeyName" in dict_param:
+            self.KeyName = dict_param["KeyName"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Entity != null:
+            dict_result["Entity"] = self.Entity.get_dict()
+        if self.KeyName != null:
+            # String
+            if self.KeyName.empty() != true:
+                dict_result["KeyName"] = self.KeyName
+        
+        return dict_result
+
+
+class PFDeleteTelemetryKeyResponse:
+    # 1 items(s)
+    var WasKeyDeleted: bool # Boolean
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "WasKeyDeleted" in dict_param:
+            self.WasKeyDeleted = dict_param["WasKeyDeleted"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.WasKeyDeleted != null:
+            # Boolean
+            dict_result["WasKeyDeleted"] = self.WasKeyDeleted
+        
+        return dict_result
+
+
 class PFEntityKey:
     # 2 items(s)
     var Id: String # String
@@ -109,6 +247,276 @@ class PFEventContents:
             # String
             if self.PayloadJSON.empty() != true:
                 dict_result["PayloadJSON"] = self.PayloadJSON
+        
+        return dict_result
+
+
+class PFGetTelemetryKeyRequest:
+    # 3 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Entity: PFEntityKey # EntityKey
+    var KeyName: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.Entity = PFEntityKey.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Entity" in dict_param:
+            self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "KeyName" in dict_param:
+            self.KeyName = dict_param["KeyName"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Entity != null:
+            dict_result["Entity"] = self.Entity.get_dict()
+        if self.KeyName != null:
+            # String
+            if self.KeyName.empty() != true:
+                dict_result["KeyName"] = self.KeyName
+        
+        return dict_result
+
+
+class PFGetTelemetryKeyResponse:
+    # 1 items(s)
+    var KeyDetails: PFTelemetryKeyDetails # TelemetryKeyDetails
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.KeyDetails = PFTelemetryKeyDetails.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "KeyDetails" in dict_param:
+            self.KeyDetails = PFTelemetryKeyDetails.new(dict_param["KeyDetails"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.KeyDetails != null:
+            dict_result["KeyDetails"] = self.KeyDetails.get_dict()
+        
+        return dict_result
+
+
+class PFListTelemetryKeysRequest:
+    # 2 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Entity: PFEntityKey # EntityKey
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.Entity = PFEntityKey.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Entity" in dict_param:
+            self.Entity = PFEntityKey.new(dict_param["Entity"])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Entity != null:
+            dict_result["Entity"] = self.Entity.get_dict()
+        
+        return dict_result
+
+
+class PFListTelemetryKeysResponse:
+    # 1 items(s)
+    var KeyDetails: Array # Array[PFTelemetryKeyDetails]
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.KeyDetails = []
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "KeyDetails" in dict_param:
+            self.KeyDetails = []
+            for v in dict_param["KeyDetails"]:
+                self.KeyDetails.push_back(PFTelemetryKeyDetails.new(v))
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.KeyDetails != null:
+            if self.KeyDetails.size() > 0:
+                var list_temp: Array = []
+                for v in self.KeyDetails:
+                    list_temp.push_back(v.get_dict())
+                dict_result["KeyDetails"] = list_temp
+        
+        return dict_result
+
+
+class PFSetTelemetryKeyActiveRequest:
+    # 4 items(s)
+    var Active: bool # Boolean
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Entity: PFEntityKey # EntityKey
+    var KeyName: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.Entity = PFEntityKey.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "Active" in dict_param:
+            self.Active = dict_param["Active"]
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Entity" in dict_param:
+            self.Entity = PFEntityKey.new(dict_param["Entity"])
+        if "KeyName" in dict_param:
+            self.KeyName = dict_param["KeyName"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.Active != null:
+            # Boolean
+            dict_result["Active"] = self.Active
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Entity != null:
+            dict_result["Entity"] = self.Entity.get_dict()
+        if self.KeyName != null:
+            # String
+            if self.KeyName.empty() != true:
+                dict_result["KeyName"] = self.KeyName
+        
+        return dict_result
+
+
+class PFSetTelemetryKeyActiveResponse:
+    # 2 items(s)
+    var KeyDetails: PFTelemetryKeyDetails # TelemetryKeyDetails
+    var WasKeyUpdated: bool # Boolean
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.KeyDetails = PFTelemetryKeyDetails.new()
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "KeyDetails" in dict_param:
+            self.KeyDetails = PFTelemetryKeyDetails.new(dict_param["KeyDetails"])
+        if "WasKeyUpdated" in dict_param:
+            self.WasKeyUpdated = dict_param["WasKeyUpdated"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.KeyDetails != null:
+            dict_result["KeyDetails"] = self.KeyDetails.get_dict()
+        if self.WasKeyUpdated != null:
+            # Boolean
+            dict_result["WasKeyUpdated"] = self.WasKeyUpdated
+        
+        return dict_result
+
+
+class PFTelemetryKeyDetails:
+    # 5 items(s)
+    var CreateTime: String # DateTime
+    var IsActive: bool # Boolean
+    var KeyValue: String # String
+    var LastUpdateTime: String # DateTime
+    var Name: String # String
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CreateTime" in dict_param:
+            self.CreateTime = dict_param["CreateTime"]
+        if "IsActive" in dict_param:
+            self.IsActive = dict_param["IsActive"]
+        if "KeyValue" in dict_param:
+            self.KeyValue = dict_param["KeyValue"]
+        if "LastUpdateTime" in dict_param:
+            self.LastUpdateTime = dict_param["LastUpdateTime"]
+        if "Name" in dict_param:
+            self.Name = dict_param["Name"]
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CreateTime != null:
+            # String(DateTime)
+            if self.CreateTime.empty() != true:
+                dict_result["CreateTime"] = self.CreateTime
+        if self.IsActive != null:
+            # Boolean
+            dict_result["IsActive"] = self.IsActive
+        if self.KeyValue != null:
+            # String
+            if self.KeyValue.empty() != true:
+                dict_result["KeyValue"] = self.KeyValue
+        if self.LastUpdateTime != null:
+            # String(DateTime)
+            if self.LastUpdateTime.empty() != true:
+                dict_result["LastUpdateTime"] = self.LastUpdateTime
+        if self.Name != null:
+            # String
+            if self.Name.empty() != true:
+                dict_result["Name"] = self.Name
         
         return dict_result
 

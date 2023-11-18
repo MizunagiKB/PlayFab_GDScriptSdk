@@ -75,7 +75,8 @@ static func AddPlayerTag(dict_request, user_callback = null, dict_header_extra =
 
 static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Increments the specified virtual currency by the stated amount
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Increments the specified virtual currency by the stated amount
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/adduservirtualcurrency
     """
 
@@ -91,8 +92,9 @@ static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_head
 
 static func AddVirtualCurrencyTypes(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds one or more virtual currencies to the set defined for the title. Virtual Currencies have a maximum value of
-    2,147,483,647 when granted to a player. Any value over that will be discarded.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds one or more virtual currencies to the set defined for the title. Virtual Currencies have a maximum
+    value of 2,147,483,647 when granted to a player. Any value over that will be discarded.
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/addvirtualcurrencytypes
     """
 
@@ -124,7 +126,8 @@ static func BanUsers(dict_request, user_callback = null, dict_header_extra = {})
 
 static func CheckLimitedEditionItemAvailability(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Checks the global count for the limited edition item.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Checks the global count for the limited edition item.
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/checklimitededitionitemavailability
     """
 
@@ -285,6 +288,22 @@ static func DeleteMasterPlayerAccount(dict_request, user_callback = null, dict_h
     )
 
 
+static func DeleteMasterPlayerEventData(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Deletes PlayStream and telemetry event data associated with the master player account from PlayFab storage
+    https://docs.microsoft.com/rest/api/playfab/admin/account-management/deletemasterplayereventdata
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Admin/DeleteMasterPlayerEventData",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func DeleteMembershipSubscription(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Deletes a player's subscription
@@ -368,7 +387,8 @@ static func DeleteSegment(dict_request, user_callback = null, dict_header_extra 
 
 static func DeleteStore(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Deletes an existing virtual item store
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Deletes an existing virtual item store
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/deletestore
     """
 
@@ -499,7 +519,8 @@ static func GetAllSegments(dict_request, user_callback = null, dict_header_extra
 
 static func GetCatalogItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getcatalogitems
     """
 
@@ -604,38 +625,6 @@ static func GetDataReport(dict_request, user_callback = null, dict_header_extra 
 
     return PlayFab._http_cli.request_append(
         "/Admin/GetDataReport",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func GetMatchmakerGameInfo(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Retrieves the details for a specific completed session, including links to standard out and standard error logs
-    https://docs.microsoft.com/rest/api/playfab/admin/matchmaking/getmatchmakergameinfo
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/GetMatchmakerGameInfo",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func GetMatchmakerGameModes(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Retrieves the details of defined game modes for the specified game server executable
-    https://docs.microsoft.com/rest/api/playfab/admin/matchmaking/getmatchmakergamemodes
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/GetMatchmakerGameModes",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -827,7 +816,8 @@ static func GetPublisherData(dict_request, user_callback = null, dict_header_ext
 
 static func GetRandomResultTables(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the random drop table configuration for the title
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the random drop table configuration for the title
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getrandomresulttables
     """
 
@@ -878,7 +868,8 @@ static func GetSegments(dict_request, user_callback = null, dict_header_extra = 
 
 static func GetStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the set of items defined for the specified store, including all prices defined
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the set of items defined for the specified store, including all prices defined
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/getstoreitems
     """
 
@@ -1022,7 +1013,8 @@ static func GetUserInternalData(dict_request, user_callback = null, dict_header_
 
 static func GetUserInventory(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified user's current inventory of virtual goods
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified user's current inventory of virtual goods
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/getuserinventory
     """
 
@@ -1102,7 +1094,8 @@ static func GetUserReadOnlyData(dict_request, user_callback = null, dict_header_
 
 static func GrantItemsToUsers(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds the specified items to the specified user inventories
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds the specified items to the specified user inventories
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/grantitemstousers
     """
 
@@ -1118,7 +1111,8 @@ static func GrantItemsToUsers(dict_request, user_callback = null, dict_header_ex
 
 static func IncrementLimitedEditionItemAvailability(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Increases the global count for the given scarce resource.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Increases the global count for the given scarce resource.
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/incrementlimitededitionitemavailability
     """
 
@@ -1166,7 +1160,8 @@ static func ListOpenIdConnection(dict_request, user_callback = null, dict_header
 
 static func ListVirtualCurrencyTypes(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retuns the list of all defined virtual currencies for the title
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retuns the list of all defined virtual currencies for the title
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/listvirtualcurrencytypes
     """
 
@@ -1180,25 +1175,10 @@ static func ListVirtualCurrencyTypes(dict_request, user_callback = null, dict_he
     )
 
 
-static func ModifyServerBuild(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Updates the build details for the specified game server executable
-    https://docs.microsoft.com/rest/api/playfab/admin/custom-server-management/modifyserverbuild
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Admin/ModifyServerBuild",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func RefundPurchase(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Attempts to process an order refund through the original real money payment provider.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Attempts to process an order refund through the original real money payment provider.
     https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/refundpurchase
     """
 
@@ -1230,7 +1210,8 @@ static func RemovePlayerTag(dict_request, user_callback = null, dict_header_extr
 
 static func RemoveVirtualCurrencyTypes(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Removes one or more virtual currencies from the set defined for the title.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Removes one or more virtual currencies from the set defined for the title.
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/removevirtualcurrencytypes
     """
 
@@ -1294,7 +1275,8 @@ static func ResetUserStatistics(dict_request, user_callback = null, dict_header_
 
 static func ResolvePurchaseDispute(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Attempts to resolve a dispute with the original order's payment provider.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Attempts to resolve a dispute with the original order's payment provider.
     https://docs.microsoft.com/rest/api/playfab/admin/player-data-management/resolvepurchasedispute
     """
 
@@ -1342,7 +1324,8 @@ static func RevokeBans(dict_request, user_callback = null, dict_header_extra = {
 
 static func RevokeInventoryItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Revokes access to an item in a user's inventory
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Revokes access to an item in a user's inventory
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/revokeinventoryitem
     """
 
@@ -1358,7 +1341,8 @@ static func RevokeInventoryItem(dict_request, user_callback = null, dict_header_
 
 static func RevokeInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Revokes access for up to 25 items across multiple users and characters.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Revokes access for up to 25 items across multiple users and characters.
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/revokeinventoryitems
     """
 
@@ -1408,7 +1392,8 @@ static func SendAccountRecoveryEmail(dict_request, user_callback = null, dict_he
 
 static func SetCatalogItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Creates the catalog configuration of all virtual goods for the specified catalog version
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Creates the catalog configuration of all virtual goods for the specified catalog version
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/setcatalogitems
     """
 
@@ -1488,7 +1473,8 @@ static func SetPublisherData(dict_request, user_callback = null, dict_header_ext
 
 static func SetStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Sets all the items in one virtual store
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Sets all the items in one virtual store
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/setstoreitems
     """
 
@@ -1574,7 +1560,8 @@ static func SetupPushNotification(dict_request, user_callback = null, dict_heade
 
 static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Decrements the specified virtual currency by the stated amount
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Decrements the specified virtual currency by the stated amount
     https://docs.microsoft.com/rest/api/playfab/admin/player-item-management/subtractuservirtualcurrency
     """
 
@@ -1606,7 +1593,8 @@ static func UpdateBans(dict_request, user_callback = null, dict_header_extra = {
 
 static func UpdateCatalogItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Updates the catalog configuration for virtual goods in the specified catalog version
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Updates the catalog configuration for virtual goods in the specified catalog version
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/updatecatalogitems
     """
 
@@ -1704,7 +1692,8 @@ static func UpdatePolicy(dict_request, user_callback = null, dict_header_extra =
 
 static func UpdateRandomResultTables(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Updates the random drop table configuration for the title
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Updates the random drop table configuration for the title
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/updaterandomresulttables
     """
 
@@ -1736,7 +1725,8 @@ static func UpdateSegment(dict_request, user_callback = null, dict_header_extra 
 
 static func UpdateStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Updates an existing virtual item store with new or modified items
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Updates an existing virtual item store with new or modified items
     https://docs.microsoft.com/rest/api/playfab/admin/title-wide-data-management/updatestoreitems
     """
 

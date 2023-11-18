@@ -195,7 +195,7 @@ class PFEntityPermissionStatement:
 
 
 class PFEntityProfileBody:
-    # 14 items(s)
+    # 13 items(s)
     var AvatarUrl: String # String
     var Created: String # DateTime
     var DisplayName: String # String
@@ -204,7 +204,6 @@ class PFEntityProfileBody:
     var ExperimentVariants: Array # Array[String]
     var Files: Dictionary # Dictionary[String, PFEntityProfileFileMetadata(EntityProfileFileMetadata)]
     var Language: String # String
-    var LeaderboardMetadata: String # String
     var Lineage: PFEntityLineage # EntityLineage
     var Objects: Dictionary # Dictionary[String, PFEntityDataObject(EntityDataObject)]
     var Permissions: Array # Array[PFEntityPermissionStatement]
@@ -244,8 +243,6 @@ class PFEntityProfileBody:
                 self.Files[k] = PFEntityProfileFileMetadata.new(dict_param["Files"][k])
         if "Language" in dict_param:
             self.Language = dict_param["Language"]
-        if "LeaderboardMetadata" in dict_param:
-            self.LeaderboardMetadata = dict_param["LeaderboardMetadata"]
         if "Lineage" in dict_param:
             self.Lineage = PFEntityLineage.new(dict_param["Lineage"])
         if "Objects" in dict_param:
@@ -303,10 +300,6 @@ class PFEntityProfileBody:
             # String
             if self.Language.empty() != true:
                 dict_result["Language"] = self.Language
-        if self.LeaderboardMetadata != null:
-            # String
-            if self.LeaderboardMetadata.empty() != true:
-                dict_result["LeaderboardMetadata"] = self.LeaderboardMetadata
         if self.Lineage != null:
             dict_result["Lineage"] = self.Lineage.get_dict()
         if self.Objects != null:
@@ -379,67 +372,81 @@ class PFEntityProfileFileMetadata:
         return dict_result
 
 
-class PFEntityStatisticChildValue:
+class PFEntityStatisticAttributeValue:
     # 3 items(s)
-    var ChildName: String # String
     var Metadata: String # String
-    var Value: int # int32
+    var Name: String # String
+    var Scores: Array # Array[String]
 
     func _init(dict_param: Dictionary = {}):
         
+        self.Scores = []
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
-        if "ChildName" in dict_param:
-            self.ChildName = dict_param["ChildName"]
         if "Metadata" in dict_param:
             self.Metadata = dict_param["Metadata"]
-        if "Value" in dict_param:
-            self.Value = dict_param["Value"]
+        if "Name" in dict_param:
+            self.Name = dict_param["Name"]
+        if "Scores" in dict_param:
+            self.Scores = []
+            for v in dict_param["Scores"]:
+                self.Scores.push_back(v)
 
     func get_dict() -> Dictionary:
         
         var dict_result: Dictionary = {}
         
-        if self.ChildName != null:
-            # String
-            if self.ChildName.empty() != true:
-                dict_result["ChildName"] = self.ChildName
         if self.Metadata != null:
             # String
             if self.Metadata.empty() != true:
                 dict_result["Metadata"] = self.Metadata
-        if self.Value != null:
-            # int32
-            dict_result["Value"] = self.Value
+        if self.Name != null:
+            # String
+            if self.Name.empty() != true:
+                dict_result["Name"] = self.Name
+        if self.Scores != null:
+            if self.Scores.size() > 0:
+                var list_temp: Array = []
+                for v in self.Scores:
+                    # Array[String]
+                    if v.empty() != true:
+                        list_temp.push_back(v)
+                dict_result["Scores"] = list_temp
         
         return dict_result
 
 
 class PFEntityStatisticValue:
-    # 5 items(s)
-    var ChildStatistics: Dictionary # Dictionary[String, PFEntityStatisticChildValue(EntityStatisticChildValue)]
+    # 6 items(s)
+    var AttributeStatistics: Dictionary # Dictionary[String, PFEntityStatisticAttributeValue(EntityStatisticAttributeValue)]
     var Metadata: String # String
     var Name: String # String
+    var Scores: Array # Array[String]
     var Value: int # int32
     var Version: int # int32
 
     func _init(dict_param: Dictionary = {}):
         
-        self.ChildStatistics = {}
+        self.AttributeStatistics = {}
+        self.Scores = []
         self.set_dict(dict_param)
 
     func set_dict(dict_param: Dictionary):
         
-        if "ChildStatistics" in dict_param:
-            self.ChildStatistics = {}
-            for k in dict_param["ChildStatistics"]:
-                self.ChildStatistics[k] = PFEntityStatisticChildValue.new(dict_param["ChildStatistics"][k])
+        if "AttributeStatistics" in dict_param:
+            self.AttributeStatistics = {}
+            for k in dict_param["AttributeStatistics"]:
+                self.AttributeStatistics[k] = PFEntityStatisticAttributeValue.new(dict_param["AttributeStatistics"][k])
         if "Metadata" in dict_param:
             self.Metadata = dict_param["Metadata"]
         if "Name" in dict_param:
             self.Name = dict_param["Name"]
+        if "Scores" in dict_param:
+            self.Scores = []
+            for v in dict_param["Scores"]:
+                self.Scores.push_back(v)
         if "Value" in dict_param:
             self.Value = dict_param["Value"]
         if "Version" in dict_param:
@@ -449,12 +456,12 @@ class PFEntityStatisticValue:
         
         var dict_result: Dictionary = {}
         
-        if self.ChildStatistics != null:
-            if self.ChildStatistics.size() > 0:
+        if self.AttributeStatistics != null:
+            if self.AttributeStatistics.size() > 0:
                 var dict_temp: Dictionary = {}
-                for k in self.ChildStatistics:
-                    dict_temp[k] = self.ChildStatistics[k].get_dict()
-                dict_result["ChildStatistics"] = dict_temp
+                for k in self.AttributeStatistics:
+                    dict_temp[k] = self.AttributeStatistics[k].get_dict()
+                dict_result["AttributeStatistics"] = dict_temp
         if self.Metadata != null:
             # String
             if self.Metadata.empty() != true:
@@ -463,6 +470,14 @@ class PFEntityStatisticValue:
             # String
             if self.Name.empty() != true:
                 dict_result["Name"] = self.Name
+        if self.Scores != null:
+            if self.Scores.size() > 0:
+                var list_temp: Array = []
+                for v in self.Scores:
+                    # Array[String]
+                    if v.empty() != true:
+                        list_temp.push_back(v)
+                dict_result["Scores"] = list_temp
         if self.Value != null:
             # int32
             dict_result["Value"] = self.Value
@@ -775,6 +790,96 @@ class PFGetTitlePlayersFromMasterPlayerAccountIdsResponse:
                 for k in self.TitlePlayerAccounts:
                     dict_temp[k] = self.TitlePlayerAccounts[k].get_dict()
                 dict_result["TitlePlayerAccounts"] = dict_temp
+        
+        return dict_result
+
+
+class PFGetTitlePlayersFromProviderIDsResponse:
+    # 1 items(s)
+    var TitlePlayerAccounts: Dictionary # Dictionary[String, PFEntityLineage(EntityLineage)]
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.TitlePlayerAccounts = {}
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "TitlePlayerAccounts" in dict_param:
+            self.TitlePlayerAccounts = {}
+            for k in dict_param["TitlePlayerAccounts"]:
+                self.TitlePlayerAccounts[k] = PFEntityLineage.new(dict_param["TitlePlayerAccounts"][k])
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.TitlePlayerAccounts != null:
+            if self.TitlePlayerAccounts.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.TitlePlayerAccounts:
+                    dict_temp[k] = self.TitlePlayerAccounts[k].get_dict()
+                dict_result["TitlePlayerAccounts"] = dict_temp
+        
+        return dict_result
+
+
+class PFGetTitlePlayersFromXboxLiveIDsRequest:
+    # 4 items(s)
+    var CustomTags: Dictionary # Dictionary[String, String(String)]
+    var Sandbox: String # String
+    var TitleId: String # String
+    var XboxLiveIds: Array # Array[String]
+
+    func _init(dict_param: Dictionary = {}):
+        
+        self.CustomTags = {}
+        self.XboxLiveIds = []
+        self.set_dict(dict_param)
+
+    func set_dict(dict_param: Dictionary):
+        
+        if "CustomTags" in dict_param:
+            self.CustomTags = {}
+            for k in dict_param["CustomTags"]:
+                self.CustomTags[k] = dict_param["CustomTags"][k]
+        if "Sandbox" in dict_param:
+            self.Sandbox = dict_param["Sandbox"]
+        if "TitleId" in dict_param:
+            self.TitleId = dict_param["TitleId"]
+        if "XboxLiveIds" in dict_param:
+            self.XboxLiveIds = []
+            for v in dict_param["XboxLiveIds"]:
+                self.XboxLiveIds.push_back(v)
+
+    func get_dict() -> Dictionary:
+        
+        var dict_result: Dictionary = {}
+        
+        if self.CustomTags != null:
+            if self.CustomTags.size() > 0:
+                var dict_temp: Dictionary = {}
+                for k in self.CustomTags:
+                    # Dictionary[String, String]
+                    if self.CustomTags[k].empty() != true:
+                        dict_temp[k] = self.CustomTags[k]
+                dict_result["CustomTags"] = dict_temp
+        if self.Sandbox != null:
+            # String
+            if self.Sandbox.empty() != true:
+                dict_result["Sandbox"] = self.Sandbox
+        if self.TitleId != null:
+            # String
+            if self.TitleId.empty() != true:
+                dict_result["TitleId"] = self.TitleId
+        if self.XboxLiveIds != null:
+            if self.XboxLiveIds.size() > 0:
+                var list_temp: Array = []
+                for v in self.XboxLiveIds:
+                    # Array[String]
+                    if v.empty() != true:
+                        list_temp.push_back(v)
+                dict_result["XboxLiveIds"] = list_temp
         
         return dict_result
 

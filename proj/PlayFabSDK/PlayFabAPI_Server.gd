@@ -11,7 +11,8 @@ extends Node
 
 static func AddCharacterVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Increments the character's balance of the specified virtual currency by the stated amount
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Increments the character's balance of the specified virtual currency by the stated amount
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/addcharactervirtualcurrency
     """
 
@@ -97,7 +98,8 @@ static func AddSharedGroupMembers(dict_request, user_callback = null, dict_heade
 
 static func AddUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Increments the user's balance of the specified virtual currency by the stated amount
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Increments the user's balance of the specified virtual currency by the stated amount
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/adduservirtualcurrency
     """
 
@@ -161,7 +163,9 @@ static func BanUsers(dict_request, user_callback = null, dict_header_extra = {})
 
 static func ConsumeItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Consume uses of a consumable item. When all uses are consumed, it will be removed from the player's inventory.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Consume uses of a consumable item. When all uses are consumed, it will be removed from the player's
+    inventory.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/consumeitem
     """
 
@@ -260,26 +264,12 @@ static func DeleteSharedGroup(dict_request, user_callback = null, dict_header_ex
     )
 
 
-static func DeregisterGame(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Inform the matchmaker that a Game Server Instance is removed.
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/deregistergame
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/DeregisterGame",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func EvaluateRandomResultTable(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Returns the result of an evaluation of a Random Result Table - the ItemId from the game Catalog which would have been
-    added to the player inventory, if the Random Result Table were added via a Bundle or a call to UnlockContainer.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Returns the result of an evaluation of a Random Result Table - the ItemId from the game Catalog which would
+    have been added to the player inventory, if the Random Result Table were added via a Bundle or a call to
+    UnlockContainer.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/evaluaterandomresulttable
     """
 
@@ -346,7 +336,8 @@ static func GetAllUsersCharacters(dict_request, user_callback = null, dict_heade
 
 static func GetCatalogItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified version of the title's catalog of virtual goods, including all defined properties
     https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/getcatalogitems
     """
 
@@ -394,7 +385,8 @@ static func GetCharacterInternalData(dict_request, user_callback = null, dict_he
 
 static func GetCharacterInventory(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified character's current inventory of virtual goods
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified character's current inventory of virtual goods
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/getcharacterinventory
     """
 
@@ -859,8 +851,9 @@ static func GetPublisherData(dict_request, user_callback = null, dict_header_ext
 
 static func GetRandomResultTables(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the configuration information for the specified random results tables for the title, including all ItemId
-    values and weights
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the configuration information for the specified random results tables for the title, including all
+    ItemId values and weights
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/getrandomresulttables
     """
 
@@ -910,7 +903,9 @@ static func GetSharedGroupData(dict_request, user_callback = null, dict_header_e
 
 static func GetStoreItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the set of items defined for the specified store, including all prices defined, for the specified player
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the set of items defined for the specified store, including all prices defined, for the specified
+    player
     https://docs.microsoft.com/rest/api/playfab/server/title-wide-data-management/getstoreitems
     """
 
@@ -1054,7 +1049,8 @@ static func GetUserInternalData(dict_request, user_callback = null, dict_header_
 
 static func GetUserInventory(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Retrieves the specified user's current inventory of virtual goods
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Retrieves the specified user's current inventory of virtual goods
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/getuserinventory
     """
 
@@ -1151,7 +1147,8 @@ static func GrantCharacterToUser(dict_request, user_callback = null, dict_header
 
 static func GrantItemsToCharacter(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds the specified items to the specified character's inventory
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds the specified items to the specified character's inventory
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/grantitemstocharacter
     """
 
@@ -1167,7 +1164,8 @@ static func GrantItemsToCharacter(dict_request, user_callback = null, dict_heade
 
 static func GrantItemsToUser(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds the specified items to the specified user's inventory
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds the specified items to the specified user's inventory
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/grantitemstouser
     """
 
@@ -1183,7 +1181,8 @@ static func GrantItemsToUser(dict_request, user_callback = null, dict_header_ext
 
 static func GrantItemsToUsers(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds the specified items to the specified user inventories
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds the specified items to the specified user inventories
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/grantitemstousers
     """
 
@@ -1205,6 +1204,22 @@ static func LinkNintendoServiceAccount(dict_request, user_callback = null, dict_
 
     return PlayFab._http_cli.request_append(
         "/Server/LinkNintendoServiceAccount",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func LinkNintendoServiceAccountSubject(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Nintendo account associated with the Nintendo Service Account subject or id to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/linknintendoserviceaccountsubject
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/LinkNintendoServiceAccountSubject",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -1245,6 +1260,22 @@ static func LinkPSNAccount(dict_request, user_callback = null, dict_header_extra
     )
 
 
+static func LinkPSNId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the PlayStation :tm: Network account associated with the provided user id to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/linkpsnid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/LinkPSNId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func LinkServerCustomId(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Links the custom server identifier, generated by the title, to the user's PlayFab account.
@@ -1253,6 +1284,22 @@ static func LinkServerCustomId(dict_request, user_callback = null, dict_header_e
 
     return PlayFab._http_cli.request_append(
         "/Server/LinkServerCustomId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
+static func LinkSteamId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Links the Steam account associated with the provided Steam ID to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/linksteamid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/LinkSteamId",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -1347,7 +1394,8 @@ static func LoginWithXboxId(dict_request, user_callback = null, dict_header_extr
 
 static func ModifyItemUses(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Modifies the number of remaining uses of a player's inventory item
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Modifies the number of remaining uses of a player's inventory item
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/modifyitemuses
     """
 
@@ -1363,7 +1411,8 @@ static func ModifyItemUses(dict_request, user_callback = null, dict_header_extra
 
 static func MoveItemToCharacterFromCharacter(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Moves an item from a character's inventory into another of the users's character's inventory.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Moves an item from a character's inventory into another of the users's character's inventory.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/moveitemtocharacterfromcharacter
     """
 
@@ -1379,7 +1428,8 @@ static func MoveItemToCharacterFromCharacter(dict_request, user_callback = null,
 
 static func MoveItemToCharacterFromUser(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Moves an item from a user's inventory into their character's inventory.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Moves an item from a user's inventory into their character's inventory.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/moveitemtocharacterfromuser
     """
 
@@ -1395,7 +1445,8 @@ static func MoveItemToCharacterFromUser(dict_request, user_callback = null, dict
 
 static func MoveItemToUserFromCharacter(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Moves an item from a character's inventory into the owning user's inventory.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Moves an item from a character's inventory into the owning user's inventory.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/moveitemtouserfromcharacter
     """
 
@@ -1409,79 +1460,16 @@ static func MoveItemToUserFromCharacter(dict_request, user_callback = null, dict
     )
 
 
-static func NotifyMatchmakerPlayerLeft(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Informs the PlayFab match-making service that the user specified has left the Game Server Instance
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/notifymatchmakerplayerleft
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/NotifyMatchmakerPlayerLeft",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func RedeemCoupon(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Adds the virtual goods associated with the coupon to the user's inventory. Coupons can be generated via the
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Adds the virtual goods associated with the coupon to the user's inventory. Coupons can be generated via the
     Economy->Catalogs tab in the PlayFab Game Manager.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/redeemcoupon
     """
 
     return PlayFab._http_cli.request_append(
         "/Server/RedeemCoupon",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func RedeemMatchmakerTicket(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Validates a Game Server session ticket and returns details about the user
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/redeemmatchmakerticket
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/RedeemMatchmakerTicket",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func RefreshGameServerInstanceHeartbeat(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Set the state of the indicated Game Server Instance. Also update the heartbeat for the instance.
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/refreshgameserverinstanceheartbeat
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/RefreshGameServerInstanceHeartbeat",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func RegisterGame(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Inform the matchmaker that a new Game Server Instance is added.
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/registergame
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/RegisterGame",
         dict_request,
         user_callback,
         dict_header_extra,
@@ -1608,7 +1596,8 @@ static func RevokeBans(dict_request, user_callback = null, dict_header_extra = {
 
 static func RevokeInventoryItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Revokes access to an item in a user's inventory
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Revokes access to an item in a user's inventory
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/revokeinventoryitem
     """
 
@@ -1624,7 +1613,8 @@ static func RevokeInventoryItem(dict_request, user_callback = null, dict_header_
 
 static func RevokeInventoryItems(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Revokes access for up to 25 items across multiple users and characters.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Revokes access for up to 25 items across multiple users and characters.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/revokeinventoryitems
     """
 
@@ -1737,54 +1727,6 @@ static func SetFriendTags(dict_request, user_callback = null, dict_header_extra 
     )
 
 
-static func SetGameServerInstanceData(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Sets the custom data of the indicated Game Server Instance
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/setgameserverinstancedata
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/SetGameServerInstanceData",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func SetGameServerInstanceState(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Set the state of the indicated Game Server Instance.
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/setgameserverinstancestate
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/SetGameServerInstanceState",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
-static func SetGameServerInstanceTags(dict_request, user_callback = null, dict_header_extra = {}):
-    """
-    Set custom tags for the specified Game Server Instance
-    https://docs.microsoft.com/rest/api/playfab/server/matchmaking/setgameserverinstancetags
-    """
-
-    return PlayFab._http_cli.request_append(
-        "/Server/SetGameServerInstanceTags",
-        dict_request,
-        user_callback,
-        dict_header_extra,
-        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
-        []
-    )
-
-
 static func SetPlayerSecret(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Sets the player's secret if it is not already set. Player secrets are used to sign API requests. To reset a player's
@@ -1852,8 +1794,9 @@ static func SetTitleInternalData(dict_request, user_callback = null, dict_header
 
 static func SubtractCharacterVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Decrements the character's balance of the specified virtual currency by the stated amount. It is possible to make a VC
-    balance negative with this API.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Decrements the character's balance of the specified virtual currency by the stated amount. It is possible to
+    make a VC balance negative with this API.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/subtractcharactervirtualcurrency
     """
 
@@ -1869,8 +1812,9 @@ static func SubtractCharacterVirtualCurrency(dict_request, user_callback = null,
 
 static func SubtractUserVirtualCurrency(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Decrements the user's balance of the specified virtual currency by the stated amount. It is possible to make a VC
-    balance negative with this API.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Decrements the user's balance of the specified virtual currency by the stated amount. It is possible to make
+    a VC balance negative with this API.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/subtractuservirtualcurrency
     """
 
@@ -1948,6 +1892,22 @@ static func UnlinkServerCustomId(dict_request, user_callback = null, dict_header
     )
 
 
+static func UnlinkSteamId(dict_request, user_callback = null, dict_header_extra = {}):
+    """
+    Unlinks the Steam account associated with the provided Steam ID to the user's PlayFab account
+    https://docs.microsoft.com/rest/api/playfab/server/account-management/unlinksteamid
+    """
+
+    return PlayFab._http_cli.request_append(
+        "/Server/UnlinkSteamId",
+        dict_request,
+        user_callback,
+        dict_header_extra,
+        [PlayFab.E_PRO.CHK_SECRET_KEY, PlayFab.E_PRO.USE_AUTH_SECRET_KEY],
+        []
+    )
+
+
 static func UnlinkXboxAccount(dict_request, user_callback = null, dict_header_extra = {}):
     """
     Unlinks the related Xbox Live account from the user's PlayFab account
@@ -1966,9 +1926,10 @@ static func UnlinkXboxAccount(dict_request, user_callback = null, dict_header_ex
 
 static func UnlockContainerInstance(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Opens a specific container (ContainerItemInstanceId), with a specific key (KeyItemInstanceId, when required), and
-    returns the contents of the opened container. If the container (and key when relevant) are consumable (RemainingUses >
-    0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Opens a specific container (ContainerItemInstanceId), with a specific key (KeyItemInstanceId, when
+    required), and returns the contents of the opened container. If the container (and key when relevant) are consumable
+    (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of ConsumeItem.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/unlockcontainerinstance
     """
 
@@ -1984,9 +1945,10 @@ static func UnlockContainerInstance(dict_request, user_callback = null, dict_hea
 
 static func UnlockContainerItem(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Searches Player or Character inventory for any ItemInstance matching the given CatalogItemId, if necessary unlocks it
-    using any appropriate key, and returns the contents of the opened container. If the container (and key when relevant)
-    are consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Searches Player or Character inventory for any ItemInstance matching the given CatalogItemId, if necessary
+    unlocks it using any appropriate key, and returns the contents of the opened container. If the container (and key when
+    relevant) are consumable (RemainingUses > 0), their RemainingUses will be decremented, consistent with the operation of
     ConsumeItem.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/unlockcontaineritem
     """
@@ -2167,7 +2129,8 @@ static func UpdateUserInternalData(dict_request, user_callback = null, dict_head
 
 static func UpdateUserInventoryItemCustomData(dict_request, user_callback = null, dict_header_extra = {}):
     """
-    Updates the key-value pair data tagged to the specified item, which is read-only from the client.
+    _NOTE: This is a Legacy Economy API, and is in bugfix-only mode. All new Economy features are being developed only for
+    version 2._ Updates the key-value pair data tagged to the specified item, which is read-only from the client.
     https://docs.microsoft.com/rest/api/playfab/server/player-item-management/updateuserinventoryitemcustomdata
     """
 

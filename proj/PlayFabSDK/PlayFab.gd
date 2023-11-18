@@ -24,7 +24,6 @@ enum E_EPI {
 
 const Admin = preload("res://PlayFabSDK/PlayFabAPI_Admin.gd")
 const Client = preload("res://PlayFabSDK/PlayFabAPI_Client.gd")
-const Matchmaker = preload("res://PlayFabSDK/PlayFabAPI_Matchmaker.gd")
 const Server = preload("res://PlayFabSDK/PlayFabAPI_Server.gd")
 const Authentication = preload("res://PlayFabSDK/PlayFabAPI_Authentication.gd")
 const CloudScript = preload("res://PlayFabSDK/PlayFabAPI_CloudScript.gd")
@@ -40,7 +39,6 @@ const Profiles = preload("res://PlayFabSDK/PlayFabAPI_Profiles.gd")
 
 const AdminDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Admin.gd")
 const ClientDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Client.gd")
-const MatchmakerDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Matchmaker.gd")
 const ServerDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Server.gd")
 const AuthenticationDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_Authentication.gd")
 const CloudScriptDataModels = preload("res://PlayFabSDK/DataModel/PlayFabAPI_DataModel_CloudScript.gd")
