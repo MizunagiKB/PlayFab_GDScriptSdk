@@ -33,25 +33,30 @@ class CRequest:
 
 
 class CResult:
-    var response_code = 0
+    var response_code: int = 0
     var dict_header = {}
-    var size = -1
+    var size: int = -1
     var data = PoolByteArray()
-    var update_count = 0
-
-    func update(client: HTTPClient):
-        if self.size < 0:
-            self.response_code = client.get_response_code()
-            self.dict_header = client.get_response_headers_as_dictionary()
-    
-            if client.is_response_chunked() != true:
-                self.size = client.get_response_body_length()
-                self.data = PoolByteArray()
+    var update_count: int = 0
 
     func update_chunk(client: HTTPClient):
         var chunk = client.read_response_body_chunk()
         if chunk.size() > 0:
             self.data = self.data + chunk
+
+    func update(client: HTTPClient):
+        if self.update_count == 0:
+            if client.has_response():
+                self.response_code = client.get_response_code()
+                self.dict_header = client.get_response_headers_as_dictionary()
+
+                if client.is_response_chunked() == false:
+                    self.size = client.get_response_body_length()
+
+                self.data = PoolByteArray()
+                self.update_chunk(client)
+        else:
+            self.update_chunk(client)
 
         self.update_count += 1
 
@@ -341,10 +346,7 @@ func update(delta):
                 _current_request.o_result = CResult.new()
 
         elif status_curr == STATUS_BODY:
-            if has_response():
-                _current_request.o_result.update(self)
-            else:
-                _current_request.o_result.update_chunk(self)
+            _current_request.o_result.update(self)
 
         if status_curr != STATUS_BODY:
             if _current_request.o_result != null:

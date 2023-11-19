@@ -4,12 +4,20 @@ import subprocess
 import pathlib
 import json
 
+
 REPOS_SDK_GEN = "https://github.com/PlayFab/SDKGenerator"
 REPOS_SDK_TPL = "https://github.com/MizunagiKB/PlayFab_GDScriptTemplate"
 REPOS_SDK_API = "https://github.com/PlayFab/API_Specs"
+REPOS_SDK_API_JSON = "SdkManualNotes.json"
+
+EnsureSConsVersion(4, 0)
+
+env = Environment()
+
+# env.Program(target='hello', source=["hello.c"])
 
 
-def pre_build():
+def pre_build(env):
 
     work_dir = pathlib.Path("SDKGenerator")
     if work_dir.exists():
@@ -31,27 +39,36 @@ def pre_build():
 
     work_dir = pathlib.Path("API_Specs")
     if work_dir.exists():
-        print("Delete folder, {:s}".format(work_dir))
-        sys.exit(1)
-    subprocess.check_output(["git", "clone", REPOS_SDK_API])
+        os.chdir("API_Specs")
+        subprocess.check_output(["git", "restore", REPOS_SDK_API_JSON])
+        subprocess.check_output(["git", "pull", REPOS_SDK_API])
+        os.chdir("..")
+    else:
+        subprocess.check_output(["git", "clone", REPOS_SDK_API])
 
-    #
     os.chdir("SDKGenerator")
-    subprocess.check_output(["sh", "SDKBuildScripts/initejs.sh"])
+    if sys.platform == "win32":
+        subprocess.check_output(["SDKBuildScripts/initejs.bat"])
+    else:
+        subprocess.check_output(["sh", "SDKBuildScripts/initejs.sh"])
     os.chdir("..")
 
     #
-    with open("API_Specs/SdkManualNotes.json", "r") as rf:
-        dict_notes = json.load(rf)
-        dict_notes["sdkVersion"]["gdscriptsdk"] = dict_notes["sdkVersion"]["pythonsdk"]
+    work_dir = pathlib.Path("API_Specs")
+    if work_dir.exists():
+        os.chdir("API_Specs")
+        with open(REPOS_SDK_API_JSON, "r") as rf:
+            dict_notes = json.load(rf)
+            dict_notes["sdkVersion"]["gdscriptsdk"] = dict_notes["sdkVersion"]["pythonsdk"]
 
-    with open("API_Specs/SdkManualNotes.json", "w") as wf:
-        dict_notes = json.dump(dict_notes, wf)
+        with open(REPOS_SDK_API_JSON, "w") as wf:
+            dict_notes = json.dump(dict_notes, wf)
+        os.chdir("..")
 
 
-def run_build():
+def run_build(env):
 
-    print(os.getcwd())
+
     work_dir = pathlib.Path("SDKGenerator")
     if work_dir.exists():
         os.chdir("SDKGenerator")
@@ -67,10 +84,11 @@ def run_build():
         os.chdir("..")
 
 
-def epi_build():
+def epi_build(env):
     pass
 
 
-pre_build()
-run_build()
-epi_build()
+pre_build(env)
+run_build(env)
+epi_build(env)
+
