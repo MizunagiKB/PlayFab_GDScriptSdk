@@ -47,6 +47,12 @@ scons
 3. Added res://PlayFabSDK/PlayFabSettings.gd to AutoLoad under the name PlayFabSettings.
 4. Create testTitleData.json to GodotEngine project folder.
 
+[CAUTION]
+====
+- The testTitleData.json is intended for testing purposes.
+- The `developerSecretKey` is intended for use by the server. Please ensure that it is not included in programs intended for clients.
+====
+
 [source,javascript]
 ----
 {
