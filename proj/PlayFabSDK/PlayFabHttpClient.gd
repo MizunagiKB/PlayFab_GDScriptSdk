@@ -316,7 +316,7 @@ func update(delta):
     if _current_request == null:
         if _request_buffers.size() > 0:
             _current_request = _request_buffers.pop_front()
-            status_curr == STATUS_DISCONNECTED
+            status_curr = STATUS_DISCONNECTED
         else:
             if status_curr == STATUS_CONNECTION_ERROR:
                 close()
